@@ -40,6 +40,18 @@ test("renders the data policy with source and publication limits", async () => {
 
 const localCatalogUrl = new URL("../public/data/enrichment-queue.json", import.meta.url);
 const globalCssUrl = new URL("../app/globals.css", import.meta.url);
+const productModalUrl = new URL("../components/catalog/ProductModal.tsx", import.meta.url);
+
+test("product modal renders official information as an always-visible document", async () => {
+  const source = await readFile(productModalUrl, "utf8");
+  assert.doesNotMatch(source, /<details|<summary/);
+  assert.doesNotMatch(source, /source-link|이미지 출처 열기|제품 설명서 원문 열기/);
+  assert.match(source, /official-detail-group/);
+  assert.match(source, /value\.trim\(\)\.length > 0/);
+  assert.match(source, /효능·효과/);
+  assert.match(source, /용법·용량/);
+  assert.match(source, /유효성분/);
+});
 
 test("product table passes vertical wheel input to the page", async () => {
   const css = await readFile(globalCssUrl, "utf8");

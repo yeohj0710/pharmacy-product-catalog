@@ -1,21 +1,11 @@
 "use client";
 
-import { ExternalLink, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Product } from "@/types/catalog";
 import { ProductImage } from "./ProductImage";
 
 const money = new Intl.NumberFormat("ko-KR");
-
-function safeHttps(value?: string) {
-  if (!value) return "";
-  try {
-    const url = new URL(value);
-    return url.protocol === "https:" ? url.href : "";
-  } catch {
-    return "";
-  }
-}
 
 function textValue(value: unknown) {
   if (Array.isArray(value)) return value.filter(Boolean).join(" · ");
@@ -78,11 +68,6 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
     };
   }, [onClose]);
 
-  const officialSourceUrl = safeHttps(typeof product.official_source_url === "string" ? product.official_source_url : "");
-  const insertPdfUrl = safeHttps(typeof product.official_insert_pdf_url === "string" ? product.official_insert_pdf_url : "");
-  const imageSourceUrl = safeHttps(product.image_source_url);
-  const sourceUrl = officialSourceUrl || imageSourceUrl;
-  const sourceLabel = officialSourceUrl.includes("health.kr") ? "약학정보원 원문 열기" : officialSourceUrl ? "제품 정보 원문 열기" : "이미지 출처 열기";
   const officialManufacturer = typeof product.official_manufacturer === "string" ? product.official_manufacturer : "";
   const officialPermitDate = structuredText(product.official_permit_date);
   const officialInsurance = structuredText(product.official_insurance);
@@ -95,33 +80,67 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
     ["허가일", officialPermitDate],
     ["보험정보", officialInsurance],
   ].filter(([, value]) => typeof value === "string" && value.trim());
-  const officialSectionCandidates: Array<[string, string]> = [
-    ["효능·효과", textValue(product.official_efficacy)],
-    ["용법·용량", textValue(product.official_dosage)],
-    ["사용상의 주의사항", textValue(product.official_precautions)],
-    ["전문가 주의사항", textValue(product.official_professional_precautions)],
-    ["유효성분", textValue(product.official_active_ingredients)],
-    ["전체 성분", textValue(product.official_ingredients)],
-    ["첨가제", structuredText(product.official_additives)],
-    ["소비자 복약정보", consumerGuidanceText(product.official_consumer_guidance)],
-    ["복약 안내", structuredText(product.official_patient_guidance)],
-    ["의약품 설명", structuredText(product.official_medication_summary)],
-    ["복약지도", structuredText(product.official_medication_guide)],
-    ["저장방법", textValue(product.official_storage)],
-    ["제품 성상", structuredText(product.official_appearance)],
-    ["식별정보", structuredText(product.official_identification)],
-    ["의약품 분류", structuredText(product.official_category)],
-    ["ATC 분류", structuredText(product.official_atc_code)],
-    ["KPIC 약효분류", structuredText(product.official_kpic_atc)],
-    ["DUR 병용금기", structuredText(product.official_dur_contraindications)],
-    ["DUR 연령금기", structuredText(product.official_dur_age)],
-    ["DUR 임부금기", structuredText(product.official_dur_pregnancy)],
-    ["DUR 고령자 주의", structuredText(product.official_dur_senior)],
-    ["DUR 최대용량", structuredText(product.official_dur_max_dose)],
-    ["DUR 최대투여기간", structuredText(product.official_dur_max_period)],
-    ["DUR 분할주의", structuredText(product.official_dur_split_dosage)],
-  ];
-  const officialSections = officialSectionCandidates.filter(([, value]) => Boolean(value));
+  const officialGroups = [
+    {
+      title: "효능과 복용",
+      description: "사용 목적과 복용 방법, 주의사항",
+      items: [
+        ["효능·효과", textValue(product.official_efficacy)],
+        ["용법·용량", textValue(product.official_dosage)],
+        ["사용상의 주의사항", textValue(product.official_precautions)],
+        ["전문가 주의사항", textValue(product.official_professional_precautions)],
+      ],
+    },
+    {
+      title: "성분",
+      description: "유효성분과 첨가제",
+      items: [
+        ["유효성분", textValue(product.official_active_ingredients)],
+        ["전체 성분", textValue(product.official_ingredients)],
+        ["첨가제", structuredText(product.official_additives)],
+      ],
+    },
+    {
+      title: "복약 정보",
+      description: "복용할 때 확인할 안내",
+      items: [
+        ["소비자 복약정보", consumerGuidanceText(product.official_consumer_guidance)],
+        ["복약 안내", structuredText(product.official_patient_guidance)],
+        ["의약품 설명", structuredText(product.official_medication_summary)],
+        ["복약지도", structuredText(product.official_medication_guide)],
+      ],
+    },
+    {
+      title: "제품 정보",
+      description: "보관, 외형과 의약품 분류",
+      items: [
+        ["저장방법", textValue(product.official_storage)],
+        ["제품 성상", structuredText(product.official_appearance)],
+        ["식별정보", structuredText(product.official_identification)],
+        ["의약품 분류", structuredText(product.official_category)],
+        ["ATC 분류", structuredText(product.official_atc_code)],
+        ["KPIC 약효분류", structuredText(product.official_kpic_atc)],
+      ],
+    },
+    {
+      title: "복용 금기·주의 정보",
+      description: "의약품 안전사용서비스(DUR) 기준",
+      items: [
+        ["DUR 병용금기", structuredText(product.official_dur_contraindications)],
+        ["DUR 연령금기", structuredText(product.official_dur_age)],
+        ["DUR 임부금기", structuredText(product.official_dur_pregnancy)],
+        ["DUR 고령자 주의", structuredText(product.official_dur_senior)],
+        ["DUR 최대용량", structuredText(product.official_dur_max_dose)],
+        ["DUR 최대투여기간", structuredText(product.official_dur_max_period)],
+        ["DUR 분할주의", structuredText(product.official_dur_split_dosage)],
+      ],
+    },
+  ]
+    .map((group) => ({
+      ...group,
+      items: group.items.filter(([, value]) => value.trim().length > 0) as Array<[string, string]>,
+    }))
+    .filter((group) => group.items.length > 0);
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <section ref={modalRef} className="modal modal-shell" role="dialog" aria-modal="true" aria-labelledby="product-title" aria-describedby="product-price-warning">
@@ -144,24 +163,34 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
               {basicDetails.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
             </dl>
           )}
-          {officialSections.length > 0 && (
+          {officialGroups.length > 0 && (
             <section className="official-detail-section" aria-labelledby="official-detail-title">
               <div className="official-detail-heading">
-                <h3 id="official-detail-title">약학정보원 제품 상세정보</h3>
+                <span className="eyebrow">공식 의약품 정보</span>
+                <h3 id="official-detail-title">약학정보원 제품 정보</h3>
+                <p>효능, 복용법, 성분과 주의사항을 항목별로 정리했습니다.</p>
               </div>
-              <div className="official-detail-list">
-                {officialSections.map(([label, value]) => (
-                  <details key={label} open={label === "효능·효과" || label === "용법·용량"}>
-                    <summary>{label}</summary>
-                    <p>{value}</p>
-                  </details>
+              <div className="official-detail-groups">
+                {officialGroups.map((group, groupIndex) => (
+                  <section className="official-detail-group" key={group.title} aria-labelledby={`official-group-${groupIndex}`}>
+                    <header>
+                      <h4 id={`official-group-${groupIndex}`}>{group.title}</h4>
+                      <p>{group.description}</p>
+                    </header>
+                    <div className="official-detail-items">
+                      {group.items.map(([label, value]) => (
+                        <article className="official-detail-item" key={label}>
+                          <h5>{label}</h5>
+                          <p>{value}</p>
+                        </article>
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </div>
               <p className="official-license">의약품을 사용하기 전에는 제품 설명서와 의료전문가의 안내를 확인하세요.</p>
             </section>
           )}
-          {sourceUrl && <a className="source-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{sourceLabel} <ExternalLink aria-hidden="true" /></a>}
-          {insertPdfUrl && <a className="source-link" href={insertPdfUrl} target="_blank" rel="noopener noreferrer">제품 설명서 원문 열기 <ExternalLink aria-hidden="true" /></a>}
         </div>
       </section>
     </div>
