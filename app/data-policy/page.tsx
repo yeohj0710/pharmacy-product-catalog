@@ -4,6 +4,8 @@ import Link from "next/link";
 const sources = [
   { label: "식품의약품안전처 의약품개요정보(e약은요)", href: "https://www.data.go.kr/data/15075057/openapi.do" },
   { label: "식품의약품안전처 의약품 제품 허가정보", href: "https://www.data.go.kr/data/15095677/openapi.do" },
+  { label: "약학정보원 서비스 이용약관", href: "https://www.health.kr/member/userAgreement.asp" },
+  { label: "약학정보원 법적책임의 한계", href: "https://www.health.kr/member/legalLiability.asp" },
   { label: "국가법령정보센터 저작권법 제93조", href: "https://law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0093&lsiSeq=283335&urlMode=lsScJoRltInfoR" },
   { label: "국가법령정보센터 저작권법 제94조", href: "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0094&lsiSeq=283335&urlMode=lsScJoRltInfoR" },
   { label: "국가법령정보센터 부정경쟁방지법 제2조", href: "https://www.law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=900358570" },
@@ -24,7 +26,7 @@ export default function DataPolicyPage() {
         <h2>로컬 아카이브에 보존하는 정보</h2>
         <ul>
           <li>Firestore 원본의 상품명, 규격, 분류, 가격, 비고와 갱신일</li>
-          <li>원본 문서 ID, 생성 시각, 수정 시각과 조회 날짜</li>
+          <li>원본 문서 ID, 생성 시각과 수정 시각</li>
           <li>화면 녹화 OCR 대조본의 출처 파일, 화면 위치, 문자 인식 신뢰도와 검수 상태</li>
           <li>식약처 공개 데이터에서 별도로 확인한 제품명, 업체명, 품목기준코드와 낱알이미지</li>
         </ul>
@@ -42,7 +44,7 @@ export default function DataPolicyPage() {
       </section>
       <section className="policy-block">
         <h2>가격을 읽는 방법</h2>
-        <p>표시 가격은 2026년 7월 15일 Firestore 조회 당시 앱 데이터값입니다. 현재 판매가·재고가 아닙니다. 실제 가격과 취급 여부는 방문할 약국에 확인하세요. OCR 값은 정본이 아니라 대조 자료로만 사용합니다.</p>
+        <p>표시 가격은 비공식 앱에서 확인한 데이터값입니다. 실제 판매 가격·재고와 다를 수 있으므로 가격과 취급 여부는 방문할 약국에 확인하세요. OCR 값은 정본이 아니라 대조 자료로만 사용합니다.</p>
       </section>
       <section className="policy-block">
         <h2>외부 공개 전 반드시 확인할 항목</h2>
@@ -56,7 +58,8 @@ export default function DataPolicyPage() {
       </section>
       <section className="policy-block">
         <h2>출처와 독립성</h2>
-        <p>이 사이트는 메가팩토리약국 및 ‘창고형약국 약값체크’ 앱의 운영자와 제휴·승인 관계가 없습니다. 브랜드명은 출처와 사실관계를 설명하는 데 필요한 범위에서만 사용합니다. 저작권법에는 비영리 교육·학술·연구 목적의 데이터베이스 권리 제한 규정이 있지만 조건이 있으므로, ‘연구용’ 표지만으로 공개가 허용된다고 보지 않습니다.</p>
+        <p>이 사이트는 메가팩토리약국, ‘창고형약국 약값체크’ 앱, 약학정보원, 네이버 또는 다나와의 공식·제휴 서비스가 아닙니다. 약학정보원에서 확인한 성분·효능·용법·주의사항에는 원문 링크를 연결합니다. 검색 결과 이미지는 파일로 복제하지 않고 출처 페이지로 이동할 수 있는 원격 미리보기로만 표시합니다.</p>
+        <p>출처 표시는 재사용 허락을 뜻하지 않습니다. 권리자가 정정·삭제를 요청하면 확인이 끝날 때까지 해당 본문과 이미지를 비공개 대상으로 처리합니다.</p>
       </section>
       <section className="policy-block">
         <h2>정정·삭제 요청</h2>

@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-15T20:02:23+09:00",
+  "missing_image_count": 230,
+  "slice": {
+    "start": 154,
+    "end_exclusive": 230,
+    "record_count": 76
+  },
+  "status_counts": {
+    "confirmed": 19,
+    "review_required": 57
+  },
+  "manual_verified_count": 19,
+  "candidate_present_count": 75,
+  "source_files": [
+    "naver-image-part-1.json",
+    "naver-image-part-2.json",
+    "naver-image-part-3.json",
+    "secondary-image-part-1.json",
+    "secondary-image-part-2.json",
+    "secondary-image-part-3.json"
+  ]
+}

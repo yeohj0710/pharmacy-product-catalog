@@ -1,5 +1,7 @@
 # 약국 상품 아카이브
 
+운영 사이트: [pharmacy-product-catalog.vercel.app](https://pharmacy-product-catalog.vercel.app)
+
 공개 Firestore `products` 컬렉션에서 약국 상품명, 규격, 분류와 조회 당시 가격을 추출하고 검색하는 로컬 데이터 프로젝트다. **가격을 포함한 원본 필드는 버리지 않는다.** `id`, `name`, `capacity`, `category`, `price`, `etc`, `updated`를 삭제하거나 덮어쓰지 않고, 화면 녹화 OCR 결과는 원본 데이터 대조용으로만 사용한다. 메가팩토리약국 또는 `창고형약국 약값체크` 앱과 제휴·승인 관계가 없다.
 
 ## 로컬 보존과 외부 공개
@@ -17,7 +19,7 @@ npm install
 npm run dev
 ```
 
-사이트는 `public/data/products.json`을 읽는다. 디렉터리 이름이 `public`이어도 외부 공개 승인을 뜻하지 않는다. 이 파일은 Git과 배포 산출물에 포함하지 않는다.
+사이트는 `data/enrichment-queue.json`을 정본으로 사용한다. `npm run catalog:sync`가 검색·다운로드용 파일을 `public/data/enrichment-queue.json`과 CSV로 복사한다.
 
 ## 정확한 원본 데이터 추출
 
@@ -68,16 +70,33 @@ npm run build:local
 
 각 열의 뜻은 [DATA_DICTIONARY.md](./DATA_DICTIONARY.md)에 정리했다.
 
-## 식약처 정보와 이미지 연결
+## 제품 상세정보와 이미지 연결
 
-공공데이터포털에서 [의약품개요정보(e약은요)](https://www.data.go.kr/data/15075057/openapi.do) 활용신청을 한 뒤 일반 인증키를 환경 변수에 넣는다.
+약학정보원에서 정확히 일치하는 의약품은 성분, 효능·효과, 용법·용량, 사용상의 주의사항, 저장방법, 제조사, 제형, 투여경로, 포장단위와 원문 링크를 별도 필드로 저장한다. 일치 여부가 모호하거나 규격·제형이 충돌하면 `review_required`로 격리하고 상세정보와 이미지를 표시하지 않는다.
+
+약학정보원에 이미지가 없거나 약학정보원 대상이 아닌 상품은 다나와·네이버 검색 결과를 보조 조사한다. 검색 결과 이미지는 파일로 복제하지 않고 출처 페이지가 연결된 원격 미리보기로만 사용한다. 짧거나 일반적인 상품명은 자동 확정하지 않는다. 자세한 출처·권리 기준은 [DATA_POLICY.md](./DATA_POLICY.md)에 적었다.
+
+```powershell
+npm run kpic:images
+npm run kpic:details:merge
+npm run images:secondary
+npm run images:secondary:merge
+npm run images:naver
+```
+
+공공데이터포털의 식약처·식품안전관리인증원 공식 API도 별도 수집기로 지원한다. 허가정보, e약은요, 건강기능식품, HACCP 이미지 등의 API를 사용하려면 인증키가 필요하다.
+
+공공데이터포털에서 `15095677`, `15075057`, `15057639`, `15095679`, `15056760`, `15095680`, `15056939`, `15073875`, `15033307`의 활용을 신청하고 발급받은 일반 인증키를 현재 PowerShell 세션에 넣는다. 인증키는 저장소 파일에 쓰지 않는다.
 
 ```powershell
 $env:DATA_GO_KR_SERVICE_KEY='발급받은 인증키'
-.\.venv\Scripts\python.exe scripts\enrich_mfds.py data\products.json public\data\products.json
+npm run official:check
+npm run official:batch -- --start 0 --limit 25
+npm run official:all
+npm run official:materialize
 ```
 
-e약은요는 공급실적이 있는 일반의약품의 제품 정보와 낱알이미지를 제공한다. 건강기능식품, 화장품과 생활용품은 별도 공식 출처가 필요하다.
+`official:batch`는 기본 25개씩 처리하고 제품마다 중간 저장한다. `official:all`은 776개 전체를 이어서 처리하며 이미 확정된 제품은 건너뛴다. 공식 제품명이 같거나 3점 이내 후보가 여럿이면 자동 반영하지 않고 `review_required`로 남긴다. GPT Pro 또는 사람이 검수할 입력은 `npm run official:review`로 만들며, 작업 지침은 [docs/GPT_PRO_HANDOFF.md](./docs/GPT_PRO_HANDOFF.md)에 있다.
 
 ## 공개 전 주의
 

@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-15T19:30:43+09:00",
+  "product_count": 776,
+  "processed_in_run": 184,
+  "linked_in_run": 138,
+  "match_record_count": 776,
+  "status_counts": {
+    "review_required": 18,
+    "not_found": 408,
+    "confirmed": 304,
+    "image_missing": 46
+  },
+  "displayable_image_count": 304,
+  "source": "약학정보원",
+  "source_policy": "상세 페이지의 공유용 상품 이미지를 원격 참조하며 원본 파일을 복제하지 않음"
+}

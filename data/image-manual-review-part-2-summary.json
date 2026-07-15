@@ -1,0 +1,13 @@
+{
+  "selected_missing_image_count": 77,
+  "record_count": 77,
+  "candidate_available_count": 74,
+  "manual_verified_count": 23,
+  "status_counts": {
+    "confirmed": 23,
+    "review_required": 54
+  },
+  "additional_naver_search_count": 3,
+  "additional_naver_search_match_count": 0,
+  "verification_rule": "상품명·용량·제형·사용 대상을 대조해 동일 제품이 명확한 후보만 확정"
+}

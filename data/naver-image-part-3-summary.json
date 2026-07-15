@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-07-15T19:56:49+09:00",
+  "missing_image_count": 408,
+  "processed_in_run": 136,
+  "record_count": 136,
+  "status_counts": {
+    "confirmed": 50,
+    "review_required": 85,
+    "not_found": 1
+  },
+  "source": "네이버 이미지 검색",
+  "source_policy": "검색 결과 썸네일을 원격 미리보기로만 참조하고 원문 링크를 함께 저장함"
+}

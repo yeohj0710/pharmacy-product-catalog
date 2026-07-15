@@ -1,0 +1,23 @@
+{
+  "product_count": 776,
+  "record_count": 486,
+  "status_counts": {
+    "cleared_previous": 256,
+    "linked": 331,
+    "not_linked": 155
+  },
+  "image_count": 621,
+  "image_missing_count": 155,
+  "sources": [
+    "data/secondary-image-matches.json",
+    "data/secondary-image-part-1.json",
+    "data/secondary-image-part-2.json",
+    "data/secondary-image-part-3.json",
+    "data/naver-image-part-1.json",
+    "data/naver-image-part-2.json",
+    "data/naver-image-part-3.json",
+    "data/image-manual-review-part-1.json",
+    "data/image-manual-review-part-2.json",
+    "data/image-manual-review-part-3.json"
+  ]
+}

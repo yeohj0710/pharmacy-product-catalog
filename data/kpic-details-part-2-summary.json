@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-07-15T19:43:13+09:00",
+  "source": "약학정보원 의약품 상세정보",
+  "range": {
+    "start": 259,
+    "end_exclusive": 518,
+    "selected_count": 259
+  },
+  "minimum_name_score": 96,
+  "request_delay_seconds": 0.8,
+  "eligible_count": 151,
+  "unique_kpic_code_count": 144,
+  "record_count": 151,
+  "status_counts": {
+    "collected": 151
+  },
+  "field_counts": {
+    "ingredients": 151,
+    "efficacy": 151,
+    "dosage": 151,
+    "precautions": 151,
+    "storage": 151,
+    "manufacturer": 151,
+    "dosage_form": 151,
+    "route": 144,
+    "package": 151,
+    "images": 151
+  },
+  "field_rates_percent": {
+    "ingredients": 100.0,
+    "efficacy": 100.0,
+    "dosage": 100.0,
+    "precautions": 100.0,
+    "storage": 100.0,
+    "manufacturer": 100.0,
+    "dosage_form": 100.0,
+    "route": 95.4,
+    "package": 100.0,
+    "images": 100.0
+  },
+  "package_image_count": 136,
+  "identification_image_count": 50,
+  "missing_primary_image_count": 0
+}
