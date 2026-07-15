@@ -256,7 +256,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .desktop-results { display: block; }
 .mobile-results { display: none; }
-.product-table { max-width: 100%; overflow: auto; background: #fff; border: 1px solid var(--line); border-radius: 20px; overscroll-behavior: contain; }
+.product-table { max-width: 100%; overflow: auto; background: #fff; border: 1px solid var(--line); border-radius: 20px; overscroll-behavior-x: contain; overscroll-behavior-y: auto; }
 .product-table table { width: 100%; min-width: 920px; border-collapse: collapse; }
 .product-table th, .product-table td { padding: 15px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; text-align: left; }
 .product-table thead th { position: sticky; top: 0; z-index: 2; padding-top: 13px; padding-bottom: 13px; background: #f6f7f8; color: var(--muted); font-size: 13px; font-weight: 750; white-space: nowrap; }

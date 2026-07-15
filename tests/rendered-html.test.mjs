@@ -39,6 +39,15 @@ test("renders the data policy with source and publication limits", async () => {
 });
 
 const localCatalogUrl = new URL("../public/data/enrichment-queue.json", import.meta.url);
+const globalCssUrl = new URL("../app/globals.css", import.meta.url);
+
+test("product table passes vertical wheel input to the page", async () => {
+  const css = await readFile(globalCssUrl, "utf8");
+  const rule = css.match(/\.product-table\s*\{([^}]+)\}/)?.[1] ?? "";
+  assert.match(rule, /overscroll-behavior-x:\s*contain/);
+  assert.match(rule, /overscroll-behavior-y:\s*auto/);
+  assert.doesNotMatch(rule, /overscroll-behavior:\s*contain/);
+});
 
 test("generated local catalog keeps every Firestore source field and price", { skip: !existsSync(localCatalogUrl) }, async () => {
   const raw = await readFile(localCatalogUrl, "utf8");
