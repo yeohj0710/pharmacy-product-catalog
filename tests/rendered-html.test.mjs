@@ -50,6 +50,7 @@ test("Vercel builds and serves the static Next.js export", async () => {
   assert.equal(packageJson.scripts["vercel-build"], "npm run prebuild && npm run build:static");
   assert.equal(vercelConfig.buildCommand, "npm run vercel-build");
   assert.equal(vercelConfig.outputDirectory, "out");
+  assert.equal(vercelConfig.cleanUrls, true);
 });
 
 test("product modal renders official information as an always-visible document", async () => {
