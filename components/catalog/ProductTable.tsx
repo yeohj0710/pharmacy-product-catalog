@@ -1,6 +1,5 @@
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { ColumnKey, Product } from "@/types/catalog";
 import { approvedImageUrl, ProductImage } from "./ProductImage";
@@ -41,11 +40,9 @@ export function ProductTable({
             {show("capacity") && <th scope="col">규격</th>}
             {show("category") && <th scope="col">분류</th>}
             {show("price") && <th scope="col" className="numeric-column">가격</th>}
-            {show("etc") && <th scope="col">원본 비고</th>}
-            {show("document_id") && <th scope="col">원본 문서 ID</th>}
-            {show("verification_status") && <th scope="col">확인 상태</th>}
-            {show("manufacturer") && <th scope="col">공식 등록 업체</th>}
-            {show("image") && <th scope="col">공식 이미지</th>}
+            {show("etc") && <th scope="col">비고</th>}
+            {show("manufacturer") && <th scope="col">제조사</th>}
+            {show("image") && <th scope="col">상품 이미지</th>}
           </tr>
         </thead>
         <tbody>
@@ -62,10 +59,8 @@ export function ProductTable({
               {show("category") && <td>{product.category || "미분류"}</td>}
               {show("price") && <td className="numeric-column"><strong>{money.format(product.displayed_price_krw)}원</strong></td>}
               {show("etc") && <td className="truncate-cell" title={product.etc || "없음"}>{product.etc || "없음"}</td>}
-              {show("document_id") && <td className="document-id">{product.document_id || product.id}</td>}
-              {show("verification_status") && <td><span className="status-cell"><CheckCircle2 aria-hidden="true" />원본 확인</span></td>}
-              {show("manufacturer") && <td>{typeof product.official_manufacturer === "string" ? product.official_manufacturer : "미연결"}</td>}
-              {show("image") && <td>{approvedImageUrl(product) ? "표시 가능" : "미연결·미검수"}</td>}
+              {show("manufacturer") && <td>{typeof product.official_manufacturer === "string" ? product.official_manufacturer : "정보 없음"}</td>}
+              {show("image") && <td>{approvedImageUrl(product) ? "있음" : "없음"}</td>}
             </tr>
           ))}
         </tbody>

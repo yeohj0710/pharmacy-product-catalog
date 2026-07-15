@@ -28,11 +28,9 @@ export function ProductCardList({ products, columns, selectedIds, onToggle, onOp
             <button type="button" className="card-detail" onClick={() => onOpen(product)} aria-label={`${product.name} 상세 보기`}>상세 보기</button>
             <dl>
               {show("category") && <div><dt>분류</dt><dd>{product.category || "미분류"}</dd></div>}
-              {show("etc") && <div><dt>원본 비고</dt><dd>{product.etc || "없음"}</dd></div>}
-              {show("document_id") && <div><dt>원본 문서 ID</dt><dd>{product.document_id || product.id}</dd></div>}
-              {show("verification_status") && <div><dt>확인 상태</dt><dd>Firestore 원본 확인</dd></div>}
-              {show("manufacturer") && <div><dt>공식 등록 업체</dt><dd>{typeof product.official_manufacturer === "string" ? product.official_manufacturer : "미연결"}</dd></div>}
-              {show("image") && <div><dt>공식 이미지</dt><dd>{approvedImageUrl(product) ? "표시 가능" : "미연결·미검수"}</dd></div>}
+              {show("etc") && <div><dt>비고</dt><dd>{product.etc || "없음"}</dd></div>}
+              {show("manufacturer") && <div><dt>제조사</dt><dd>{typeof product.official_manufacturer === "string" ? product.official_manufacturer : "정보 없음"}</dd></div>}
+              {show("image") && <div><dt>상품 이미지</dt><dd>{approvedImageUrl(product) ? "있음" : "없음"}</dd></div>}
             </dl>
           </article>
         </li>

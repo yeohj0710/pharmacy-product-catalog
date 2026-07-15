@@ -10,11 +10,9 @@ export const COLUMN_OPTIONS = [
   { key: "capacity" as ColumnKey, label: "규격" },
   { key: "category" as ColumnKey, label: "분류" },
   { key: "price" as ColumnKey, label: "가격" },
-  { key: "etc" as ColumnKey, label: "원본 비고" },
-  { key: "document_id" as ColumnKey, label: "원본 문서 ID" },
-  { key: "verification_status" as ColumnKey, label: "확인 상태" },
-  { key: "manufacturer" as ColumnKey, label: "공식 등록 업체" },
-  { key: "image" as ColumnKey, label: "공식 이미지" },
+  { key: "etc" as ColumnKey, label: "비고" },
+  { key: "manufacturer" as ColumnKey, label: "제조사" },
+  { key: "image" as ColumnKey, label: "상품 이미지" },
 ];
 
 export function ColumnPicker({ open, state, setState, onClose }: { open: boolean; state: CatalogState; setState: CatalogStateUpdater; onClose: () => void }) {

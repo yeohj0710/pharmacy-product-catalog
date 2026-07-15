@@ -125,7 +125,7 @@ export default function CatalogClient() {
         <section className="principles">
           <div><span className="eyebrow">데이터 원칙</span><h2>사실 정보와 출처를<br />분리해 기록합니다</h2></div>
           <div className="principle-list">
-            <article><span>01</span><div><strong>원본 데이터는 그대로 보존합니다</strong><p>상품명, 규격, 분류, 가격과 원본 문서 ID를 함께 저장합니다.</p></div></article>
+            <article><span>01</span><div><strong>상품 정보를 그대로 보존합니다</strong><p>상품명, 규격, 분류와 가격을 원본대로 저장합니다.</p></div></article>
             <article><span>02</span><div><strong>공식 정보는 별도로 연결합니다</strong><p>식약처 공개 데이터와 제조사 공식 페이지에서 확인한 정보만 공식 정보로 표시합니다.</p></div></article>
             <article><span>03</span><div><strong>원본 화면과 로고를 복제하지 않습니다</strong><p>앱 화면, 광고, 로고와 제3자 이미지는 공개 데이터에 포함하지 않습니다.</p></div></article>
           </div>

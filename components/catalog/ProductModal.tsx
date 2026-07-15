@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Info, X } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Product } from "@/types/catalog";
 import { ProductImage } from "./ProductImage";
@@ -53,18 +53,6 @@ function consumerGuidanceText(value: unknown) {
     .join("\n\n");
 }
 
-function officialStatusLabel(value?: string) {
-  return {
-    pending: "공식 정보 조사 전",
-    confirmed: "공식 제품 연결 완료",
-    review_required: "공식 제품 후보 검수 필요",
-    not_found: "공식 제품 미확인",
-    not_applicable: "공식 제품 연결 대상 아님",
-    blocked_missing_key: "공식 데이터 인증키 필요",
-    error: "공식 정보 수집 실패",
-  }[value || ""] || value || "";
-}
-
 export function ProductModal({ product, onClose }: { product: Product; onClose: () => void }) {
   const modalRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -98,6 +86,15 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
   const officialManufacturer = typeof product.official_manufacturer === "string" ? product.official_manufacturer : "";
   const officialPermitDate = structuredText(product.official_permit_date);
   const officialInsurance = structuredText(product.official_insurance);
+  const basicDetails = [
+    ["비고", product.etc],
+    ["제조사", officialManufacturer],
+    ["제형", product.official_dosage_form],
+    ["포장단위", product.official_pack_unit],
+    ["투여경로", product.official_route],
+    ["허가일", officialPermitDate],
+    ["보험정보", officialInsurance],
+  ].filter(([, value]) => typeof value === "string" && value.trim());
   const officialSectionCandidates: Array<[string, string]> = [
     ["효능·효과", textValue(product.official_efficacy)],
     ["용법·용량", textValue(product.official_dosage)],
@@ -142,28 +139,15 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
               <p className="price-warning" id="product-price-warning">실제 판매 가격이나 재고와 다를 수 있습니다. 가격과 취급 여부는 방문할 약국에 확인하세요.</p>
             </div>
           </div>
-          <dl className="detail-list">
-            <div><dt>원본 문서 ID</dt><dd>{product.document_id || product.id}</dd></div>
-            <div><dt>규격</dt><dd>{product.capacity || product.specification || "미입력"}</dd></div>
-            <div><dt>원본 비고</dt><dd>{product.etc || "없음"}</dd></div>
-            <div><dt>확인 상태</dt><dd>{product.verification_status || "Firestore 원본 확인"}</dd></div>
-            {officialManufacturer && <div><dt>공식 등록 업체</dt><dd>{officialManufacturer}</dd></div>}
-            {product.official_item_seq && <div><dt>품목기준코드</dt><dd>{product.official_item_seq}</dd></div>}
-            {product.official_dosage_form && <div><dt>공식 제형</dt><dd>{product.official_dosage_form}</dd></div>}
-            {product.official_pack_unit && <div><dt>공식 포장단위</dt><dd>{product.official_pack_unit}</dd></div>}
-            {product.official_route && <div><dt>투여경로</dt><dd>{product.official_route}</dd></div>}
-            {officialPermitDate && <div><dt>허가일</dt><dd>{officialPermitDate}</dd></div>}
-            {officialInsurance && <div><dt>보험정보</dt><dd>{officialInsurance}</dd></div>}
-            {product.official_match_status && <div><dt>공식 정보 상태</dt><dd>{officialStatusLabel(product.official_match_status)}</dd></div>}
-            {product.official_match_score !== undefined && product.official_match_score !== "" && <div><dt>매칭 점수</dt><dd>{String(product.official_match_score)}점</dd></div>}
-            {product.image_kind && <div><dt>이미지 종류</dt><dd>{product.image_kind === "pill" ? "낱알 이미지" : product.image_kind === "package" ? "포장 이미지" : product.image_kind}</dd></div>}
-          </dl>
-          {product.official_match_status === "review_required" && <div className="review-warning"><Info aria-hidden="true" />이 상품은 공식 제품 후보가 여러 개입니다. 사람이 품목코드·제조사·제형을 확인하기 전에는 후보 상세정보와 이미지를 표시하지 않습니다.</div>}
+          {basicDetails.length > 0 && (
+            <dl className="detail-list">
+              {basicDetails.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+            </dl>
+          )}
           {officialSections.length > 0 && (
             <section className="official-detail-section" aria-labelledby="official-detail-title">
               <div className="official-detail-heading">
                 <h3 id="official-detail-title">약학정보원 제품 상세정보</h3>
-                <span>{product.official_content_status === "complete" ? "핵심 정보 확보" : "일부 정보 확보"}</span>
               </div>
               <div className="official-detail-list">
                 {officialSections.map(([label, value]) => (
@@ -174,10 +158,9 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
                 ))}
               </div>
               <p className="official-license">의약품을 사용하기 전에는 제품 설명서와 의료전문가의 안내를 확인하세요.</p>
-              {product.official_license && <p className="official-license">이용허락: {product.official_license}</p>}
             </section>
           )}
-          {sourceUrl ? <a className="source-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{sourceLabel} <ExternalLink aria-hidden="true" /></a> : <div className="source-pending"><Info aria-hidden="true" />공식 제품 정보와 연결하기 전입니다.</div>}
+          {sourceUrl && <a className="source-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{sourceLabel} <ExternalLink aria-hidden="true" /></a>}
           {insertPdfUrl && <a className="source-link" href={insertPdfUrl} target="_blank" rel="noopener noreferrer">제품 설명서 원문 열기 <ExternalLink aria-hidden="true" /></a>}
         </div>
       </section>

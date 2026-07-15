@@ -6,7 +6,7 @@ import type { CatalogState, ColumnKey, SortKey } from "@/types/catalog";
 
 const PAGE_SIZES = new Set([25, 50, 100]);
 const SORT_KEYS = new Set(["source", "name", "category", "price-low", "price-high"]);
-const COLUMN_KEYS = new Set(["name", "capacity", "category", "price", "etc", "document_id", "verification_status", "manufacturer", "image"]);
+const COLUMN_KEYS = new Set(["name", "capacity", "category", "price", "etc", "manufacturer", "image"]);
 const NOTE_FILTERS = new Set(["all", "with", "without"]);
 const OFFICIAL_FILTERS = new Set(["all", "linked", "unlinked"]);
 const IMAGE_FILTERS = new Set(["all", "with", "without"]);
