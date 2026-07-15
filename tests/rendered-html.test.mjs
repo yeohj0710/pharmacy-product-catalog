@@ -41,6 +41,16 @@ test("renders the data policy with source and publication limits", async () => {
 const localCatalogUrl = new URL("../public/data/enrichment-queue.json", import.meta.url);
 const globalCssUrl = new URL("../app/globals.css", import.meta.url);
 const productModalUrl = new URL("../components/catalog/ProductModal.tsx", import.meta.url);
+const packageJsonUrl = new URL("../package.json", import.meta.url);
+const vercelConfigUrl = new URL("../vercel.json", import.meta.url);
+
+test("Vercel builds and serves the static Next.js export", async () => {
+  const packageJson = JSON.parse(await readFile(packageJsonUrl, "utf8"));
+  const vercelConfig = JSON.parse(await readFile(vercelConfigUrl, "utf8"));
+  assert.equal(packageJson.scripts["vercel-build"], "npm run prebuild && npm run build:static");
+  assert.equal(vercelConfig.buildCommand, "npm run vercel-build");
+  assert.equal(vercelConfig.outputDirectory, "out");
+});
 
 test("product modal renders official information as an always-visible document", async () => {
   const source = await readFile(productModalUrl, "utf8");
