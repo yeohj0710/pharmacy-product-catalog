@@ -1,0 +1,3540 @@
+{
+  "valid": true,
+  "errors": [],
+  "error_count": 0,
+  "object_count": 776,
+  "status_counts": {
+    "not_applicable": 186,
+    "not_found": 294,
+    "review_required": 24,
+    "confirmed": 272
+  },
+  "confirmed_complete": 272,
+  "confirmed_partial": 0,
+  "generated_at": "2026-07-16T12:57:54+09:00",
+  "progress_errors": [
+    {
+      "document_id": "20250801_172724",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:귀이마적외선체온계:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172721",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:AD혈압계:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172722",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:보령비접촉식체온계:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172723",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:보령귓속형체온계:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172327",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성멜라토닌:RuntimeError;search:멜라토닌:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172323",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성 멜라토닌 멜라잇 플러스:RuntimeError;search:멜라토닌멜라잇플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173107",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이가탄:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172844",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:유한비타민D2000IU:RuntimeError;search:유한비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172845",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:유한비타민D5000IU:RuntimeError;search:유한비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20250801_172846",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:유한비타민C정1000mg:RuntimeError;search:유한비타민c정:RuntimeError;search:유한비타민c:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173352",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:고용량비타민하이렉스:RuntimeError;search:하이렉스:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173524",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:챔프코프목감기:RuntimeError;search:챔프코프:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173218",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:챔프노트코감기:RuntimeError;search:챔프노즈:RuntimeError;search:챔프노즈시럽:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173304",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:비겐크림톤:RuntimeError;search:비겐크림:RuntimeError;search:비겐:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173526",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:챔프알러논알레르기:RuntimeError;search:챔프알러논:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173217",
+      "status": "review_required",
+      "queries": 4,
+      "candidates": 1,
+      "error": "search:챔프시럽해열진통:RuntimeError;search:챔프시럽:RuntimeError;search:챔프시럽 동아제약:RuntimeError;search:챔프:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173732",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:맥스클리어점안액:RuntimeError;search:맥스클리어:RuntimeError;search:맥스클리어점안:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173740",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:루핑점안액:RuntimeError;search:루핑:RuntimeError;search:루핑점안:RuntimeError"
+    },
+    {
+      "document_id": "20250801_173527",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:챕프이부펜해열소염:RuntimeError;search:챔프이부펜:RuntimeError;search:챔프이부펜해열:RuntimeError;search:챔프이부펜시럽:RuntimeError"
+    },
+    {
+      "document_id": "20250812_102500",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:칼슘마그네슘 아연앤비타민D:RuntimeError"
+    },
+    {
+      "document_id": "20250812_102506",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맥스조인트뮤코다당단백콘드로이친1200:RuntimeError"
+    },
+    {
+      "document_id": "20250812_102908",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:카베진알파:RuntimeError"
+    },
+    {
+      "document_id": "20250812_102743",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:고햠량비타민 하이렉스 비타민B3000:RuntimeError;search:하이렉스비타민b3000:RuntimeError"
+    },
+    {
+      "document_id": "20250812_102357",
+      "status": "not_applicable",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:국내산꿀생강도라지스틱:RuntimeError;search:꿀생강도라지스틱:RuntimeError;search:국내산:RuntimeError;search:국내:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103019",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컨디션:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103032",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:부채표 쌍화천:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103045",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:부채표 판콜에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103059",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:판피린:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103132",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아미노B골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103254",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컴배트 스피드에어졸:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103226",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:까스활명수:RuntimeError;search:까스활명수큐액:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103307",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:홈키파 수성에어졸:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103344",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:웰빙헬스 고운발:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103426",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:바세린핸드앤스트롱거네일:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103314",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:피톤치드 에어로졸(수성):RuntimeError;search:피톤치드 에어로졸:RuntimeError;search:피톤치드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103434",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:바세린젤리오리지널:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103431",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:바세린풋그림:RuntimeError;search:바세린풋:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103447",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:듀렉스인비저블:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103448",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:윙크퍼펙트슬림:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103505",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타하임비타민:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103517",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:허브눈찜질팩:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103544",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:레모비타플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103509",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:비빌크림캔디:RuntimeError;search:비빌크림:RuntimeError;search:비빌:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103607",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:키드큐젤리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103618",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아이키커비타골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103632",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜이뮨챔피언:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103713",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:리너지오메가3원스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103723",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:명작프리미엄알티지오메가:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103727",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:트리어드코어플러스D:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103735",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:초임계눈건강아스타잔틴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103738",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:슈퍼아이잔틴루테인:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103749",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:유한루테인지아잔틴플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103758",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜싱글맥스루테인20:RuntimeError"
+    },
+    {
+      "document_id": "20250812_103803",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:슈퍼아이루테인:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104038",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:둘코락스좌약5S:RuntimeError;search:둘코락스좌약:RuntimeError;search:둘코락스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104052",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:슬림락정:RuntimeError;search:슬림락정 선일양행:RuntimeError;search:슬림락:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104104",
+      "status": "not_found",
+      "queries": 5,
+      "candidates": 0,
+      "error": "search:식물성변비약 위드원엘과립:RuntimeError;search:위드원엘과립:RuntimeError;search:변비약위드원엘과립:RuntimeError;search:식물성변비약위드원엘:RuntimeError;search:위드원엘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104115",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:디오스민 캡슐:RuntimeError;search:디오스민:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104130",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:디오라인티:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104101",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:부드럽고 효과빠른 변비약 엠티:RuntimeError;search:엠티:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104239",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:폴시드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104252",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:산타몬플러스:RuntimeError;search:산타몬플러스액:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104242",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:메가엽산54g:RuntimeError;search:메가엽산:RuntimeError;search:메가엽:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104323",
+      "status": "not_found",
+      "queries": 5,
+      "candidates": 0,
+      "error": "search:멘탈관리 듀얼 솔루션 안정액:RuntimeError;search:안정액:RuntimeError;search:멘탈관리듀얼솔루션안정:RuntimeError;search:멘탈관리듀얼솔루션안:RuntimeError;search:안정:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104333",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:광동마음정액:RuntimeError;search:광동마음정:RuntimeError;search:광동마음:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104437",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:수면유도제 슬리펠:RuntimeError;search:슬리펠:RuntimeError;search:슬리펠정:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104440",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:수면유도제 쿨드림:RuntimeError;search:쿨드림:RuntimeError;search:쿨드림연질캡슐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104449",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:어린이멀미약 조은아이:RuntimeError;search:조은아이:RuntimeError;search:멀미약조은아이:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104505",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:액상스틱형 멀미약 오네론액:RuntimeError;search:오네론액:RuntimeError;search:오네론:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104616",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:무조날S:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104713",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:이큐펜키즈A(아세트아미노펜):RuntimeError;search:이큐펜키즈a:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104612",
+      "status": "review_required",
+      "queries": 4,
+      "candidates": 1,
+      "error": "search:무조날맥스외용액:RuntimeError;search:무조날맥스외용액 한미약품:RuntimeError;search:무조날맥스:RuntimeError;search:무조날맥스외용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104716",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:이큐펜키즈A(이부프로펜):RuntimeError;search:이큐펜키즈a:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104727",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:챔프알러논시럽:RuntimeError;search:챔프알러논:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104730",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:챔프이부프로펜(파랑):RuntimeError;search:챔프이부프로펜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104751",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:콜대원키즈펜시럽:RuntimeError;search:콜대원키즈펜시럽 대원제약:RuntimeError;search:콜대원키즈펜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104912",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:라미실크림 1%:RuntimeError;search:라미실크림:RuntimeError;search:라미실:RuntimeError"
+    },
+    {
+      "document_id": "20250812_104948",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:시카케어(소):RuntimeError;search:시카케어:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105018",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:한풍자운고연고:RuntimeError;search:한풍자운고:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105631",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성 멜라토닌 멜레븐 하모니:RuntimeError;search:멜라토닌멜레븐하모니:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105723",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:파인애플 그레인 효소:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105730",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:카무트 브랜드 밀:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105744",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:산양유단백분말:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105753",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아르앤비타블러드오렌지맛:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105757",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아임얼라이브카무트효소:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105806",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹십장 하루케어 오메가3:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105810",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹십자 하루케어 멀티비타민V:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105814",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프리미엄 수 침향환 4.2:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105820",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹십자 하루케어 루테인:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105836",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:홍삼진스틱:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105841",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:하루케어칼마디:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105859",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:홍기천앰플:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105906",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹용침향환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105912",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:홍기천침향환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105919",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:늘비움:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105923",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:유기농 엑스트라 버진 올리브유:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105931",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:하루1레몬유기농NFC:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105934",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엑스트라버진유기농올리브오일:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105940",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마이라이프대마종자유:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105953",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:블러드케어올인원:RuntimeError"
+    },
+    {
+      "document_id": "20250812_105957",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:혈관팔팔:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110005",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:종근당명작코큐텐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110019",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:알부스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110026",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:바이탈NMN퀘르세틴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110029",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:명품NMN프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110120",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:어린리즈저분자콜라겐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110124",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비오틴어린콜라겐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110132",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:리핏어린저분자피쉬콜라겐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110141",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:그린프로폴리스40:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110146",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:면역앤포르테:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110151",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:유한m면역앤프로폴리스아연플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110155",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:코큐텐아연셀렌프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110159",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:허브쵸크에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110219",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:매직리얼허브:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110224",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:동성허브칼라2호:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110130",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:에버콜라겐인앤업플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110232",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:창포휴허브:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110336",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:케어리브L:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110338",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:케어리브라이언:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110350",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:밴드닥터소프트스킨일반:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110402",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마데카슴윤밴드키즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110403",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마데카습윤밴드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110416",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F일반용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110417",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110418",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F대형:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110419",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F소형큐티:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110420",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F원형:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110421",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F발뒤꿈치용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110424",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F 가족용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110425",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F관절용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110426",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반F손끝용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110436",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:큐어반H스팟:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110456",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담서포트발목튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110457",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담튼튼손목튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110430",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:큐어반A방수(표준형):RuntimeError;search:큐어반a방수:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110431",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:큐어반A방수(대형):RuntimeError;search:큐어반a방수:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110459",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담서포트무릎튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110460",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담서포트팔꿈치튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110502",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담튼튼엄지튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110503",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맨담골프테니스엘보튼튼프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110511",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:반테린코와서손목L:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110512",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:반테린코와서포터손목M:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110524",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아나파롤테이프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110525",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이동국테이핑:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110528",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:웰업엠앰엠테이프와이:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110534",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:메디큐어롤반창고중령:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110543",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컴배트 개미:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110546",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컴배트 작은바퀴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110608",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:클리덴트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110613",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:폴리덴트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110604",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:쿨티아토탈케어가글액:RuntimeError;search:쿨티아토탈케어가글:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110627",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:가그린 후레쉬라임:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110707",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:관절팔팔:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110709",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:7일의보스웰리아:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110713",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:관절애MSM:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110722",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:스트롱조인트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110621",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:인사덴트나이트의치세정제:RuntimeError;search:인사덴트나이트의치세:RuntimeError;search:인사덴트나이트의치세정:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110725",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:스트롱조인트에프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110732",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엠에스엠포르테:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110734",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:코랄칼슘마그네슘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110618",
+      "status": "not_applicable",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:인사덴트교정기세정제:RuntimeError;search:인사덴트교정기세:RuntimeError;search:인사덴트교정:RuntimeError;search:인사덴트교:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110748",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:명품난각막프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110751",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜관절건강엔타마플렉스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110755",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜관절건강엔MSM&NAG:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110817",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맥스콘드로이틴1200:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110820",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:소연골콘드로이친1200맥스플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110803",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:조인탑600:RuntimeError;search:조인탑600정:RuntimeError;search:조인탑600정 일양약품:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110922",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:앗센액:RuntimeError;search:앗센액 유니메드제약:RuntimeError;search:앗센:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110932",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹십자 하루케어 밀크씨슬:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110925",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:이뮤골드액:RuntimeError;search:이뮤골드액 고려제약:RuntimeError;search:이뮤골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110942",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:리포조말 글루타치온 셀렌:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110952",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프리미엄리버시마린:RuntimeError"
+    },
+    {
+      "document_id": "20250812_110955",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:쓸기담:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111018",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:우루샷정:RuntimeError;search:우루샷:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111110",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:칼륨메리로트밸런스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111123",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜두뇌인지력엔:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111135",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:기넥슨에프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111138",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마그징코플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111151",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:징코폴리시아:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111154",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:징코넥신:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111209",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:써큐란알파:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111226",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:대웅징코샷:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111229",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:브레인하이큐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111237",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:5070먼역비타민:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111551",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:마그비액티브:RuntimeError;search:마그비액:RuntimeError;search:마그비:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111802",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:지엘세티리진:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111811",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:알러나딘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111814",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:캐롤에프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111901",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:이지엔6이브(병):RuntimeError;search:이지엔6이브:RuntimeError"
+    },
+    {
+      "document_id": "20250812_111904",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:탁센(나프록센):RuntimeError;search:탁센:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112153",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:홈키파엑파에어졸:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112150",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:모스케어싹액:RuntimeError;search:모스케어싹:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112156",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:신신모스키토아웃도어에어로솔:RuntimeError;search:신신모스키토아웃도어:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112336",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:무통환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112340",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:해천환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112347",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:보화소합원(소환):RuntimeError;search:보화소합원:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112224",
+      "status": "not_applicable",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:영국산비타민c500mg:RuntimeError;search:영국산:RuntimeError;search:영국:RuntimeError;search:영국산비타민c:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112437",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:다나옴액티브엽산:RuntimeError;search:다나옴액:RuntimeError;search:다나옴:RuntimeError;search:다나옴액티브엽:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112455",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:디어미T:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112542",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:니코틴엘30:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112549",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:니코틴엘1mg로젠즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112552",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:니코틴엘2mg:RuntimeError;search:니코틴엘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112646",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:위평원과립:RuntimeError;search:위평원:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112655",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:청상기가환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112658",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:한솔갈근탕:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112701",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:기가천과립:RuntimeError;search:기가천:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112703",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:맥기천과립:RuntimeError;search:맥기천:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112717",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:연통환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112736",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:해농정:RuntimeError;search:해농:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112812",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아이월드을치환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112817",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:한풍올가에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112814",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:맥기원과립:RuntimeError;search:맥기원:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112826",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:치골단:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112857",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비트콜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112915",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:경남보감탕액:RuntimeError;search:경남보감탕:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112920",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:일양정정보환:RuntimeError;search:일양정:RuntimeError;search:일양:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112930",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:헤파신:RuntimeError"
+    },
+    {
+      "document_id": "20250812_112932",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:포박신:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113116",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:오라센스:RuntimeError;search:오라센스액:RuntimeError;search:오라센스액 동국제약:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113126",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:콜대원코나프레쉬나잘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113129",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:코마키텐큐스프레이:RuntimeError;search:코마키텐큐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113132",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:코마키텐스프레이:RuntimeError;search:코마키텐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113138",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:오트리빈베이비:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113143",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:오트리빈 0.05%:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113147",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:오트리빈에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113149",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:피지오머비강세척액젯노즐:RuntimeError;search:피지오머비강세척액:RuntimeError;search:피지오머비강세척:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113152",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:피지오머비강세척액스프레이:RuntimeError;search:피지오머비강세척액:RuntimeError;search:피지오머비강세척:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113206",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:포비돈스틱스왑액:RuntimeError;search:포비돈스틱스왑:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113208",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:헥사메딘액:RuntimeError;search:헥사메딘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113230",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:그린나잘스프레이:RuntimeError;search:그린:RuntimeError;search:그린나잘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113313",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아이다움 실리콘 투약병:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113308",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:파인큐아세트펜시럽:RuntimeError;search:파인큐아세트펜시럽 대원바이오텍:RuntimeError;search:파인큐아세트펜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113334",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:어린이 부루펜시럽:RuntimeError;search:부루펜시럽:RuntimeError;search:어린이부루펜:RuntimeError;search:부루펜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113347",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:카네스탄산제:RuntimeError;search:카네스탄:RuntimeError;search:카네스탄산:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113352",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:세네폴에스액:RuntimeError;search:세네폴에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113403",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:잇치:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113405",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:잇치 프로폴리스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113458",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엑소데릴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113556",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:콜대원키즈시럽:RuntimeError;search:콜대원키즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113504",
+      "status": "review_required",
+      "queries": 4,
+      "candidates": 1,
+      "error": "search:터비뉴원스외용액:RuntimeError;search:터비뉴원스외용액 동아제약:RuntimeError;search:터비뉴원스:RuntimeError;search:터비뉴원스외용:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113558",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:콜대원키즈이부펜시럽:RuntimeError;search:콜대원키즈이부펜시럽 대원제약:RuntimeError;search:콜대원키즈이부펜:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113600",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:콜대원키즈노즈시럽:RuntimeError;search:콜대원키즈노즈시럽 대원제약:RuntimeError;search:콜대원키즈노즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113603",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:콜대원키즈콜드시럽:RuntimeError;search:콜대원키즈콜드시럽 대원제약:RuntimeError;search:콜대원키즈콜드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113611",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:그린노즈에스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113614",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:모드콜키즈노즈시럽:RuntimeError;search:모드콜키즈노즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113616",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:모드콜키즈코프시럽:RuntimeError;search:모드콜키즈코프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113618",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:모드콜키즈콜드시럽:RuntimeError;search:모드콜키즈콜드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113630",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:이큐펜키즈A(이브프로펜):RuntimeError;search:이큐펜키즈a:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113631",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:이큐펜키즈(아세트아미노펜):RuntimeError;search:이큐펜키즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113733",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:절효환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113738",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:광동우황청심환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113752",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:안정액:RuntimeError;search:안정:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113754",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:게리단:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113801",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:플레인:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113812",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:보인환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113824",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:한신갈근탕:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113827",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:한신은교산:RuntimeError;search:한신은교:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113830",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:한신패독산:RuntimeError;search:한신패독:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113840",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:한풍패독산:RuntimeError;search:한풍패독:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113925",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:로이디펜규:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113929",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:로페리놀S10캡슐:RuntimeError;search:로페리놀s10:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113951",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:정로환에프:RuntimeError"
+    },
+    {
+      "document_id": "20250812_113955",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:포타겔현탁액:RuntimeError;search:포타겔:RuntimeError;search:포타:RuntimeError;search:포타겔현탁:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114000",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:로페라미드캡슐:RuntimeError;search:로페라미드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114016",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:미야리산u:RuntimeError;search:미야리산:RuntimeError;search:미야리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114012",
+      "status": "review_required",
+      "queries": 4,
+      "candidates": 1,
+      "error": "search:백초시럽플러스:RuntimeError;search:백초시럽플러스 녹십자:RuntimeError;search:백초시럽:RuntimeError;search:백초:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114031",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:덴파사:RuntimeError;search:덴파사캡슐:RuntimeError;search:덴파사캡슐 동아제약:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114037",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:유한덴티케어플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114035",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:덴타탁액티브:RuntimeError;search:덴타탁액:RuntimeError;search:덴타탁:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114054",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로탁스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114122",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이가엔탑플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114124",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이엔탁스프로:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114127",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아이간유연질:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114357",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:트라부틴100mg:RuntimeError;search:트라부틴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114359",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:트라부틴200mg:RuntimeError;search:트라부틴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114411",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:커버든액상과립:RuntimeError;search:커버든액상:RuntimeError;search:커버든액:RuntimeError;search:커버든:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114418",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:반사신:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114422",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:스모타큐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114424",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:스토마큐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114430",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:숙신환:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114437",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:판키아제:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114439",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:신일트리메부틴:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114504",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:건양탕:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114518",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:파모트리정:RuntimeError;search:파모트리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114511",
+      "status": "review_required",
+      "queries": 5,
+      "candidates": 1,
+      "error": "search:트리겔현탁액:RuntimeError;search:트리겔현탁액 대원제약:RuntimeError;search:트리겔:RuntimeError;search:트리:RuntimeError;search:트리겔현탁:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114520",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:트리겔:RuntimeError;search:트리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114533",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:겔포스엠:RuntimeError;search:겔포스엠현탁액:RuntimeError;search:겔포스엠현탁액 보령:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114551",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:스타빅현탁액:RuntimeError;search:스타빅:RuntimeError;search:스타빅현탁:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114655",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:1436품:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114707",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:훼마틴에이:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114657",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:페리비타:RuntimeError;search:페리비타캡슐:RuntimeError;search:페리비타캡슐 광동제약:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114745",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:사노바:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114737",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:트리플리얼리체크(임테기):RuntimeError;search:트리플리얼리체크:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114756",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:HONEY GEL:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114800",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:자이젤리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114805",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:페미라이드플러스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114808",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로캄 클레어진 여성청결제:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114747",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:사노바겔:RuntimeError;search:사노바겔 명문제약:RuntimeError;search:사노바:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114826",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:그린티다이어트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114802",
+      "status": "review_required",
+      "queries": 4,
+      "candidates": 1,
+      "error": "search:지노베타딘질세정액:RuntimeError;search:지노베타딘질세정액 한국파마:RuntimeError;search:지노베타딘질세정:RuntimeError;search:지노베타딘질세:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114924",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:경목골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114911",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:밀크씨슬액세트:RuntimeError;search:밀크씨슬액:RuntimeError;search:밀크씨슬:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114928",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:파워텐골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114918",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:상황산삼액:RuntimeError;search:상황산삼:RuntimeError;search:상황산:RuntimeError;search:상황:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114935",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:셀티아이베이비:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114938",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:셀티아이키즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114941",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:셀티아이 골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_114943",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:셀티아이 맘:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115001",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:글루타치온실크알부민:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115003",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:황제진상보:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115010",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:취어스액:RuntimeError;search:취어스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115050",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:삼진본경옥고:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115110",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:경옥침향세트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115141",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:롱키즈하이연조엑스:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115144",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:메가트루633:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115206",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:잘크토닉:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115209",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:데이스트:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115225",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:젤리잘크론(망고):RuntimeError;search:젤리잘크론:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115226",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:젤리잘크론(블루베이):RuntimeError;search:젤리잘크론:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115232",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:미량키즈아이쑥쑥:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115242",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:액상 미네랄 키드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115247",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜락토챔피언:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115248",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:더팜이지바울베베키즈:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115254",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:티니핑홍삼젤리:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115259",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로팜칼슘챔피언:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115304",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬판오메가챔피언:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115314",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:키드큐:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115344",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:블랙마카애골드:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115421",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:일동쏘팔메토코사놀프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115426",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:뉴올업쏘팔메토포르테:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115438",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:쏘팔메토옥타코사놀메가프라임:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115445",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹십자 하루케어 쏘팔메토:RuntimeError"
+    },
+    {
+      "document_id": "20250812_115450",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:젤세라프리미엄쏘팔메토:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110232",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엉겅퀴:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110235",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:녹용보:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110238",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:건강애:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110248",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:쿠퍼스깨곰:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110242",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:구론산:RuntimeError;search:구론:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110250",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:주당의비결:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110254",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:헛개컨디션:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110257",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컨디션스틱그린애플:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110259",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컨디션스틱자두:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110300",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컨디션스틱망고:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110306",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:상쾌환:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110309",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:상쾌환부스터:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110312",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:헛개땡큐골드:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110316",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:광동헛개파워:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110317",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:헛개숙취세트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110323",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:헛개숙취세트10EA:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110356",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:닥터리뷰피디PDRN크림:RuntimeError;search:닥터리뷰피디pdrn:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110402",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:리쥬닉피디알엔리페어크림:RuntimeError;search:리쥬닉피디알엔리페어:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110414",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:리쥬올 레티노텔라세럼:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110359",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:닥터리뷰피디PDRN크림10EA:RuntimeError;search:닥터리뷰피디pdrn크림:RuntimeError;search:닥터리뷰피디pdrn:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110416",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:리쥬올세라마이드베리어크림:RuntimeError;search:리쥬올세라마이드베리어:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110406",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:리쥬닉피디알엔리페어크림10EA:RuntimeError;search:리쥬닉피디알엔리페어크림:RuntimeError;search:리쥬닉피디알엔리페어:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110422",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:리쥬올 PDRN크림:RuntimeError;search:리쥬올pdrn:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110426",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:프로캄레드엑스크림:RuntimeError;search:프로캄레드엑스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110428",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:후시메드 마스크팩:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110434",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로캄EGFPDRN시너지마스크:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110453",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아르베라 PDRN리쥬샷부스터:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110455",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아르베라 PDRN리쥬샷세럼:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110456",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아르베라 포포파우더워시:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110451",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:아르베라 PDRN리쥬샷크림:RuntimeError;search:아르베라pdrn리쥬샷:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110508",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이데베논 프레스티지앰플:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110518",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:셀비엔 글루라치온 백옥앰플:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110519",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:샐비엔 글루타치온 백옥크림:RuntimeError;search:샐비엔글루타치온백옥:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110533",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:에크온 딥 클렌징 폼:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110521",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:나티아 PDRN다이렉트 필름:RuntimeError;search:나티아pdrn다이렉트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110528",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:프로캄 베베 베이비로션:RuntimeError;search:프로캄베베베이비:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110530",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:프로캄 베베 베이비크림:RuntimeError;search:프로캄베베베이비:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110845",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:풀업373다이렉트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110848",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:더다른아르기닌오르니틴:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110858",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:알콘달콘소프트핑거가드:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110915",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:윙크리얼핏:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110918",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:듀럭스러브:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110940",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:듀럭스익사이트미:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110842",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:파워겔1g:RuntimeError;search:파워겔:RuntimeError;search:파워:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110942",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:듀렉스플레쥬어미:RuntimeError"
+    },
+    {
+      "document_id": "20260129_110946",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:듀렉스필울트라씬:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111224",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:판토모나 비오틴하이퍼포머:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111242",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:볼두민:RuntimeError;search:볼두민캡슐:RuntimeError;search:볼두민캡슐 제이더블유중외제약:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111250",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:카필러스:RuntimeError;search:카필러스캡슐:RuntimeError;search:카필러스캡슐 동아제약:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111258",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마이녹실:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111302",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:마이녹실S캡슐:RuntimeError;search:마이녹실s:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111318",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:맥스파워비오틴:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111340",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:판시딜(미녹시딜):RuntimeError;search:판시딜:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111405",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:유한 미녹펜겔5%(미녹시딜):RuntimeError;search:유한 미녹펜겔5%:RuntimeError;search:유한미녹펜겔:RuntimeError;search:유한미녹펜:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111412",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마이녹실5%:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111414",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:모발렌5%폼:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111429",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:일동모발솔루션프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111437",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111453",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마이녹실5%:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111459",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:마이녹실5%:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111506",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엘크라넬:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111516",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:판시딜3%(미녹시딜)비오딜정:RuntimeError;search:판시딜3%비오딜정:RuntimeError;search:판시딜3%(미녹시딜)비오딜:RuntimeError;search:판시딜3비오딜:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111529",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:동성미녹스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111721",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:용표우황청심원(사향)변뱡:RuntimeError;search:용표우황청심원변뱡:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111718",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:광동우황청심원(사향)액:RuntimeError;search:광동우황청심원액:RuntimeError;search:광동우황청심원(사향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111725",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:광동우황청심원(영묘향)액:RuntimeError;search:광동우황청심원액:RuntimeError;search:광동우황청심원(영묘향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111727",
+      "status": "not_found",
+      "queries": 4,
+      "candidates": 0,
+      "error": "search:광동우황청심원(영묘향)액:RuntimeError;search:광동우황청심원액:RuntimeError;search:광동우황청심원(영묘향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112014",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:컬처렐 헬스앤웰니스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112022",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:와이즈바이옴프로:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111729",
+      "status": "not_found",
+      "queries": 5,
+      "candidates": 0,
+      "error": "search:광동우황청심원(영묘향)액50ml:RuntimeError;search:광동우황청심원액50ml:RuntimeError;search:광동우황청심원(영묘향)액:RuntimeError;search:광동우황청심원(영묘향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112026",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:피비골드플러스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112016",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:상쾌한구강유산균:RuntimeError;search:상쾌한구강유산:RuntimeError;search:상쾌한구강유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112030",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜질건강엔리스펙타&리노밸런스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112032",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:진 프로바이오틱스 플러스30:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111732",
+      "status": "not_found",
+      "queries": 5,
+      "candidates": 0,
+      "error": "search:광동우황청심원(영묘향)액30ml:RuntimeError;search:광동우황청심원액30ml:RuntimeError;search:광동우황청심원(영묘향)액:RuntimeError;search:광동우황청심원(영묘향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_111735",
+      "status": "not_found",
+      "queries": 5,
+      "candidates": 0,
+      "error": "search:광동우황청심원(사향)액50ml:RuntimeError;search:광동우황청심원액50ml:RuntimeError;search:광동우황청심원(사향)액:RuntimeError;search:광동우황청심원(사향):RuntimeError;search:광동우황청심원:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112042",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬판 싱글맥스 프로바이오틱스 50:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112046",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:트루팍 생프로바이오틱스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112050",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜 프로바이오틱스아연:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112053",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:하루 밸런스 프로바이오틱스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112100",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:올케어장용성프로바이오틱스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112103",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로바이오틱스프라임:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112040",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:리포좀 생유산균:RuntimeError;search:리포좀생유산:RuntimeError;search:리포좀생유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112109",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프로바이오틱스맥스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112117",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:야쿠르트 프로바이오틱스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112036",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:프리미엄 뉴케어 유산균 100억:RuntimeError;search:프리미엄뉴케어유산:RuntimeError;search:프리미엄뉴케어유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112120",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:야쿠르트 프로바이오틱스 혈당콜레스테롤케어:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112106",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:맥스바이오틱스 생유산균:RuntimeError;search:맥스바이오틱스생유산:RuntimeError;search:맥스바이오틱스생유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112142",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프리락토 프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112113",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:락토핏생유산균팜:RuntimeError;search:락토핏생유산:RuntimeError;search:락토핏생유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112125",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:바이오리브 100억 유산균:RuntimeError;search:바이오리브100억유산:RuntimeError;search:바이오리브100억유:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112151",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프리락토 더포스트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112134",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:매야리산U:RuntimeError;search:매야리산:RuntimeError;search:매야리:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112145",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:프리락토 시그니처키즈2g:RuntimeError;search:프리락토시그니처키즈:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112148",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:프리락토 시그니처2g:RuntimeError;search:프리락토시그니처:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112348",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:쌍화탕:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112354",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:경남보강탕액:RuntimeError;search:경남보강탕:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112356",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:경남보감탕노즈액:RuntimeError;search:경남보감탕노즈:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112359",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:경남보감탕코프액:RuntimeError;search:경남보감탕코프:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112351",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:갈근탕종합감기약:RuntimeError;search:갈근탕:RuntimeError;search:갈근탕종합:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112608",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:안정액50ml:RuntimeError;search:안정액:RuntimeError;search:안정:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112629",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:금왕심단:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112631",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:천왕안심환:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112621",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:아졸정25mg:RuntimeError;search:아졸정:RuntimeError;search:아졸:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112636",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:온유로케어나이트루틴 식물성멜라토닌:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112638",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:순심:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112642",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:온유로케어 릴렉스루틴 테아닌:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112644",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:알지오골드15ml:RuntimeError;search:알지오골드:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112654",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:정우안심액:RuntimeError;search:정우안심:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112656",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:천심액15ml:RuntimeError;search:천심액:RuntimeError;search:천심:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112658",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:평온액20ML:RuntimeError;search:평온액:RuntimeError;search:평온:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112707",
+      "status": "not_found",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:용표안신액:RuntimeError;search:용표안신:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112701",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:안정액50ml:RuntimeError;search:안정액:RuntimeError;search:안정:RuntimeError"
+    },
+    {
+      "document_id": "20260129_112710",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:광동 마음정액:RuntimeError;search:광동마음정:RuntimeError;search:광동마음:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113153",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:비라밸:RuntimeError;search:비라밸정:RuntimeError;search:비라밸정 동화약품:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113223",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:멕타:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113241",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:액세라민엑소:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113219",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:메가비텐액티브:RuntimeError;search:메가비텐액:RuntimeError;search:메가비텐:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113244",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:액세라민비:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113250",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엑세라민엔:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113301",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비맥스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113305",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비멕스메타:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113308",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:비맥스액티브:RuntimeError;search:비맥스액:RuntimeError;search:비맥스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113323",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:벤포벨B:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113413",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:메가트루633:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113509",
+      "status": "review_required",
+      "queries": 3,
+      "candidates": 1,
+      "error": "search:임팩타민 원스정:RuntimeError;search:임팩타민원스정 대웅제약:RuntimeError;search:임팩타민원스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113524",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:울트라맥스메가B:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113532",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성비타민B컴플렉스:RuntimeError;search:비타민b컴플렉스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113537",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:액티넘EX:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113539",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:액티넘EX골드:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113619",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타씬 프로테엠:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113630",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:올인원 뉴트리썬 이뮨 데일리팩:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113633",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프롬팜 싱글맥스 비타민:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113635",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:프레스샷:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113648",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:경남데일리츄어블:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113651",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성비타민D아연:RuntimeError;search:비타민d아연:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113703",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:썬비타민D500U:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113649",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성멀티비타민미네랄:RuntimeError;search:멀티비타민미네랄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113706",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:츄어블 비타민D 4000IU:RuntimeError;search:츄어블비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113710",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:하루케어비타민D 4000IU:RuntimeError;search:하루케어비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113712",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:유한 비타민D 2000IU:RuntimeError;search:유한비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113715",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:비타민D 2000IU:RuntimeError;search:비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113716",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:비타민D3 1000IU:RuntimeError;search:비타민d:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113732",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:하루루틴미타민C:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113736",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타블로썸 메가비타민C3000:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113724",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:유한 비타민C정:RuntimeError;search:유한비타민c:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113742",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:데일리 비타민C 골드 프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113748",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:리포좀비타민C:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113744",
+      "status": "not_applicable",
+      "queries": 2,
+      "candidates": 0,
+      "error": "search:식물성비타민C 셀레늄:RuntimeError;search:비타민c셀레늄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113739",
+      "status": "not_applicable",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:영국산 비타민C 3000:RuntimeError;search:영국산:RuntimeError;search:영국:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113801",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:하루케어 멀티비타민 미네랄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113832",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:멀티비타민 이뮨부스트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113838",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:멀티비타민 이뮨부스트:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113939",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:이뮨엔 비타민미네랄 듀얼샷:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113942",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:데일리 에너지 올인원 끌올팩:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113946",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:메가트루골:RuntimeError"
+    },
+    {
+      "document_id": "20260129_113958",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:레모나:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114007",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:속편한비타민C프리미엄:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114009",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엘리나C이뮨:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114011",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:엘리나C:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114024",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:장용비타민C복합제:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114030",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타그란비타민C츄어블 사과맛:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114033",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타그란비타민C츄어블 포도맛:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114042",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타그란비타민C츄어블 라즈베리맛:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114045",
+      "status": "not_applicable",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타그란비타민C츄어블 레몬맛:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114051",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:비타 바이탈씨:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114054",
+      "status": "not_found",
+      "queries": 3,
+      "candidates": 0,
+      "error": "search:유한 액티브셀렌효모:RuntimeError;search:유한액:RuntimeError;search:유한:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114102",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:에너쎌 아연:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114110",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:쎈탁스:RuntimeError"
+    },
+    {
+      "document_id": "20260129_114113",
+      "status": "not_found",
+      "queries": 1,
+      "candidates": 0,
+      "error": "search:아이브라 아연:RuntimeError"
+    }
+  ],
+  "input_sha256": "cff25fc1301cd77176c9c58064cfa1dbe8342e4c1417c9768c3ef5bf6156cc90",
+  "output_sha256": "fd46d60637cfb5ebddad1ac48a5e3e4c75c43f1b0726a6ca79561c27c52a50d7"
+}
