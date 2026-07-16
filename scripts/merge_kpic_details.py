@@ -4,11 +4,16 @@ import argparse
 import csv
 import glob
 import json
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from scripts.collect_kpic_images import safe_name_match
 
 
 DETAIL_FIELDS = (
@@ -47,6 +52,17 @@ DETAIL_FIELDS = (
     "official_section_evidence",
     "official_additional_data",
     "official_images",
+)
+
+OFFICIAL_IDENTITY_FIELDS = (
+    "official_item_name",
+    "official_manufacturer",
+    "official_item_seq",
+    "official_source_type",
+    "official_source_url",
+    "official_match_score",
+    "official_checked_at",
+    "official_domain",
 )
 
 
@@ -139,12 +155,48 @@ def official_images(content: dict[str, Any], source_url: str, checked_at: str) -
             }
         )
 
-    add(images.get("primary_url"), "package" if images.get("primary_type") != "pill" else "pill")
+    primary_type = clean_text(images.get("primary_type")).lower()
+    if primary_type not in {"pill", "identification"}:
+        add(images.get("primary_url"), "package")
     for url in images.get("pack_urls") or []:
         add(url, "package")
+    if primary_type in {"pill", "identification"}:
+        add(images.get("primary_url"), "pill")
     for url in images.get("identification_urls") or []:
         add(url, "pill")
     return output
+
+
+def clear_kpic_enrichment(product: dict[str, Any]) -> None:
+    source_type = clean_text(product.get("official_source_type"))
+    source_url = clean_text(product.get("official_source_url"))
+    domain = clean_text(product.get("official_domain"))
+    stale_unidentified_details = (
+        bool(product.get("official_content_status"))
+        and product.get("official_match_status") != "confirmed"
+    )
+    is_kpic = (
+        "약학정보원" in source_type
+        or "health.kr" in source_url
+        or domain == "health.kr"
+        or stale_unidentified_details
+    )
+    if not is_kpic:
+        return
+    for field in OFFICIAL_IDENTITY_FIELDS + DETAIL_FIELDS + ("official_content_status",):
+        product.pop(field, None)
+    if product.get("image_rights_status") == "official_source_preview":
+        product.update(
+            {
+                "image_kind": "",
+                "image_url": "",
+                "image_source_url": "",
+                "image_rights_status": "미확인",
+                "image_checked_at": "",
+            }
+        )
+    product["official_match_status"] = "pending"
+    product["enrichment_status"] = "pending"
 
 
 def record_priority(record: dict[str, Any]) -> tuple[int, int, int]:
@@ -173,8 +225,13 @@ def choose_records(part_paths: list[Path]) -> dict[str, dict[str, Any]]:
 def merge_product(product: dict[str, Any], record: dict[str, Any]) -> str:
     status = clean_text(record.get("status"))
     score = int(record.get("match_score") or 0)
-    if status == "review_required" or score < 96:
-        for field in DETAIL_FIELDS + ("official_content_status",):
+    names_are_safe = safe_name_match(
+        product.get("name"),
+        record.get("kpic_name"),
+        product.get("capacity"),
+    )
+    if status == "review_required" or score < 96 or not names_are_safe:
+        for field in OFFICIAL_IDENTITY_FIELDS + DETAIL_FIELDS + ("official_content_status",):
             product.pop(field, None)
         if product.get("image_rights_status") == "official_source_preview":
             product.update(
@@ -275,6 +332,8 @@ def merge_files(input_path: Path, part_paths: list[Path]) -> tuple[list[dict[str
     records = choose_records(part_paths)
     counts: Counter[str] = Counter()
     product_ids = {clean_text(row.get("id") or row.get("document_id")) for row in products}
+    for product in products:
+        clear_kpic_enrichment(product)
     for product in products:
         product_id = clean_text(product.get("id") or product.get("document_id"))
         record = records.get(product_id)

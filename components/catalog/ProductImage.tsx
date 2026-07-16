@@ -9,8 +9,8 @@ import type { Product } from "@/types/catalog";
 export function approvedImageUrl(product: Product) {
   if (!product.image_url) return "";
   const rights = String(product.image_rights_status || "").toLowerCase();
-  const allowed = ["approved", "verified", "official", "official_source_preview", "source_preview", "public_domain", "open_license", "재사용 가능", "공공누리", "공식 공개"];
-  if (!allowed.some((status) => rights.includes(status))) return "";
+  const allowed = new Set(["approved", "verified", "official", "official_source_preview", "public_domain", "open_license", "재사용 가능", "공공누리", "공식 공개"]);
+  if (!allowed.has(rights)) return "";
   try {
     const url = new URL(product.image_url);
     return url.protocol === "https:" ? url.href : "";

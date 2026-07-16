@@ -5,6 +5,7 @@ import copy
 import html
 import json
 import re
+import sys
 import time
 from collections import Counter
 from datetime import datetime, timezone
@@ -14,6 +15,10 @@ from typing import Any
 from urllib.parse import quote
 
 import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from scripts.collect_kpic_images import safe_name_match
 
 
 BASE_URL = "https://health.kr"
@@ -297,11 +302,13 @@ def eligible(
     product: dict[str, Any],
     minimum_score: int,
 ) -> bool:
-    score = max(int(match.get("suggestion_score") or 0), int(match.get("match_score") or 0))
+    score = int(match.get("match_score") or 0)
     code = str(match.get("kpic_code") or "")
     return (
         bool(code)
         and score >= minimum_score
+        and match.get("status") == "confirmed"
+        and safe_name_match(product.get("name"), match.get("kpic_name"), product.get("capacity"))
         and product.get("official_match_status") == "confirmed"
         and str(product.get("official_item_seq") or "") == code
         and bool(product.get("official_source_url"))
@@ -406,7 +413,7 @@ def collect(args: argparse.Namespace) -> dict[str, Any]:
         product = products_by_id.get(product_id, {})
         catalog_name = str(product.get("name") or match.get("catalog_name") or "").strip()
         kpic_name = str(match.get("kpic_name") or "").strip()
-        score = max(int(match.get("suggestion_score") or 0), int(match.get("match_score") or 0))
+        score = int(match.get("match_score") or 0)
 
         existing = records_by_id.get(product_id)
         if (
@@ -457,7 +464,10 @@ def collect(args: argparse.Namespace) -> dict[str, Any]:
                 code_cache[code] = (copy.deepcopy(content), copy.deepcopy(metadata))
 
             ajax_name = str(metadata.get("drug_name") or "")
-            if normalize_name(ajax_name) != normalize_name(kpic_name):
+            if (
+                normalize_name(ajax_name) != normalize_name(kpic_name)
+                or not safe_name_match(catalog_name, ajax_name, product.get("capacity"))
+            ):
                 record["status"] = "review_required"
                 record["review_reason"] = "매칭 파일의 제품명과 약학정보원 상세 응답의 제품명이 일치하지 않음"
                 record["kpic_name"] = ajax_name or kpic_name

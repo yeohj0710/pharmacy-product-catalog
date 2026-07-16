@@ -5,22 +5,22 @@
     "end_exclusive": 776,
     "total": 258
   },
-  "source_with_kpic_code": 101,
+  "source_with_kpic_code": 121,
   "minimum_name_score": 96,
-  "records": 101,
-  "collected": 73,
-  "review_required": 28,
+  "records": 121,
+  "collected": 80,
+  "review_required": 41,
   "errors": 0,
   "field_counts": {
-    "ingredients": 73,
-    "efficacy": 73,
-    "dosage": 73,
-    "precautions": 73,
-    "storage": 73,
-    "manufacturer": 73,
-    "dosage_form": 73,
-    "route": 73,
-    "package": 73
+    "ingredients": 80,
+    "efficacy": 80,
+    "dosage": 80,
+    "precautions": 80,
+    "storage": 80,
+    "manufacturer": 80,
+    "dosage_form": 80,
+    "route": 80,
+    "package": 80
   },
   "field_coverage_percent": {
     "ingredients": 100.0,
@@ -33,7 +33,7 @@
     "route": 100.0,
     "package": 100.0
   },
-  "primary_image_count": 68,
-  "primary_image_coverage_percent": 93.2,
-  "updated_at": "2026-07-15T19:45:21+09:00"
+  "primary_image_count": 78,
+  "primary_image_coverage_percent": 97.5,
+  "updated_at": "2026-07-16T09:32:26+09:00"
 }

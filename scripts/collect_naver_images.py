@@ -57,6 +57,10 @@ def safe_candidate(catalog_name: str, candidate: dict[str, Any]) -> bool:
     return len(target) >= 5 and target in title
 
 
+def automatic_candidate_status(candidate: dict[str, Any]) -> str:
+    return "review_required" if candidate.get("image_url") else "not_found"
+
+
 class NaverImageClient:
     def __init__(self, delay: float, timeout: float = 20.0, retries: int = 3) -> None:
         self.delay = max(delay, 0.0)
@@ -121,7 +125,7 @@ def collect(args: argparse.Namespace) -> dict[str, Any]:
             if candidates:
                 candidate = max(candidates, key=lambda row: (safe_candidate(name, row), int(row["match_score"]), -int(row["rank"])))
                 record.update(candidate)
-                record["status"] = "confirmed" if safe_candidate(name, candidate) else "review_required"
+                record["status"] = automatic_candidate_status(candidate)
         except RuntimeError as exc:
             record["status"] = "error"
             record["error"] = str(exc)

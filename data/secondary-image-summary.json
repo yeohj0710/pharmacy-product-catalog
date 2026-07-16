@@ -2,12 +2,11 @@
   "product_count": 776,
   "record_count": 486,
   "status_counts": {
-    "cleared_previous": 256,
-    "linked": 331,
-    "not_linked": 155
+    "not_linked": 446,
+    "already_has_image": 40
   },
-  "image_count": 621,
-  "image_missing_count": 155,
+  "image_count": 269,
+  "image_missing_count": 507,
   "sources": [
     "data/secondary-image-matches.json",
     "data/secondary-image-part-1.json",

@@ -4,7 +4,7 @@ from scripts.merge_secondary_images import merge_images
 
 
 class MergeSecondaryImagesTests(unittest.TestCase):
-    def test_confirmed_secondary_image_is_linked(self):
+    def test_automatic_secondary_image_is_not_linked(self):
         products = [{"id": "p1", "name": "상품"}]
         records = {
             "p1": {
@@ -19,8 +19,27 @@ class MergeSecondaryImagesTests(unittest.TestCase):
             }
         }
         counts = merge_images(products, records)
+        self.assertEqual(counts["not_linked"], 1)
+        self.assertNotIn("image_url", products[0])
+
+    def test_manually_verified_secondary_image_is_linked(self):
+        products = [{"id": "p1", "name": "테스트상품"}]
+        records = {
+            "p1": {
+                "catalog_product_id": "p1",
+                "catalog_name": "테스트상품",
+                "candidate_name": "테스트상품 30정",
+                "status": "confirmed",
+                "manual_verified": True,
+                "visual_verified": True,
+                "image_url": "https://img.example.com/product.jpg",
+                "source_url": "https://example.com/product",
+                "checked_at": "2026-07-15T00:00:00+09:00",
+            }
+        }
+        counts = merge_images(products, records)
         self.assertEqual(counts["linked"], 1)
-        self.assertEqual(products[0]["image_rights_status"], "source_preview")
+        self.assertEqual(products[0]["image_rights_status"], "verified")
 
     def test_existing_official_image_is_preserved(self):
         products = [{"id": "p1", "image_url": "https://common.health.kr/official.jpg"}]
@@ -50,7 +69,7 @@ class MergeSecondaryImagesTests(unittest.TestCase):
         self.assertEqual(counts["not_linked"], 1)
         self.assertNotIn("image_url", products[0])
 
-    def test_naver_exact_title_containment_is_linked(self):
+    def test_naver_exact_title_containment_is_not_linked_without_manual_verification(self):
         products = [{"id": "p1", "name": "테스트 상품"}]
         records = {
             "p1": {
@@ -64,7 +83,8 @@ class MergeSecondaryImagesTests(unittest.TestCase):
             }
         }
         counts = merge_images(products, records)
-        self.assertEqual(counts["linked"], 1)
+        self.assertEqual(counts["not_linked"], 1)
+        self.assertNotIn("image_url", products[0])
 
     def test_previous_unverified_preview_is_cleared(self):
         products = [

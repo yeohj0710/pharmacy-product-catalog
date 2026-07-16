@@ -13,7 +13,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlparse
 from urllib.request import HTTPCookieProcessor, Request, build_opener
 
-from collect_kpic_images import normalize, score_name
+from collect_kpic_images import normalize, safe_name_match, score_name, validated_match_score
 
 
 BASE_URL = "https://health.kr"
@@ -209,7 +209,11 @@ def duplicate_code_conflicts(all_matches: list[dict[str, Any]]) -> set[str]:
     for code, names in by_code.items():
         if len(names) <= 1:
             continue
-        if any(score_name(left, right) < 96 for index, left in enumerate(names) for right in names[index + 1 :]):
+        if any(
+            validated_match_score(left, right) < 96
+            for index, left in enumerate(names)
+            for right in names[index + 1 :]
+        ):
             conflicts.add(code)
     return conflicts
 
@@ -224,6 +228,8 @@ def preliminary_review_reason(
         return "기존 자동 매칭이 검토 대상으로 분류됨"
     if new_score < 96:
         return "새 이름 점수가 96점 미만"
+    if not safe_name_match(catalog_name, kpic_name, row.get("catalog_capacity")):
+        return "상품명·함량·제형 또는 괄호 수식어가 안전하게 일치하지 않음"
     if code in conflicting_codes:
         return "서로 다른 상품명이 동일한 약학정보원 코드에 매칭됨"
     if forms_conflict(catalog_name, kpic_name):
@@ -328,6 +334,10 @@ def detail_record(
         raise RuntimeError("상세 페이지 또는 JSON의 제품 코드가 요청 코드와 다름")
     if score_name(str(row.get("kpic_name") or ""), official_name) < 96:
         raise RuntimeError("검색 결과 제품명과 상세 JSON 제품명이 다름")
+    if not safe_name_match(
+        row.get("catalog_name"), official_name, row.get("catalog_capacity")
+    ):
+        raise RuntimeError("카탈로그 규격과 상세 JSON 제품의 이름·제형이 안전하게 일치하지 않음")
 
     content = build_content(payload, document)
     present_dom_ids = [
@@ -466,8 +476,10 @@ def main() -> int:
     candidates: list[tuple[dict[str, Any], int]] = []
     for row in part:
         code = str(row.get("kpic_code") or "")
-        new_score = score_name(str(row.get("catalog_name") or ""), str(row.get("kpic_name") or ""))
-        if code and new_score >= 96:
+        new_score = validated_match_score(
+            row.get("catalog_name"), row.get("kpic_name"), row.get("catalog_capacity")
+        )
+        if code and row.get("status") == "confirmed" and new_score >= 96:
             candidates.append((row, new_score))
 
     existing: list[dict[str, Any]] = load_json(args.output, [])
@@ -492,7 +504,12 @@ def main() -> int:
         product_id = str(row.get("catalog_product_id") or "")
         prior = records_by_id.get(product_id)
         review_reason = preliminary_review_reason(row, new_score, conflicting_codes)
-        if prior and prior.get("status") == "collected":
+        if (
+            prior
+            and prior.get("status") == "collected"
+            and prior.get("kpic_code") == row.get("kpic_code")
+            and not review_reason
+        ):
             continue
         if prior and prior.get("status") == "review_required" and review_reason:
             continue

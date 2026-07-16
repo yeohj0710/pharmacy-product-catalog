@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from scripts.collect_naver_images import parse_image_results, safe_candidate
+from scripts.collect_naver_images import automatic_candidate_status, parse_image_results, safe_candidate
 
 
 class NaverImageTests(unittest.TestCase):
@@ -20,6 +20,7 @@ class NaverImageTests(unittest.TestCase):
         rows = parse_image_results(document, "테스트 상품")
         self.assertEqual(len(rows), 1)
         self.assertTrue(safe_candidate("테스트 상품", rows[0]))
+        self.assertEqual(automatic_candidate_status(rows[0]), "review_required")
 
     def test_short_ambiguous_name_is_not_safe(self):
         candidate = {"candidate_name": "판피린 프라하 여행", "match_score": 96}

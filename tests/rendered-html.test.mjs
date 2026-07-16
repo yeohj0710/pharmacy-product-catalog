@@ -41,6 +41,7 @@ test("renders the data policy with source and publication limits", async () => {
 const localCatalogUrl = new URL("../public/data/enrichment-queue.json", import.meta.url);
 const globalCssUrl = new URL("../app/globals.css", import.meta.url);
 const productModalUrl = new URL("../components/catalog/ProductModal.tsx", import.meta.url);
+const productImageUrl = new URL("../components/catalog/ProductImage.tsx", import.meta.url);
 const packageJsonUrl = new URL("../package.json", import.meta.url);
 const vercelConfigUrl = new URL("../vercel.json", import.meta.url);
 
@@ -70,6 +71,12 @@ test("product table passes vertical wheel input to the page", async () => {
   assert.match(rule, /overscroll-behavior-x:\s*contain/);
   assert.match(rule, /overscroll-behavior-y:\s*auto/);
   assert.doesNotMatch(rule, /overscroll-behavior:\s*contain/);
+});
+
+test("product image rejects unverified search previews", async () => {
+  const source = await readFile(productImageUrl, "utf8");
+  assert.doesNotMatch(source, /"source_preview"/);
+  assert.match(source, /"official_source_preview"/);
 });
 
 test("generated local catalog keeps every Firestore source field and price", { skip: !existsSync(localCatalogUrl) }, async () => {

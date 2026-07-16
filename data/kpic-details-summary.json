@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-15T19:46:50+09:00",
+  "generated_at": "2026-07-16T09:41:28+09:00",
   "product_count": 776,
-  "detail_record_count": 344,
+  "detail_record_count": 337,
   "status_counts": {
-    "merged": 310,
-    "review_required": 34,
+    "merged": 296,
+    "review_required": 41,
     "orphan_records": 0
   },
-  "complete_detail_count": 310,
-  "official_detail_count": 310,
-  "image_count": 291,
+  "complete_detail_count": 296,
+  "official_detail_count": 296,
+  "image_count": 269,
   "sources": [
     "data/kpic-details-part-1.json",
     "data/kpic-details-part-2.json",

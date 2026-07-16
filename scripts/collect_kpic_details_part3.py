@@ -4,6 +4,7 @@ import argparse
 import html
 import json
 import re
+import sys
 import time
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
@@ -12,6 +13,10 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from scripts.collect_kpic_images import safe_name_match, validated_match_score
 
 
 BASE_URL = "https://health.kr"
@@ -39,26 +44,6 @@ REQUIRED_CONTENT_FIELDS = (
     "route",
     "package",
 )
-MANUAL_REVIEW_REASONS = {
-    531: "catalog_is_saw_palmetto_supplement_but_match_is_tamsulosin_drug",
-    557: "catalog_is_sheet_mask_but_match_is_antibiotic_ointment",
-    587: "catalog_capacity_is_capsules_but_match_is_topical_liquid",
-    588: "catalog_capacity_is_capsules_but_match_is_topical_gel",
-    600: "catalog_capacity_is_60g_but_match_is_180ml_liquid",
-    617: "catalog_is_50ml_liquid_but_match_is_pill",
-    618: "catalog_is_50ml_liquid_but_match_is_pill",
-    619: "catalog_is_50ml_liquid_but_match_is_pill",
-    620: "catalog_is_30ml_liquid_but_match_is_pill",
-    621: "catalog_is_bottled_liquid_but_match_is_pill",
-    622: "catalog_is_bottled_liquid_but_match_is_pill",
-    623: "catalog_is_bottled_liquid_but_match_is_pill",
-    708: "catalog_variant_is_multipl_but_match_is_gold_100",
-    735: "catalog_is_180_capsules_but_match_is_prefilled_injection",
-    738: "catalog_brand_is_jongkundang_but_match_manufacturer_is_kyungnam",
-    768: "catalog_is_120_sachets_but_match_is_120_chewable_tablets",
-}
-
-
 def now_iso() -> str:
     return datetime.now(timezone.utc).astimezone().replace(microsecond=0).isoformat()
 
@@ -141,9 +126,8 @@ def manufacturer_name(value: Any) -> str:
 def image_content(detail: dict[str, Any]) -> dict[str, Any]:
     pack_urls = split_urls(detail.get("pack_img"), "@")
     drug_pic = split_urls(detail.get("drug_pic"), "|")
-    if drug_pic:
-        pack_urls = unique(pack_urls + drug_pic[:1])
-    identification_urls = unique(drug_pic[1:])
+    pack_urls = unique(pack_urls + [url for url in drug_pic if "/pack_img/" in url])
+    identification_urls = unique([url for url in drug_pic if url not in pack_urls])
     if pack_urls:
         primary_url, primary_type = pack_urls[0], "package"
     elif identification_urls:
@@ -299,13 +283,13 @@ def collect_one(client: RateLimitedClient, source: dict[str, Any], source_index:
     catalog_name = str(source.get("catalog_name") or "")
     kpic_name = str(source.get("kpic_name") or "")
     code = str(source.get("kpic_code") or "")
-    match_score = score_name(catalog_name, kpic_name)
-    if source_index in MANUAL_REVIEW_REASONS:
-        return make_review_record(source, source_index, match_score, MANUAL_REVIEW_REASONS[source_index])
+    match_score = validated_match_score(catalog_name, kpic_name, source.get("catalog_capacity"))
     if match_score < MIN_SCORE:
         return make_review_record(source, source_index, match_score, "name_score_below_96")
-    if source.get("status") == "review_required":
+    if source.get("status") != "confirmed":
         return make_review_record(source, source_index, match_score, "upstream_match_requires_review")
+    if not safe_name_match(catalog_name, kpic_name, source.get("catalog_capacity")):
+        return make_review_record(source, source_index, match_score, "name_or_dosage_conflict")
 
     source_url = DETAIL_URL.format(code=quote(code))
     document = client.get_text(source_url)
@@ -316,7 +300,11 @@ def collect_one(client: RateLimitedClient, source: dict[str, Any], source_index:
     ajax_code = str(detail.get("drug_code") or "")
     ajax_name = str(detail.get("drug_name") or "")
     ajax_name_score = score_name(kpic_name, ajax_name)
-    ajax_verified = ajax_code == code and ajax_name_score >= MIN_SCORE
+    ajax_verified = (
+        ajax_code == code
+        and ajax_name_score >= MIN_SCORE
+        and safe_name_match(catalog_name, ajax_name, source.get("catalog_capacity"))
+    )
     if not page_verified or not ajax_verified:
         reason = "detail_page_structure_unverified" if not page_verified else "ajax_product_mismatch"
         record = make_review_record(source, source_index, match_score, reason)
@@ -351,6 +339,25 @@ def collect_one(client: RateLimitedClient, source: dict[str, Any], source_index:
     }
 
 
+def can_reuse_record(source: dict[str, Any], previous: dict[str, Any]) -> bool:
+    same_code = previous.get("kpic_code") == source.get("kpic_code")
+    current_safe = (
+        source.get("status") == "confirmed"
+        and validated_match_score(
+            source.get("catalog_name"), source.get("kpic_name"), source.get("catalog_capacity")
+        )
+        >= MIN_SCORE
+        and safe_name_match(
+            source.get("catalog_name"), source.get("kpic_name"), source.get("catalog_capacity")
+        )
+    )
+    if previous.get("status") == "collected":
+        return bool(same_code and current_safe)
+    if previous.get("status") == "review_required":
+        return bool(same_code and not current_safe)
+    return False
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="약학정보원 제품 상세정보 수집기: 3/3 구간")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
@@ -366,16 +373,17 @@ def main() -> int:
     segment = source_all[SEGMENT_START:SEGMENT_END]
     coded = [(SEGMENT_START + offset, row) for offset, row in enumerate(segment) if row.get("kpic_code")]
     existing = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else []
-    by_index = {int(record["source_index"]): record for record in existing if "source_index" in record}
+    by_id = {
+        str(record.get("catalog_product_id") or ""): record
+        for record in existing
+        if record.get("catalog_product_id")
+    }
     client = RateLimitedClient(args.delay, args.timeout, args.retries)
 
     for position, (source_index, source) in enumerate(coded, start=1):
-        previous = by_index.get(source_index)
-        if (
-            previous
-            and previous.get("status") in {"collected", "review_required"}
-            and not (source_index in MANUAL_REVIEW_REASONS and previous.get("status") != "review_required")
-        ):
+        product_id = str(source.get("catalog_product_id") or "")
+        previous = by_id.get(product_id)
+        if previous and can_reuse_record(source, previous):
             continue
         if previous and previous.get("status") == "error" and not args.retry_errors:
             continue
@@ -389,7 +397,11 @@ def main() -> int:
                 "kpic_code": source.get("kpic_code", ""),
                 "kpic_name": source.get("kpic_name", ""),
                 "status": "error",
-                "match_score": score_name(source.get("catalog_name", ""), source.get("kpic_name", "")),
+                "match_score": validated_match_score(
+                    source.get("catalog_name", ""),
+                    source.get("kpic_name", ""),
+                    source.get("catalog_capacity", ""),
+                ),
                 "content": {},
                 "source_url": source.get("source_url", ""),
                 "section_evidence": {
@@ -401,13 +413,13 @@ def main() -> int:
                 "error": f"{type(exc).__name__}:{exc}",
                 "collected_at": now_iso(),
             }
-        by_index[source_index] = record
-        records = [by_index[index] for index in sorted(by_index) if SEGMENT_START <= index < SEGMENT_END]
+        by_id[product_id] = record
+        records = sorted(by_id.values(), key=lambda item: int(item.get("source_index") or 0))
         write_json_atomic(args.output, records)
         write_json_atomic(args.summary, summary_for(records, len(segment), len(coded)))
         print(f"[{position}/{len(coded)}] index={source_index} status={record['status']}", flush=True)
 
-    records = [by_index[index] for index in sorted(by_index) if SEGMENT_START <= index < SEGMENT_END]
+    records = sorted(by_id.values(), key=lambda item: int(item.get("source_index") or 0))
     write_json_atomic(args.output, records)
     summary = summary_for(records, len(segment), len(coded))
     write_json_atomic(args.summary, summary)

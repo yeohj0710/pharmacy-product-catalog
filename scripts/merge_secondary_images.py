@@ -10,18 +10,16 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.collect_secondary_images import normalize, valid_image_url, write_csv, write_json_atomic
+from scripts.collect_secondary_images import valid_image_url, write_csv, write_json_atomic
 
 
 def safe_match(record: dict[str, Any]) -> bool:
-    score = int(record.get("match_score") or 0)
-    if record.get("manual_verified") is True:
-        return True
-    target = normalize(record.get("catalog_name"))
-    candidate = normalize(record.get("candidate_name"))
-    if "search.naver.com" in str(record.get("source_url") or ""):
-        return len(target) >= 5 and target in candidate
-    return score >= 96 and len(target) >= 5 and target in candidate
+    return record.get("manual_verified") is True and record.get("visual_verified") is True
+
+
+def is_placeholder_image(url: str) -> bool:
+    lowered = url.lower()
+    return any(marker in lowered for marker in ("19_limited", "noimg", "no_image", "placeholder"))
 
 
 def load_records(paths: list[Path]) -> dict[str, dict[str, Any]]:
@@ -62,6 +60,11 @@ def merge_images(products: list[dict[str, Any]], records: dict[str, dict[str, An
             }
         )
         counts["cleared_previous"] += 1
+    safe_urls: Counter[str] = Counter(
+        valid_image_url(str(record.get("image_url") or ""))
+        for record in records.values()
+        if record.get("status") == "confirmed" and safe_match(record)
+    )
     for product in products:
         product_id = str(product.get("id") or product.get("document_id") or "")
         record = records.get(product_id)
@@ -71,15 +74,21 @@ def merge_images(products: list[dict[str, Any]], records: dict[str, dict[str, An
             counts["already_has_image"] += 1
             continue
         image_url = valid_image_url(str(record.get("image_url") or ""))
-        if record.get("status") != "confirmed" or not safe_match(record) or not image_url:
+        if (
+            record.get("status") != "confirmed"
+            or not safe_match(record)
+            or not image_url
+            or is_placeholder_image(image_url)
+            or safe_urls[image_url] > 1
+        ):
             counts["not_linked"] += 1
             continue
         product.update(
             {
                 "image_kind": "package",
                 "image_url": image_url,
-                "image_source_url": str(record.get("source_url") or record.get("result_url") or ""),
-                "image_rights_status": "source_preview",
+                "image_source_url": str(record.get("result_url") or record.get("source_url") or ""),
+                "image_rights_status": "verified",
                 "image_checked_at": str(record.get("checked_at") or ""),
                 "enrichment_status": "secondary_image_linked",
             }

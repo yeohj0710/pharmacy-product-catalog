@@ -181,24 +181,12 @@ def collect(args: argparse.Namespace) -> dict[str, Any]:
                 candidate = max(candidates, key=lambda row: int(row["match_score"]))
                 record.update(candidate)
                 record["source_url"] = source_url
-                record["status"] = "confirmed" if candidate["match_score"] >= args.confirm_score else "review_required"
+                record["status"] = "review_required"
         except RuntimeError as exc:
             record["status"] = "error"
             record["error"] = str(exc)
         by_id[product_id] = record
         processed += 1
-        if record["status"] == "confirmed" and args.materialize:
-            product.update(
-                {
-                    "image_kind": "package",
-                    "image_url": record["image_url"],
-                    "image_source_url": record["source_url"],
-                    "image_rights_status": RIGHTS_STATUS,
-                    "image_checked_at": record["checked_at"],
-                    "enrichment_status": "secondary_image_linked",
-                }
-            )
-            linked += 1
         if processed % args.checkpoint_every == 0:
             checkpoint()
             print(json.dumps({"processed": processed, "linked": linked}, ensure_ascii=False), flush=True)

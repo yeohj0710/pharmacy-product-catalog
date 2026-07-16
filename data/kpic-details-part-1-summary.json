@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-07-15T19:42:10+09:00",
-  "started_at": "2026-07-15T19:42:05+09:00",
+  "generated_at": "2026-07-16T09:36:06+09:00",
+  "started_at": "2026-07-16T09:36:05+09:00",
   "part": 1,
   "range": {
     "start_index": 0,
     "end_index_inclusive": 258
   },
   "input_count": 259,
-  "eligible_count": 92,
-  "record_count": 92,
-  "collected_count": 86,
-  "review_required_count": 6,
+  "eligible_count": 78,
+  "record_count": 78,
+  "collected_count": 78,
+  "review_required_count": 0,
   "error_count": 0,
   "field_counts": {
-    "ingredients": 86,
-    "efficacy": 86,
-    "dosage": 86,
-    "precautions": 86,
-    "storage": 86,
-    "manufacturer": 86,
-    "dosage_form": 86,
-    "route": 86,
-    "package": 86
+    "ingredients": 78,
+    "efficacy": 78,
+    "dosage": 78,
+    "precautions": 78,
+    "storage": 78,
+    "manufacturer": 78,
+    "dosage_form": 78,
+    "route": 78,
+    "package": 78
   },
   "field_fill_rates": {
     "ingredients": 1.0,
@@ -34,9 +34,9 @@
     "route": 1.0,
     "package": 1.0
   },
-  "image_count": 71,
-  "image_fill_rate": 0.8256,
-  "detail_page_verified_count": 86,
+  "image_count": 67,
+  "image_fill_rate": 0.859,
+  "detail_page_verified_count": 78,
   "source": "약학정보원 의약품 상세정보",
   "request_delay_seconds": 0.75
 }
