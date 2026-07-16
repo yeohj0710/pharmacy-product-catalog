@@ -5,6 +5,8 @@ import test from "node:test";
 import { catalogSummary, filterProducts, paginateProducts, sortProducts, validateProducts } from "../lib/catalog/catalog.ts";
 // @ts-expect-error Node 22 strip-types executes explicit .ts module specifiers.
 import { EXPORT_FIELDS, createCsv, createExportFilename, createJson, sanitizeCsvCell } from "../lib/catalog/download.ts";
+// @ts-expect-error Node 22 strip-types executes explicit .ts module specifiers.
+import { compactOfficialText } from "../lib/catalog/text.ts";
 import type { CatalogFilters, Product } from "../types/catalog.ts";
 
 function product(overrides: Partial<Product> = {}): Product {
@@ -53,6 +55,15 @@ const allFilters: CatalogFilters = {
   official: "all",
   image: "all",
 };
+
+test("compactOfficialText removes repeated blank lines without changing the source data", () => {
+  const source = "(시럽제)\r\n\r\n성인 : 1회 20 mL\n \n소아 : 1회\n\n\n11세 이상 ~ 15세 미만 13 mL";
+  assert.equal(
+    compactOfficialText(source),
+    "(시럽제)\n성인 : 1회 20 mL\n소아 : 1회\n11세 이상 ~ 15세 미만 13 mL",
+  );
+  assert.equal(source.includes("\r\n\r\n"), true);
+});
 
 test("validateProducts validates all fields, positive prices, and unique IDs", () => {
   const valid = [product(), product({ id: "id-2", document_id: "doc-2", source_order: 2 })];

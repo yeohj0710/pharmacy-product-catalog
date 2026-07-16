@@ -2,18 +2,19 @@
 
 import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { compactOfficialText } from "@/lib/catalog/text";
 import type { Product } from "@/types/catalog";
 import { ProductImage } from "./ProductImage";
 
 const money = new Intl.NumberFormat("ko-KR");
 
 function textValue(value: unknown) {
-  if (Array.isArray(value)) return value.filter(Boolean).join(" · ");
-  return typeof value === "string" ? value : "";
+  if (Array.isArray(value)) return compactOfficialText(value.filter(Boolean).join(" · "));
+  return typeof value === "string" ? compactOfficialText(value) : "";
 }
 
 function structuredText(value: unknown): string {
-  if (typeof value === "string") return value;
+  if (typeof value === "string") return compactOfficialText(value);
   if (typeof value === "number" || typeof value === "boolean") return String(value);
   if (Array.isArray(value)) return value.map(structuredText).filter(Boolean).join(" · ");
   if (!value || typeof value !== "object") return "";
@@ -37,10 +38,10 @@ function consumerGuidanceText(value: unknown) {
     side_effects: "부작용",
     storage: "보관 방법",
   };
-  return Object.entries(value as Record<string, unknown>)
-    .filter(([, text]) => typeof text === "string" && text)
+  return compactOfficialText(Object.entries(value as Record<string, unknown>)
+    .filter(([, text]) => typeof text === "string" && text.trim().length > 0)
     .map(([key, text]) => `${labels[key] || key}: ${text}`)
-    .join("\n\n");
+    .join("\n"));
 }
 
 export function ProductModal({ product, onClose }: { product: Product; onClose: () => void }) {

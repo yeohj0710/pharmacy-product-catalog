@@ -59,6 +59,7 @@ test("product modal renders official information as an always-visible document",
   assert.doesNotMatch(source, /<details|<summary/);
   assert.doesNotMatch(source, /source-link|이미지 출처 열기|제품 설명서 원문 열기/);
   assert.match(source, /official-detail-group/);
+  assert.match(source, /compactOfficialText/);
   assert.match(source, /value\.trim\(\)\.length > 0/);
   assert.match(source, /효능·효과/);
   assert.match(source, /용법·용량/);
@@ -75,6 +76,20 @@ test("product modal keeps official information in a compact reading layout", asy
   assert.match(groupsRule, /gap:\s*14px/);
   assert.match(itemRule, /padding:\s*17px 18px 19px/);
   assert.match(copyRule, /line-height:\s*1\.7/);
+});
+
+test("catalog uses one compact content width and readable control sizes", async () => {
+  const css = await readFile(globalCssUrl, "utf8");
+  const rootRule = css.match(/:root\s*\{([^}]+)\}/)?.[1] ?? "";
+  const heroRule = css.match(/\.hero\s*\{([^}]+)\}/)?.[1] ?? "";
+  const catalogRule = css.match(/\.catalog-section\s*\{([^}]+)\}/)?.[1] ?? "";
+  const toolbarControlRule = css.match(/\.search-field,\s*\.sort-field\s*\{([^}]+)\}/)?.[1] ?? "";
+  const tableCellRule = css.match(/\.product-table th,\s*\.product-table td\s*\{([^}]+)\}/)?.[1] ?? "";
+  assert.match(rootRule, /--content-width:\s*1040px/);
+  assert.match(heroRule, /width:\s*min\(var\(--content-width\)/);
+  assert.match(catalogRule, /width:\s*min\(var\(--content-width\)/);
+  assert.match(toolbarControlRule, /height:\s*50px/);
+  assert.match(tableCellRule, /padding:\s*11px 14px/);
 });
 
 test("product table passes vertical wheel input to the page", async () => {
