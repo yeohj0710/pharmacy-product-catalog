@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Restore scraper and verify packed inputs
+      - name: Restore scraper and verified compact input
         shell: bash
         run: |
           set -euo pipefail
@@ -37,8 +37,36 @@ jobs:
           echo 'ecac68249635f5dfa8c98e5ad0b62023198bee3d1ad74814df1167e7b9c57dd2  /tmp/chatgpt_healthkr_enrich.py.xz' | sha256sum -c -
           xz -dc /tmp/chatgpt_healthkr_enrich.py.xz > runner/chatgpt_healthkr_enrich.py
           echo '371e5b5ac659d27d06fa0a0b37f6a052e8801e7cd0b9be19d3b383c2cd2a8110  runner/chatgpt_healthkr_enrich.py' | sha256sum -c -
-          echo '3182225acecd5182abd2f0382e86da9ba9322716651fc4dfe759ac631699f938  input/enrichment-queue.json.xz' | sha256sum -c -
-          xz -t input/enrichment-queue.json.xz
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          import codecs
+
+          parts = sorted(Path('input/packed').glob('input.rev.rot13.part.*'))
+          assert len(parts) == 9, [str(p) for p in parts]
+          packed = ''.join(p.read_text(encoding='ascii') for p in parts)
+          encoded = codecs.decode(packed, 'rot_13')[::-1].strip()
+          Path('/tmp/enrichment-input.json.xz').write_bytes(base64.b64decode(encoded, validate=True))
+          PY
+          echo 'db0fb8de9340a2b3fa93a6077b37edc748479fdb80a73018751073a762db6e42  /tmp/enrichment-input.json.xz' | sha256sum -c -
+          xz -t /tmp/enrichment-input.json.xz
+          python - <<'PY'
+          import json
+          import lzma
+          from pathlib import Path
+
+          rows = json.loads(lzma.decompress(Path('/tmp/enrichment-input.json.xz').read_bytes()).decode('utf-8'))
+          assert isinstance(rows, list) and len(rows) == 776
+          required = {
+              'document_id','document_create_time','document_update_time','id','name','capacity','category','price','etc','updated',
+              'app_id','app_name','app_capacity','app_category','app_price','app_etc','app_updated','specification',
+              'displayed_price_krw','normalized_name','normalized_capacity','source_order','source_type','recorded_at',
+              'price_status','verification_status','duplicate_group_id','duplicate_group_size'
+          }
+          assert all(required <= set(row) for row in rows)
+          assert len({row['document_id'] for row in rows}) == 776
+          assert [row['source_order'] for row in rows] == list(range(1, 777))
+          PY
 
       - name: Install scraper dependencies
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4 lxml rapidfuzz pillow
@@ -48,7 +76,7 @@ jobs:
           PYTHONUNBUFFERED: '1'
         run: |
           python runner/chatgpt_healthkr_enrich.py \
-            --input input/enrichment-queue.json.xz \
+            --input /tmp/enrichment-input.json.xz \
             --output enrichment-queue.json \
             --report enrichment-report.json \
             --workers 6 \
