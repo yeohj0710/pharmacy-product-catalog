@@ -327,17 +327,17 @@ footer p { max-width: 700px; margin: 0; }
 footer a { color: var(--muted); font-weight: 700; }
 
 .modal-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: rgba(15, 23, 33, .58); backdrop-filter: blur(5px); }
-.modal-shell { width: min(960px, 100%); max-height: min(880px, calc(100dvh - 48px)); display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: hidden; border-radius: 26px; background: #fff; box-shadow: 0 28px 80px rgba(0, 0, 0, .23); overscroll-behavior: contain; }
+.modal-shell { width: min(840px, 100%); max-height: min(880px, calc(100dvh - 48px)); display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: hidden; border-radius: 26px; background: #fff; box-shadow: 0 28px 80px rgba(0, 0, 0, .23); overscroll-behavior: contain; }
 .modal-header { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 26px; border-bottom: 1px solid var(--line); background: #fff; }
 .modal-header .eyebrow { display: block; margin-bottom: 4px; font-size: 13px; }
 .modal-header h2 { margin: 0; font-size: 26px; }
 .modal-header > div > strong { color: var(--text-strong); font-size: 17px; }
-.modal-body { min-height: 0; overflow-y: auto; padding: 30px; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #c7d0da transparent; }
+.modal-body { min-height: 0; overflow-y: auto; padding: 26px; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #c7d0da transparent; }
 .modal-body::-webkit-scrollbar { width: 10px; }
 .modal-body::-webkit-scrollbar-track { background: transparent; }
 .modal-body::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: 999px; background: #c7d0da; background-clip: padding-box; }
-.modal-grid { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 34px; align-items: center; }
-.product-image.large, .image-placeholder.large { width: 230px; height: 230px; border-radius: 22px; }
+.modal-grid { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 28px; align-items: center; }
+.product-image.large, .image-placeholder.large { width: 210px; height: 210px; border-radius: 22px; }
 .image-placeholder.large { display: flex; flex-direction: column; gap: 12px; padding: 24px; color: var(--subtle); text-align: center; }
 .image-placeholder.large svg { width: 34px; }
 .modal h2 { margin: 8px 0 4px; font-size: 32px; line-height: 1.28; letter-spacing: -.03em; }
@@ -346,8 +346,8 @@ footer a { color: var(--muted); font-weight: 700; }
 .modal-price span { display: block; color: var(--subtle); font-size: 13px; font-weight: 650; }
 .modal-price strong { display: block; margin-top: 5px; font-size: 30px; font-variant-numeric: tabular-nums; }
 .price-warning { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
-.detail-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 32px 0 22px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
-.detail-list div { min-width: 0; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+.detail-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 26px 0 20px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.detail-list div { min-width: 0; display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
 .detail-list div:nth-child(odd) { border-right: 1px solid var(--line); }
 .detail-list div:nth-last-child(-n+2) { border-bottom: 0; }
 .detail-list dt { color: var(--muted); font-weight: 650; }
@@ -355,22 +355,22 @@ footer a { color: var(--muted); font-weight: 700; }
 .review-warning { display: flex; align-items: flex-start; gap: 9px; margin: 0 0 18px; padding: 15px 17px; border-radius: 14px; background: #fff4e6; color: #8c5b16; line-height: 1.6; }
 .review-warning svg { width: 19px; flex: 0 0 auto; margin-top: 2px; }
 
-.official-detail-section { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 32px; }
-.official-detail-heading { margin-bottom: 22px; }
+.official-detail-section { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 26px; }
+.official-detail-heading { margin-bottom: 18px; }
 .official-detail-heading .eyebrow { display: block; margin-bottom: 7px; color: var(--blue); font-size: 13px; font-weight: 750; }
 .official-detail-heading h3 { margin: 0; font-size: 25px; line-height: 1.35; letter-spacing: -.025em; text-wrap: balance; }
 .official-detail-heading > p { margin: 8px 0 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
-.official-detail-groups { display: grid; gap: 20px; }
-.official-detail-group { overflow: hidden; border: 1px solid #e5e9ee; border-radius: 20px; background: #fff; }
-.official-detail-group > header { padding: 18px 20px; border-bottom: 1px solid #e9edf1; background: #f7f9fb; }
+.official-detail-groups { display: grid; gap: 14px; }
+.official-detail-group { overflow: hidden; border: 1px solid #e5e9ee; border-radius: 16px; background: #fff; }
+.official-detail-group > header { padding: 15px 18px; border-bottom: 1px solid #e9edf1; background: #f7f9fb; }
 .official-detail-group h4 { margin: 0; color: var(--text-strong); font-size: 19px; line-height: 1.4; letter-spacing: -.015em; }
 .official-detail-group > header p { margin: 4px 0 0; color: var(--subtle); font-size: 14px; line-height: 1.55; }
 .official-detail-items { display: grid; }
-.official-detail-item { min-width: 0; padding: 21px 22px 23px; }
+.official-detail-item { min-width: 0; padding: 17px 18px 19px; }
 .official-detail-item + .official-detail-item { border-top: 1px solid #edf0f2; }
-.official-detail-item h5 { margin: 0 0 9px; color: var(--blue); font-size: 15px; line-height: 1.5; }
-.official-detail-item p { margin: 0; color: #3f4b5a; font-size: 16px; line-height: 1.82; overflow-wrap: anywhere; white-space: pre-wrap; text-wrap: pretty; }
-.official-license { margin: 18px 0 0; padding: 16px 18px; border-radius: 14px; background: #f3f6f9; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.official-detail-item h5 { margin: 0 0 7px; color: var(--blue); font-size: 15px; line-height: 1.5; }
+.official-detail-item p { margin: 0; color: #3f4b5a; font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; white-space: pre-wrap; text-wrap: pretty; }
+.official-license { margin: 14px 0 0; padding: 14px 16px; border-radius: 14px; background: #f3f6f9; color: var(--muted); font-size: 14px; line-height: 1.65; }
 
 .export-dialog { width: min(940px, 100%); }
 .export-dialog .modal-body { display: grid; gap: 26px; }
@@ -460,7 +460,7 @@ footer a { color: var(--muted); font-weight: 700; }
   .modal-backdrop { align-items: end; padding: 0; }
   .modal-shell { width: 100%; max-height: calc(100dvh - 28px); border-radius: 24px 24px 0 0; }
   .modal-header { min-height: 70px; padding: 16px 20px; }
-  .modal-body { padding: 22px 20px calc(24px + env(safe-area-inset-bottom)); scrollbar-gutter: auto; }
+  .modal-body { padding: 20px 18px calc(22px + env(safe-area-inset-bottom)); scrollbar-gutter: auto; }
   .modal-grid { grid-template-columns: 1fr; gap: 22px; }
   .product-image.large, .image-placeholder.large { width: 150px; height: 150px; margin: 0 auto; }
   .modal h2 { font-size: 27px; }
@@ -472,12 +472,12 @@ footer a { color: var(--muted); font-weight: 700; }
   .official-detail-heading { margin-bottom: 18px; }
   .official-detail-heading h3 { font-size: 23px; }
   .official-detail-heading > p { font-size: 14px; }
-  .official-detail-groups { gap: 16px; }
-  .official-detail-group { border-radius: 17px; }
-  .official-detail-group > header { padding: 16px 17px; }
+  .official-detail-groups { gap: 12px; }
+  .official-detail-group { border-radius: 15px; }
+  .official-detail-group > header { padding: 14px 15px; }
   .official-detail-group h4 { font-size: 18px; }
-  .official-detail-item { padding: 18px 17px 20px; }
-  .official-detail-item p { font-size: 15.5px; line-height: 1.78; }
+  .official-detail-item { padding: 16px 15px 18px; }
+  .official-detail-item p { font-size: 15.5px; line-height: 1.7; }
   .export-dialog .modal-body { gap: 22px; }
   .export-scope { grid-template-columns: 1fr; }
   .export-format { grid-template-columns: repeat(2, 1fr); }

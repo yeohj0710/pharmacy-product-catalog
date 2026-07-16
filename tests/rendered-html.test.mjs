@@ -65,6 +65,18 @@ test("product modal renders official information as an always-visible document",
   assert.match(source, /유효성분/);
 });
 
+test("product modal keeps official information in a compact reading layout", async () => {
+  const css = await readFile(globalCssUrl, "utf8");
+  const shellRule = css.match(/\.modal-shell\s*\{([^}]+)\}/)?.[1] ?? "";
+  const groupsRule = css.match(/\.official-detail-groups\s*\{([^}]+)\}/)?.[1] ?? "";
+  const itemRule = css.match(/\.official-detail-item\s*\{([^}]+)\}/)?.[1] ?? "";
+  const copyRule = css.match(/\.official-detail-item p\s*\{([^}]+)\}/)?.[1] ?? "";
+  assert.match(shellRule, /width:\s*min\(840px,\s*100%\)/);
+  assert.match(groupsRule, /gap:\s*14px/);
+  assert.match(itemRule, /padding:\s*17px 18px 19px/);
+  assert.match(copyRule, /line-height:\s*1\.7/);
+});
+
 test("product table passes vertical wheel input to the page", async () => {
   const css = await readFile(globalCssUrl, "utf8");
   const rule = css.match(/\.product-table\s*\{([^}]+)\}/)?.[1] ?? "";
