@@ -76,7 +76,11 @@ try {
     Copy-Item -LiteralPath $jsonSource -Destination (Join-Path $stage "data\enrichment-queue.json")
     Copy-Item -LiteralPath $csvSource -Destination (Join-Path $stage "data\enrichment-queue.csv")
     New-Item -ItemType Directory -Force -Path (Join-Path $stage "data\portable") | Out-Null
-    Copy-Item -LiteralPath $portableDataSource -Destination (Join-Path $stage "data\portable\v1") -Recurse
+    $stagePortable = Join-Path $stage "data\portable\v1"
+    if (Test-Path -LiteralPath $stagePortable) {
+        Remove-Item -LiteralPath $stagePortable -Recurse -Force
+    }
+    Copy-Item -LiteralPath $portableDataSource -Destination $stagePortable -Recurse
     $stagePublicData = Join-Path $stage "public\data"
     if (Test-Path -LiteralPath $stagePublicData) {
         Remove-Item -LiteralPath $stagePublicData -Recurse -Force
