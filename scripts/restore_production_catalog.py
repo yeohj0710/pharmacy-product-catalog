@@ -7,6 +7,7 @@ import os
 import shutil
 import sys
 import tempfile
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -77,6 +78,43 @@ def _tracked_sibling_temp(
     return candidate
 
 
+def _restore_lock_path(output: Path) -> Path:
+    resolved_output = Path(output).resolve(strict=False)
+    return resolved_output.with_name(f".{resolved_output.name}.restore.lock")
+
+
+def _acquire_restore_lock(output: Path) -> tuple[Path, int, bytes]:
+    lock_path = _restore_lock_path(output)
+    lock_contents = f"pid={os.getpid()} token={uuid.uuid4().hex}\n".encode("ascii")
+    flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
+    if hasattr(os, "O_BINARY"):
+        flags |= os.O_BINARY
+    try:
+        descriptor = os.open(lock_path, flags)
+    except FileExistsError as error:
+        raise RuntimeError(
+            f"catalog restore already in progress; lock file exists: {lock_path}"
+        ) from error
+    try:
+        os.write(descriptor, lock_contents)
+        os.fsync(descriptor)
+    except Exception:
+        os.close(descriptor)
+        lock_path.unlink(missing_ok=True)
+        raise
+    return lock_path, descriptor, lock_contents
+
+
+def _release_restore_lock(lock_path: Path, descriptor: int, lock_contents: bytes) -> None:
+    os.close(descriptor)
+    try:
+        current_contents = lock_path.read_bytes()
+    except FileNotFoundError:
+        return
+    if current_contents == lock_contents:
+        lock_path.unlink(missing_ok=True)
+
+
 def restore_catalog(
     *,
     url: str = DEFAULT_URL,
@@ -89,11 +127,19 @@ def restore_catalog(
     output = Path(output)
     manifest_path = Path(manifest_path)
     schema_path = Path(schema_path)
-    named_paths = {"output": output, "manifest": manifest_path, "schema": schema_path}
+    lock_path = _restore_lock_path(output)
+    named_paths = {
+        "output": output,
+        "manifest": manifest_path,
+        "schema": schema_path,
+        "lock": lock_path,
+    }
     _assert_distinct_paths(**named_paths)
     output.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    lock_path, lock_descriptor, lock_contents = _acquire_restore_lock(output)
     temporary_paths: list[Path] = []
+    retained_recovery_paths: set[Path] = set()
     try:
         download_path = _tracked_sibling_temp(
             output,
@@ -208,24 +254,53 @@ def restore_catalog(
             output_replaced = True
             manifest_replace_attempted = True
             manifest_download_path.replace(manifest_path)
-        except Exception:
+        except Exception as commit_error:
+            rollback_errors: list[tuple[str, Exception]] = []
             if output_replaced:
-                if output_existed:
-                    assert output_backup_path is not None
-                    output_backup_path.replace(output)
-                else:
-                    output.unlink(missing_ok=True)
+                try:
+                    if output_existed:
+                        assert output_backup_path is not None
+                        output_backup_path.replace(output)
+                    else:
+                        output.unlink(missing_ok=True)
+                except Exception as rollback_error:
+                    rollback_errors.append(("catalog", rollback_error))
+                    if output_backup_path is not None and output_backup_path.exists():
+                        retained_recovery_paths.add(output_backup_path)
             if manifest_replace_attempted:
-                if manifest_existed:
-                    assert manifest_backup_path is not None
-                    manifest_backup_path.replace(manifest_path)
-                else:
-                    manifest_path.unlink(missing_ok=True)
+                try:
+                    if manifest_existed:
+                        assert manifest_backup_path is not None
+                        manifest_backup_path.replace(manifest_path)
+                    else:
+                        manifest_path.unlink(missing_ok=True)
+                except Exception as rollback_error:
+                    rollback_errors.append(("manifest", rollback_error))
+                    if manifest_backup_path is not None and manifest_backup_path.exists():
+                        retained_recovery_paths.add(manifest_backup_path)
+            if rollback_errors:
+                rollback_details = "; ".join(
+                    f"{target}: {type(error).__name__}: {error}"
+                    for target, error in rollback_errors
+                )
+                retained_paths = ", ".join(
+                    str(path) for path in sorted(retained_recovery_paths)
+                ) or "none"
+                raise RuntimeError(
+                    "catalog restore commit failed and rollback was incomplete; "
+                    f"commit error: {type(commit_error).__name__}: {commit_error}; "
+                    f"rollback errors: {rollback_details}; "
+                    f"retained recovery paths: {retained_paths}"
+                ) from commit_error
             raise
         return manifest
     finally:
-        for temporary_path in reversed(temporary_paths):
-            temporary_path.unlink(missing_ok=True)
+        try:
+            for temporary_path in reversed(temporary_paths):
+                if temporary_path not in retained_recovery_paths:
+                    temporary_path.unlink(missing_ok=True)
+        finally:
+            _release_restore_lock(lock_path, lock_descriptor, lock_contents)
 
 
 def main() -> int:

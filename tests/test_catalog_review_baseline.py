@@ -111,6 +111,24 @@ EXPECTED_CANONICAL_FIELDS = (
 )
 
 
+class _PayloadResponse:
+    def __init__(self, payload):
+        self.headers = {"Content-Length": str(len(payload))}
+        self.stream = io.BytesIO(payload)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        return False
+
+    def getcode(self):
+        return 200
+
+    def read(self, size=-1):
+        return self.stream.read(size)
+
+
 class CatalogBaselineTests(unittest.TestCase):
     def test_accepts_776_rows_with_conditional_official_content(self):
         rows = [
@@ -317,6 +335,7 @@ class CatalogBaselineTests(unittest.TestCase):
                 created_paths[1].name.endswith(".manifest.download"),
                 created_paths[1],
             )
+            self.assertFalse(output.with_name(f".{output.name}.restore.lock").exists())
 
     def test_manifest_replace_failure_restores_existing_catalog_and_manifest(self):
         from scripts.restore_production_catalog import restore_catalog
@@ -456,6 +475,184 @@ class CatalogBaselineTests(unittest.TestCase):
             self.assertTrue(manifest_failure_injected)
             self.assertFalse(output.exists())
             self.assertEqual(manifest_path.read_bytes(), original_manifest)
+
+    def test_output_rollback_failure_still_restores_manifest_and_retains_catalog_backup(self):
+        from scripts.restore_production_catalog import restore_catalog
+
+        payload = json.dumps(
+            [{"id": "p-1", "source_order": 1, "official_match_status": "not_applicable"}],
+            separators=(",", ":"),
+        ).encode("utf-8")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            output = root / "catalog.json"
+            manifest_path = root / "manifest.json"
+            schema_path = root / "schema.json"
+            original_catalog = b"original catalog"
+            original_manifest = b'{"version":"original"}\n'
+            output.write_bytes(original_catalog)
+            manifest_path.write_bytes(original_manifest)
+            schema_path.write_text(
+                json.dumps(
+                    {
+                        "field_union": ["id", "official_match_status", "source_order"],
+                        "accepted_row_field_counts": [3],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            original_replace = Path.replace
+            catalog_backup_path = None
+            manifest_rollback_attempted = False
+
+            def replace_with_rollback_failure(source, target):
+                nonlocal catalog_backup_path, manifest_rollback_attempted
+                source = Path(source)
+                target = Path(target)
+                if target.resolve() == manifest_path.resolve() and source.name.endswith(
+                    ".manifest.download"
+                ):
+                    manifest_path.write_bytes(b"partially replaced manifest")
+                    raise OSError("injected manifest commit failure")
+                if target.resolve() == output.resolve() and source.name.endswith(".catalog_backup"):
+                    catalog_backup_path = source
+                    raise OSError("injected output rollback failure")
+                if target.resolve() == manifest_path.resolve() and source.name.endswith(
+                    ".manifest_backup"
+                ):
+                    manifest_rollback_attempted = True
+                return original_replace(source, target)
+
+            with mock.patch(
+                "scripts.restore_production_catalog.urlopen",
+                return_value=_PayloadResponse(payload),
+            ), mock.patch.object(Path, "replace", new=replace_with_rollback_failure):
+                with self.assertRaisesRegex(RuntimeError, "retained recovery paths") as raised:
+                    restore_catalog(
+                        url="https://example.test/catalog.json",
+                        output=output,
+                        manifest_path=manifest_path,
+                        schema_path=schema_path,
+                        expected_count=1,
+                    )
+
+            self.assertTrue(manifest_rollback_attempted)
+            self.assertEqual(manifest_path.read_bytes(), original_manifest)
+            self.assertEqual(output.read_bytes(), payload)
+            self.assertIsNotNone(catalog_backup_path)
+            self.assertTrue(catalog_backup_path.exists())
+            self.assertEqual(catalog_backup_path.read_bytes(), original_catalog)
+            self.assertIn(str(catalog_backup_path), str(raised.exception))
+
+    def test_manifest_rollback_failure_retains_manifest_backup(self):
+        from scripts.restore_production_catalog import restore_catalog
+
+        payload = json.dumps(
+            [{"id": "p-1", "source_order": 1, "official_match_status": "not_applicable"}],
+            separators=(",", ":"),
+        ).encode("utf-8")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            output = root / "catalog.json"
+            manifest_path = root / "manifest.json"
+            schema_path = root / "schema.json"
+            original_catalog = b"original catalog"
+            original_manifest = b'{"version":"original"}\n'
+            output.write_bytes(original_catalog)
+            manifest_path.write_bytes(original_manifest)
+            schema_path.write_text(
+                json.dumps(
+                    {
+                        "field_union": ["id", "official_match_status", "source_order"],
+                        "accepted_row_field_counts": [3],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            original_replace = Path.replace
+            manifest_backup_path = None
+
+            def replace_with_rollback_failure(source, target):
+                nonlocal manifest_backup_path
+                source = Path(source)
+                target = Path(target)
+                if target.resolve() == manifest_path.resolve() and source.name.endswith(
+                    ".manifest.download"
+                ):
+                    manifest_path.write_bytes(b"partially replaced manifest")
+                    raise OSError("injected manifest commit failure")
+                if target.resolve() == manifest_path.resolve() and source.name.endswith(
+                    ".manifest_backup"
+                ):
+                    manifest_backup_path = source
+                    raise OSError("injected manifest rollback failure")
+                return original_replace(source, target)
+
+            with mock.patch(
+                "scripts.restore_production_catalog.urlopen",
+                return_value=_PayloadResponse(payload),
+            ), mock.patch.object(Path, "replace", new=replace_with_rollback_failure):
+                with self.assertRaisesRegex(RuntimeError, "retained recovery paths") as raised:
+                    restore_catalog(
+                        url="https://example.test/catalog.json",
+                        output=output,
+                        manifest_path=manifest_path,
+                        schema_path=schema_path,
+                        expected_count=1,
+                    )
+
+            self.assertEqual(output.read_bytes(), original_catalog)
+            self.assertEqual(manifest_path.read_bytes(), b"partially replaced manifest")
+            self.assertIsNotNone(manifest_backup_path)
+            self.assertTrue(manifest_backup_path.exists())
+            self.assertEqual(manifest_backup_path.read_bytes(), original_manifest)
+            self.assertIn(str(manifest_backup_path), str(raised.exception))
+
+    def test_preexisting_restore_lock_blocks_without_changing_targets(self):
+        from scripts.restore_production_catalog import restore_catalog
+
+        payload = json.dumps(
+            [{"id": "p-1", "source_order": 1, "official_match_status": "not_applicable"}],
+            separators=(",", ":"),
+        ).encode("utf-8")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            output = root / "catalog.json"
+            manifest_path = root / "manifest.json"
+            schema_path = root / "schema.json"
+            lock_path = output.with_name(f".{output.name}.restore.lock")
+            original_catalog = b"original catalog"
+            original_manifest = b'{"version":"original"}\n'
+            lock_contents = b"owned by another process\n"
+            output.write_bytes(original_catalog)
+            manifest_path.write_bytes(original_manifest)
+            lock_path.write_bytes(lock_contents)
+            schema_path.write_text(
+                json.dumps(
+                    {
+                        "field_union": ["id", "official_match_status", "source_order"],
+                        "accepted_row_field_counts": [3],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            with mock.patch(
+                "scripts.restore_production_catalog.urlopen",
+                return_value=_PayloadResponse(payload),
+            ):
+                with self.assertRaisesRegex(RuntimeError, "restore already in progress"):
+                    restore_catalog(
+                        url="https://example.test/catalog.json",
+                        output=output,
+                        manifest_path=manifest_path,
+                        schema_path=schema_path,
+                        expected_count=1,
+                    )
+
+            self.assertEqual(output.read_bytes(), original_catalog)
+            self.assertEqual(manifest_path.read_bytes(), original_manifest)
+            self.assertEqual(lock_path.read_bytes(), lock_contents)
 
     def test_unique_sibling_staging_paths_do_not_collide(self):
         from scripts.restore_production_catalog import _new_sibling_temp
