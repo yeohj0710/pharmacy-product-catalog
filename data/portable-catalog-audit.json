@@ -1,0 +1,1483 @@
+{
+ "generated_at": "2026-07-18T14:53:27+09:00",
+ "input": "data/portable/v1/products.json",
+ "product_count": 776,
+ "summary": {
+  "text_finding_count": 0,
+  "image_missing_count": 111,
+  "image_search_proxy_count": 8,
+  "shared_image_cross_identity_group_count": 16,
+  "official_status_counts": {
+   "not_applicable": 297,
+   "confirmed": 458,
+   "review_required": 10,
+   "not_found": 11
+  },
+  "confirmed_missing_field_count": 0,
+  "shared_item_code_cross_identity_group_count": 16,
+  "gap_queue_row_count": 375,
+  "gap_queue_reason_counts": {
+   "official_match_unresolved": 21,
+   "image_missing": 111,
+   "shared_item_code_identity_conflict": 37,
+   "shared_image_cross_identity": 37,
+   "non_medicine_official_source_pending": 297,
+   "image_search_proxy_source": 8
+  }
+ },
+ "text_findings": [],
+ "image_audit": {
+  "missing": [
+   {
+    "product_id": "20250801_172327",
+    "name": "식물성멜라토닌",
+    "category": "수면",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250801_172721",
+    "name": "AD혈압계",
+    "category": "의료기기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250801_172724",
+    "name": "귀이마적외선체온계",
+    "category": "의료기기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250801_172845",
+    "name": "유한비타민D5000IU",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_102357",
+    "name": "국내산꿀생강도라지스틱",
+    "category": "이벤트",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_102500",
+    "name": "칼슘마그네슘 아연앤비타민D",
+    "category": "이벤트",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_102506",
+    "name": "맥스조인트뮤코다당단백콘드로이친1200",
+    "category": "이벤트",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_102743",
+    "name": "고함량비타민 하이렉스 비타민B3000",
+    "category": "이벤트",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20250812_103011",
+    "name": "드링크",
+    "category": "드링크",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103505",
+    "name": "비타하임비타민",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103509",
+    "name": "비빌크림캔디",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103517",
+    "name": "허브눈찜질팩",
+    "category": "의료기기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103607",
+    "name": "키드큐젤리",
+    "category": "키즈",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103727",
+    "name": "트리어드코어플러스D",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103735",
+    "name": "초임계 눈건강 아스타잔틴",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103738",
+    "name": "슈퍼 아이잔틴 루테인",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103758",
+    "name": "프롬팜싱글맥스루테인20",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_103803",
+    "name": "슈퍼 아이 루테인",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_104052",
+    "name": "슬림락정",
+    "category": "소화기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104242",
+    "name": "유한m 메가엽산",
+    "category": "여성",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_104713",
+    "name": "이큐펜키즈에이시럽(아세트아미노펜)",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104716",
+    "name": "이큐펜키즈아이시럽(이부프로펜)",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104725",
+    "name": "챔프콜드펜하이시럽",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104736",
+    "name": "챔프콜드펜하이시럽",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104759",
+    "name": "모드콜콜드시럽",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_104856",
+    "name": "나프졸크림",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_105007",
+    "name": "바디드란트액",
+    "category": "기타",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_105631",
+    "name": "식물성 멜라토닌 멜레븐 하모니",
+    "category": "수면",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105730",
+    "name": "카무트 브랜드 밀",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105744",
+    "name": "산양유단백분말",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105810",
+    "name": "녹십자 하루케어 멀티비타민V",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105836",
+    "name": "홍삼진스틱",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105841",
+    "name": "하루케어칼마디",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_105906",
+    "name": "녹용침향환",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110019",
+    "name": "알부스",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110120",
+    "name": "어린리즈저분자콜라겐",
+    "category": "피부",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110124",
+    "name": "비오틴어린콜라겐",
+    "category": "피부",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110141",
+    "name": "그린프로폴리스40",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110155",
+    "name": "코큐텐 아연 셀렌 프리미엄",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110224",
+    "name": "동성허브칼라2호",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110232",
+    "name": "창포휴허브",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110525",
+    "name": "이동국테이핑",
+    "category": "의료기기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110528",
+    "name": "웰업엠앰엠테이프와이",
+    "category": "기타",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110722",
+    "name": "스트롱조인트",
+    "category": "관절",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110748",
+    "name": "명품난각막프리미엄",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_110952",
+    "name": "프리미엄리버시마린",
+    "category": "건강보조식품",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_111138",
+    "name": "마그징코플러스",
+    "category": "혈행개선",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_111229",
+    "name": "브레인하이큐",
+    "category": "혈행개선",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_112817",
+    "name": "한풍올가에스",
+    "category": "소화기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113118",
+    "name": "인사큐어액",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113122",
+    "name": "이바프텐액",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113223",
+    "name": "콜즈록나잘스프레이",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113258",
+    "name": "센코프액",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113301",
+    "name": "파인큐나프록센현탁액",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113556",
+    "name": "콜대원키즈시럽",
+    "category": "키즈",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20250812_113616",
+    "name": "모드콜코프시럽",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113630",
+    "name": "이큐펜키즈아이시럽(이부프로펜)",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113631",
+    "name": "이큐펜키즈에이시럽(아세트아미노펜)",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_113634",
+    "name": "콜록키즈이부펜시럽",
+    "category": "키즈",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_114000",
+    "name": "로페라미드캡슐",
+    "category": "소화기",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20250812_114124",
+    "name": "이엔탁스프로",
+    "category": "구강, 치아",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114411",
+    "name": "커버든엑스과립(위령탕)",
+    "category": "호흡기",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20250812_114422",
+    "name": "스모타큐",
+    "category": "호흡기",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20250812_114655",
+    "name": "1436품",
+    "category": "소화기",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20250812_114707",
+    "name": "훼마틴에이",
+    "category": "빈혈",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20250812_114737",
+    "name": "트리플리얼리체크(임테기)",
+    "category": "의료기기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114756",
+    "name": "HONEY GEL",
+    "category": "남성",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114918",
+    "name": "상황산삼액",
+    "category": "소화기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114924",
+    "name": "경옥골드",
+    "category": "소화기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114928",
+    "name": "파워텐골드",
+    "category": "소화기",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_114935",
+    "name": "셀티아이베이비",
+    "category": "키즈",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115001",
+    "name": "글루타치온실크알부민",
+    "category": "영양제",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115050",
+    "name": "삼진본경옥고",
+    "category": "영양제",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20250812_115254",
+    "name": "티니핑홍삼젤리",
+    "category": "키즈",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115259",
+    "name": "프로팜칼슘챔피언",
+    "category": "키즈",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115421",
+    "name": "일동쏘팔메토코사놀프리미엄",
+    "category": "전립선",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115426",
+    "name": "뉴올업쏘팔메토포르테",
+    "category": "전립선",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20250812_115450",
+    "name": "젤세라프리미엄쏘팔메토",
+    "category": "전립선",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110235",
+    "name": "녹용보",
+    "category": "드링크",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110359",
+    "name": "닥터 리쥬피디 프리미엄 PDRN 리페어 크림",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110406",
+    "name": "리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110416",
+    "name": "리쥬올세라마이드베리어크림",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110428",
+    "name": "후시메드 마스크팩",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110455",
+    "name": "아르베라 PDRN 리쥬샷 리페어 세럼",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110533",
+    "name": "애크온 딥 클렌징 폼",
+    "category": "코스메틱",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_110915",
+    "name": "윙크리얼핏",
+    "category": "남성",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_111414",
+    "name": "모발렌5%폼",
+    "category": "탈모",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_111437",
+    "name": "프롬팜",
+    "category": "탈모",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_111516",
+    "name": "판시딜액3%(미녹시딜)",
+    "category": "탈모",
+    "official_match_status": "confirmed"
+   },
+   {
+    "product_id": "20260129_111529",
+    "name": "동성미녹스샴푸",
+    "category": "탈모",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112030",
+    "name": "프롬팜질건강엔리스펙타&지노밸런스",
+    "category": "유산균",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112032",
+    "name": "프로캄진프로바이오틱스플러스30",
+    "category": "유산균",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112046",
+    "name": "트루팍 생프로바이오틱스",
+    "category": "유산균",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112100",
+    "name": "올케어장용성프로바이오틱스",
+    "category": "유산균",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112103",
+    "name": "프로바이오틱스프라임",
+    "category": "유산균",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_112348",
+    "name": "쌍화탕",
+    "category": "드링크",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20260129_112351",
+    "name": "갈근탕종합감기약",
+    "category": "호흡기",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20260129_112354",
+    "name": "경남보강탕액",
+    "category": "호흡기",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_113223",
+    "name": "멕타",
+    "category": "비타민",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_113301",
+    "name": "비맥스",
+    "category": "비타민",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20260129_113524",
+    "name": "울트라맥스메가B",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_113537",
+    "name": "액티넘EX",
+    "category": "비타민",
+    "official_match_status": "review_required"
+   },
+   {
+    "product_id": "20260129_113630",
+    "name": "올인원뉴트리션이뮨데일리팩",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_113703",
+    "name": "썬비타민D500U",
+    "category": "비타민",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_113715",
+    "name": "비타민D 2000IU",
+    "category": "비타민",
+    "official_match_status": "not_found"
+   },
+   {
+    "product_id": "20260129_113732",
+    "name": "하루루틴비타민C",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_113748",
+    "name": "리포좀비타민C",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_114009",
+    "name": "엘리나C이뮨",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_114024",
+    "name": "장용비타민C복합제",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_114054",
+    "name": "유한m액티브셀렌효모플러스",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   },
+   {
+    "product_id": "20260129_114113",
+    "name": "아이브라 아연",
+    "category": "비타민",
+    "official_match_status": "not_applicable"
+   }
+  ],
+  "shared_url_groups": [
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2009071505962_02.jpg",
+    "product_ids": [
+     "20260129_111258",
+     "20260129_111302"
+    ],
+    "names": [
+     "마이녹실에스캡슐",
+     "마이녹실에스캡슐"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2009071506011_03.jpg",
+    "product_ids": [
+     "20250812_104934",
+     "20250812_104935"
+    ],
+    "names": [
+     "마데카솔케어",
+     "마데카솔케어"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2013101100013_01.jpg",
+    "product_ids": [
+     "20250812_111521",
+     "20260129_113946"
+    ],
+    "names": [
+     "메가트루골드",
+     "메가트루골드정"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2015121700002_00.jpg",
+    "product_ids": [
+     "20260129_113317",
+     "20260129_113323",
+     "20260129_113326",
+     "20260129_113330"
+    ],
+    "names": [
+     "벤포벨",
+     "벤포벨B",
+     "벤포벨",
+     "벤포벨"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2016071900002_00.jpg",
+    "product_ids": [
+     "20250801_173527",
+     "20250812_104730"
+    ],
+    "names": [
+     "챕프이부펜해열소염",
+     "챔프이부펜시럽"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2017090500003_00.jpg",
+    "product_ids": [
+     "20250801_173218",
+     "20250812_104733"
+    ],
+    "names": [
+     "챔프노트코감기",
+     "챔프노즈시럽"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2018100500006_00.jpg",
+    "product_ids": [
+     "20250812_102908",
+     "20250812_114341"
+    ],
+    "names": [
+     "카베진 코와 알파",
+     "카베진코와알파"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2019051000107_00.jpg",
+    "product_ids": [
+     "20260129_113401",
+     "20260129_113404"
+    ],
+    "names": [
+     "삐콤씨파워",
+     "삐콤씨파워"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2021031100002_00.jpg",
+    "product_ids": [
+     "20260129_114000",
+     "20260129_114002"
+    ],
+    "names": [
+     "비타메드 레모나",
+     "비타메드 레모나"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2021042300003_00.jpg",
+    "product_ids": [
+     "20250812_104449",
+     "20250812_115214"
+    ],
+    "names": [
+     "어린이멀미약 조은아이",
+     "조은아이시럽"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A0570A0226_04.jpg",
+    "product_ids": [
+     "20250812_104548",
+     "20250812_104557"
+    ],
+    "names": [
+     "후시딘연고",
+     "후시딘연고"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A0670A0329_02.jpg",
+    "product_ids": [
+     "20250812_111329",
+     "20260129_111525"
+    ],
+    "names": [
+     "비가졸",
+     "비가졸액"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A0740B0009_03.jpg",
+    "product_ids": [
+     "20250812_113914",
+     "20250812_113919"
+    ],
+    "names": [
+     "훼스탈플러스",
+     "훼스탈플러스"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2260A0347_01.jpg",
+    "product_ids": [
+     "20250812_113738",
+     "20260129_111718",
+     "20260129_111735"
+    ],
+    "names": [
+     "광동우황청심원현탁액",
+     "광동우황청심원(사향)액",
+     "광동우황청심원(사향)액50ml"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2262A0568_01.jpg",
+    "product_ids": [
+     "20260129_111725",
+     "20260129_111727",
+     "20260129_111729",
+     "20260129_111732"
+    ],
+    "names": [
+     "광동우황청심원(영묘향)액",
+     "광동우황청심원(영묘향)액",
+     "광동우황청심원(영묘향)액50ml",
+     "광동우황청심원(영묘향)액30ml"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2670A0001_01.jpg",
+    "product_ids": [
+     "20250812_112347",
+     "20250812_114405"
+    ],
+    "names": [
+     "보화소합원(소환)",
+     "보화소합원"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A3060A0346_04.jpg",
+    "product_ids": [
+     "20260129_111453",
+     "20260129_111459"
+    ],
+    "names": [
+     "마이녹실액5%",
+     "마이녹실액5%"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A3180A0218_00.jpg",
+    "product_ids": [
+     "20250812_114745",
+     "20250812_115324"
+    ],
+    "names": [
+     "사노바",
+     "사노바스프레이"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A3780A0129_01.jpg",
+    "product_ids": [
+     "20250812_114349",
+     "20250812_114351"
+    ],
+    "names": [
+     "다제스",
+     "다제스"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ABBBBB0727_02.jpg",
+    "product_ids": [
+     "20250812_104323",
+     "20250812_113752",
+     "20260129_112608",
+     "20260129_112701"
+    ],
+    "names": [
+     "멘탈관리 듀얼 솔루션 안정액",
+     "안정액",
+     "안정액",
+     "안정액50ml"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ADDDDD0017_01.jpg",
+    "product_ids": [
+     "20250812_104252",
+     "20250812_114721"
+    ],
+    "names": [
+     "산타몬플러스",
+     "산타몬플러스액"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AHHHHH0243_03.jpg",
+    "product_ids": [
+     "20250801_172846",
+     "20260129_113724"
+    ],
+    "names": [
+     "유한비타민C정1000mg",
+     "유한 비타민C정"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP07K0065_02.jpg",
+    "product_ids": [
+     "20250812_113149",
+     "20250812_113152"
+    ],
+    "names": [
+     "피지오머비강세척액젯노즐",
+     "피지오머 비강세척액 스프레이 노즐"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08F1261_01.jpg",
+    "product_ids": [
+     "20250812_111336",
+     "20260129_111536"
+    ],
+    "names": [
+     "덴드로프쿨액",
+     "덴드로프쿨액"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08F1359_01.jpg",
+    "product_ids": [
+     "20250812_111337",
+     "20260129_111444"
+    ],
+    "names": [
+     "라이센드플러스액",
+     "라이센드플러스액"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08G2439_01.jpg",
+    "product_ids": [
+     "20250812_115116",
+     "20250812_115128"
+    ],
+    "names": [
+     "익수공진단",
+     "익수공진단"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08G2962_02.jpg",
+    "product_ids": [
+     "20260129_111250",
+     "20260129_111420"
+    ],
+    "names": [
+     "카필러스캡슐",
+     "카필러스"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AOOOOO2180_01.jpg",
+    "product_ids": [
+     "20260129_113541",
+     "20260129_113544"
+    ],
+    "names": [
+     "아로나민 씨플러스",
+     "아로나민 씨플러스"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_f29ua8m9p963y_00.jpg",
+    "product_ids": [
+     "20250812_113403",
+     "20250812_113405"
+    ],
+    "names": [
+     "잇치페이스트",
+     "잇치 페이스트 프로폴리스향"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/P_krqpwvlvb3q6f_01.jpg",
+    "product_ids": [
+     "20250812_112643",
+     "20250812_112951"
+    ],
+    "names": [
+     "상위정",
+     "상위정"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://common.health.kr/shared/images/ext_images/pack_img/p_2018110500002_01.jpg",
+    "product_ids": [
+     "20250801_173524",
+     "20250812_104723"
+    ],
+    "names": [
+     "챔프코프목감기",
+     "챔프코프액"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://common.health.kr/shared/images/sb_photo/big3/202405030000501.jpg",
+    "product_ids": [
+     "20250812_115144",
+     "20260129_113413"
+    ],
+    "names": [
+     "메가트루633",
+     "메가트루633"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   },
+   {
+    "url": "https://www.dapharm.com/common/images/brand/1e7a892cc525459ba8fdbc78dd09b6be.png",
+    "product_ids": [
+     "20250801_173526",
+     "20250812_104727"
+    ],
+    "names": [
+     "챔프알러논알레르기",
+     "챔프알러논시럽"
+    ],
+    "distinct_identity_names": 2,
+    "cross_identity": true
+   },
+   {
+    "url": "https://www.ekdp.com/upload/product/1A2RIyOgvP0B1okv1QqG1CuSFqrOAVMVn0RptgHekZOLm5MlVD45.qhqlhuszvckj.png",
+    "product_ids": [
+     "20250812_104333",
+     "20260129_112710"
+    ],
+    "names": [
+     "광동마음정액",
+     "광동 마음정액"
+    ],
+    "distinct_identity_names": 1,
+    "cross_identity": false
+   }
+  ],
+  "search_proxy_findings": [
+   {
+    "product_id": "20250812_105806",
+    "name": "녹십자 하루케어 오메가3",
+    "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/4379/a68607c745c6a299d018716cb6f633240f699e2fb04102e177251d2d5a77.png",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20250812_110425",
+    "name": "큐어반F 관절용",
+    "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/3c45/6367c958cb5c7a4ec5107644de598e6fbb18d6a428265231668fa05ab519.jpg",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20250812_110426",
+    "name": "큐어반F 손끝용",
+    "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/033e/8ddb3b42ee081ad6c27921ba56ff0e72eb332dba197361890998458e512b.jpg",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20250812_112150",
+    "name": "모스케어 싹액",
+    "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/08/07/14/5/90734ebf-f3b3-466a-bfd2-cf99e4a51039.jpg",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20260129_112042",
+    "name": "프롬팜싱글맥스프로바이오틱스50",
+    "url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/4e7c/d53077c18bc71246885bf77100ef0450453767ac2dc7eacbffb772221926.jpeg",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20260129_113706",
+    "name": "츄어블비타민D4000IU",
+    "url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/668f/b18fc34e273b4aef795e1a798b6ded7e6b72402e25d2bf99686b335c152b.png",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20260129_113801",
+    "name": "하루케어멀티비타민&미네랄",
+    "url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/dc03/3b6e0e25620a7a322c61d4a339960be0ac791474cd2dcd1a0597ae3fb2d9.jpg",
+    "code": "search_or_thumbnail_proxy_host"
+   },
+   {
+    "product_id": "20260129_113832",
+    "name": "슈퍼멀티비타민이뮨부스트",
+    "url": "https://thumbnail.coupangcdn.com/image/retail/images/2025/05/07/17/5/292e21c9-9ebe-438c-9758-600808e775e1.png",
+    "code": "search_or_thumbnail_proxy_host"
+   }
+  ],
+  "host_counts": {
+   "common.health.kr": 410,
+   "img.danuri.io": 46,
+   "img1a.coupangcdn.com": 25,
+   "cdn.011st.com": 19,
+   "ep-cdn.011st.com": 17,
+   "image.coupangcdn.com": 13,
+   "www.dapharm.com": 10,
+   "thumbnail.coupangcdn.com": 8,
+   "ecimg.cafe24img.com": 6,
+   "imagedelivery.net": 6,
+   "m.choa.co.kr": 6,
+   "image.auction.co.kr": 6,
+   "sep-item.ssgcdn.com": 5,
+   "soear.co.kr": 5,
+   "shop-phinf.pstatic.net": 4,
+   "dpharm.co.kr": 4,
+   "nutrius.co.kr": 4,
+   "www.peoplepharm.com": 3,
+   "gdimg.gmarket.co.kr": 3,
+   "contents.lotteon.com": 2,
+   "www.ekdp.com": 2,
+   "common.hanmi.co.kr": 2,
+   "sitem.ssgcdn.com": 2,
+   "static.megamart.com": 2,
+   "cdn.platpharm.co.kr": 2,
+   "m.dmall.co.kr": 2,
+   "www.dong-wha.co.kr": 1,
+   "cdn.mdtoday.co.kr": 1,
+   "www.cjq.co.kr": 1,
+   "simg.ssgcdn.com": 1,
+   "kolonpharm.co.kr": 1,
+   "smith-nephew.stylelabs.cloud": 1,
+   "itemimage.cjonstyle.net": 1,
+   "img.ssfshop.com": 1,
+   "m.ngardenmall.co.kr": 1,
+   "midermall.com": 1,
+   "m.ehanmaum.co.kr": 1,
+   "www.iroirotokyo.net": 1,
+   "cafe24.poxo.com": 1,
+   "asset.m-gs.kr": 1,
+   "basecamp.kr": 1,
+   "cooltia.com": 1,
+   "product-image.prod-nsmall.com": 1,
+   "image.homeplus.kr": 1,
+   "cdn.mariooutlet.com": 1,
+   "www.hanmi.co.kr": 1,
+   "minol.co.kr": 1,
+   "contents.sixshop.com": 1,
+   "kbpharm.com": 1,
+   "www.gcbiopharma.com": 1,
+   "image9.coupangcdn.com": 1,
+   "www.bukwang.co.kr": 1,
+   "shopping-phinf.pstatic.net": 1,
+   "pharmswell.net": 1,
+   "godomall.speedycdn.net": 1,
+   "hkinnotr7596.cdn-nhncommerce.com": 1,
+   "ckdmall.co.kr": 1,
+   "content.foodspring.co.kr": 1,
+   "image.makewebcdn.com": 1,
+   "down-sg.img.susercontent.com": 1,
+   "cellbn.co.kr": 1,
+   "m.cellbn.co.kr": 1,
+   "cdn.oasis.co.kr:48581": 1,
+   "www.drprio.com": 1,
+   "alcondalcon.com": 1,
+   "m.kondom.co.kr": 1,
+   "ivancity.com": 1,
+   "cdn-banana.bizhost.kr": 1,
+   "eskl001image.godohosting.com": 1,
+   "www.yuhan.co.kr": 1,
+   "admin.ildong.com": 1,
+   "www.ell-cranell.co.kr": 1,
+   "assets.fullscript.io": 1,
+   "s3image.fredit.co.kr": 1,
+   "www.checkeat.org": 1,
+   "m.joeunpharm.com": 1,
+   "www.yaksawa.com": 1
+  }
+ },
+ "official_audit": {
+  "status_counts": {
+   "not_applicable": 297,
+   "confirmed": 458,
+   "review_required": 10,
+   "not_found": 11
+  },
+  "confirmed_missing_fields": [],
+  "shared_item_codes_cross_identity": [
+   {
+    "item_code": "2013101100013",
+    "product_ids": [
+     "20250812_111521",
+     "20260129_113946"
+    ],
+    "names": [
+     "메가트루골드",
+     "메가트루골드정"
+    ]
+   },
+   {
+    "item_code": "2015121700002",
+    "product_ids": [
+     "20260129_113317",
+     "20260129_113323",
+     "20260129_113326",
+     "20260129_113330"
+    ],
+    "names": [
+     "벤포벨",
+     "벤포벨B",
+     "벤포벨",
+     "벤포벨"
+    ]
+   },
+   {
+    "item_code": "2016071900002",
+    "product_ids": [
+     "20250801_173527",
+     "20250812_104730"
+    ],
+    "names": [
+     "챕프이부펜해열소염",
+     "챔프이부펜시럽"
+    ]
+   },
+   {
+    "item_code": "2017090500003",
+    "product_ids": [
+     "20250801_173218",
+     "20250812_104733"
+    ],
+    "names": [
+     "챔프노트코감기",
+     "챔프노즈시럽"
+    ]
+   },
+   {
+    "item_code": "2018110500002",
+    "product_ids": [
+     "20250801_173524",
+     "20250812_104723"
+    ],
+    "names": [
+     "챔프코프목감기",
+     "챔프코프액"
+    ]
+   },
+   {
+    "item_code": "2021042300003",
+    "product_ids": [
+     "20250812_104449",
+     "20250812_115214"
+    ],
+    "names": [
+     "어린이멀미약 조은아이",
+     "조은아이시럽"
+    ]
+   },
+   {
+    "item_code": "2021121000002",
+    "product_ids": [
+     "20250801_173526",
+     "20250812_104727"
+    ],
+    "names": [
+     "챔프알러논알레르기",
+     "챔프알러논시럽"
+    ]
+   },
+   {
+    "item_code": "A11A0670A0329",
+    "product_ids": [
+     "20250812_111329",
+     "20260129_111525"
+    ],
+    "names": [
+     "비가졸",
+     "비가졸액"
+    ]
+   },
+   {
+    "item_code": "A11A2260A0347",
+    "product_ids": [
+     "20250812_113738",
+     "20260129_111718",
+     "20260129_111735"
+    ],
+    "names": [
+     "광동우황청심원현탁액",
+     "광동우황청심원(사향)액",
+     "광동우황청심원(사향)액50ml"
+    ]
+   },
+   {
+    "item_code": "A11A2670A0001",
+    "product_ids": [
+     "20250812_112347",
+     "20250812_114405"
+    ],
+    "names": [
+     "보화소합원(소환)",
+     "보화소합원"
+    ]
+   },
+   {
+    "item_code": "A11A3180A0218",
+    "product_ids": [
+     "20250812_114745",
+     "20250812_115324"
+    ],
+    "names": [
+     "사노바",
+     "사노바스프레이"
+    ]
+   },
+   {
+    "item_code": "A11ABBBBB0727",
+    "product_ids": [
+     "20250812_104323",
+     "20250812_113752",
+     "20260129_112608",
+     "20260129_112701"
+    ],
+    "names": [
+     "멘탈관리 듀얼 솔루션 안정액",
+     "안정액",
+     "안정액",
+     "안정액50ml"
+    ]
+   },
+   {
+    "item_code": "A11ADDDDD0017",
+    "product_ids": [
+     "20250812_104252",
+     "20250812_114721"
+    ],
+    "names": [
+     "산타몬플러스",
+     "산타몬플러스액"
+    ]
+   },
+   {
+    "item_code": "A11AKP07K0065",
+    "product_ids": [
+     "20250812_113149",
+     "20250812_113152"
+    ],
+    "names": [
+     "피지오머비강세척액젯노즐",
+     "피지오머 비강세척액 스프레이 노즐"
+    ]
+   },
+   {
+    "item_code": "A11AKP08G2962",
+    "product_ids": [
+     "20260129_111250",
+     "20260129_111420"
+    ],
+    "names": [
+     "카필러스캡슐",
+     "카필러스"
+    ]
+   },
+   {
+    "item_code": "f29ua8m9p963y",
+    "product_ids": [
+     "20250812_113403",
+     "20250812_113405"
+    ],
+    "names": [
+     "잇치페이스트",
+     "잇치 페이스트 프로폴리스향"
+    ]
+   }
+  ]
+ }
+}
