@@ -36,6 +36,11 @@ FINAL_DECISIONS = {
     "exception_approved",
 }
 CANONICAL_BATCH_COUNT = 4
+CANONICAL_PRODUCT_COUNT = 776
+DEFAULT_SCAFFOLD_TIMESTAMP = "1970-01-01T00:00:00+00:00"
+SYSTEM_CONDITIONAL_REVIEWER = "system:conditional-rule"
+BATCH_SET_MANIFEST_NAME = "batch-set-manifest.json"
+BATCH_SET_LOCK_NAME = ".batch-set.lock"
 
 RECORD_KEYS = {
     "schema_version",
@@ -119,6 +124,19 @@ def field_union_sha256(field_union: Sequence[str]) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def batch_set_sha256(baseline_sha256: str, batch_hashes: Sequence[str]) -> str:
+    """Identify one complete batch generation without trusting file metadata."""
+    payload = json.dumps(
+        {
+            "baseline_sha256": baseline_sha256,
+            "batch_sha256": list(batch_hashes),
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
 def _pending_pass(reviewer: str) -> dict:
     return {
         "decision": "pending",
@@ -133,6 +151,7 @@ def make_review_record(
     field_union: Sequence[str],
     baseline_sha256: str = "abc",
     reviewer: str = "agent-1",
+    scaffold_timestamp: str = DEFAULT_SCAFFOLD_TIMESTAMP,
 ) -> dict:
     """Create a hash-only review scaffold covering the complete field union."""
     product_id = product.get("id")
@@ -143,6 +162,8 @@ def make_review_record(
         raise ValueError("product must have an integer source_order")
     if len(set(field_union)) != len(field_union):
         raise ValueError("field_union contains duplicate field names")
+    if not isinstance(scaffold_timestamp, str) or not scaffold_timestamp.strip():
+        raise ValueError("scaffold_timestamp must be a non-empty string")
 
     field_reviews = {}
     for field in field_union:
@@ -167,8 +188,14 @@ def make_review_record(
                 "conditional_rule" if official_content_not_applicable else "unreviewed"
             ),
             "evidence_ids": [],
-            "reviewer": reviewer,
-            "reviewed_at": "",
+            "reviewer": (
+                SYSTEM_CONDITIONAL_REVIEWER
+                if official_content_not_applicable
+                else reviewer
+            ),
+            "reviewed_at": (
+                scaffold_timestamp if official_content_not_applicable else ""
+            ),
             "reason": (
                 "official_content applies only to confirmed official matches"
                 if official_content_not_applicable
@@ -224,6 +251,30 @@ def _is_opened_url(value: object) -> bool:
         return False
     parsed = urlparse(value)
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def _require_string(value: object, label: str, *, nonblank: bool = False) -> str:
+    if not isinstance(value, str) or (nonblank and not value.strip()):
+        qualifier = "non-empty " if nonblank else ""
+        raise ValueError(f"{label} must be a {qualifier}string")
+    return value
+
+
+def _validate_evidence_ids(
+    evidence_ids: object,
+    evidence_by_id: dict[str, dict],
+    label: str,
+) -> list[str]:
+    if (
+        not isinstance(evidence_ids, list)
+        or not all(isinstance(item, str) and item.strip() for item in evidence_ids)
+        or len(set(evidence_ids)) != len(evidence_ids)
+    ):
+        raise ValueError(f"{label} evidence_ids must be unique non-empty strings")
+    unknown_evidence = sorted(set(evidence_ids) - set(evidence_by_id))
+    if unknown_evidence:
+        raise ValueError(f"{label} references unknown evidence: {unknown_evidence}")
+    return evidence_ids
 
 
 def _validate_baseline_for_batch(baseline_rows: Sequence[dict]) -> None:
@@ -311,12 +362,29 @@ def _validate_evidence(record: dict, label: str) -> dict[str, dict]:
             raise ValueError(f"{label} has an invalid evidence ID")
         if evidence_id in evidence_by_id:
             raise ValueError(f"{label} has duplicate evidence ID {evidence_id!r}")
+        opened_source_url = _require_string(
+            evidence["opened_source_url"],
+            f"{label} evidence {index} opened_source_url",
+        )
+        if opened_source_url and not _is_opened_url(opened_source_url):
+            raise ValueError(
+                f"{label} evidence {index} opened_source_url must be an http(s) URL"
+            )
+        for key in ("source_type", "accessed_at", "note"):
+            _require_string(
+                evidence[key],
+                f"{label} evidence {index} {key}",
+                nonblank=True,
+            )
         evidence_by_id[evidence_id] = evidence
     return evidence_by_id
 
 
 def _validate_passes_and_dimensions(
-    record: dict, label: str, allow_pending: bool
+    record: dict,
+    label: str,
+    allow_pending: bool,
+    evidence_by_id: dict[str, dict],
 ) -> None:
     dimensions = record["dimensions"]
     _require_exact_keys(dimensions, set(REVIEW_DIMENSIONS), f"{label} dimensions")
@@ -327,8 +395,19 @@ def _validate_passes_and_dimensions(
             f"{label} dimension {dimension_name}",
         )
         decision = dimension["decision"]
-        if decision not in FINAL_DECISIONS:
+        if not isinstance(decision, str) or decision not in FINAL_DECISIONS:
             raise ValueError(f"{label} dimension {dimension_name} has invalid decision")
+        _validate_evidence_ids(
+            dimension["evidence_ids"],
+            evidence_by_id,
+            f"{label} dimension {dimension_name}",
+        )
+        for key in ("reviewer", "reviewed_at", "reason"):
+            _require_string(
+                dimension[key],
+                f"{label} dimension {dimension_name} {key}",
+                nonblank=decision != "pending",
+            )
         if decision == "pending" and not allow_pending:
             raise ValueError(f"{label} has a pending decision")
 
@@ -336,13 +415,19 @@ def _validate_passes_and_dimensions(
         pass_review = record[pass_name]
         _require_exact_keys(pass_review, PASS_REVIEW_KEYS, f"{label} {pass_name}")
         decision = pass_review["decision"]
-        if decision not in FINAL_DECISIONS:
+        if not isinstance(decision, str) or decision not in FINAL_DECISIONS:
             raise ValueError(f"{label} {pass_name} has invalid decision")
+        for key in ("reviewer", "reviewed_at", "reason"):
+            _require_string(
+                pass_review[key],
+                f"{label} {pass_name} {key}",
+                nonblank=decision != "pending",
+            )
         if decision == "pending" and not allow_pending:
             raise ValueError(f"{label} has a pending decision")
 
     final_decision = record["final_decision"]
-    if final_decision not in FINAL_DECISIONS:
+    if not isinstance(final_decision, str) or final_decision not in FINAL_DECISIONS:
         raise ValueError(f"{label} has invalid final decision")
     if final_decision == "pending" and not allow_pending:
         raise ValueError(f"{label} has a pending decision")
@@ -388,7 +473,7 @@ def _validate_record(
         if field_review["original_value_sha256"] != expected_original_hash:
             raise ValueError(f"{label} field {field!r} original mismatch")
         decision = field_review["decision"]
-        if decision not in FIELD_DECISIONS:
+        if not isinstance(decision, str) or decision not in FIELD_DECISIONS:
             raise ValueError(f"{label} field {field!r} has invalid decision")
         applicability = field_review["applicability"]
         if applicability not in {"applicable", "not_applicable"}:
@@ -406,15 +491,16 @@ def _validate_record(
             raise ValueError(f"{label} official_content must be not_applicable")
         if not official_content_not_applicable and decision == "not_applicable":
             raise ValueError(f"{label} field {field!r} cannot be not_applicable")
-        evidence_ids = field_review["evidence_ids"]
-        if not isinstance(evidence_ids, list) or not all(
-            isinstance(item, str) for item in evidence_ids
-        ):
-            raise ValueError(f"{label} field {field!r} has invalid evidence_ids")
-        unknown_evidence = sorted(set(evidence_ids) - set(evidence_by_id))
-        if unknown_evidence:
-            raise ValueError(
-                f"{label} field {field!r} references unknown evidence: {unknown_evidence}"
+        _validate_evidence_ids(
+            field_review["evidence_ids"],
+            evidence_by_id,
+            f"{label} field {field!r}",
+        )
+        for key in ("method", "reviewer", "reviewed_at", "reason"):
+            _require_string(
+                field_review[key],
+                f"{label} field {field!r} {key}",
+                nonblank=decision != "pending",
             )
         if decision == "pending":
             pending_field_count += 1
@@ -428,7 +514,7 @@ def _validate_record(
     for index, correction in enumerate(corrections):
         _require_exact_keys(correction, CORRECTION_KEYS, f"{label} correction {index}")
         field = correction["field"]
-        if field not in expected_fields:
+        if not isinstance(field, str) or field not in expected_fields:
             raise ValueError(f"{label} correction has unknown field {field!r}")
         if field in correction_fields:
             raise ValueError(f"{label} has duplicate correction for field {field!r}")
@@ -439,9 +525,17 @@ def _validate_record(
             raise ValueError(f"{label} correction must change field {field!r}")
         if field_reviews[field]["decision"] != "corrected":
             raise ValueError(f"{label} correction field {field!r} is not marked corrected")
-        correction_evidence_ids = correction["evidence_ids"]
-        if not isinstance(correction_evidence_ids, list):
-            raise ValueError(f"{label} correction evidence_ids must be an array")
+        for key in ("reviewer", "reviewed_at", "reason"):
+            _require_string(
+                correction[key],
+                f"{label} correction {index} {key}",
+                nonblank=True,
+            )
+        correction_evidence_ids = _validate_evidence_ids(
+            correction["evidence_ids"],
+            evidence_by_id,
+            f"{label} correction {index}",
+        )
         opened_evidence = [
             evidence_by_id[evidence_id]
             for evidence_id in correction_evidence_ids
@@ -459,7 +553,7 @@ def _validate_record(
     if marked_corrected != set(correction_fields):
         raise ValueError(f"{label} corrected field decisions do not match corrections")
 
-    _validate_passes_and_dimensions(record, label, allow_pending)
+    _validate_passes_and_dimensions(record, label, allow_pending, evidence_by_id)
     return pending_field_count
 
 
@@ -471,6 +565,7 @@ def validate_batch(
     allow_pending: bool = False,
     expected_batch_id: str | None = None,
     expected_batch_count: int = CANONICAL_BATCH_COUNT,
+    expected_product_count: int = CANONICAL_PRODUCT_COUNT,
 ) -> dict:
     """Validate a batch against its immutable baseline and assigned range."""
     if not isinstance(batch, dict) or set(batch) != {
@@ -483,6 +578,17 @@ def validate_batch(
         raise ValueError("batch has unsupported schema_version")
     if len(set(field_union)) != len(field_union):
         raise ValueError("canonical field union contains duplicates")
+    if (
+        isinstance(expected_product_count, bool)
+        or not isinstance(expected_product_count, int)
+        or expected_product_count <= 0
+    ):
+        raise ValueError("expected_product_count must be a positive integer")
+    if len(baseline_rows) != expected_product_count:
+        raise ValueError(
+            f"expected exactly {expected_product_count} canonical products, "
+            f"got {len(baseline_rows)}"
+        )
     _validate_baseline_for_batch(baseline_rows)
     assigned_products, expected_ids = _validate_assignment(
         batch["assignment"],
@@ -538,10 +644,15 @@ def validate_batch(
 
 __all__ = [
     "CANONICAL_BATCH_COUNT",
+    "CANONICAL_PRODUCT_COUNT",
+    "BATCH_SET_LOCK_NAME",
+    "BATCH_SET_MANIFEST_NAME",
+    "DEFAULT_SCAFFOLD_TIMESTAMP",
     "FIELD_DECISIONS",
     "FINAL_DECISIONS",
     "REVIEW_DIMENSIONS",
     "field_union_sha256",
+    "batch_set_sha256",
     "make_review_record",
     "split_batch_sizes",
     "validate_batch",

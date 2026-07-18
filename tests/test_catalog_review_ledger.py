@@ -2,6 +2,7 @@ import copy
 import hashlib
 import io
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -95,14 +96,16 @@ class CatalogReviewLedgerTests(unittest.TestCase):
             "products": products,
         }
 
-    def make_canonical_batch(self, *, batch_number=1, batch_count=4):
+    def make_canonical_batch(
+        self, *, batch_number=1, batch_count=4, product_count=776
+    ):
         baseline = [
             {
                 "id": f"p-{source_order}",
                 "source_order": source_order,
                 "official_match_status": "not_applicable",
             }
-            for source_order in range(1, 777)
+            for source_order in range(1, product_count + 1)
         ]
         field_union = ["id", "official_match_status", "source_order"]
         baseline_sha256 = canonical_json_sha256(baseline)
@@ -149,7 +152,57 @@ class CatalogReviewLedgerTests(unittest.TestCase):
             self.field_union,
             allow_pending=allow_pending,
             expected_batch_count=2,
+            expected_product_count=4,
         )
+
+    def write_prepare_inputs(self, root, *, product_count=776):
+        core_fields = [
+            "id",
+            "official_match_status",
+            "source_order",
+            *(f"field_{index:02d}" for index in range(91)),
+        ]
+        field_union = sorted([*core_fields, "official_content"])
+        rows = []
+        for source_order in range(1, product_count + 1):
+            row = {field: "" for field in core_fields}
+            row.update(
+                {
+                    "id": f"p-{source_order}",
+                    "source_order": source_order,
+                    "official_match_status": (
+                        "confirmed" if source_order == 1 else "not_applicable"
+                    ),
+                }
+            )
+            if source_order == 1:
+                row["official_content"] = {}
+            rows.append(row)
+        baseline_path = root / "baseline.json"
+        manifest_path = root / "manifest.json"
+        schema_path = root / "fields.json"
+        baseline_path.write_text(json.dumps(rows), encoding="utf-8")
+        manifest_path.write_text(
+            json.dumps(
+                {
+                    "count": product_count,
+                    "canonical_json_sha256": canonical_json_sha256(rows),
+                    "field_union": field_union,
+                    "retrieved_at": "2026-07-18T03:42:37+00:00",
+                }
+            ),
+            encoding="utf-8",
+        )
+        schema_path.write_text(
+            json.dumps({"field_union": field_union}), encoding="utf-8"
+        )
+        return {
+            "rows": rows,
+            "field_union": field_union,
+            "baseline_path": baseline_path,
+            "manifest_path": manifest_path,
+            "schema_path": schema_path,
+        }
 
     def mark_complete(self, batch):
         for product in batch["products"]:
@@ -175,6 +228,9 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 product[pass_name].update(
                     {
                         "decision": "approved",
+                        "reviewer": (
+                            "agent-1" if pass_name == "first_pass" else "agent-2"
+                        ),
                         "reviewed_at": "2026-07-18T12:00:00+09:00",
                         "reason": "Pass complete.",
                     }
@@ -255,6 +311,21 @@ class CatalogReviewLedgerTests(unittest.TestCase):
             self.assertEqual(review["applicability"], "not_applicable")
             self.assertEqual(review["decision"], "not_applicable")
 
+    def test_system_not_applicable_scaffold_has_auditable_provenance(self):
+        record = make_review_record(
+            self.baseline[1],
+            self.field_union,
+            baseline_sha256="abc",
+            reviewer="agent-1",
+            scaffold_timestamp="2026-07-18T03:42:37+00:00",
+        )
+
+        review = record["field_reviews"]["official_content"]
+        self.assertEqual(review["reviewer"], "system:conditional-rule")
+        self.assertEqual(review["method"], "conditional_rule")
+        self.assertEqual(review["reviewed_at"], "2026-07-18T03:42:37+00:00")
+        self.assertTrue(review["reason"].strip())
+
     def test_official_content_is_applicable_for_a_confirmed_match(self):
         record = make_review_record(
             self.baseline[0], self.field_union, baseline_sha256="abc", reviewer="agent-1"
@@ -298,6 +369,230 @@ class CatalogReviewLedgerTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "batch_number must be between 1 and 4"):
             validate_batch(batch, baseline, field_union, allow_pending=True)
+
+    def test_validate_batch_rejects_noncanonical_total_product_count(self):
+        for product_count in (775, 777):
+            with self.subTest(product_count=product_count):
+                batch, baseline, field_union = self.make_canonical_batch(
+                    product_count=product_count
+                )
+                with self.assertRaisesRegex(
+                    ValueError, "expected exactly 776 canonical products"
+                ):
+                    validate_batch(batch, baseline, field_union, allow_pending=True)
+
+    def test_prepare_rejects_self_consistent_noncanonical_product_count(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+
+        for product_count in (775, 777):
+            with self.subTest(product_count=product_count):
+                with tempfile.TemporaryDirectory() as directory:
+                    root = Path(directory)
+                    inputs = self.write_prepare_inputs(
+                        root, product_count=product_count
+                    )
+                    with self.assertRaisesRegex(
+                        ValueError, "expected exactly 776 canonical products"
+                    ):
+                        prepare_review_batches(
+                            baseline_path=inputs["baseline_path"],
+                            manifest_path=inputs["manifest_path"],
+                            field_schema_path=inputs["schema_path"],
+                            output_dir=root / "batches",
+                        )
+
+    def test_prepare_publishes_complete_set_marker_and_validator_checks_hash(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+        from scripts.validate_catalog_review_batch import validate_queue_file
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            summary = prepare_review_batches(
+                baseline_path=inputs["baseline_path"],
+                manifest_path=inputs["manifest_path"],
+                field_schema_path=inputs["schema_path"],
+                output_dir=output_dir,
+            )
+
+            marker_path = output_dir / "batch-set-manifest.json"
+            marker = json.loads(marker_path.read_text(encoding="utf-8"))
+            self.assertEqual(summary["set_manifest"], str(marker_path))
+            self.assertTrue(marker["complete"])
+            self.assertEqual(marker["baseline_count"], 776)
+            self.assertEqual(len(marker["batches"]), 4)
+            for entry in marker["batches"]:
+                batch_path = output_dir / entry["file_name"]
+                self.assertEqual(
+                    entry["sha256"], hashlib.sha256(batch_path.read_bytes()).hexdigest()
+                )
+
+            queue_path = output_dir / "batch-01.json"
+            queue_path.write_bytes(queue_path.read_bytes() + b"\n")
+            with self.assertRaisesRegex(ValueError, "batch set marker hash mismatch"):
+                validate_queue_file(
+                    queue_path=queue_path,
+                    baseline_path=inputs["baseline_path"],
+                    manifest_path=inputs["manifest_path"],
+                    field_schema_path=inputs["schema_path"],
+                    allow_pending=True,
+                )
+
+    def test_prepare_lock_blocks_concurrent_batch_set_generation(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            output_dir.mkdir()
+            lock_path = output_dir / ".batch-set.lock"
+            lock_contents = b"owned by another process\n"
+            lock_path.write_bytes(lock_contents)
+
+            with self.assertRaisesRegex(RuntimeError, "generation already in progress"):
+                prepare_review_batches(
+                    baseline_path=inputs["baseline_path"],
+                    manifest_path=inputs["manifest_path"],
+                    field_schema_path=inputs["schema_path"],
+                    output_dir=output_dir,
+                )
+
+            self.assertEqual(lock_path.read_bytes(), lock_contents)
+
+    def test_staged_validation_failure_does_not_publish_any_batch(self):
+        import scripts.prepare_full_catalog_review as prepare_module
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            output_dir.mkdir()
+            old_files = {
+                output_dir / f"batch-{number:02d}.json": f"old-batch-{number}".encode()
+                for number in range(1, 5)
+            }
+            old_files[output_dir / "batch-set-manifest.json"] = b"old-marker"
+            for path, contents in old_files.items():
+                path.write_bytes(contents)
+
+            original_make_review_record = prepare_module.make_review_record
+
+            def make_invalid_record(product, *args, **kwargs):
+                record = original_make_review_record(product, *args, **kwargs)
+                if product["source_order"] == 389:
+                    record["field_reviews"].pop("field_00")
+                return record
+
+            with mock.patch.object(
+                prepare_module,
+                "make_review_record",
+                side_effect=make_invalid_record,
+            ):
+                with self.assertRaisesRegex(ValueError, "missing field reviews"):
+                    prepare_module.prepare_review_batches(
+                        baseline_path=inputs["baseline_path"],
+                        manifest_path=inputs["manifest_path"],
+                        field_schema_path=inputs["schema_path"],
+                        output_dir=output_dir,
+                    )
+
+            for path, contents in old_files.items():
+                self.assertEqual(path.read_bytes(), contents)
+
+    def test_batch03_publish_failure_rolls_back_entire_old_set_byte_for_byte(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            output_dir.mkdir()
+            old_files = {
+                output_dir / f"batch-{number:02d}.json": f"old-batch-{number}".encode()
+                for number in range(1, 5)
+            }
+            old_files[output_dir / "batch-set-manifest.json"] = b"old-marker"
+            for path, contents in old_files.items():
+                path.write_bytes(contents)
+
+            original_replace = Path.replace
+            failure_injected = False
+
+            def replace_with_batch03_failure(source, target):
+                nonlocal failure_injected
+                target = Path(target)
+                if target == output_dir / "batch-03.json" and not failure_injected:
+                    failure_injected = True
+                    target.write_bytes(b"partially-published-batch-03")
+                    raise OSError("injected batch03 publish failure")
+                return original_replace(source, target)
+
+            with mock.patch.object(Path, "replace", new=replace_with_batch03_failure):
+                with self.assertRaisesRegex(OSError, "injected batch03 publish failure"):
+                    prepare_review_batches(
+                        baseline_path=inputs["baseline_path"],
+                        manifest_path=inputs["manifest_path"],
+                        field_schema_path=inputs["schema_path"],
+                        output_dir=output_dir,
+                    )
+
+            self.assertTrue(failure_injected)
+            for path, contents in old_files.items():
+                self.assertEqual(path.read_bytes(), contents)
+            self.assertFalse((output_dir / ".batch-set.lock").exists())
+
+    def test_incomplete_rollback_retains_and_reports_recovery_backup(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            output_dir.mkdir()
+            old_files = {
+                output_dir / f"batch-{number:02d}.json": f"old-batch-{number}".encode()
+                for number in range(1, 5)
+            }
+            old_files[output_dir / "batch-set-manifest.json"] = b"old-marker"
+            for path, contents in old_files.items():
+                path.write_bytes(contents)
+
+            original_replace = Path.replace
+            publish_failure_injected = False
+            retained_backup = None
+
+            def replace_with_rollback_failure(source, target):
+                nonlocal publish_failure_injected, retained_backup
+                source = Path(source)
+                target = Path(target)
+                if target == output_dir / "batch-03.json" and not publish_failure_injected:
+                    publish_failure_injected = True
+                    raise OSError("injected batch03 publish failure")
+                if (
+                    target == output_dir / "batch-01.json"
+                    and ".backup" in source.name
+                ):
+                    retained_backup = source
+                    raise OSError("injected batch01 rollback failure")
+                return original_replace(source, target)
+
+            with mock.patch.object(Path, "replace", new=replace_with_rollback_failure):
+                with self.assertRaisesRegex(
+                    RuntimeError, "retained recovery paths"
+                ) as raised:
+                    prepare_review_batches(
+                        baseline_path=inputs["baseline_path"],
+                        manifest_path=inputs["manifest_path"],
+                        field_schema_path=inputs["schema_path"],
+                        output_dir=output_dir,
+                    )
+
+            self.assertIsNotNone(retained_backup)
+            self.assertTrue(retained_backup.exists())
+            self.assertEqual(retained_backup.read_bytes(), old_files[output_dir / "batch-01.json"])
+            self.assertIn(str(retained_backup), str(raised.exception))
 
     def test_prepare_cli_does_not_accept_batch_count_override(self):
         from scripts.prepare_full_catalog_review import parse_args
@@ -343,6 +638,83 @@ class CatalogReviewLedgerTests(unittest.TestCase):
         summary = self.validate_fixture_batch(batch, allow_pending=True)
         self.assertEqual(summary["pending_field_count"], 9)
 
+    def test_validate_batch_rejects_non_pending_field_without_provenance(self):
+        cases = {
+            "method": "",
+            "reviewer": " ",
+            "reviewed_at": None,
+            "reason": 123,
+        }
+        for key, invalid_value in cases.items():
+            with self.subTest(key=key):
+                batch = self.mark_complete(self.make_batch())
+                batch["products"][0]["field_reviews"]["name"][key] = invalid_value
+                with self.assertRaisesRegex(
+                    ValueError, rf"field 'name' {key} must be a non-empty string"
+                ):
+                    self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_non_pending_dimension_without_provenance(self):
+        batch = self.mark_complete(self.make_batch())
+        batch["products"][0]["dimensions"]["identity"]["reviewer"] = ""
+
+        with self.assertRaisesRegex(
+            ValueError, "dimension identity reviewer must be a non-empty string"
+        ):
+            self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_completed_pass_without_provenance(self):
+        batch = self.mark_complete(self.make_batch())
+        batch["products"][0]["second_pass"]["reviewer"] = ""
+
+        with self.assertRaisesRegex(
+            ValueError, "second_pass reviewer must be a non-empty string"
+        ):
+            self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_invalid_or_unresolved_evidence_ids(self):
+        cases = (
+            ("field_reviews", ["source-1", "source-1"], "unique non-empty strings"),
+            ("field_reviews", ["missing"], "references unknown evidence"),
+            ("dimensions", ["missing"], "references unknown evidence"),
+        )
+        for target, evidence_ids, message in cases:
+            with self.subTest(target=target, evidence_ids=evidence_ids):
+                batch = self.mark_complete(self.make_batch())
+                if target == "field_reviews":
+                    batch["products"][0][target]["name"]["evidence_ids"] = evidence_ids
+                else:
+                    batch["products"][0][target]["identity"][
+                        "evidence_ids"
+                    ] = evidence_ids
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_invalid_evidence_entry_values(self):
+        invalid_values = {
+            "opened_source_url": "ftp://example.test/product",
+            "source_type": "",
+            "accessed_at": " ",
+            "note": 123,
+        }
+        for key, invalid_value in invalid_values.items():
+            with self.subTest(key=key):
+                batch = self.mark_complete(self.make_batch())
+                record = batch["products"][0]
+                record["evidence"] = [
+                    {
+                        "evidence_id": "source-1",
+                        "opened_source_url": "https://example.test/products/p-1",
+                        "source_type": "official",
+                        "accessed_at": "2026-07-18T12:00:00+09:00",
+                        "note": "Opened exact product page.",
+                    }
+                ]
+                record["field_reviews"]["name"]["evidence_ids"] = ["source-1"]
+                record["evidence"][0][key] = invalid_value
+                with self.assertRaisesRegex(ValueError, key):
+                    self.validate_fixture_batch(batch)
+
     def test_validate_batch_rejects_correction_without_opened_source_url(self):
         batch = self.mark_complete(self.make_batch())
         record = batch["products"][0]
@@ -369,6 +741,67 @@ class CatalogReviewLedgerTests(unittest.TestCase):
         ]
         with self.assertRaisesRegex(ValueError, "opened source URL"):
             self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_correction_with_unknown_evidence(self):
+        batch = self.mark_complete(self.make_batch())
+        record = batch["products"][0]
+        record["field_reviews"]["name"]["decision"] = "corrected"
+        record["field_reviews"]["name"]["evidence_ids"] = ["source-1"]
+        record["corrections"] = [
+            {
+                "field": "name",
+                "before_value": "First",
+                "after_value": "Corrected First",
+                "reason": "The exact source uses the corrected name.",
+                "evidence_ids": ["source-1", "missing"],
+                "reviewer": "agent-1",
+                "reviewed_at": "2026-07-18T12:00:00+09:00",
+            }
+        ]
+        record["evidence"] = [
+            {
+                "evidence_id": "source-1",
+                "opened_source_url": "https://example.test/products/p-1",
+                "source_type": "official",
+                "accessed_at": "2026-07-18T12:00:00+09:00",
+                "note": "Opened exact product page.",
+            }
+        ]
+
+        with self.assertRaisesRegex(ValueError, "references unknown evidence"):
+            self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_correction_without_provenance(self):
+        invalid_values = {"reviewer": "", "reviewed_at": None, "reason": " "}
+        for key, invalid_value in invalid_values.items():
+            with self.subTest(key=key):
+                batch = self.mark_complete(self.make_batch())
+                record = batch["products"][0]
+                record["field_reviews"]["name"]["decision"] = "corrected"
+                record["field_reviews"]["name"]["evidence_ids"] = ["source-1"]
+                record["corrections"] = [
+                    {
+                        "field": "name",
+                        "before_value": "First",
+                        "after_value": "Corrected First",
+                        "reason": "The exact source uses the corrected name.",
+                        "evidence_ids": ["source-1"],
+                        "reviewer": "agent-1",
+                        "reviewed_at": "2026-07-18T12:00:00+09:00",
+                    }
+                ]
+                record["corrections"][0][key] = invalid_value
+                record["evidence"] = [
+                    {
+                        "evidence_id": "source-1",
+                        "opened_source_url": "https://example.test/products/p-1",
+                        "source_type": "official",
+                        "accessed_at": "2026-07-18T12:00:00+09:00",
+                        "note": "Opened exact product page.",
+                    }
+                ]
+                with self.assertRaisesRegex(ValueError, key):
+                    self.validate_fixture_batch(batch)
 
     def test_validate_batch_rejects_mismatched_original_hash(self):
         batch = self.make_batch()
