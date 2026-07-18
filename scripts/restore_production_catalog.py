@@ -97,13 +97,13 @@ def restore_catalog(
     try:
         download_path = _tracked_sibling_temp(
             output,
-            "catalog_stage",
+            "download",
             named_paths,
             temporary_paths,
         )
         manifest_download_path = _tracked_sibling_temp(
             manifest_path,
-            "manifest_stage",
+            "manifest.download",
             named_paths,
             temporary_paths,
         )

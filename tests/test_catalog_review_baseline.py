@@ -236,7 +236,7 @@ class CatalogBaselineTests(unittest.TestCase):
         )
 
     def test_restore_downloads_validates_and_atomically_replaces_existing_targets(self):
-        from scripts.restore_production_catalog import restore_catalog
+        from scripts.restore_production_catalog import _new_sibling_temp, restore_catalog
 
         payload = json.dumps(
             [{"id": "p-1", "source_order": 1, "official_match_status": "not_applicable"}],
@@ -277,14 +277,25 @@ class CatalogBaselineTests(unittest.TestCase):
             thread = threading.Thread(target=server.serve_forever, daemon=True)
             thread.start()
             url = f"http://127.0.0.1:{server.server_port}/catalog.json"
+            created_paths = []
+
+            def record_sibling_temp(target, role):
+                path = _new_sibling_temp(target, role)
+                created_paths.append(path)
+                return path
+
             try:
-                manifest = restore_catalog(
-                    url=url,
-                    output=output,
-                    manifest_path=manifest_path,
-                    schema_path=schema_path,
-                    expected_count=1,
-                )
+                with mock.patch(
+                    "scripts.restore_production_catalog._new_sibling_temp",
+                    side_effect=record_sibling_temp,
+                ):
+                    manifest = restore_catalog(
+                        url=url,
+                        output=output,
+                        manifest_path=manifest_path,
+                        schema_path=schema_path,
+                        expected_count=1,
+                    )
             finally:
                 server.shutdown()
                 server.server_close()
@@ -301,6 +312,11 @@ class CatalogBaselineTests(unittest.TestCase):
             self.assertEqual(manifest["count"], 1)
             self.assertEqual(manifest["row_field_count_distribution"], {"3": 1})
             self.assertRegex(manifest["retrieved_at"], r"^\d{4}-\d{2}-\d{2}T")
+            self.assertTrue(created_paths[0].name.endswith(".download"), created_paths[0])
+            self.assertTrue(
+                created_paths[1].name.endswith(".manifest.download"),
+                created_paths[1],
+            )
 
     def test_manifest_replace_failure_restores_existing_catalog_and_manifest(self):
         from scripts.restore_production_catalog import restore_catalog
