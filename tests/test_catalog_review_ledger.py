@@ -206,12 +206,22 @@ class CatalogReviewLedgerTests(unittest.TestCase):
 
     def mark_complete(self, batch):
         for product in batch["products"]:
+            baseline_evidence = {
+                "evidence_id": "baseline-sha256",
+                "opened_source_url": "",
+                "source_type": "baseline_hash",
+                "accessed_at": "2026-07-18T12:00:00+09:00",
+                "note": "Compared against the immutable canonical baseline hash.",
+            }
+            if not product["evidence"]:
+                product["evidence"].append(baseline_evidence)
             for field_review in product["field_reviews"].values():
                 if field_review["decision"] == "pending":
                     field_review.update(
                         {
                             "decision": "verified",
                             "method": "baseline_comparison",
+                            "evidence_ids": ["baseline-sha256"],
                             "reviewed_at": "2026-07-18T12:00:00+09:00",
                             "reason": "Matched the opened source.",
                         }
@@ -220,6 +230,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 dimension.update(
                     {
                         "decision": "approved",
+                        "evidence_ids": ["baseline-sha256"],
                         "reviewed_at": "2026-07-18T12:00:00+09:00",
                         "reason": "Dimension reviewed.",
                     }
@@ -291,6 +302,23 @@ class CatalogReviewLedgerTests(unittest.TestCase):
         serialized = json.dumps(record, ensure_ascii=False)
         self.assertNotIn('"original_value"', serialized)
         self.assertNotIn('"content": "content"', serialized)
+
+    def test_make_review_record_includes_reusable_baseline_hash_evidence(self):
+        record = make_review_record(
+            self.baseline[1],
+            self.field_union,
+            baseline_sha256="abc",
+            reviewer="agent-1",
+            scaffold_timestamp="2026-07-18T03:42:37+00:00",
+        )
+
+        self.assertEqual(len(record["evidence"]), 1)
+        evidence = record["evidence"][0]
+        self.assertEqual(evidence["evidence_id"], "baseline-sha256")
+        self.assertEqual(evidence["source_type"], "baseline_hash")
+        self.assertEqual(evidence["accessed_at"], "2026-07-18T03:42:37+00:00")
+        self.assertEqual(evidence["opened_source_url"], "")
+        self.assertIn("abc", evidence["note"])
 
     def test_official_content_is_not_applicable_when_absent_or_unconfirmed(self):
         absent = make_review_record(
@@ -403,7 +431,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
 
     def test_prepare_publishes_complete_set_marker_and_validator_checks_hash(self):
         from scripts.prepare_full_catalog_review import prepare_review_batches
-        from scripts.validate_catalog_review_batch import validate_queue_file
+        import scripts.validate_catalog_review_batch as validate_module
 
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -429,15 +457,40 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 )
 
             queue_path = output_dir / "batch-01.json"
-            queue_path.write_bytes(queue_path.read_bytes() + b"\n")
-            with self.assertRaisesRegex(ValueError, "batch set marker hash mismatch"):
-                validate_queue_file(
+            original_queue_bytes = queue_path.read_bytes()
+            original_validate_set = validate_module._validate_current_batch_set
+
+            def mutate_after_snapshot(*args, **kwargs):
+                result = original_validate_set(*args, **kwargs)
+                queue_path.write_text("{}", encoding="utf-8")
+                return result
+
+            with mock.patch.object(
+                validate_module,
+                "_validate_current_batch_set",
+                side_effect=mutate_after_snapshot,
+            ):
+                validated = validate_module.validate_queue_file(
                     queue_path=queue_path,
                     baseline_path=inputs["baseline_path"],
                     manifest_path=inputs["manifest_path"],
                     field_schema_path=inputs["schema_path"],
                     allow_pending=True,
                 )
+            self.assertEqual(validated["product_count"], 194)
+            self.assertFalse((output_dir / ".batch-set.lock").exists())
+
+            queue_path.write_bytes(original_queue_bytes)
+            queue_path.write_bytes(queue_path.read_bytes() + b"\n")
+            with self.assertRaisesRegex(ValueError, "batch set marker hash mismatch"):
+                validate_module.validate_queue_file(
+                    queue_path=queue_path,
+                    baseline_path=inputs["baseline_path"],
+                    manifest_path=inputs["manifest_path"],
+                    field_schema_path=inputs["schema_path"],
+                    allow_pending=True,
+                )
+            self.assertFalse((output_dir / ".batch-set.lock").exists())
 
     def test_prepare_lock_blocks_concurrent_batch_set_generation(self):
         from scripts.prepare_full_catalog_review import prepare_review_batches
@@ -457,6 +510,35 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                     manifest_path=inputs["manifest_path"],
                     field_schema_path=inputs["schema_path"],
                     output_dir=output_dir,
+                )
+
+            self.assertEqual(lock_path.read_bytes(), lock_contents)
+
+    def test_validator_rejects_existing_batch_set_lock(self):
+        from scripts.prepare_full_catalog_review import prepare_review_batches
+        from scripts.validate_catalog_review_batch import validate_queue_file
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = self.write_prepare_inputs(root)
+            output_dir = root / "batches"
+            prepare_review_batches(
+                baseline_path=inputs["baseline_path"],
+                manifest_path=inputs["manifest_path"],
+                field_schema_path=inputs["schema_path"],
+                output_dir=output_dir,
+            )
+            lock_path = output_dir / ".batch-set.lock"
+            lock_contents = b"owned by generator\n"
+            lock_path.write_bytes(lock_contents)
+
+            with self.assertRaisesRegex(RuntimeError, str(lock_path).replace("\\", "\\\\")):
+                validate_queue_file(
+                    queue_path=output_dir / "batch-01.json",
+                    baseline_path=inputs["baseline_path"],
+                    manifest_path=inputs["manifest_path"],
+                    field_schema_path=inputs["schema_path"],
+                    allow_pending=True,
                 )
 
             self.assertEqual(lock_path.read_bytes(), lock_contents)
@@ -654,12 +736,30 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 ):
                     self.validate_fixture_batch(batch)
 
+    def test_validate_batch_rejects_verified_field_without_evidence(self):
+        batch = self.mark_complete(self.make_batch())
+        batch["products"][0]["field_reviews"]["name"]["evidence_ids"] = []
+
+        with self.assertRaisesRegex(
+            ValueError, "field 'name' requires at least one evidence ID"
+        ):
+            self.validate_fixture_batch(batch)
+
     def test_validate_batch_rejects_non_pending_dimension_without_provenance(self):
         batch = self.mark_complete(self.make_batch())
         batch["products"][0]["dimensions"]["identity"]["reviewer"] = ""
 
         with self.assertRaisesRegex(
             ValueError, "dimension identity reviewer must be a non-empty string"
+        ):
+            self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_approved_dimension_without_evidence(self):
+        batch = self.mark_complete(self.make_batch())
+        batch["products"][0]["dimensions"]["identity"]["evidence_ids"] = []
+
+        with self.assertRaisesRegex(
+            ValueError, "dimension identity requires at least one evidence ID"
         ):
             self.validate_fixture_batch(batch)
 
@@ -671,6 +771,24 @@ class CatalogReviewLedgerTests(unittest.TestCase):
             ValueError, "second_pass reviewer must be a non-empty string"
         ):
             self.validate_fixture_batch(batch)
+
+    def test_validate_batch_rejects_completed_pass_when_record_has_no_evidence(self):
+        batch = self.make_batch()
+        first_pass = batch["products"][0]["first_pass"]
+        first_pass.update(
+            {
+                "decision": "approved",
+                "reviewer": "agent-1",
+                "reviewed_at": "2026-07-18T12:00:00+09:00",
+                "reason": "Pass complete.",
+            }
+        )
+        batch["products"][0]["evidence"] = []
+
+        with self.assertRaisesRegex(
+            ValueError, "first_pass requires at least one record evidence entry"
+        ):
+            self.validate_fixture_batch(batch, allow_pending=True)
 
     def test_validate_batch_rejects_invalid_or_unresolved_evidence_ids(self):
         cases = (
@@ -701,7 +819,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
             with self.subTest(key=key):
                 batch = self.mark_complete(self.make_batch())
                 record = batch["products"][0]
-                record["evidence"] = [
+                record["evidence"].append(
                     {
                         "evidence_id": "source-1",
                         "opened_source_url": "https://example.test/products/p-1",
@@ -709,9 +827,9 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                         "accessed_at": "2026-07-18T12:00:00+09:00",
                         "note": "Opened exact product page.",
                     }
-                ]
+                )
                 record["field_reviews"]["name"]["evidence_ids"] = ["source-1"]
-                record["evidence"][0][key] = invalid_value
+                record["evidence"][-1][key] = invalid_value
                 with self.assertRaisesRegex(ValueError, key):
                     self.validate_fixture_batch(batch)
 
@@ -730,7 +848,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "reviewed_at": "2026-07-18T12:00:00+09:00",
             }
         ]
-        record["evidence"] = [
+        record["evidence"].append(
             {
                 "evidence_id": "source-1",
                 "opened_source_url": "",
@@ -738,7 +856,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "accessed_at": "2026-07-18T12:00:00+09:00",
                 "note": "Not actually opened.",
             }
-        ]
+        )
         with self.assertRaisesRegex(ValueError, "opened source URL"):
             self.validate_fixture_batch(batch)
 
@@ -758,7 +876,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "reviewed_at": "2026-07-18T12:00:00+09:00",
             }
         ]
-        record["evidence"] = [
+        record["evidence"].append(
             {
                 "evidence_id": "source-1",
                 "opened_source_url": "https://example.test/products/p-1",
@@ -766,7 +884,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "accessed_at": "2026-07-18T12:00:00+09:00",
                 "note": "Opened exact product page.",
             }
-        ]
+        )
 
         with self.assertRaisesRegex(ValueError, "references unknown evidence"):
             self.validate_fixture_batch(batch)
@@ -791,7 +909,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                     }
                 ]
                 record["corrections"][0][key] = invalid_value
-                record["evidence"] = [
+                record["evidence"].append(
                     {
                         "evidence_id": "source-1",
                         "opened_source_url": "https://example.test/products/p-1",
@@ -799,7 +917,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                         "accessed_at": "2026-07-18T12:00:00+09:00",
                         "note": "Opened exact product page.",
                     }
-                ]
+                )
                 with self.assertRaisesRegex(ValueError, key):
                     self.validate_fixture_batch(batch)
 
@@ -827,7 +945,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "reviewed_at": "2026-07-18T12:00:00+09:00",
             }
         ]
-        record["evidence"] = [
+        record["evidence"].append(
             {
                 "evidence_id": "source-1",
                 "opened_source_url": "https://example.test/products/p-1",
@@ -835,7 +953,7 @@ class CatalogReviewLedgerTests(unittest.TestCase):
                 "accessed_at": "2026-07-18T12:00:00+09:00",
                 "note": "Opened product page.",
             }
-        ]
+        )
         with self.assertRaisesRegex(ValueError, "correction before_value mismatch"):
             self.validate_fixture_batch(batch)
 

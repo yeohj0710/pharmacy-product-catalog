@@ -4,8 +4,12 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import uuid
 from collections import Counter
-from collections.abc import Sequence
+from collections.abc import Iterator, Sequence
+from contextlib import contextmanager
+from pathlib import Path
 from urllib.parse import urlparse
 
 from .baseline import canonical_json_sha256
@@ -39,8 +43,39 @@ CANONICAL_BATCH_COUNT = 4
 CANONICAL_PRODUCT_COUNT = 776
 DEFAULT_SCAFFOLD_TIMESTAMP = "1970-01-01T00:00:00+00:00"
 SYSTEM_CONDITIONAL_REVIEWER = "system:conditional-rule"
+BASELINE_EVIDENCE_ID = "baseline-sha256"
 BATCH_SET_MANIFEST_NAME = "batch-set-manifest.json"
 BATCH_SET_LOCK_NAME = ".batch-set.lock"
+
+
+@contextmanager
+def batch_set_lock(directory: Path, *, operation: str) -> Iterator[Path]:
+    """Exclusively own a batch set while generating or validating it."""
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    lock_path = directory / BATCH_SET_LOCK_NAME
+    contents = f"pid={os.getpid()} token={uuid.uuid4().hex}\n".encode("ascii")
+    flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
+    if hasattr(os, "O_BINARY"):
+        flags |= os.O_BINARY
+    try:
+        descriptor = os.open(lock_path, flags)
+    except FileExistsError as error:
+        raise RuntimeError(
+            f"batch set {operation} already in progress; lock file exists: {lock_path}"
+        ) from error
+    try:
+        os.write(descriptor, contents)
+        os.fsync(descriptor)
+        yield lock_path
+    finally:
+        os.close(descriptor)
+        try:
+            current_contents = lock_path.read_bytes()
+        except FileNotFoundError:
+            return
+        if current_contents == contents:
+            lock_path.unlink(missing_ok=True)
 
 RECORD_KEYS = {
     "schema_version",
@@ -221,7 +256,15 @@ def make_review_record(
         "field_reviews": field_reviews,
         "dimensions": dimensions,
         "corrections": [],
-        "evidence": [],
+        "evidence": [
+            {
+                "evidence_id": BASELINE_EVIDENCE_ID,
+                "opened_source_url": "",
+                "source_type": "baseline_hash",
+                "accessed_at": scaffold_timestamp,
+                "note": f"Immutable canonical baseline SHA-256: {baseline_sha256}",
+            }
+        ],
         "first_pass": _pending_pass(reviewer),
         "second_pass": _pending_pass(""),
         "final_decision": "pending",
@@ -402,6 +445,10 @@ def _validate_passes_and_dimensions(
             evidence_by_id,
             f"{label} dimension {dimension_name}",
         )
+        if decision != "pending" and not dimension["evidence_ids"]:
+            raise ValueError(
+                f"{label} dimension {dimension_name} requires at least one evidence ID"
+            )
         for key in ("reviewer", "reviewed_at", "reason"):
             _require_string(
                 dimension[key],
@@ -422,6 +469,10 @@ def _validate_passes_and_dimensions(
                 pass_review[key],
                 f"{label} {pass_name} {key}",
                 nonblank=decision != "pending",
+            )
+        if decision != "pending" and not evidence_by_id:
+            raise ValueError(
+                f"{label} {pass_name} requires at least one record evidence entry"
             )
         if decision == "pending" and not allow_pending:
             raise ValueError(f"{label} has a pending decision")
@@ -496,6 +547,20 @@ def _validate_record(
             evidence_by_id,
             f"{label} field {field!r}",
         )
+        is_system_conditional_exception = (
+            field == "official_content"
+            and decision == "not_applicable"
+            and field_review["method"] == "conditional_rule"
+            and field_review["reviewer"] == SYSTEM_CONDITIONAL_REVIEWER
+        )
+        if (
+            decision != "pending"
+            and not field_review["evidence_ids"]
+            and not is_system_conditional_exception
+        ):
+            raise ValueError(
+                f"{label} field {field!r} requires at least one evidence ID"
+            )
         for key in ("method", "reviewer", "reviewed_at", "reason"):
             _require_string(
                 field_review[key],
@@ -643,6 +708,7 @@ def validate_batch(
 
 
 __all__ = [
+    "BASELINE_EVIDENCE_ID",
     "CANONICAL_BATCH_COUNT",
     "CANONICAL_PRODUCT_COUNT",
     "BATCH_SET_LOCK_NAME",
@@ -653,6 +719,7 @@ __all__ = [
     "REVIEW_DIMENSIONS",
     "field_union_sha256",
     "batch_set_sha256",
+    "batch_set_lock",
     "make_review_record",
     "split_batch_sizes",
     "validate_batch",

@@ -7,18 +7,17 @@ import os
 import shutil
 import sys
 import tempfile
-import uuid
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from lib.catalog_review.baseline import canonical_json_sha256, field_schema, validate_baseline
 from lib.catalog_review.ledger import (
-    BATCH_SET_LOCK_NAME,
     BATCH_SET_MANIFEST_NAME,
     CANONICAL_BATCH_COUNT,
     CANONICAL_PRODUCT_COUNT,
     batch_set_sha256,
+    batch_set_lock,
     field_union_sha256,
     make_review_record,
     split_batch_sizes,
@@ -66,41 +65,6 @@ def _file_sha256(path: Path) -> str:
         while chunk := handle.read(1024 * 1024):
             digest.update(chunk)
     return digest.hexdigest()
-
-
-def _acquire_batch_set_lock(output_dir: Path) -> tuple[Path, int, bytes]:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    lock_path = output_dir / BATCH_SET_LOCK_NAME
-    lock_contents = f"pid={os.getpid()} token={uuid.uuid4().hex}\n".encode("ascii")
-    flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
-    if hasattr(os, "O_BINARY"):
-        flags |= os.O_BINARY
-    try:
-        descriptor = os.open(lock_path, flags)
-    except FileExistsError as error:
-        raise RuntimeError(
-            f"batch set generation already in progress; lock file exists: {lock_path}"
-        ) from error
-    try:
-        os.write(descriptor, lock_contents)
-        os.fsync(descriptor)
-    except Exception:
-        os.close(descriptor)
-        lock_path.unlink(missing_ok=True)
-        raise
-    return lock_path, descriptor, lock_contents
-
-
-def _release_batch_set_lock(
-    lock_path: Path, descriptor: int, lock_contents: bytes
-) -> None:
-    os.close(descriptor)
-    try:
-        current_contents = lock_path.read_bytes()
-    except FileNotFoundError:
-        return
-    if current_contents == lock_contents:
-        lock_path.unlink(missing_ok=True)
 
 
 def _validate_staged_batch_set(
@@ -196,8 +160,7 @@ def prepare_review_batches(
     reviewer: str = "agent-1",
 ) -> dict:
     output_dir = Path(output_dir)
-    lock_path, lock_descriptor, lock_contents = _acquire_batch_set_lock(output_dir)
-    try:
+    with batch_set_lock(output_dir, operation="generation"):
         return _prepare_review_batches_locked(
             baseline_path=baseline_path,
             manifest_path=manifest_path,
@@ -205,8 +168,6 @@ def prepare_review_batches(
             output_dir=output_dir,
             reviewer=reviewer,
         )
-    finally:
-        _release_batch_set_lock(lock_path, lock_descriptor, lock_contents)
 
 
 def _prepare_review_batches_locked(

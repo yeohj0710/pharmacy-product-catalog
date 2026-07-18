@@ -14,6 +14,7 @@ from lib.catalog_review.ledger import (
     CANONICAL_BATCH_COUNT,
     CANONICAL_PRODUCT_COUNT,
     batch_set_sha256,
+    batch_set_lock,
     field_union_sha256,
     validate_batch,
 )
@@ -34,22 +35,18 @@ def _load_json(path: Path) -> object:
         raise ValueError(f"invalid JSON in {path}: {error}") from error
 
 
-def _file_sha256(path: Path) -> str:
-    digest = hashlib.sha256()
+def _read_batch_bytes(path: Path) -> bytes:
     try:
-        with path.open("rb") as handle:
-            while chunk := handle.read(1024 * 1024):
-                digest.update(chunk)
+        return path.read_bytes()
     except FileNotFoundError as error:
         raise ValueError(f"batch set marker references missing file: {path.name}") from error
-    return digest.hexdigest()
 
 
 def _validate_current_batch_set(
     queue_dir: Path,
     baseline_sha256: str,
     field_union: list[str],
-) -> dict:
+) -> tuple[dict, dict[str, bytes]]:
     marker_path = queue_dir / BATCH_SET_MANIFEST_NAME
     marker = _load_json(marker_path)
     expected_marker_keys = {
@@ -90,6 +87,7 @@ def _validate_current_batch_set(
         "source_order_end",
     }
     batch_hashes = []
+    batch_snapshots: dict[str, bytes] = {}
     for batch_number, entry in enumerate(entries, start=1):
         if not isinstance(entry, dict) or set(entry) != expected_entry_keys:
             raise ValueError(f"batch set marker entry {batch_number} has invalid keys")
@@ -110,18 +108,20 @@ def _validate_current_batch_set(
                     f"batch set marker entry {batch_number} has invalid {key}"
                 )
         batch_path = queue_dir / file_name
-        actual_hash = _file_sha256(batch_path)
+        batch_bytes = _read_batch_bytes(batch_path)
+        actual_hash = hashlib.sha256(batch_bytes).hexdigest()
         if entry["sha256"] != actual_hash:
             raise ValueError(f"batch set marker hash mismatch for {file_name}")
         batch_hashes.append(actual_hash)
+        batch_snapshots[file_name] = batch_bytes
 
     expected_set_id = batch_set_sha256(baseline_sha256, batch_hashes)
     if marker["set_id"] != expected_set_id:
         raise ValueError("batch set marker set_id mismatch")
-    return marker
+    return marker, batch_snapshots
 
 
-def validate_queue_file(
+def _validate_queue_file_locked(
     *,
     queue_path: Path,
     baseline_path: Path = DEFAULT_BASELINE,
@@ -151,8 +151,19 @@ def validate_queue_file(
     if manifest.get("count") != len(baseline):
         raise ValueError("baseline count does not match baseline manifest")
 
-    _validate_current_batch_set(queue_path.parent, baseline_sha256, field_union)
-    batch = _load_json(queue_path)
+    _, batch_snapshots = _validate_current_batch_set(
+        queue_path.parent, baseline_sha256, field_union
+    )
+    try:
+        batch_bytes = batch_snapshots[queue_path.name]
+    except KeyError as error:
+        raise ValueError(
+            f"review queue must be one of the canonical batch files: {queue_path.name}"
+        ) from error
+    try:
+        batch = json.loads(batch_bytes.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise ValueError(f"invalid JSON in {queue_path}: {error}") from error
     if not isinstance(batch, dict):
         raise ValueError("review queue must be a JSON object")
 
@@ -163,6 +174,25 @@ def validate_queue_file(
         allow_pending=allow_pending,
         expected_batch_id=queue_path.stem,
     )
+
+
+def validate_queue_file(
+    *,
+    queue_path: Path,
+    baseline_path: Path = DEFAULT_BASELINE,
+    manifest_path: Path = DEFAULT_MANIFEST,
+    field_schema_path: Path = DEFAULT_FIELD_SCHEMA,
+    allow_pending: bool = False,
+) -> dict:
+    queue_path = Path(queue_path)
+    with batch_set_lock(queue_path.parent, operation="validation"):
+        return _validate_queue_file_locked(
+            queue_path=queue_path,
+            baseline_path=baseline_path,
+            manifest_path=manifest_path,
+            field_schema_path=field_schema_path,
+            allow_pending=allow_pending,
+        )
 
 
 def parse_args() -> argparse.Namespace:
