@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pharmacy-product-catalog.local/schemas/catalog-review-ledger.schema.json",
+  "title": "Catalog product review ledger",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "catalog_product_id",
+    "source_order",
+    "baseline_sha256",
+    "field_reviews",
+    "dimensions",
+    "corrections",
+    "evidence",
+    "first_pass",
+    "second_pass",
+    "final_decision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "catalog_product_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_order": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "baseline_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "field_reviews": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/field_review"
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "identity",
+        "capacity",
+        "category",
+        "price_preservation",
+        "official_match",
+        "official_content",
+        "image",
+        "provenance"
+      ],
+      "properties": {
+        "identity": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "capacity": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "category": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "price_preservation": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "official_match": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "official_content": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "image": {
+          "$ref": "#/$defs/dimension_review"
+        },
+        "provenance": {
+          "$ref": "#/$defs/dimension_review"
+        }
+      },
+      "additionalProperties": false
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/correction"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "first_pass": {
+      "$ref": "#/$defs/pass_review"
+    },
+    "second_pass": {
+      "$ref": "#/$defs/pass_review"
+    },
+    "final_decision": {
+      "enum": [
+        "pending",
+        "approved",
+        "corrected",
+        "rejected",
+        "exception_approved"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "field_review": {
+      "type": "object",
+      "required": [
+        "original_value_sha256",
+        "decision",
+        "applicability",
+        "method",
+        "evidence_ids",
+        "reviewer",
+        "reviewed_at",
+        "reason"
+      ],
+      "properties": {
+        "original_value_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "decision": {
+          "enum": [
+            "pending",
+            "verified",
+            "corrected",
+            "not_applicable",
+            "verified_exception"
+          ]
+        },
+        "applicability": {
+          "enum": [
+            "applicable",
+            "not_applicable"
+          ]
+        },
+        "method": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidence_ids"
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dimension_review": {
+      "type": "object",
+      "required": [
+        "decision",
+        "evidence_ids",
+        "reviewer",
+        "reviewed_at",
+        "reason"
+      ],
+      "properties": {
+        "decision": {
+          "$ref": "#/$defs/final_decision"
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidence_ids"
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "correction": {
+      "type": "object",
+      "required": [
+        "field",
+        "before_value",
+        "after_value",
+        "reason",
+        "evidence_ids",
+        "reviewer",
+        "reviewed_at"
+      ],
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before_value": {},
+        "after_value": {},
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "$ref": "#/$defs/evidence_ids"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "opened_source_url",
+        "source_type",
+        "accessed_at",
+        "note"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "opened_source_url": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "accessed_at": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "pass_review": {
+      "type": "object",
+      "required": [
+        "decision",
+        "reviewer",
+        "reviewed_at",
+        "reason"
+      ],
+      "properties": {
+        "decision": {
+          "$ref": "#/$defs/final_decision"
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "final_decision": {
+      "enum": [
+        "pending",
+        "approved",
+        "corrected",
+        "rejected",
+        "exception_approved"
+      ]
+    }
+  }
+}
