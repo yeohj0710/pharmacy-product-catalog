@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -19,6 +21,60 @@ DEFAULT_URL = "https://pharmacy-product-catalog.vercel.app/data/enrichment-queue
 DEFAULT_OUTPUT = ROOT / "data" / "enrichment-queue.json"
 DEFAULT_MANIFEST = ROOT / "etc" / "catalog-verification" / "baseline-manifest.json"
 DEFAULT_SCHEMA = ROOT / "schemas" / "catalog-canonical-fields.json"
+DEFAULT_NETWORK_TIMEOUT_SECONDS = 30
+MAX_DOWNLOAD_BYTES = 64 * 1024 * 1024
+DOWNLOAD_CHUNK_BYTES = 1024 * 1024
+
+
+def _new_sibling_temp(target: Path, role: str) -> Path:
+    """Create a unique temporary file beside a target for same-volume replacement."""
+    target = Path(target)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, name = tempfile.mkstemp(
+        prefix=f".{target.name}.",
+        suffix=f".{role}",
+        dir=target.parent,
+    )
+    os.close(descriptor)
+    return Path(name)
+
+
+def _paths_alias(first: Path, second: Path) -> bool:
+    first = Path(first)
+    second = Path(second)
+    first_key = os.path.normcase(str(first.resolve(strict=False)))
+    second_key = os.path.normcase(str(second.resolve(strict=False)))
+    if first_key == second_key:
+        return True
+    return first.exists() and second.exists() and os.path.samefile(first, second)
+
+
+def _assert_distinct_paths(**named_paths: Path) -> None:
+    items = list(named_paths.items())
+    for index, (first_name, first_path) in enumerate(items):
+        for second_name, second_path in items[index + 1 :]:
+            if _paths_alias(first_path, second_path):
+                raise ValueError(
+                    f"path collision: {first_name} and {second_name} resolve to the same file"
+                )
+
+
+def _tracked_sibling_temp(
+    target: Path,
+    role: str,
+    named_paths: dict[str, Path],
+    temporary_paths: list[Path],
+) -> Path:
+    candidate = _new_sibling_temp(target, role)
+    try:
+        _assert_distinct_paths(**named_paths, **{role: candidate})
+    except Exception:
+        if not any(_paths_alias(candidate, protected) for protected in named_paths.values()):
+            candidate.unlink(missing_ok=True)
+        raise
+    named_paths[role] = candidate
+    temporary_paths.append(candidate)
+    return candidate
 
 
 def restore_catalog(
@@ -33,18 +89,60 @@ def restore_catalog(
     output = Path(output)
     manifest_path = Path(manifest_path)
     schema_path = Path(schema_path)
+    named_paths = {"output": output, "manifest": manifest_path, "schema": schema_path}
+    _assert_distinct_paths(**named_paths)
     output.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    download_path = output.with_name(output.name + ".download")
-    manifest_download_path = manifest_path.with_name(manifest_path.name + ".download")
-
-    request = Request(url, headers={"User-Agent": "pharmacy-catalog-baseline-restorer/1.0"})
+    temporary_paths: list[Path] = []
     try:
-        with urlopen(request) as response, download_path.open("wb") as destination:
+        download_path = _tracked_sibling_temp(
+            output,
+            "catalog_stage",
+            named_paths,
+            temporary_paths,
+        )
+        manifest_download_path = _tracked_sibling_temp(
+            manifest_path,
+            "manifest_stage",
+            named_paths,
+            temporary_paths,
+        )
+
+        request = Request(url, headers={"User-Agent": "pharmacy-catalog-baseline-restorer/1.0"})
+        byte_hasher = hashlib.sha256()
+        with urlopen(request, timeout=DEFAULT_NETWORK_TIMEOUT_SECONDS) as response, download_path.open(
+            "wb"
+        ) as destination:
             status = response.getcode()
             etag = response.headers.get("ETag")
             last_modified = response.headers.get("Last-Modified")
-            shutil.copyfileobj(response, destination)
+            content_length = response.headers.get("Content-Length")
+            if content_length is not None:
+                try:
+                    declared_size = int(content_length)
+                except ValueError as error:
+                    raise ValueError("invalid Content-Length header") from error
+                if declared_size < 0:
+                    raise ValueError("invalid Content-Length header")
+                if declared_size > MAX_DOWNLOAD_BYTES:
+                    raise ValueError(
+                        f"maximum download size is {MAX_DOWNLOAD_BYTES} bytes; "
+                        f"Content-Length declared {declared_size}"
+                    )
+
+            downloaded_size = 0
+            while True:
+                chunk = response.read(DOWNLOAD_CHUNK_BYTES)
+                if not chunk:
+                    break
+                downloaded_size += len(chunk)
+                if downloaded_size > MAX_DOWNLOAD_BYTES:
+                    raise ValueError(
+                        f"maximum download size is {MAX_DOWNLOAD_BYTES} bytes; "
+                        f"received more than the limit"
+                    )
+                destination.write(chunk)
+                byte_hasher.update(chunk)
 
         rows = json.loads(download_path.read_text(encoding="utf-8"))
         if not isinstance(rows, list):
@@ -62,13 +160,12 @@ def restore_catalog(
         if unexpected_counts:
             raise ValueError(f"unexpected row field counts: {unexpected_counts}")
 
-        payload_bytes = download_path.read_bytes()
         manifest = {
             "url": url,
             "http_status": status,
             "etag": etag,
             "last_modified": last_modified,
-            "byte_sha256": hashlib.sha256(payload_bytes).hexdigest(),
+            "byte_sha256": byte_hasher.hexdigest(),
             "canonical_json_sha256": canonical_json_sha256(rows),
             "count": validation["count"],
             "field_union": validation["field_union"],
@@ -83,12 +180,52 @@ def restore_catalog(
             json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-        download_path.replace(output)
-        manifest_download_path.replace(manifest_path)
+        output_existed = output.exists()
+        manifest_existed = manifest_path.exists()
+        output_backup_path = None
+        manifest_backup_path = None
+        if output_existed:
+            output_backup_path = _tracked_sibling_temp(
+                output,
+                "catalog_backup",
+                named_paths,
+                temporary_paths,
+            )
+            shutil.copy2(output, output_backup_path)
+        if manifest_existed:
+            manifest_backup_path = _tracked_sibling_temp(
+                manifest_path,
+                "manifest_backup",
+                named_paths,
+                temporary_paths,
+            )
+            shutil.copy2(manifest_path, manifest_backup_path)
+
+        output_replaced = False
+        manifest_replace_attempted = False
+        try:
+            download_path.replace(output)
+            output_replaced = True
+            manifest_replace_attempted = True
+            manifest_download_path.replace(manifest_path)
+        except Exception:
+            if output_replaced:
+                if output_existed:
+                    assert output_backup_path is not None
+                    output_backup_path.replace(output)
+                else:
+                    output.unlink(missing_ok=True)
+            if manifest_replace_attempted:
+                if manifest_existed:
+                    assert manifest_backup_path is not None
+                    manifest_backup_path.replace(manifest_path)
+                else:
+                    manifest_path.unlink(missing_ok=True)
+            raise
         return manifest
     finally:
-        download_path.unlink(missing_ok=True)
-        manifest_download_path.unlink(missing_ok=True)
+        for temporary_path in reversed(temporary_paths):
+            temporary_path.unlink(missing_ok=True)
 
 
 def main() -> int:

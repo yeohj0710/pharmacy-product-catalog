@@ -57,6 +57,21 @@ def validate_baseline(
             extra = sorted(observed_fields - expected_fields)
             raise ValueError(f"unexpected field union: missing={missing}, extra={extra}")
 
+        core_fields = expected_fields - {"official_content"}
+        for index, row in enumerate(rows, start=1):
+            required_fields = (
+                expected_fields
+                if row.get("official_match_status") == "confirmed"
+                else core_fields
+            )
+            row_fields = set(row)
+            if row_fields != required_fields:
+                missing = sorted(required_fields - row_fields)
+                extra = sorted(row_fields - required_fields)
+                raise ValueError(
+                    f"unexpected row fields at row {index}: missing={missing}, extra={extra}"
+                )
+
     for index, row in enumerate(rows, start=1):
         has_official_content = "official_content" in row
         is_confirmed = row.get("official_match_status") == "confirmed"
