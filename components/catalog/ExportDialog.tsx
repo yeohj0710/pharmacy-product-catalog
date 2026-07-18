@@ -28,13 +28,19 @@ export function ExportDialog({ open, allProducts, filteredProducts, selectedProd
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    dialogRef.current?.querySelector<HTMLElement>("button")?.focus();
+    dialogRef.current?.focus({ preventScroll: true });
     const keydown = (event: KeyboardEvent) => {
       if (event.key === "Escape") { event.preventDefault(); onClose(); return; }
       if (event.key !== "Tab" || !dialogRef.current) return;
       const focusable = [...dialogRef.current.querySelectorAll<HTMLElement>("button, input, select, [tabindex]:not([tabindex='-1'])")].filter((element) => !element.hasAttribute("disabled"));
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
+      if (!first || !last) return;
+      if (!document.activeElement || document.activeElement === dialogRef.current || !dialogRef.current.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+        return;
+      }
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     };
@@ -55,7 +61,7 @@ export function ExportDialog({ open, allProducts, filteredProducts, selectedProd
 
   return (
     <div className="modal-backdrop export-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section ref={dialogRef} className="modal modal-shell export-dialog" role="dialog" aria-modal="true" aria-labelledby="export-title">
+      <section ref={dialogRef} className="modal modal-shell export-dialog" role="dialog" aria-modal="true" aria-labelledby="export-title" tabIndex={-1}>
         <header className="modal-header"><div><span className="eyebrow">원본 필드 보존</span><h2 id="export-title">데이터 받기</h2></div><button type="button" className="icon-button modal-close" onClick={onClose} aria-label="데이터 받기 닫기"><X aria-hidden="true" /></button></header>
         <div className="modal-body">
           <fieldset className="export-scope"><legend>다운로드 범위</legend>

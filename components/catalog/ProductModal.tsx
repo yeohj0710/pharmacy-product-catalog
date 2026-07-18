@@ -2,8 +2,8 @@
 
 import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { compactOfficialText } from "@/lib/catalog/text";
-import type { Product } from "@/types/catalog";
+import { compactOfficialText, dedupeLabeledText, formatConsumerGuidance } from "@/lib/catalog/text";
+import type { OfficialRichText, Product } from "@/types/catalog";
 import { ProductImage } from "./ProductImage";
 
 const money = new Intl.NumberFormat("ko-KR");
@@ -27,21 +27,43 @@ function structuredText(value: unknown): string {
     .join("\n");
 }
 
-function consumerGuidanceText(value: unknown) {
-  if (!value || typeof value !== "object" || Array.isArray(value)) return "";
-  const labels: Record<string, string> = {
-    efficacy: "효능·효과",
-    dosage: "복용 방법",
-    warning: "복용 전 경고",
-    precautions: "주의사항",
-    interactions: "상호작용",
-    side_effects: "부작용",
-    storage: "보관 방법",
-  };
-  return compactOfficialText(Object.entries(value as Record<string, unknown>)
-    .filter(([, text]) => typeof text === "string" && text.trim().length > 0)
-    .map(([key, text]) => `${labels[key] || key}: ${text}`)
-    .join("\n"));
+function safeSourceUrl(value: unknown): string {
+  if (typeof value !== "string" || !value.trim()) return "";
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function OfficialContentValue({ fallback, rich }: { fallback: string; rich?: OfficialRichText }) {
+  if (!rich?.blocks?.length) return <p>{fallback}</p>;
+  return (
+    <div className="official-rich-text">
+      {rich.blocks.map((block, index) => {
+        if (block.type === "paragraph") return <p key={`paragraph-${index}`}>{block.text}</p>;
+        return (
+          <div className="official-table-scroll" key={`table-${index}`}>
+            <table>
+              {block.headers.length > 0 && (
+                <thead><tr>{block.headers.map((cell, cellIndex) => <th key={cellIndex} scope="col">{cell}</th>)}</tr></thead>
+              )}
+              <tbody>
+                {block.rows.map((row, rowIndex) => (
+                  <tr key={rowIndex}>{row.map((cell, cellIndex) => (
+                    block.headers.length === 0 && cellIndex === 0 && cell
+                      ? <th key={cellIndex} scope="row">{cell}</th>
+                      : <td key={cellIndex}>{cell}</td>
+                  ))}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export function ProductModal({ product, onClose }: { product: Product; onClose: () => void }) {
@@ -50,7 +72,7 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
     const previousOverflow = document.body.style.overflow;
     const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     document.body.style.overflow = "hidden";
-    modalRef.current?.querySelector<HTMLElement>("button")?.focus();
+    modalRef.current?.focus({ preventScroll: true });
     const keydown = (event: KeyboardEvent) => {
       if (event.key === "Escape") { event.preventDefault(); onClose(); return; }
       if (event.key !== "Tab" || !modalRef.current) return;
@@ -58,6 +80,11 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
       if (!focusable.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
+      if (!document.activeElement || document.activeElement === modalRef.current || !modalRef.current.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+        return;
+      }
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     };
@@ -70,8 +97,22 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
   }, [onClose]);
 
   const officialManufacturer = typeof product.official_manufacturer === "string" ? product.official_manufacturer : "";
+  const officialSourceUrl = safeSourceUrl(product.official_source_url);
+  const imageSourceUrl = safeSourceUrl(product.image_source_url);
+  const sourceLinks = [
+    officialSourceUrl && ["약학정보원 제품 원문", officialSourceUrl],
+    imageSourceUrl && imageSourceUrl !== officialSourceUrl && ["제품 이미지 출처", imageSourceUrl],
+  ].filter(Boolean) as Array<[string, string]>;
   const officialPermitDate = structuredText(product.official_permit_date);
   const officialInsurance = structuredText(product.official_insurance);
+  const richByLabel = new Map<string, OfficialRichText | undefined>([
+    ["효능·효과", product.official_content?.efficacy],
+    ["용법·용량", product.official_content?.dosage],
+    ["사용상의 주의사항", product.official_content?.precautions],
+    ["전문가 주의사항", product.official_content?.professional_precautions],
+    ["복약 안내", product.official_content?.patient_guidance],
+    ["복약지도", product.official_content?.medication_guide],
+  ]);
   const basicDetails = [
     ["비고", product.etc],
     ["제조사", officialManufacturer],
@@ -80,7 +121,7 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
     ["투여경로", product.official_route],
     ["허가일", officialPermitDate],
     ["보험정보", officialInsurance],
-  ].filter(([, value]) => typeof value === "string" && value.trim());
+  ].filter(([, value]) => typeof value === "string" && value.trim().length > 0);
   const officialGroups = [
     {
       title: "효능과 복용",
@@ -105,7 +146,7 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
       title: "복약 정보",
       description: "복용할 때 확인할 안내",
       items: [
-        ["소비자 복약정보", consumerGuidanceText(product.official_consumer_guidance)],
+        ["소비자 복약정보", formatConsumerGuidance(product.official_consumer_guidance)],
         ["복약 안내", structuredText(product.official_patient_guidance)],
         ["의약품 설명", structuredText(product.official_medication_summary)],
         ["복약지도", structuredText(product.official_medication_guide)],
@@ -139,12 +180,12 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
   ]
     .map((group) => ({
       ...group,
-      items: group.items.filter(([, value]) => value.trim().length > 0) as Array<[string, string]>,
+      items: dedupeLabeledText(group.items as Array<[string, string]>),
     }))
     .filter((group) => group.items.length > 0);
   return (
     <div className="modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section ref={modalRef} className="modal modal-shell" role="dialog" aria-modal="true" aria-labelledby="product-title" aria-describedby="product-price-warning">
+      <section ref={modalRef} className="modal modal-shell" role="dialog" aria-modal="true" aria-labelledby="product-title" aria-describedby="product-price-warning" tabIndex={-1}>
         <header className="modal-header">
           <div><span className="eyebrow">상품 상세</span><strong>{product.category || "미분류"}</strong></div>
           <button type="button" className="icon-button modal-close" onClick={onClose} aria-label="상품 상세 닫기"><X aria-hidden="true" /></button>
@@ -152,7 +193,7 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
         <div className="modal-body">
           <div className="modal-grid">
             <ProductImage product={product} large />
-            <div>
+            <div className="modal-product-copy">
               <h2 id="product-title">{product.name}</h2>
               <p className="modal-spec">{product.capacity || product.specification || "규격 미입력"}</p>
               <div className="modal-price"><span>가격</span><strong>{money.format(product.displayed_price_krw)}원</strong></div>
@@ -163,6 +204,13 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
             <dl className="detail-list">
               {basicDetails.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
             </dl>
+          )}
+          {sourceLinks.length > 0 && (
+            <nav className="product-source-links" aria-label="상품 출처">
+              {sourceLinks.map(([label, url]) => (
+                <a href={url} key={label} target="_blank" rel="noopener noreferrer">{label}</a>
+              ))}
+            </nav>
           )}
           {officialGroups.length > 0 && (
             <section className="official-detail-section" aria-labelledby="official-detail-title">
@@ -182,7 +230,7 @@ export function ProductModal({ product, onClose }: { product: Product; onClose: 
                       {group.items.map(([label, value]) => (
                         <article className="official-detail-item" key={label}>
                           <h5>{label}</h5>
-                          <p>{value}</p>
+                          <OfficialContentValue fallback={value} rich={richByLabel.get(label)} />
                         </article>
                       ))}
                     </div>

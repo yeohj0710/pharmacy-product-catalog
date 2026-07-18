@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { DEFAULT_COLUMNS, DEFAULT_FILTERS } from "@/types/catalog";
 import type { CatalogState, ColumnKey, SortKey } from "@/types/catalog";
 
@@ -8,7 +8,15 @@ const PAGE_SIZES = new Set([25, 50, 100]);
 const SORT_KEYS = new Set(["source", "name", "category", "price-low", "price-high"]);
 const COLUMN_KEYS = new Set(["name", "capacity", "category", "price", "etc", "manufacturer", "image"]);
 const NOTE_FILTERS = new Set(["all", "with", "without"]);
-const OFFICIAL_FILTERS = new Set(["all", "linked", "unlinked"]);
+const OFFICIAL_FILTERS = new Set([
+  "all",
+  "confirmed",
+  "not_found",
+  "not_applicable",
+  "review_required",
+  "linked",
+  "unlinked",
+]);
 const IMAGE_FILTERS = new Set(["all", "with", "without"]);
 
 function positiveNumber(value: string | null) {
@@ -94,6 +102,7 @@ function writeState(state: CatalogState) {
 
 export function useCatalogState() {
   const [state, setStateValue] = useState<CatalogState>(defaults);
+  const hydrated = useRef(false);
 
   useEffect(() => {
     const sync = () => setStateValue(readState());
@@ -102,12 +111,18 @@ export function useCatalogState() {
     return () => window.removeEventListener("popstate", sync);
   }, []);
 
+  useEffect(() => {
+    if (!hydrated.current) {
+      hydrated.current = true;
+      return;
+    }
+    writeState(state);
+  }, [state]);
+
   const setState = useCallback((patch: Partial<CatalogState> | ((current: CatalogState) => Partial<CatalogState>)) => {
     setStateValue((current) => {
       const nextPatch = typeof patch === "function" ? patch(current) : patch;
-      const next = { ...current, ...nextPatch } as CatalogState;
-      writeState(next);
-      return next;
+      return { ...current, ...nextPatch } as CatalogState;
     });
   }, []);
 

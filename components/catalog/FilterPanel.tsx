@@ -64,8 +64,8 @@ export function FilterPanel({
 
         <div className="filter-selects">
           <label><span>원본 비고</span><select value={draft.note} onChange={(event) => setDraft({ ...draft, note: event.target.value as NoteFilter })}><option value="all">전체</option><option value="with">있음</option><option value="without">없음</option></select></label>
-          <label><span>공식 정보</span><select value={draft.official} onChange={(event) => setDraft({ ...draft, official: event.target.value as OfficialFilter })}><option value="all">전체</option><option value="linked">연결됨</option><option value="unlinked">미연결</option></select></label>
-          <label><span>공식 이미지</span><select value={draft.image} onChange={(event) => setDraft({ ...draft, image: event.target.value as ImageFilter })}><option value="all">전체</option><option value="with">있음</option><option value="without">없음</option></select></label>
+          <label><span>약학정보원 수록 상태</span><select value={draft.official} onChange={(event) => setDraft({ ...draft, official: event.target.value as OfficialFilter })}><option value="all">전체</option><option value="confirmed">수록 확인</option><option value="not_found">검색 결과 없음</option><option value="not_applicable">수록 대상 아님</option><option value="review_required">확인 필요</option></select></label>
+          <label><span>상품 이미지</span><select value={draft.image} onChange={(event) => setDraft({ ...draft, image: event.target.value as ImageFilter })}><option value="all">전체</option><option value="with">있음</option><option value="without">없음</option></select></label>
         </div>
       </div>
 

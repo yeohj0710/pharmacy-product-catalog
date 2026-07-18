@@ -2,7 +2,6 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { ImageOff } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/types/catalog";
 
@@ -24,9 +23,9 @@ export function ProductImage({ product, large = false }: { product: Product; lar
   const imageUrl = approvedImageUrl(product);
   if (!imageUrl || failed) {
     return (
-      <div className={`image-placeholder ${large ? "large" : ""}`} aria-label="연결된 상품 이미지 없음">
-        <ImageOff aria-hidden="true" />
-        {large && <span>연결된 공식 상품 이미지가 없습니다.</span>}
+      <div className={`image-placeholder product-image-fallback ${large ? "large" : ""}`} aria-label={`${product.name} 대체 이미지`}>
+        <strong aria-hidden="true">{product.name.slice(0, large ? 18 : 2)}</strong>
+        {large && <span>{product.capacity || product.specification}</span>}
       </div>
     );
   }

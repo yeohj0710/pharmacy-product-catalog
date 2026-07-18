@@ -68,6 +68,7 @@ const PRODUCT_FIELDS = new Set<string>([
   "image_kind",
   "image_checked_at",
   "enrichment_status",
+  "match_alternatives",
 ]);
 
 const koreanCollator = new Intl.Collator("ko", {
@@ -100,7 +101,17 @@ function hasOfficialInformation(product: Product): boolean {
     if (["확정", "연결", "연결됨", "검증 완료", "confirmed", "linked", "verified"].includes(normalized)) {
       return true;
     }
-    if (["미연결", "검수 대기", "후보", "unlinked", "pending", "candidate"].includes(normalized)) {
+    if ([
+      "미연결",
+      "검수 대기",
+      "후보",
+      "unlinked",
+      "pending",
+      "candidate",
+      "not_found",
+      "not_applicable",
+      "review_required",
+    ].includes(normalized)) {
       return false;
     }
   }
@@ -114,7 +125,7 @@ function hasOfficialInformation(product: Product): boolean {
 function hasImage(product: Product): boolean {
   if (!product.image_url.trim()) return false;
   const rights = product.image_rights_status.toLocaleLowerCase("ko-KR");
-  return ["approved", "verified", "official", "public_domain", "open_license", "재사용 가능", "공공누리", "공식 공개"]
+  return ["approved", "verified", "official", "official_source_preview", "public_domain", "open_license", "재사용 가능", "공공누리", "공식 공개"]
     .some((status) => rights.includes(status));
 }
 
@@ -218,6 +229,10 @@ export function filterProducts(
     const officialLinked = hasOfficialInformation(product);
     if (filters.official === "linked" && !officialLinked) return false;
     if (filters.official === "unlinked" && officialLinked) return false;
+    if (
+      ["confirmed", "not_found", "not_applicable", "review_required"].includes(filters.official) &&
+      product.official_match_status !== filters.official
+    ) return false;
 
     const imageAvailable = hasImage(product);
     if (filters.image === "with" && !imageAvailable) return false;

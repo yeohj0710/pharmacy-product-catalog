@@ -7,6 +7,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -20,6 +21,27 @@ def safe_match(record: dict[str, Any]) -> bool:
 def is_placeholder_image(url: str) -> bool:
     lowered = url.lower()
     return any(marker in lowered for marker in ("19_limited", "noimg", "no_image", "placeholder"))
+
+
+def is_search_thumbnail(url: str) -> bool:
+    hostname = (urlparse(url).hostname or "").lower()
+    return hostname in {"search.pstatic.net", "search.naver.com", "search.daum.net", "search.danawa.com"}
+
+
+def is_health_kr_preview(image_url: str, source_url: str) -> bool:
+    image_host = (urlparse(image_url).hostname or "").lower()
+    source_host = (urlparse(source_url).hostname or "").lower()
+    return image_host in {"health.kr", "www.health.kr", "common.health.kr"} and source_host in {"health.kr", "www.health.kr"}
+
+
+def valid_product_page_url(url: str) -> bool:
+    parsed = urlparse(url)
+    hostname = (parsed.hostname or "").lower()
+    return (
+        parsed.scheme in {"http", "https"}
+        and bool(hostname)
+        and hostname not in {"search.pstatic.net", "search.naver.com", "search.daum.net", "search.danawa.com"}
+    )
 
 
 def load_records(paths: list[Path]) -> dict[str, dict[str, Any]]:
@@ -44,7 +66,14 @@ def load_records(paths: list[Path]) -> dict[str, dict[str, Any]]:
     return selected
 
 
-def merge_images(products: list[dict[str, Any]], records: dict[str, dict[str, Any]]) -> dict[str, int]:
+def merge_images(
+    products: list[dict[str, Any]],
+    records: dict[str, dict[str, Any]],
+    *,
+    include_unverified_previews: bool = False,
+    replace_search_thumbnails: bool = False,
+    replace_existing_verified: bool = False,
+) -> dict[str, int]:
     counts: Counter[str] = Counter()
     for product in products:
         if product.get("image_rights_status") != "source_preview":
@@ -70,30 +99,44 @@ def merge_images(products: list[dict[str, Any]], records: dict[str, dict[str, An
         record = records.get(product_id)
         if not record:
             continue
-        if product.get("image_url"):
+        existing_image_url = str(product.get("image_url") or "")
+        can_replace_search_thumbnail = replace_search_thumbnails and is_search_thumbnail(existing_image_url)
+        can_replace_verified = replace_existing_verified and product.get(
+            "image_rights_status"
+        ) in {"verified", "official_source_preview"}
+        if existing_image_url and not can_replace_search_thumbnail and not can_replace_verified:
             counts["already_has_image"] += 1
             continue
         image_url = valid_image_url(str(record.get("image_url") or ""))
+        source_url = str(record.get("result_url") or record.get("source_url") or "")
+        is_verified = record.get("status") == "confirmed" and safe_match(record)
         if (
-            record.get("status") != "confirmed"
-            or not safe_match(record)
+            not is_verified
             or not image_url
+            or not valid_product_page_url(source_url)
             or is_placeholder_image(image_url)
+            or is_search_thumbnail(image_url)
             or safe_urls[image_url] > 1
         ):
             counts["not_linked"] += 1
             continue
+        official_preview = is_health_kr_preview(image_url, source_url)
         product.update(
             {
                 "image_kind": "package",
                 "image_url": image_url,
-                "image_source_url": str(record.get("result_url") or record.get("source_url") or ""),
-                "image_rights_status": "verified",
+                "image_source_url": source_url,
+                "image_rights_status": "official_source_preview" if official_preview else "verified",
                 "image_checked_at": str(record.get("checked_at") or ""),
                 "enrichment_status": "secondary_image_linked",
             }
         )
+        counts["linked_verified"] += 1
         counts["linked"] += 1
+        if can_replace_search_thumbnail:
+            counts["replaced_search_thumbnail"] += 1
+        elif can_replace_verified:
+            counts["replaced_verified_image"] += 1
     return dict(counts)
 
 
@@ -104,28 +147,52 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--csv", type=Path, default=Path("data/enrichment-queue.csv"))
     parser.add_argument("--summary", type=Path, default=Path("data/secondary-image-summary.json"))
     parser.add_argument("--part", action="append", type=Path)
+    parser.add_argument(
+        "--include-unverified-previews",
+        action="store_true",
+        help="호환성용 옵션입니다. 검수되지 않은 이미지는 연결하지 않습니다.",
+    )
+    parser.add_argument(
+        "--replace-search-thumbnails",
+        action="store_true",
+        help="검수 승인된 이미지로 기존 검색 결과 썸네일만 교체합니다.",
+    )
+    parser.add_argument(
+        "--replace-existing-verified",
+        action="store_true",
+        help="교정 검수를 통과한 레코드로 기존 외부 검증 이미지를 교체합니다.",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    part_paths = args.part or [
-        Path(path)
-        for pattern in (
-            "data/secondary-image-part-[123].json",
-            "data/naver-image-part-[123].json",
-            "data/image-manual-review-part-[123].json",
-        )
-        for path in sorted(glob.glob(pattern))
-    ]
-    baseline = Path("data/secondary-image-matches.json")
-    if baseline.exists():
-        part_paths = [baseline, *part_paths]
+    if args.part:
+        part_paths = args.part
+    else:
+        part_paths = [
+            Path(path)
+            for pattern in (
+                "data/secondary-image-part-[123].json",
+                "data/naver-image-part-[123].json",
+                "data/image-manual-review-part-[123].json",
+            )
+            for path in sorted(glob.glob(pattern))
+        ]
+        baseline = Path("data/secondary-image-matches.json")
+        if baseline.exists():
+            part_paths = [baseline, *part_paths]
     if not part_paths:
         raise ValueError("병합할 보조 이미지 조사 파일이 없습니다.")
     products = json.loads(args.input.read_text(encoding="utf-8"))
     records = load_records(part_paths)
-    status_counts = merge_images(products, records)
+    status_counts = merge_images(
+        products,
+        records,
+        include_unverified_previews=args.include_unverified_previews,
+        replace_search_thumbnails=args.replace_search_thumbnails,
+        replace_existing_verified=args.replace_existing_verified,
+    )
     summary = {
         "product_count": len(products),
         "record_count": len(records),

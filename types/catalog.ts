@@ -1,5 +1,12 @@
 export type NoteFilter = "all" | "with" | "without";
-export type OfficialFilter = "all" | "linked" | "unlinked";
+export type OfficialFilter =
+  | "all"
+  | "confirmed"
+  | "not_found"
+  | "not_applicable"
+  | "review_required"
+  | "linked"
+  | "unlinked";
 export type ImageFilter = "all" | "with" | "without";
 
 export type SortKey =
@@ -32,6 +39,34 @@ export interface OfficialProductImage {
   sha256?: string;
   mime_type?: string;
   local_path?: string;
+}
+
+export interface OfficialParagraphBlock {
+  type: "paragraph";
+  text: string;
+}
+
+export interface OfficialTableBlock {
+  type: "table";
+  headers: string[];
+  rows: string[][];
+}
+
+export interface OfficialRichText {
+  text: string;
+  blocks: Array<OfficialParagraphBlock | OfficialTableBlock>;
+}
+
+export interface OfficialContent {
+  schema_version: "1.0";
+  normalization_version: string;
+  efficacy?: OfficialRichText;
+  dosage?: OfficialRichText;
+  precautions?: OfficialRichText;
+  professional_precautions?: OfficialRichText;
+  patient_guidance?: OfficialRichText;
+  medication_guide?: OfficialRichText;
+  consumer_guidance?: Record<string, string>;
 }
 
 export interface Product {
@@ -100,6 +135,7 @@ export interface Product {
   official_upstream_updated_at?: string;
   official_raw_sha256?: string;
   official_content_status?: string;
+  official_content?: OfficialContent;
   lookup_status?: string;
   match_alternatives?: unknown[];
   image_kind?: string;

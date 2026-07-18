@@ -6,7 +6,7 @@ import { catalogSummary, filterProducts, paginateProducts, sortProducts, validat
 // @ts-expect-error Node 22 strip-types executes explicit .ts module specifiers.
 import { EXPORT_FIELDS, createCsv, createExportFilename, createJson, sanitizeCsvCell } from "../lib/catalog/download.ts";
 // @ts-expect-error Node 22 strip-types executes explicit .ts module specifiers.
-import { compactOfficialText } from "../lib/catalog/text.ts";
+import { compactOfficialText, dedupeLabeledText, formatConsumerGuidance } from "../lib/catalog/text.ts";
 import type { CatalogFilters, Product } from "../types/catalog.ts";
 
 function product(overrides: Partial<Product> = {}): Product {
@@ -65,6 +65,35 @@ test("compactOfficialText removes repeated blank lines without changing the sour
   assert.equal(source.includes("\r\n\r\n"), true);
 });
 
+test("formatConsumerGuidance renders only semantic guidance fields", () => {
+  assert.equal(
+    formatConsumerGuidance({
+      summary: "기침과 가래 증상을 완화합니다.",
+      guide: "충분한 수분을 섭취하세요.",
+      source_url: "https://health.kr/example",
+      full_text: "의약품 상세정보 메뉴와 페이지 전체 원문",
+      unknown: "표시하면 안 되는 수집기 내부 값",
+    }),
+    "무슨 약인가요\n기침과 가래 증상을 완화합니다.\n\n어떻게 복용하나요\n충분한 수분을 섭취하세요.",
+  );
+});
+
+test("dedupeLabeledText removes repeated official aliases", () => {
+  assert.deepEqual(
+    dedupeLabeledText([
+      ["소비자 복약정보", "무슨 약인가요\n기침을 완화합니다.\n어떻게 복용하나요\n물을 드세요."],
+      ["복약 안내", "기침을 완화합니다."],
+      ["의약품 설명", "기침을 완화합니다."],
+      ["복약지도", "물을 드세요."],
+      ["별도 안내", "졸음에 주의하세요."],
+    ]),
+    [
+      ["소비자 복약정보", "무슨 약인가요\n기침을 완화합니다.\n어떻게 복용하나요\n물을 드세요."],
+      ["별도 안내", "졸음에 주의하세요."],
+    ],
+  );
+});
+
 test("validateProducts validates all fields, positive prices, and unique IDs", () => {
   const valid = [product(), product({ id: "id-2", document_id: "doc-2", source_order: 2 })];
   assert.equal(validateProducts(valid).length, 2);
@@ -72,6 +101,20 @@ test("validateProducts validates all fields, positive prices, and unique IDs", (
   assert.throws(() => validateProducts([product({ displayed_price_krw: 0 })]), /양수/);
   assert.throws(() => validateProducts([product(), product({ document_id: "doc-2" })]), /중복 상품 ID/);
   assert.throws(() => validateProducts([product(), product({ id: "id-2" })]), /중복 Firestore 문서 ID/);
+});
+
+test("validateProducts accepts enrichment match alternatives", () => {
+  const valid = product({
+    match_alternatives: [
+      {
+        official_item_seq: "200001",
+        official_item_name: "매칭 후보 상품",
+        official_match_score: 82,
+      },
+    ],
+  });
+
+  assert.equal(validateProducts([valid]).length, 1);
 });
 
 test("filterProducts combines Korean search, multiple categories, inclusive price and date bounds", () => {
@@ -143,6 +186,28 @@ test("filterProducts handles note, official information, and image states", () =
   assert.deepEqual(filterProducts(products, { ...allFilters, note: "with" }).map((item) => item.id), ["id-2"]);
   assert.deepEqual(filterProducts(products, { ...allFilters, official: "linked" }).map((item) => item.id), ["id-2"]);
   assert.deepEqual(filterProducts(products, { ...allFilters, image: "without" }).map((item) => item.id), ["id-1"]);
+});
+
+test("filterProducts distinguishes KPIC listing states and official source preview images", () => {
+  const products = [
+    product({
+      official_match_status: "confirmed",
+      image_url: "https://common.health.kr/product.jpg",
+      image_source_url: "https://health.kr/product/1",
+      image_rights_status: "official_source_preview",
+    }),
+    product({ id: "id-2", document_id: "doc-2", source_order: 2, official_match_status: "not_found", official_match_reason: "검색 후보 없음" }),
+    product({ id: "id-3", document_id: "doc-3", source_order: 3, official_match_status: "not_applicable" }),
+    product({ id: "id-4", document_id: "doc-4", source_order: 4, official_match_status: "review_required" }),
+  ];
+
+  assert.deepEqual(filterProducts(products, { ...allFilters, official: "confirmed" }).map((item) => item.id), ["id-1"]);
+  assert.deepEqual(filterProducts(products, { ...allFilters, official: "not_found" }).map((item) => item.id), ["id-2"]);
+  assert.deepEqual(filterProducts(products, { ...allFilters, official: "not_applicable" }).map((item) => item.id), ["id-3"]);
+  assert.deepEqual(filterProducts(products, { ...allFilters, official: "review_required" }).map((item) => item.id), ["id-4"]);
+  assert.deepEqual(filterProducts(products, { ...allFilters, image: "with" }).map((item) => item.id), ["id-1"]);
+  assert.equal(catalogSummary(products).officialLinked, 1);
+  assert.equal(catalogSummary(products).withImage, 1);
 });
 
 test("sortProducts is stable and paginateProducts clamps page ranges", () => {

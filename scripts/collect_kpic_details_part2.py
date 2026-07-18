@@ -19,6 +19,7 @@ import requests
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.collect_kpic_images import safe_name_match
+from lib.catalog_text_normalization import normalize_health_text
 
 
 BASE_URL = "https://health.kr"
@@ -141,23 +142,7 @@ class SectionExtractor(HTMLParser):
 
 
 def clean_text(value: Any) -> str:
-    raw = html.unescape(str(value or ""))
-    raw = re.sub(r"(?i)brbr", "\n\n", raw)
-    raw = re.sub(r"(?i)<br\s*/?>", "\n", raw)
-    parser = TextExtractor()
-    try:
-        parser.feed(raw)
-        raw = parser.text()
-    except Exception:
-        raw = re.sub(r"<[^>]+>", " ", raw)
-    lines = [re.sub(r"[ \t\f\v]+", " ", line).strip() for line in raw.splitlines()]
-    output: list[str] = []
-    for line in lines:
-        if line:
-            output.append(line)
-        elif output and output[-1] != "":
-            output.append("")
-    return "\n".join(output).strip()
+    return normalize_health_text(value)
 
 
 def parse_page_sections(document: str) -> tuple[dict[str, str], list[str]]:

@@ -131,7 +131,7 @@ export default function CatalogClient() {
           </div>
           <Link className="policy-link" href="/data-policy">데이터 수집·공개 기준 보기 <ChevronRight aria-hidden="true" /></Link>
         </section>
-        <footer><p>메가팩토리약국 또는 ‘창고형약국 약값체크’ 앱과 제휴·승인 관계가 없는 독립적인 연구용 아카이브입니다.</p><Link href="/data-policy">데이터 기준 및 정정 안내</Link></footer>
+        <footer><p>공개 자료의 출처를 확인해 정리한 독립적인 연구용 아카이브입니다.</p><Link href="/data-policy">데이터 기준 및 정정 안내</Link></footer>
         <SelectionBar selectedCount={selectedIds.size} filteredCount={filtered.length} onSelectFiltered={() => setSelectedIds(new Set(filtered.map((product) => product.id)))} onExport={() => openExport("selected")} onClear={() => setSelectedIds(new Set())} />
       </main>
       {selectedProduct && <ProductModal product={selectedProduct} onClose={closeProduct} />}

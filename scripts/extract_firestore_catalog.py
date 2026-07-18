@@ -17,6 +17,11 @@ import httpx
 from androguard.core.apk import APK
 from loguru import logger
 
+try:
+    from scripts.apply_catalog_text_corrections import apply_corrections
+except ModuleNotFoundError:  # `python scripts/extract_firestore_catalog.py` 실행 경로
+    from apply_catalog_text_corrections import apply_corrections
+
 
 DEFAULT_APK = Path("etc/apk/com.hiddenwave.yakcheck-9.apk")
 DEFAULT_COLLECTION = "products"
@@ -273,6 +278,12 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=Path("data/firestore-extraction-report.json"))
     parser.add_argument("--quality-report", type=Path, default=Path("data/quality-report.json"))
     parser.add_argument("--manifest", type=Path, default=Path("data/source-manifest.json"))
+    parser.add_argument(
+        "--text-corrections",
+        type=Path,
+        default=Path("data/catalog-text-corrections.json"),
+        help="검수된 표시용 상품명·규격 교정 목록. app_* 원문은 그대로 보존합니다.",
+    )
     args = parser.parse_args()
 
     project_id, api_key = read_firebase_config(args.apk)
@@ -382,6 +393,9 @@ def main() -> int:
         )
 
     products = [public_product(document, index) for index, document in enumerate(decoded_documents, start=1)]
+    if args.text_corrections.is_file():
+        corrections = json.loads(args.text_corrections.read_text(encoding="utf-8"))
+        apply_corrections(products, corrections)
     product_json = json.dumps(products, ensure_ascii=False, indent=2)
     atomic_write_text(args.output, product_json)
     atomic_write_text(args.public_output, product_json)
