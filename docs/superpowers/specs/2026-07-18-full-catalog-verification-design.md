@@ -10,7 +10,7 @@ The work is complete only when every product has an auditable review record. A f
 
 The repository and current production payload were inspected on 2026-07-18.
 
-- The production canonical payload contains 776 products and 94 top-level fields per row.
+- The production canonical payload contains 776 products and a 95-field union. The 458 confirmed rows contain all 95 fields; the other 318 rows contain 94 because `official_content` is conditionally absent.
 - Official match states are 458 `confirmed`, 10 `review_required`, 11 `not_found`, and 297 `not_applicable`.
 - Forty-one confirmed matches have a score below 95 and require mandatory re-review.
 - Thirty-eight official-record groups are linked to multiple catalog SKUs and require pack-unit and variant review.
@@ -41,7 +41,7 @@ The recovered `data/enrichment-queue.json` remains the compatibility source. Ori
 A new machine-readable review ledger stores exactly one record per product. Each record contains:
 
 - stable catalog product ID and source order;
-- a `field_reviews` entry for every one of the 94 canonical fields, including the observed value, applicability, validation method, evidence references, reviewer, and decision;
+- a `field_reviews` entry for every one of the 95 canonical field names, including the observed value, applicability, validation method, evidence references, reviewer, and decision; conditionally absent fields still receive an explicit `not_applicable` review;
 - aggregate review state for identity, capacity, category, price preservation, official match, official content, image, and provenance;
 - before and after values for every correction;
 - source URL, source tier, retrieval time, response status, content hash, and reviewer;
@@ -49,7 +49,7 @@ A new machine-readable review ledger stores exactly one record per product. Each
 - first-pass and second-pass reviewer decisions;
 - final state: `verified`, `corrected`, `not_applicable`, or `verified_exception`.
 
-The release gate rejects missing product IDs, duplicate review records, missing or extra field-review keys, unreviewed review dimensions, corrections without evidence, and changed original fields. A schema snapshot derived from the restored baseline fixes the expected 94-field set so coverage cannot silently shrink.
+The release gate rejects missing product IDs, duplicate review records, missing or extra field-review keys, unreviewed review dimensions, corrections without evidence, and changed original fields. A schema snapshot derived from the restored baseline fixes the expected 95-field union and the conditional `official_content` rule so coverage cannot silently shrink.
 
 ## Source Routing and Priority
 
@@ -135,7 +135,7 @@ Completion requires all of the following evidence:
 
 1. Exactly 776 canonical rows and 776 final ledger rows with identical unique IDs and order.
 2. Every original Firestore/app field preserved byte-for-byte from the baseline.
-3. Every product has decisions for all 94 canonical fields and passes the aggregate identity, capacity, category, price preservation, official match, official content, image, and provenance reviews.
+3. Every product has decisions for all 95 canonical field names, with explicit applicability for conditional fields, and passes the aggregate identity, capacity, category, price preservation, official match, official content, image, and provenance reviews.
 4. Every confirmed official match supported by identifiers or compatible identity evidence; no unresolved conflicts.
 5. Every confirmed medicine passes structured-content schema, text audit, section coverage, and source-link checks.
 6. Every non-empty image passes live HTTP, decode, dimension, duplicate, source, and exact-product visual checks.
