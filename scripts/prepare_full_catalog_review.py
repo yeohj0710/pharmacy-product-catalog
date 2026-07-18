@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from lib.catalog_review.baseline import canonical_json_sha256, field_schema, validate_baseline
 from lib.catalog_review.ledger import (
+    CANONICAL_BATCH_COUNT,
     field_union_sha256,
     make_review_record,
     split_batch_sizes,
@@ -62,7 +63,6 @@ def prepare_review_batches(
     manifest_path: Path = DEFAULT_MANIFEST,
     field_schema_path: Path = DEFAULT_FIELD_SCHEMA,
     output_dir: Path = DEFAULT_OUTPUT_DIR,
-    batch_count: int = 4,
     reviewer: str = "agent-1",
 ) -> dict:
     baseline = _load_json(Path(baseline_path))
@@ -97,7 +97,7 @@ def prepare_review_batches(
     if manifest.get("field_union") != observed_field_union:
         raise ValueError("baseline manifest field union does not match canonical baseline")
 
-    batch_sizes = split_batch_sizes(baseline, batch_count)
+    batch_sizes = split_batch_sizes(baseline, CANONICAL_BATCH_COUNT)
     batches = []
     ordered_generated_ids = []
     offset = 0
@@ -120,7 +120,7 @@ def prepare_review_batches(
             "assignment": {
                 "batch_id": f"batch-{batch_index:02d}",
                 "batch_number": batch_index,
-                "batch_count": batch_count,
+                "batch_count": CANONICAL_BATCH_COUNT,
                 "source_order_start": source_order_start,
                 "source_order_end": source_order_end,
                 "product_count": batch_size,
@@ -163,7 +163,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--field-schema", type=Path, default=DEFAULT_FIELD_SCHEMA)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
-    parser.add_argument("--batch-count", type=int, default=4)
     parser.add_argument("--reviewer", default="agent-1")
     return parser.parse_args()
 
@@ -175,7 +174,6 @@ def main() -> int:
         manifest_path=args.manifest,
         field_schema_path=args.field_schema,
         output_dir=args.output_dir,
-        batch_count=args.batch_count,
         reviewer=args.reviewer,
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))

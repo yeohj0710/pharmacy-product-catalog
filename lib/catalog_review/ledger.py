@@ -35,6 +35,7 @@ FINAL_DECISIONS = {
     "rejected",
     "exception_approved",
 }
+CANONICAL_BATCH_COUNT = 4
 
 RECORD_KEYS = {
     "schema_version",
@@ -247,19 +248,26 @@ def _validate_assignment(
     baseline_rows: Sequence[dict],
     field_union: Sequence[str],
     expected_batch_id: str | None,
+    expected_batch_count: int,
 ) -> tuple[list[dict], list[str]]:
     _require_exact_keys(assignment, ASSIGNMENT_KEYS, "assignment")
     batch_number = assignment["batch_number"]
-    batch_count = assignment["batch_count"]
+    if (
+        isinstance(expected_batch_count, bool)
+        or not isinstance(expected_batch_count, int)
+        or expected_batch_count <= 0
+    ):
+        raise ValueError("expected_batch_count must be a positive integer")
+    if assignment["batch_count"] != expected_batch_count:
+        raise ValueError(f"assignment batch_count must be exactly {expected_batch_count}")
     if (
         isinstance(batch_number, bool)
         or not isinstance(batch_number, int)
-        or isinstance(batch_count, bool)
-        or not isinstance(batch_count, int)
-        or batch_count <= 0
-        or not 1 <= batch_number <= batch_count
+        or not 1 <= batch_number <= expected_batch_count
     ):
-        raise ValueError("assignment has invalid batch number or count")
+        raise ValueError(
+            f"assignment batch_number must be between 1 and {expected_batch_count}"
+        )
 
     canonical_batch_id = f"batch-{batch_number:02d}"
     if assignment["batch_id"] != canonical_batch_id:
@@ -267,7 +275,7 @@ def _validate_assignment(
     if expected_batch_id is not None and assignment["batch_id"] != expected_batch_id:
         raise ValueError("assignment batch_id does not match queue filename")
 
-    sizes = split_batch_sizes(baseline_rows, batch_count)
+    sizes = split_batch_sizes(baseline_rows, expected_batch_count)
     expected_start = 1 + sum(sizes[: batch_number - 1])
     expected_end = expected_start + sizes[batch_number - 1] - 1
     assigned_products = list(baseline_rows[expected_start - 1 : expected_end])
@@ -462,6 +470,7 @@ def validate_batch(
     *,
     allow_pending: bool = False,
     expected_batch_id: str | None = None,
+    expected_batch_count: int = CANONICAL_BATCH_COUNT,
 ) -> dict:
     """Validate a batch against its immutable baseline and assigned range."""
     if not isinstance(batch, dict) or set(batch) != {
@@ -476,7 +485,11 @@ def validate_batch(
         raise ValueError("canonical field union contains duplicates")
     _validate_baseline_for_batch(baseline_rows)
     assigned_products, expected_ids = _validate_assignment(
-        batch["assignment"], baseline_rows, field_union, expected_batch_id
+        batch["assignment"],
+        baseline_rows,
+        field_union,
+        expected_batch_id,
+        expected_batch_count,
     )
 
     records = batch["products"]
@@ -524,6 +537,7 @@ def validate_batch(
 
 
 __all__ = [
+    "CANONICAL_BATCH_COUNT",
     "FIELD_DECISIONS",
     "FINAL_DECISIONS",
     "REVIEW_DIMENSIONS",
