@@ -1,0 +1,41 @@
+[
+  {
+    "catalog_product_id": "20260129_111506",
+    "catalog_name": "엘크라넬",
+    "candidate_name": "엘크라넬 100ml",
+    "status": "confirmed",
+    "manual_verified": true,
+    "visual_verified": true,
+    "image_url": "https://www.ell-cranell.co.kr/ogimage.jpg",
+    "source_url": "https://www.ell-cranell.co.kr/",
+    "result_url": "https://www.ell-cranell.co.kr/",
+    "match_score": 100,
+    "checked_at": "2026-07-16T15:45:00+09:00"
+  },
+  {
+    "catalog_product_id": "20250812_104616",
+    "catalog_name": "무조날S 네일라카",
+    "candidate_name": "무조날에스네일라카 6mL",
+    "status": "confirmed",
+    "manual_verified": true,
+    "visual_verified": true,
+    "image_url": "https://common.hanmi.co.kr/upfile/ces/product/d5440b76-8e3f-40a3-b2ab-6ffdbb8edab4.jpg",
+    "source_url": "https://www.hanmi.co.kr/business/product/finder/detail-4384.hm?prodSeq=4384",
+    "result_url": "https://www.hanmi.co.kr/business/product/finder/detail-4384.hm?prodSeq=4384",
+    "match_score": 100,
+    "checked_at": "2026-07-16T21:17:00+09:00"
+  },
+  {
+    "catalog_product_id": "20260129_110521",
+    "catalog_name": "나티아 PDRN다이렉트 필름",
+    "candidate_name": "나티아 PDRN 다이렉트 먹는 연어 피디알엔 필름 300mg x 30매",
+    "status": "confirmed",
+    "manual_verified": true,
+    "visual_verified": true,
+    "image_url": "https://cdn.oasis.co.kr:48581/product/123662/thumb/30b616f1-4348-456d-bfde-989a7a2a8912.jpg",
+    "source_url": "https://www.dongwonmall.com/product/detail.do?productId=003842167",
+    "result_url": "https://www.dongwonmall.com/product/detail.do?productId=003842167",
+    "match_score": 100,
+    "checked_at": "2026-07-16T22:03:00+09:00"
+  }
+]

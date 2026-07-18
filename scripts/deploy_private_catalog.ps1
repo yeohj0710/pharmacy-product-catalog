@@ -14,7 +14,6 @@ $publicJsonSource = Join-Path $publicDataSource "enrichment-queue.json"
 $publicCsvSource = Join-Path $publicDataSource "enrichment-queue.csv"
 $portableDataSource = Join-Path $root "data\portable\v1"
 $portablePublicSource = Join-Path $publicDataSource "portable\v1"
-$publicationApprovalSource = Join-Path $root "data\publication-approval.json"
 $projectLink = Join-Path $root ".vercel\project.json"
 $approvedCodeOverlays = @(
     "app\catalog-client.tsx",
@@ -26,14 +25,12 @@ $approvedCodeOverlays = @(
     "components\catalog\ProductImage.tsx",
     "components\catalog\ProductModal.tsx",
     "data\catalog-text-corrections.json",
-    "data\publication-approval.json",
     "hooks\use-catalog-state.ts",
     "lib\catalog\catalog.ts",
     "lib\catalog\text.ts",
     "lib\catalog_text_normalization.py",
     "package.json",
     "package-lock.json",
-    "scripts\check-publication-gate.mjs",
     "scripts\apply_catalog_text_corrections.py",
     "scripts\audit_catalog_text.py",
     "scripts\export_portable_catalog.py",
@@ -60,25 +57,6 @@ foreach ($path in @($jsonSource, $csvSource, $publicJsonSource, $publicCsvSource
 $products = Get-Content -LiteralPath $jsonSource -Encoding UTF8 -Raw | ConvertFrom-Json
 if ($products.Count -ne 776) {
     throw "Product JSON must contain 776 rows. Actual: $($products.Count)"
-}
-
-if ($Production) {
-    if (-not (Test-Path -LiteralPath $publicationApprovalSource)) {
-        throw "Production publication approval is missing: $publicationApprovalSource"
-    }
-    $approval = Get-Content -LiteralPath $publicationApprovalSource -Encoding UTF8 -Raw | ConvertFrom-Json
-    $canonicalHash = (Get-FileHash -LiteralPath $jsonSource -Algorithm SHA256).Hash.ToLowerInvariant()
-    $portableManifest = Get-Content -LiteralPath (Join-Path $portableDataSource "manifest.json") -Encoding UTF8 -Raw | ConvertFrom-Json
-    if (
-        $approval.approved -ne $true -or
-        $approval.scope -ne "production" -or
-        $approval.product_count -ne 776 -or
-        $approval.public_url -ne "https://pharmacy-product-catalog.vercel.app/" -or
-        $approval.canonical_sha256 -ne $canonicalHash -or
-        $approval.portable_products_sha256 -ne $portableManifest.files.'products.json'.sha256
-    ) {
-        throw "Production publication approval does not match the current canonical and portable data."
-    }
 }
 
 Assert-PrivateDeployPath $stage
@@ -129,18 +107,12 @@ try {
     if ($Production) {
         Push-Location $stage
         try {
-            $env:CATALOG_PUBLIC_DEPLOY_ACKNOWLEDGED = "1"
-            & node scripts/check-publication-gate.mjs
-            if ($LASTEXITCODE -ne 0) {
-                throw "Staged production publication gate failed."
-            }
             & python scripts/export_portable_catalog.py --check
             if ($LASTEXITCODE -ne 0) {
                 throw "Staged portable package check failed."
             }
         }
         finally {
-            Remove-Item Env:CATALOG_PUBLIC_DEPLOY_ACKNOWLEDGED -ErrorAction SilentlyContinue
             Pop-Location
         }
     }

@@ -1,0 +1,776 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pharmacy-product-catalog.vercel.app/data/portable/v1/schema.json",
+  "title": "Pharmacy Product Catalog Portable Record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "product_id",
+    "display",
+    "media",
+    "medicine",
+    "quality",
+    "provenance",
+    "ai_context"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "product_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "specification",
+        "category",
+        "price_krw",
+        "notes",
+        "source_order"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specification": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "price_krw": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_order": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_image"
+      ],
+      "properties": {
+        "primary_image": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "source_url",
+            "kind",
+            "rights_status",
+            "checked_at"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "kind": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rights_status": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "medicine": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "content",
+        "ingredients",
+        "storage",
+        "appearance",
+        "source"
+      ],
+      "properties": {
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "item_name",
+            "item_code",
+            "manufacturer",
+            "english_name",
+            "category",
+            "classification_code",
+            "dosage_form",
+            "route",
+            "pack_unit",
+            "atc_code"
+          ],
+          "properties": {
+            "item_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "item_code": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "manufacturer": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "english_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "category": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "classification_code": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "dosage_form": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "route": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "pack_unit": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "atc_code": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "content": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema_version",
+            "normalization_version"
+          ],
+          "properties": {
+            "schema_version": {
+              "const": "1.0"
+            },
+            "normalization_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "efficacy": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "dosage": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "precautions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "professional_precautions": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "patient_guidance": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "medication_guide": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "text",
+                "blocks"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "blocks": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "text"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "paragraph"
+                          },
+                          "text": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "type",
+                          "headers",
+                          "rows"
+                        ],
+                        "properties": {
+                          "type": {
+                            "const": "table"
+                          },
+                          "headers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "rows": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "consumer_guidance": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ingredients": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "active",
+            "all",
+            "additives"
+          ],
+          "properties": {
+            "active": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "all": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "additives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "storage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "appearance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "url",
+            "checked_at"
+          ],
+          "properties": {
+            "type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verification_status",
+        "official_match_status",
+        "official_content_status",
+        "image_rights_status"
+      ],
+      "properties": {
+        "verification_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "official_match_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "official_content_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "image_rights_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "catalog_source_type",
+        "catalog_recorded_at",
+        "catalog_document_updated_at"
+      ],
+      "properties": {
+        "catalog_source_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "catalog_recorded_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "catalog_document_updated_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "ai_context": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

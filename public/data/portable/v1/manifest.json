@@ -1,0 +1,21 @@
+{
+  "package_version": "pharmacy-product-catalog-v1",
+  "schema_version": "1.0",
+  "product_count": 776,
+  "official_confirmed_count": 458,
+  "image_count": 665,
+  "files": {
+    "products.json": {
+      "sha256": "e272ecafaae5546da4f142291f10065df3307d36391ef27e2128365e2279694e"
+    },
+    "products.ndjson": {
+      "sha256": "c5a71a2a8b0ca779a9735b6053fd672ed2a69fcfda35e36675fc39721f1146bb"
+    },
+    "schema.json": {
+      "sha256": "cb38edfd101f503620573358f2b6a823767197c310cade6febae4a5c6ba08c67"
+    },
+    "README.md": {
+      "sha256": "f67102e48f872a945017f68a211232fa56a9d1c2f0480713b466f21f3c9257b4"
+    }
+  }
+}

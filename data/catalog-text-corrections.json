@@ -1,0 +1,3822 @@
+[
+  {
+    "source_order": 1,
+    "document_id": "20250801_172323",
+    "original_name": "식물성 멜라토닌 멜라잇 플러스",
+    "corrected_name": "헬씨허그 식물성 멜라토닌 함유 멜라잇 플러스 500mg",
+    "original_capacity": "30정",
+    "corrected_capacity": "30정",
+    "evidence_urls": [
+      "https://store.ohou.se/goods/3620617"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 판매 페이지의 브랜드, 제품명, 500mg 함량, 30정 포장을 직접 대조했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 4,
+    "document_id": "20250801_172722",
+    "original_name": "보령비접촉식체온계",
+    "corrected_name": "보령 메디칼 비접촉식 다기능 체온계 BR-060",
+    "original_capacity": "1EA",
+    "corrected_capacity": "1개",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/6331892734"
+    ],
+    "evidence_text": "기존 수동 웹 조사 후보가 보령 메디칼 BR-060 모델명과 제품 이미지를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 5,
+    "document_id": "20250801_172723",
+    "original_name": "보령귓속형체온계",
+    "corrected_name": "보령 귓속형 체온계 DT-025",
+    "original_capacity": "1EA",
+    "corrected_capacity": "1개",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/7474307622"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 보령 귓속형 체온계의 DT-025 모델명을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 7,
+    "document_id": "20250801_172844",
+    "original_name": "유한비타민D2000IU",
+    "corrected_name": "유한m 비타민D 2000IU",
+    "original_capacity": "90캡슐",
+    "corrected_capacity": "90캡슐",
+    "evidence_urls": [
+      "https://www.peoplepharm.com/m2/goods/view.php?goodsno=186788320&inflow=naver"
+    ],
+    "evidence_text": "판매 페이지가 유한m 브랜드, 비타민D 2000IU, 90캡슐을 함께 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 10,
+    "document_id": "20250801_173107",
+    "original_name": "이가탄",
+    "corrected_name": "이가탄에프캡슐",
+    "original_capacity": "180캡슐",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1047",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=x1yz9ddq5chfc"
+    ],
+    "evidence_text": "판매 페이지와 약학정보원 후보가 모두 정확한 제품명을 이가탄에프캡슐, 포장을 180캡슐로 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 14,
+    "document_id": "20250801_173352",
+    "original_name": "고용량비타민하이렉스",
+    "corrected_name": "고함량 비타민 하이렉스",
+    "original_capacity": "360정",
+    "corrected_capacity": "360정",
+    "evidence_urls": [
+      "https://www.thekpm.com/news/articleView.html?idxno=180320",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023070600001"
+    ],
+    "evidence_text": "출시 기사와 약학정보원 후보는 하이렉스를 고함량 비타민B군 제품으로 설명한다. 고용량은 문맥상 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 25,
+    "document_id": "20250812_102743",
+    "original_name": "고햠량비타민 하이렉스 비타민B3000",
+    "corrected_name": "고함량비타민 하이렉스 비타민B3000",
+    "original_capacity": "180정",
+    "corrected_capacity": "180정",
+    "evidence_urls": [
+      "https://www.thekpm.com/news/articleView.html?idxno=180320"
+    ],
+    "evidence_text": "하이렉스 출시 자료의 고함량 표기와 대조하면 고햠량은 명백한 자모 OCR 오타다. 나머지 식별 문자열은 보존했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 27,
+    "document_id": "20250812_102908",
+    "original_name": "카베진알파",
+    "corrected_name": "카베진 코와 알파",
+    "original_capacity": "200정",
+    "corrected_capacity": "200정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=72344564"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 실제 판매 제품명이 카베진 코와 알파이고 규격이 200정임을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 29,
+    "document_id": "20250812_103019",
+    "original_name": "컨디션",
+    "corrected_name": "컨디션 헛개",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL×10병",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/8437151603"
+    ],
+    "evidence_text": "판매 페이지가 컨디션 헛개 100mL 10병 제품을 확인한다. 기존 이름에는 제품 변형과 병당 용량이 누락됐다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 30,
+    "document_id": "20250812_103032",
+    "original_name": "부채표 쌍화천",
+    "corrected_name": "부채표 쌍화천",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL×10병",
+    "evidence_urls": [
+      "https://www.dong-wha.co.kr/product/content.asp?b=46&s=99&t_idx=134"
+    ],
+    "evidence_text": "동화약품 공식 제품 페이지에서 100mL 10병 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 31,
+    "document_id": "20250812_103045",
+    "original_name": "부채표 판콜에스",
+    "corrected_name": "판콜에스내복액",
+    "original_capacity": "10병",
+    "corrected_capacity": "30mL×10병",
+    "evidence_urls": [
+      "https://www.dong-wha.co.kr/product/content.asp?t_idx=324"
+    ],
+    "evidence_text": "동화약품 공식 페이지가 정식 제품명 판콜에스내복액과 병당 30mL를 확인한다. 카탈로그의 10병 수량을 결합했다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 32,
+    "document_id": "20250812_103059",
+    "original_name": "판피린",
+    "corrected_name": "판피린큐액",
+    "original_capacity": "5병",
+    "corrected_capacity": "20mL×5병",
+    "evidence_urls": [
+      "https://barkiri.com/products/p250"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 판피린큐액 20mL 5병을 제품 페이지와 제조사 자료로 교차 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 33,
+    "document_id": "20250812_103118",
+    "original_name": "가넥트액",
+    "corrected_name": "동아제약 가넥트액",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL×10병",
+    "evidence_urls": [
+      "https://mdtoday.co.kr/news/view/1065598542411289"
+    ],
+    "evidence_text": "출시 기사에서 동아제약 가넥트액 100mL와 10병 포장을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 34,
+    "document_id": "20250812_103132",
+    "original_name": "아미노B골드",
+    "corrected_name": "영진 아미노비 골드",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL×10병",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/8978393215"
+    ],
+    "evidence_text": "판매 페이지가 아미노비 골드 100mL 10병을 표시한다. 기존 B는 한글 비를 잘못 옮긴 표기다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 35,
+    "document_id": "20250812_103226",
+    "original_name": "까스활명수",
+    "corrected_name": "까스활명수-큐액",
+    "original_capacity": "10병",
+    "corrected_capacity": "75mL×10병",
+    "evidence_urls": [
+      "https://www.dong-wha.co.kr/product/content.asp?t_idx=415"
+    ],
+    "evidence_text": "동화약품 공식 페이지에서 정식 제품명 까스활명수-큐액과 75mL 10병을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 36,
+    "document_id": "20250812_103254",
+    "original_name": "컴배트 스피드에어졸",
+    "corrected_name": "컴배트 스피드 에어졸",
+    "original_capacity": "1EA",
+    "corrected_capacity": "500mL×1개",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=5147761"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 제품명과 500mL 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 37,
+    "document_id": "20250812_103307",
+    "original_name": "홈키파 수성에어졸",
+    "corrected_name": "홈키파 수성 에어졸 무향",
+    "original_capacity": "1개",
+    "corrected_capacity": "600mL×1개",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=93174458"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 무향 변형과 600mL 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 40,
+    "document_id": "20250812_103426",
+    "original_name": "바세린핸드앤스트롱거네일",
+    "corrected_name": "바세린 인텐시브 케어 헬씨 핸드 앤 스트롱거 네일",
+    "original_capacity": "60ml",
+    "corrected_capacity": "60mL",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=10193589"
+    ],
+    "evidence_text": "가격비교 제품 페이지에서 전체 제품명, 60mL 용량, 튜브 전면을 직접 대조했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 41,
+    "document_id": "20250812_103431",
+    "original_name": "바세린풋그림",
+    "corrected_name": "바세린 풋크림 딥 모이스처",
+    "original_capacity": "55g",
+    "corrected_capacity": "55g",
+    "evidence_urls": [
+      "https://www.ssg.com/item/itemView.ssg?itemId=1000632937961"
+    ],
+    "evidence_text": "판매 페이지가 풋크림 딥 모이스처 55g을 표시한다. 풋그림은 풋크림의 명백한 OCR 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 42,
+    "document_id": "20250812_103434",
+    "original_name": "바세린젤리오리지널",
+    "corrected_name": "바세린 프로텍팅 젤리 오리지널",
+    "original_capacity": "50ml",
+    "corrected_capacity": "50mL",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=3544362"
+    ],
+    "evidence_text": "기존 시각 검수 후보에서 전체 제품명과 50mL 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 43,
+    "document_id": "20250812_103447",
+    "original_name": "듀렉스인비저블",
+    "corrected_name": "듀렉스 인비저블 엑스트라 센서티브",
+    "original_capacity": "10P",
+    "corrected_capacity": "10개",
+    "evidence_urls": [
+      "https://greentube.co.kr/product/%EB%93%80%EB%A0%89%EC%8A%A4-%EC%9D%B8%EB%B9%84%EC%A0%80%EB%B8%94-%EC%97%91%EC%8A%A4%ED%8A%B8%EB%9D%BC-%EC%84%BC%EC%84%9C%ED%8B%B0%EB%B8%8C-%EC%BD%98%EB%8F%94-10p/440/"
+    ],
+    "evidence_text": "판매 페이지에서 인비저블의 정확한 변형명과 10개 포장을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 44,
+    "document_id": "20250812_103448",
+    "original_name": "윙크퍼펙트슬림",
+    "corrected_name": "윙크 퍼펙트 슬림 001",
+    "original_capacity": "10개",
+    "corrected_capacity": "10개",
+    "evidence_urls": [
+      "https://www.dapharm.com/ko/brand/product/WNKCDPS10P"
+    ],
+    "evidence_text": "제조사 브랜드 페이지가 정확한 제품명과 10개 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 48,
+    "document_id": "20250812_103544",
+    "original_name": "레모비타플러스",
+    "corrected_name": "레모비타플러스",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://www.peoplepharm.com/m2/goods/view.php?brand=5&goodsno=186786261"
+    ],
+    "evidence_text": "판매 페이지가 레모비타플러스 120정을 표시하므로 영문 약자 T를 정으로 풀었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 50,
+    "document_id": "20250812_103618",
+    "original_name": "아이키커비타골드",
+    "corrected_name": "정관장 아이키커 비타골드 포도",
+    "original_capacity": "10P",
+    "corrected_capacity": "100mL×10포",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=117924596"
+    ],
+    "evidence_text": "기존 수동 조사에서 브랜드, 포도맛, 100mL 10포를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 51,
+    "document_id": "20250812_103632",
+    "original_name": "프롬팜이뮨챔피언",
+    "corrected_name": "동아제약 프롬팜 이뮨챔피언",
+    "original_capacity": "30포",
+    "corrected_capacity": "15g×30포",
+    "evidence_urls": [
+      "https://www.dapharm.com/ko/brand/product/ICPO30"
+    ],
+    "evidence_text": "동아제약 공식 브랜드 페이지가 제품명과 15g 30포 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 52,
+    "document_id": "20250812_103713",
+    "original_name": "리너지오메가3원스",
+    "corrected_name": "리너지 초임계 알티지 오메가3 원스",
+    "original_capacity": "60c",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228847&cate_c4=231904&cmpny_c=TH201&link_prod_c=9337580498"
+    ],
+    "evidence_text": "기존 시각 검수 후보에서 전체 제품명과 60캡슐을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 53,
+    "document_id": "20250812_103723",
+    "original_name": "명작프리미엄알티지오메가",
+    "corrected_name": "종근당 명작 프리미엄 알티지 오메가-3",
+    "original_capacity": "90c",
+    "corrected_capacity": "90캡슐",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/4717666670"
+    ],
+    "evidence_text": "판매 페이지가 브랜드, 전체 제품명, 90캡슐을 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 55,
+    "document_id": "20250812_103735",
+    "original_name": "초임계눈건강아스타잔틴",
+    "corrected_name": "초임계 눈건강 아스타잔틴",
+    "original_capacity": "120c",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "http://www.medisobizanews.com/news/articleView.html?idxno=79233"
+    ],
+    "evidence_text": "출시 기사에서 제품명을 확인했고, 원문의 c 단위를 캡슐로 풀었다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 56,
+    "document_id": "20250812_103738",
+    "original_name": "슈퍼아이잔틴루테인",
+    "corrected_name": "슈퍼 아이잔틴 루테인",
+    "original_capacity": "180c",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://www.yagiyagi.kr/search?value=%EC%8A%88%ED%8D%BC%EC%95%84%EC%9D%B4%EC%9E%94%ED%8B%B4%EB%A3%A8%ED%85%8C%EC%9D%B8"
+    ],
+    "evidence_text": "건강기능식품 정보 검색 결과가 슈퍼 아이잔틴 루테인이라는 제품명을 확인하고, 기존 c 단위는 캡슐 약자다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 57,
+    "document_id": "20250812_103749",
+    "original_name": "유한루테인지아잔틴플러스",
+    "corrected_name": "유한 루테인 지아잔틴 플러스",
+    "original_capacity": "60c",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223828&cate_c3=223840&cate_c4=0&cmpny_c=EE309&link_prod_c=LO2709457090"
+    ],
+    "evidence_text": "기존 시각 검수 후보에서 제품명과 60캡슐 규격을 확인했다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 59,
+    "document_id": "20250812_103803",
+    "original_name": "슈퍼아이루테인",
+    "corrected_name": "슈퍼 아이 루테인",
+    "original_capacity": "90캅셀",
+    "corrected_capacity": "90캡슐",
+    "evidence_urls": [
+      "https://blog.naver.com/knsnet/223176217079",
+      "https://www.yagiyagi.kr/search?value=%EC%8A%88%ED%8D%BC%EC%95%84%EC%9D%B4%EB%A3%A8%ED%85%8C%EC%9D%B8"
+    ],
+    "evidence_text": "제품명 검색 결과와 기존 시각 검수가 슈퍼 아이 루테인을 확인한다. 캅셀은 캡슐의 명백한 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 68,
+    "document_id": "20250812_104115",
+    "original_name": "디오스민 캡슐",
+    "corrected_name": "조아디오스민캡슐",
+    "original_capacity": "60c",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB2445"
+    ],
+    "evidence_text": "약학정보원 후보가 조아디오스민캡슐과 60캡슐 포장단위를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 77,
+    "document_id": "20250812_104242",
+    "original_name": "메가엽산54g",
+    "corrected_name": "유한m 메가엽산",
+    "original_capacity": "90정",
+    "corrected_capacity": "90정",
+    "evidence_urls": [
+      "https://kshpharm.co.kr/product/detail.html?cate_no=214&display_group=1&product_no=4968"
+    ],
+    "evidence_text": "판매 페이지가 유한m 메가엽산 90정을 표시한다. 이름 끝의 54g는 제품명에 없는 OCR 잔여 문자열이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 78,
+    "document_id": "20250812_104248",
+    "original_name": "훼로모아",
+    "corrected_name": "훼로모아캡슐",
+    "original_capacity": "120C",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO8121"
+    ],
+    "evidence_text": "약학정보원이 정식 제품명을 훼로모아캡슐로 확인한다. 120C는 카탈로그 총수량을 120캡슐로 풀어 썼다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 89,
+    "document_id": "20250812_104505",
+    "original_name": "액상스틱형 멀미약 오네론액",
+    "corrected_name": "일양약품 오네론액",
+    "original_capacity": "5P",
+    "corrected_capacity": "20mL×5포",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1968"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 오네론액 20mL 5포를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 94,
+    "document_id": "20250812_104616",
+    "original_name": "무조날S",
+    "corrected_name": "무조날S 네일라카",
+    "original_capacity": "6ml",
+    "corrected_capacity": "6mL",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1003",
+      "https://common.hanmi.co.kr/upfile/ces/product/d78eca7d-e00c-4162-8d65-f9c60ea7ae71.pdf"
+    ],
+    "evidence_text": "가격 페이지와 한미약품 설명서가 정식 제품명 무조날S 네일라카와 6mL 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 95,
+    "document_id": "20250812_104713",
+    "original_name": "이큐펜키즈A(아세트아미노펜)",
+    "corrected_name": "이큐펜키즈에이시럽(아세트아미노펜)",
+    "original_capacity": "10포",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023013100005"
+    ],
+    "evidence_text": "약학정보원이 정식 제품명, 성분, 5mL 10포 포장과 표준코드를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 96,
+    "document_id": "20250812_104716",
+    "original_name": "이큐펜키즈A(이부프로펜)",
+    "corrected_name": "이큐펜키즈아이시럽(이부프로펜)",
+    "original_capacity": "10P",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://www.brpinsight.com/brand/10963"
+    ],
+    "evidence_text": "의약품 유통정보가 아이시럽은 이부프로펜 제품이고 5mL 10포 포장임을 확인한다. 기존 A 표기는 다른 제품 변형이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 100,
+    "document_id": "20250812_104730",
+    "original_name": "챔프이부프로펜(파랑)",
+    "corrected_name": "챔프이부펜시럽",
+    "original_capacity": "10포",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016071900002"
+    ],
+    "evidence_text": "약학정보원 후보가 정식 제품명 챔프이부펜시럽과 5mL 10포 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 112,
+    "document_id": "20250812_104948",
+    "original_name": "시카케어(소)",
+    "corrected_name": "시카케어 실리콘 겔 시트(소)",
+    "original_capacity": "1 gel",
+    "corrected_capacity": "3cm×12cm 1매",
+    "evidence_urls": [
+      "https://www.smith-nephew.com/en-au/pharmacy/product-range/healthcare-in-the-home/cica-care"
+    ],
+    "evidence_text": "제조사 공식 페이지에서 소형 규격 3cm×12cm와 한 팩당 실리콘 겔 시트 1매를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 119,
+    "document_id": "20250812_105723",
+    "original_name": "파인애플 그레인 효소",
+    "corrected_name": "온유바이오 파인애플 그레인 효소",
+    "original_capacity": "30P",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=122618606"
+    ],
+    "evidence_text": "가격비교 제품 페이지에서 브랜드, 제품명, 30포 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 122,
+    "document_id": "20250812_105753",
+    "original_name": "아르앤비타블러드오렌지맛",
+    "corrected_name": "리틀모어 아르앤비타 블러드 오렌지맛",
+    "original_capacity": "1box",
+    "corrected_capacity": "12g×14포",
+    "evidence_urls": [
+      "https://item.cjonstyle.com/nfront/item/2075592137?channelCode=30002002"
+    ],
+    "evidence_text": "판매 페이지가 브랜드, 맛, 12g 14포 규격을 확인한다. 기존 1box에는 포 수와 중량이 누락됐다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 123,
+    "document_id": "20250812_105757",
+    "original_name": "아임얼라이브카무트효소",
+    "corrected_name": "아임얼라이브 카무트 브랜드밀 효소",
+    "original_capacity": "30p",
+    "corrected_capacity": "3g×30포",
+    "evidence_urls": [
+      "https://www.ssfshop.com/I%E2%80%99M-ALIVE/GQR525042393491/good"
+    ],
+    "evidence_text": "판매 페이지가 정확한 제품명과 3g 30포 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 124,
+    "document_id": "20250812_105806",
+    "original_name": "녹십장 하루케어 오메가3",
+    "corrected_name": "녹십자 하루케어 오메가3",
+    "original_capacity": "30c",
+    "corrected_capacity": "30캡슐",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/9026878123"
+    ],
+    "evidence_text": "판매 페이지가 녹십자 하루케어 오메가3 30캡슐을 표시한다. 녹십장은 녹십자의 명백한 OCR 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 126,
+    "document_id": "20250812_105814",
+    "original_name": "프리미엄 수 침향환 4.2",
+    "corrected_name": "익수 프리미엄 수 침향환 4.2",
+    "original_capacity": "30H",
+    "corrected_capacity": "30환",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228862&cate_c4=232060&cmpny_c=TP40F&link_prod_c=V95003451567"
+    ],
+    "evidence_text": "기존 시각 검수가 익수 브랜드와 제품명을 확인했고 H를 환 단위로 풀었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 127,
+    "document_id": "20250812_105820",
+    "original_name": "녹십자 하루케어 루테인",
+    "corrected_name": "녹십자 하루케어 루테인",
+    "original_capacity": "30c",
+    "corrected_capacity": "30캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228847&cate_c4=231907&cmpny_c=TP40F&link_prod_c=I26991047772"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 제품명과 30회분 캡슐 제품을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 130,
+    "document_id": "20250812_105859",
+    "original_name": "홍기천앰플",
+    "corrected_name": "한삼인 홍기천 앰플",
+    "original_capacity": "16병",
+    "corrected_capacity": "20mL×16병",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=122667122"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 한삼인 홍기천 앰플 20mL 16병을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 132,
+    "document_id": "20250812_105912",
+    "original_name": "홍기천침향환",
+    "corrected_name": "한삼인 홍기천 침향환",
+    "original_capacity": "30환",
+    "corrected_capacity": "30환",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228862&cate_c4=232078&cmpny_c=TH201&link_prod_c=9486198914"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 한삼인 브랜드, 제품명, 30개입을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 133,
+    "document_id": "20250812_105919",
+    "original_name": "늘비움",
+    "corrected_name": "씨스팡 늘 비움",
+    "original_capacity": "28P",
+    "corrected_capacity": "28포",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228130&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I24719539999"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 씨스팡 늘 비움 28포 제품을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 135,
+    "document_id": "20250812_105931",
+    "original_name": "하루1레몬유기농NFC",
+    "corrected_name": "헬씨허그 하루1레몬 유기농 NFC 레몬즙 100%",
+    "original_capacity": "30포",
+    "corrected_capacity": "20g×30포",
+    "evidence_urls": [
+      "https://www.ssg.com/item/itemView.ssg?itemId=1000682096209"
+    ],
+    "evidence_text": "판매 페이지가 브랜드, 전체 제품명, 20g 30포 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 136,
+    "document_id": "20250812_105934",
+    "original_name": "엑스트라버진유기농올리브오일",
+    "corrected_name": "뉴트리가든 엑스트라버진 유기농 올리브오일100 스틱",
+    "original_capacity": "30포",
+    "corrected_capacity": "10mL×30포",
+    "evidence_urls": [
+      "https://m.ngardenmall.co.kr/product/%EC%97%91%EC%8A%A4%ED%8A%B8%EB%9D%BC%EB%B2%84%EC%A7%84-%EC%9C%A0%EA%B8%B0%EB%86%8D-%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%A4%EC%9D%BC100-%EC%8A%A4%ED%8B%B1-10ml-x-30%ED%8F%AC/750/"
+    ],
+    "evidence_text": "공식 판매 페이지가 브랜드, 제품명, 10mL 30포 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 137,
+    "document_id": "20250812_105940",
+    "original_name": "마이라이프대마종자유",
+    "corrected_name": "헬씨허그 마이 라이프 식물성 대마종자유 100%",
+    "original_capacity": "60캡슐",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=122626156"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 브랜드, 전체 제품명, 60캡슐을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 138,
+    "document_id": "20250812_105953",
+    "original_name": "블러드케어올인원",
+    "corrected_name": "나우푸드 블러드 케어 올인원",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228847&cate_c4=231898&cmpny_c=TP40F&link_prod_c=V92262855603"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 브랜드, 제품명, 60정을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 139,
+    "document_id": "20250812_105957",
+    "original_name": "혈관팔팔",
+    "corrected_name": "씨스팡 혈관 팔팔",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=72415271"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 씨스팡 혈관 팔팔 60정을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 140,
+    "document_id": "20250812_110005",
+    "original_name": "종근당명작코큐텐",
+    "corrected_name": "종근당 명작 코큐텐",
+    "original_capacity": "90C",
+    "corrected_capacity": "90캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9267534677"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 제품명과 90캡슐 규격을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 142,
+    "document_id": "20250812_110026",
+    "original_name": "바이탈NMN퀘르세틴",
+    "corrected_name": "일양약품 바이탈 NMN 퀘르세틴",
+    "original_capacity": "30T",
+    "corrected_capacity": "600mg×30정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=0&cate_c4=0&cmpny_c=TN118&link_prod_c=1000846273075"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 일양약품, 제품명, 600mg 30정을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 143,
+    "document_id": "20250812_110029",
+    "original_name": "명품NMN프리미엄",
+    "corrected_name": "식물유래 명품 NMN 프리미엄",
+    "original_capacity": "120T",
+    "corrected_capacity": "500mg×60정×2개입",
+    "evidence_urls": [
+      "https://midermall.com/shop/index.php?catalog=G1742365359&category=C1742448180"
+    ],
+    "evidence_text": "판매 페이지가 전체 제품명과 500mg 60정 2개입 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 146,
+    "document_id": "20250812_110130",
+    "original_name": "에버콜라겐인앤업플러스",
+    "corrected_name": "뉴트리 에버콜라겐 인앤업 플러스",
+    "original_capacity": "56T",
+    "corrected_capacity": "750mg×56정",
+    "evidence_urls": [
+      "https://www.ssg.com/item/itemView.ssg?itemId=1000265673972"
+    ],
+    "evidence_text": "판매 페이지가 브랜드, 제품명, 750mg 56정 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 147,
+    "document_id": "20250812_110132",
+    "original_name": "리핏어린저분자피쉬콜라겐",
+    "corrected_name": "온유바이오 리핏 어린 저분자 피쉬 콜라겐",
+    "original_capacity": "30P",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=15345224"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 브랜드, 제품명, 30포를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 150,
+    "document_id": "20250812_110151",
+    "original_name": "유한m면역앤프로폴리스아연플러스",
+    "corrected_name": "유한m 면역앤 프로폴리스 아연 플러스",
+    "original_capacity": "1box",
+    "corrected_capacity": "1000mg×60캡슐×2개입",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/9256839333"
+    ],
+    "evidence_text": "판매 페이지가 브랜드, 전체 제품명, 1000mg 60캡슐 2개입을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 151,
+    "document_id": "20250812_110155",
+    "original_name": "코큐텐아연셀렌프리미엄",
+    "corrected_name": "코큐텐 아연 셀렌 프리미엄",
+    "original_capacity": "120C",
+    "corrected_capacity": "60캡슐×2개입",
+    "evidence_urls": [
+      "https://cr3.shopping.naver.com/v2/bridge/searchGate?frm=NVSCIMG&nv_mid=90585569070"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 제품명과 60캡슐 2개입을 확인했다. 총 120C보다 포장 구성이 명확하다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 152,
+    "document_id": "20250812_110159",
+    "original_name": "허브쵸크에스",
+    "corrected_name": "조아제약 허브쵸크에스",
+    "original_capacity": "30앰플",
+    "corrected_capacity": "20mL×30앰플",
+    "evidence_urls": [
+      "https://m.choa.co.kr/product/product_020300.asp?bmain=view&idx=309&page="
+    ],
+    "evidence_text": "조아제약 공식 제품 페이지가 제품명과 20mL 30앰플 규격을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 156,
+    "document_id": "20250812_110336",
+    "original_name": "케어리브L",
+    "corrected_name": "케어리브 L",
+    "original_capacity": "16매",
+    "corrected_capacity": "30mm×72mm 16매",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=0&cate_c2=0&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I28847411759"
+    ],
+    "evidence_text": "기존 시각 검수 후보가 케어리브 L, 30mm×72mm, 16매를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 157,
+    "document_id": "20250812_110338",
+    "original_name": "케어리브라이언",
+    "corrected_name": "니치반 케어리브 카카오프렌즈 라이언",
+    "original_capacity": "12매",
+    "corrected_capacity": "12매",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=88148804"
+    ],
+    "evidence_text": "기존 수동 웹 조사에서 브랜드, 카카오프렌즈 라이언 변형, 12매를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 159,
+    "document_id": "20250812_110402",
+    "original_name": "마데카슴윤밴드키즈",
+    "corrected_name": "동국제약 마데카 습윤 밴드 키즈",
+    "original_capacity": "10매",
+    "corrected_capacity": "10매",
+    "evidence_urls": [
+      "https://m.ehanmaum.co.kr/goods/view?no=2091"
+    ],
+    "evidence_text": "판매 페이지가 마데카 습윤 밴드 키즈 10매를 표시한다. 슴윤은 습윤의 명백한 OCR 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 161,
+    "document_id": "20250812_110416",
+    "original_name": "큐어반F일반용",
+    "corrected_name": "대원제약 큐어반F 일반용 중형",
+    "original_capacity": "10매",
+    "corrected_capacity": "10매",
+    "evidence_urls": [
+      "https://smartstore.naver.com/jongno-health/products/10510019788"
+    ],
+    "evidence_text": "판매 페이지가 큐어반F 일반용 중형 10매를 확인한다. 중형이 정확한 크기 표기다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 162,
+    "document_id": "20250812_110417",
+    "original_name": "큐어반F",
+    "corrected_name": "대원제약 큐어반F 일반용",
+    "original_capacity": "30매",
+    "corrected_capacity": "30매",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/4572902183"
+    ],
+    "evidence_text": "판매 페이지가 큐어반F 일반용 30매를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 164,
+    "document_id": "20250812_110419",
+    "original_name": "큐어반F소형큐티",
+    "corrected_name": "큐어반F 소형(큐티용)",
+    "original_capacity": "10매",
+    "corrected_capacity": "10매",
+    "evidence_urls": [
+      "https://smartstore.naver.com/handa0902/products/11514513162"
+    ],
+    "evidence_text": "검증된 판매 페이지가 제품명을 “큐어반F 큐티용 10매”로 표시한다. 원문의 “소형큐티”는 용도 구분어가 붙은 표기다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 165,
+    "document_id": "20250812_110420",
+    "original_name": "큐어반F원형",
+    "corrected_name": "큐어반F 원형",
+    "original_capacity": "20매",
+    "corrected_capacity": "20매",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223828&cate_c3=223849&cate_c4=223990&cmpny_c=EE128&link_prod_c=3936442429&keyword=%ED%81%90%EC%96%B4%EB%B0%98F%EC%9B%90%ED%98%95&r=17841124218747&cate=17327022",
+      "https://search.danawa.com/dsearch.php?query=%ED%81%90%EC%96%B4%EB%B0%98F%EC%9B%90%ED%98%95"
+    ],
+    "evidence_text": "검증된 상품 제목과 포장 이미지에서 “큐어반F 원형 20매”를 확인했다. 영문 F와 형태 구분어 사이를 띄운다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 166,
+    "document_id": "20250812_110421",
+    "original_name": "큐어반F발뒤꿈치용",
+    "corrected_name": "큐어반F 발뒤꿈치용",
+    "original_capacity": "12매",
+    "corrected_capacity": "12매",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=88143302",
+      "https://blog.naver.com/gentleman6825/223180814366"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “큐어반F 밴드 발뒤꿈치용 12매”로 표시한다. 붙어 있는 제품명만 읽기 좋게 바로잡는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 168,
+    "document_id": "20250812_110425",
+    "original_name": "큐어반F관절용",
+    "corrected_name": "큐어반F 관절용",
+    "original_capacity": "7매",
+    "corrected_capacity": "7매",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/4939255244?itemId=14908811279&vendorItemId=86740022013",
+      "https://blog.naver.com/gentleman6825/223184801411"
+    ],
+    "evidence_text": "검증된 판매 페이지와 포장 이미지가 “큐어반F 관절용 7매”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 169,
+    "document_id": "20250812_110426",
+    "original_name": "큐어반F손끝용",
+    "corrected_name": "큐어반F 손끝용",
+    "original_capacity": "10매",
+    "corrected_capacity": "10매",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/4939259330"
+    ],
+    "evidence_text": "검증된 판매 페이지와 포장 이미지가 “큐어반F 손끝용 10매”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 170,
+    "document_id": "20250812_110430",
+    "original_name": "큐어반A방수(표준형)",
+    "corrected_name": "큐어반A 방수(표준형)",
+    "original_capacity": "10매",
+    "corrected_capacity": "10매",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223828&cate_c3=223849&cate_c4=0&cmpny_c=EE715&link_prod_c=F225617136&keyword=%ED%81%90%EC%96%B4%EB%B0%98A%EB%B0%A9%EC%88%98%28%ED%91%9C%EC%A4%80%ED%98%95%29&r=17841124293815&cate=1724565",
+      "https://search.danawa.com/dsearch.php?query=%ED%81%90%EC%96%B4%EB%B0%98A%EB%B0%A9%EC%88%98%28%ED%91%9C%EC%A4%80%ED%98%95%29"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “큐어반A 방수 밴드 표준형 10매”를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 171,
+    "document_id": "20250812_110431",
+    "original_name": "큐어반A방수(대형)",
+    "corrected_name": "큐어반A 방수(대형)",
+    "original_capacity": "15매",
+    "corrected_capacity": "15매",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223828&cate_c3=223849&cate_c4=0&cmpny_c=EE715&link_prod_c=F225615864&keyword=%ED%81%90%EC%96%B4%EB%B0%98A%EB%B0%A9%EC%88%98%28%EB%8C%80%ED%98%95%29&r=17841124311418&cate=1724565",
+      "https://search.danawa.com/dsearch.php?query=%ED%81%90%EC%96%B4%EB%B0%98A%EB%B0%A9%EC%88%98%28%EB%8C%80%ED%98%95%29"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “큐어반A 방수 밴드 대형 15매”를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 172,
+    "document_id": "20250812_110436",
+    "original_name": "큐어반H스팟",
+    "corrected_name": "큐어반H 스팟",
+    "original_capacity": "66매",
+    "corrected_capacity": "66매",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/6383994536",
+      "https://blog.naver.com/gentleman6825/223215607132"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “큐어반H 스팟 66매”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 173,
+    "document_id": "20250812_110456",
+    "original_name": "맨담서포트발목튼튼프리미엄",
+    "corrected_name": "맨담 서포트 발목 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=90650636&keyword=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%EB%B0%9C%EB%AA%A9%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%EB%B0%9C%EB%AA%A9%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목과 포장 이미지가 “맨담 서포트 발목 튼튼 프리미엄”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 174,
+    "document_id": "20250812_110457",
+    "original_name": "맨담튼튼손목튼튼프리미엄",
+    "corrected_name": "맨담 서포트 손목 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=90652697&keyword=%EB%A7%A8%EB%8B%B4%ED%8A%BC%ED%8A%BC%EC%86%90%EB%AA%A9%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%ED%8A%BC%ED%8A%BC%EC%86%90%EB%AA%A9%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목은 “맨담 서포트 손목 튼튼 프리미엄”이다. 원문의 첫 “튼튼”은 “서포트” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 175,
+    "document_id": "20250812_110459",
+    "original_name": "맨담서포트무릎튼튼프리미엄",
+    "corrected_name": "맨담 서포트 무릎 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=90650558&keyword=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%EB%AC%B4%EB%A6%8E%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%EB%AC%B4%EB%A6%8E%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목과 포장 이미지가 “맨담 서포트 무릎 튼튼 프리미엄”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 176,
+    "document_id": "20250812_110460",
+    "original_name": "맨담서포트팔꿈치튼튼프리미엄",
+    "corrected_name": "맨담 서포트 팔꿈치 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=72715814&keyword=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%ED%8C%94%EA%BF%88%EC%B9%98%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%EC%84%9C%ED%8F%AC%ED%8A%B8%ED%8C%94%EA%BF%88%EC%B9%98%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목과 포장 이미지가 “맨담 서포트 팔꿈치 튼튼 프리미엄”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 177,
+    "document_id": "20250812_110502",
+    "original_name": "맨담튼튼엄지튼튼프리미엄",
+    "corrected_name": "맨담 서포트 엄지 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=88231178&keyword=%EB%A7%A8%EB%8B%B4%ED%8A%BC%ED%8A%BC%EC%97%84%EC%A7%80%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%ED%8A%BC%ED%8A%BC%EC%97%84%EC%A7%80%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목은 “맨담 서포트 엄지 튼튼 프리미엄”이다. 원문의 첫 “튼튼”은 “서포트” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 178,
+    "document_id": "20250812_110503",
+    "original_name": "맨담골프테니스엘보튼튼프리미엄",
+    "corrected_name": "맨담 서포트 골프 테니스 엘보 튼튼 프리미엄",
+    "original_capacity": "1box",
+    "corrected_capacity": "1box",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223828&cate_c3=223849&cate_c4=0&cmpny_c=ED901&link_prod_c=1000547682046&keyword=%EB%A7%A8%EB%8B%B4%EA%B3%A8%ED%94%84%ED%85%8C%EB%8B%88%EC%8A%A4%EC%97%98%EB%B3%B4%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&r=17841124419877&cate=1724565",
+      "https://search.danawa.com/dsearch.php?query=%EB%A7%A8%EB%8B%B4%EA%B3%A8%ED%94%84%ED%85%8C%EB%8B%88%EC%8A%A4%EC%97%98%EB%B3%B4%ED%8A%BC%ED%8A%BC%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “맨담 서포트 골프 테니스 엘보 튼튼 프리미엄”을 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 179,
+    "document_id": "20250812_110511",
+    "original_name": "반테린코와서손목L",
+    "corrected_name": "반테린코와 서포터 손목 L",
+    "original_capacity": "1box",
+    "corrected_capacity": "1매",
+    "evidence_urls": [
+      "https://www.iroirotokyo.net/product/%EB%B0%98%ED%85%8C%EB%A6%B0%EC%BD%94%EC%99%80-%EC%84%9C%ED%8F%AC%ED%84%B0-%EC%86%90%EB%AA%A9-l%EC%82%AC%EC%9D%B4%EC%A6%88-1%EB%A7%A4%EC%9E%85-%ED%95%9C%EC%AA%BD%EC%9A%A9/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2012032900007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017101200007"
+    ],
+    "evidence_text": "판매 페이지가 “반테린코와 서포터 손목 L사이즈 1매입”으로 표시한다. 원문의 “서”는 “서포터”가 잘린 OCR 결과다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 180,
+    "document_id": "20250812_110512",
+    "original_name": "반테린코와서포터손목M",
+    "corrected_name": "반테린코와 서포터 손목 M",
+    "original_capacity": "1box",
+    "corrected_capacity": "1개",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223837&cate_c3=223936&cate_c4=224281&cmpny_c=TP40F&link_prod_c=V78727052667&prod_id=41336078&linkYN=Y&fee_type=T&safe_trade=&keyword=%EB%B0%98%ED%85%8C%EB%A6%B0%EC%BD%94%EC%99%80%EC%84%9C%ED%8F%AC%ED%84%B0%EC%86%90%EB%AA%A9M&r=17841124429782&cate=17339956",
+      "https://search.danawa.com/dsearch.php?query=%EB%B0%98%ED%85%8C%EB%A6%B0%EC%BD%94%EC%99%80%EC%84%9C%ED%8F%AC%ED%84%B0%EC%86%90%EB%AA%A9M",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2012032900007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017101200007"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “반테린코와 서포터 손목 보호대 M 1개”를 확인했다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 181,
+    "document_id": "20250812_110524",
+    "original_name": "아나파롤테이프",
+    "corrected_name": "아나파 롤테이프",
+    "original_capacity": "1box",
+    "corrected_capacity": "5cm×5m",
+    "evidence_urls": [
+      "https://soear.co.kr/product/%EB%8F%99%EC%84%B1%EC%A0%9C%EC%95%BD-%EC%95%84%EB%82%98%ED%8C%8C-%ED%85%8C%EC%9D%B4%ED%94%84-5cm%C3%975m/45/display/1/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016032200009",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022022300001"
+    ],
+    "evidence_text": "동성제약 제품 판매 페이지가 “아나파 테이프 롤타입 5cm×5m”로 표시한다. 일반 단위인 1box 대신 실제 규격을 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 184,
+    "document_id": "20250812_110534",
+    "original_name": "메디큐어롤반창고중령",
+    "corrected_name": "메디큐어 롤반창고 중형",
+    "original_capacity": "10cm10cm",
+    "corrected_capacity": "10cm×10m",
+    "evidence_urls": [
+      "https://a2medi.cafe24.com/shop4/product/%EC%8B%A0%EC%8B%A0%EC%A0%9C%EC%95%BD-%EB%A9%94%EB%94%94%ED%81%90%EC%96%B4%EB%A1%A4%EB%B0%98%EC%B0%BD%EA%B3%A0/2618/",
+      "https://blog.naver.com/dreammedimall/222499064705",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018022800001"
+    ],
+    "evidence_text": "신신제약 메디큐어 롤반창고 판매 페이지와 검수 자료가 “중형 10cm×10m”를 확인한다. “중령”과 “10cm10cm”는 각각 OCR 오인과 연속 중복이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 185,
+    "document_id": "20250812_110543",
+    "original_name": "컴배트 개미",
+    "corrected_name": "컴배트 파워 개미 베이트",
+    "original_capacity": "6통",
+    "corrected_capacity": "6개입",
+    "evidence_urls": [
+      "https://m.gsshop.com/prd/prd.gs?prdid=91593240"
+    ],
+    "evidence_text": "판매 페이지의 정확한 상품명과 포장 단위는 “컴배트 파워 개미 베이트 6개입”이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 186,
+    "document_id": "20250812_110546",
+    "original_name": "컴배트 작은바퀴",
+    "corrected_name": "컴배트 파워 작은바퀴용",
+    "original_capacity": "12통",
+    "corrected_capacity": "12개입",
+    "evidence_urls": [
+      "https://basecamp.kr/product/%EC%BB%B4%EB%B0%B0%ED%8A%B8-%ED%8C%8C%EC%9B%8C-%EC%9E%91%EC%9D%80%EB%B0%94%ED%80%B4%EC%9A%A9-12%EA%B0%9C%EC%9E%85/2825/"
+    ],
+    "evidence_text": "판매 페이지의 정확한 상품명과 포장 단위는 “컴배트 파워 작은바퀴용 12개입”이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 187,
+    "document_id": "20250812_110604",
+    "original_name": "쿨티아토탈케어가글액",
+    "corrected_name": "쿨티아 프로폴리스 토탈케어 가글",
+    "original_capacity": "11ml X 30EA",
+    "corrected_capacity": "11mL×30포",
+    "evidence_urls": [
+      "https://cooltia.com/product/%EC%BF%A8%ED%8B%B0%EC%95%84-%ED%94%84%EB%A1%9C%ED%8F%B4%EB%A6%AC%EC%8A%A4-%ED%86%A0%ED%83%88%EC%BC%80%EC%96%B4-%EA%B0%80%EA%B8%80-%EC%8A%A4%ED%8B%B1%ED%98%95-330ml11ml-x-30%ED%8F%AC-1%EA%B0%9C/27/"
+    ],
+    "evidence_text": "브랜드 상품 페이지가 “쿨티아 프로폴리스 토탈케어 가글 스틱형 330mL(11mL×30포)”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 188,
+    "document_id": "20250812_110608",
+    "original_name": "클리덴트",
+    "corrected_name": "클리덴트RX",
+    "original_capacity": "48T",
+    "corrected_capacity": "48정",
+    "evidence_urls": [
+      "https://dpharm.co.kr/cleadent/info"
+    ],
+    "evidence_text": "동아제약 제품 페이지가 “클리덴트RX 2.7g 48정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 189,
+    "document_id": "20250812_110613",
+    "original_name": "폴리덴트",
+    "corrected_name": "폴리덴트 취침전",
+    "original_capacity": "48T",
+    "corrected_capacity": "48정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=13470413&keyword=%ED%8F%B4%EB%A6%AC%EB%8D%B4%ED%8A%B8&cate=17311304",
+      "https://search.danawa.com/dsearch.php?query=%ED%8F%B4%EB%A6%AC%EB%8D%B4%ED%8A%B8"
+    ],
+    "evidence_text": "검증된 상품 제목이 “폴리덴트 취침전 48정”으로 세부 제품군과 단위를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 190,
+    "document_id": "20250812_110618",
+    "original_name": "인사덴트교정기세정제",
+    "corrected_name": "인사덴트 교정기 세정제",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1985&cate_c2=226384&cate_c3=226396&cate_c4=226519&cmpny_c=TP40F&link_prod_c=I27406202832&keyword=%EC%9D%B8%EC%82%AC%EB%8D%B4%ED%8A%B8%EA%B5%90%EC%A0%95%EA%B8%B0%EC%84%B8%EC%A0%95%EC%A0%9C&r=17841124583822&cate=17311304",
+      "https://search.danawa.com/dsearch.php?query=%EC%9D%B8%EC%82%AC%EB%8D%B4%ED%8A%B8%EA%B5%90%EC%A0%95%EA%B8%B0%EC%84%B8%EC%A0%95%EC%A0%9C"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “인사덴트 교정기 세정제 … 60정”을 확인했다. 붙임과 영문 단위 T를 바로잡는다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 191,
+    "document_id": "20250812_110621",
+    "original_name": "인사덴트나이트의치세정제",
+    "corrected_name": "인사덴트 나이트 의치 세정제",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1985&cate_c2=226384&cate_c3=0&cate_c4=0&cmpny_c=EE128&link_prod_c=4802970321&keyword=%EC%9D%B8%EC%82%AC%EB%8D%B4%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9D%98%EC%B9%98%EC%84%B8%EC%A0%95%EC%A0%9C&r=17841124605662",
+      "https://search.danawa.com/dsearch.php?query=%EC%9D%B8%EC%82%AC%EB%8D%B4%ED%8A%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9D%98%EC%B9%98%EC%84%B8%EC%A0%95%EC%A0%9C"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “인사덴트 나이트 의치 세정제 60개입”을 확인했다. 정제 제품이므로 기존 60T를 60정으로 표기한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 192,
+    "document_id": "20250812_110627",
+    "original_name": "가그린 후레쉬라임",
+    "corrected_name": "가그린 후레쉬 라임",
+    "original_capacity": "750ml",
+    "corrected_capacity": "750mL",
+    "evidence_urls": [
+      "https://www.megamart.com/product/13792862",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G3171",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018061800005"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “동아제약 가그린 후레쉬 라임 750mL”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 193,
+    "document_id": "20250812_110707",
+    "original_name": "관절팔팔",
+    "corrected_name": "관절팔팔",
+    "original_capacity": "30C",
+    "corrected_capacity": "30캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=32016278&keyword=%EA%B4%80%EC%A0%88%ED%8C%94%ED%8C%94&cate=16340287",
+      "https://search.danawa.com/dsearch.php?query=%EA%B4%80%EC%A0%88%ED%8C%94%ED%8C%94"
+    ],
+    "evidence_text": "검증된 상품 제목이 “씨스팡 관절 팔팔 310mg 30캡슐”로 표시한다. 기존 30C를 한국어 단위로 바꾼다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 194,
+    "document_id": "20250812_110709",
+    "original_name": "7일의보스웰리아",
+    "corrected_name": "7일의 보스웰리아",
+    "original_capacity": "30t",
+    "corrected_capacity": "30정",
+    "evidence_urls": [
+      "https://newtreemall.co.kr/product/7%EC%9D%BC%EC%9D%98-%EB%B3%B4%EC%8A%A4%EC%9B%B0%EB%A6%AC%EC%95%84-1%EA%B0%9C%EC%9B%94%EB%B6%84-30%EC%A0%95/561/"
+    ],
+    "evidence_text": "브랜드 판매 페이지가 “7일의 보스웰리아 1개월분 30정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 197,
+    "document_id": "20250812_110725",
+    "original_name": "스트롱조인트에프",
+    "corrected_name": "스트롱조인트-F",
+    "original_capacity": "240정",
+    "corrected_capacity": "240정",
+    "evidence_urls": [
+      "https://soear.co.kr/product/%EC%A1%B0%EC%95%84%EC%A0%9C%EC%95%BD-%EC%8A%A4%ED%8A%B8%EB%A1%B1%EC%A1%B0%EC%9D%B8%ED%8A%B8-f-240%EC%A0%95-2%EA%B0%9C%EC%9B%94%EB%B6%84/29/category/53/display/1/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019052200036",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G3002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2015060300028",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2015060300030",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016100500002"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “조아제약 스트롱조인트-F 240정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 198,
+    "document_id": "20250812_110732",
+    "original_name": "엠에스엠포르테",
+    "corrected_name": "MSM 포르테",
+    "original_capacity": "90T",
+    "corrected_capacity": "90정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=17824856&keyword=%EC%97%A0%EC%97%90%EC%8A%A4%EC%97%A0%ED%8F%AC%EB%A5%B4%ED%85%8C&cate=1622280",
+      "https://search.danawa.com/dsearch.php?query=%EC%97%A0%EC%97%90%EC%8A%A4%EC%97%A0%ED%8F%AC%EB%A5%B4%ED%85%8C",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB0117",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB0118",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO3241",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017032900015"
+    ],
+    "evidence_text": "검증된 상품 제목이 “MSM 포르테 90정”으로 표시한다. 원문의 음차 표기와 90T를 표준 표기로 바꾼다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 201,
+    "document_id": "20250812_110751",
+    "original_name": "프롬팜관절건강엔타마플렉스",
+    "corrected_name": "프롬팜 관절건강엔 타마플렉스",
+    "original_capacity": "60정",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=10840&cate_c2=223834&cate_c3=223918&cate_c4=0&cmpny_c=TH201&link_prod_c=9456016183&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C%EA%B4%80%EC%A0%88%EA%B1%B4%EA%B0%95%EC%97%94%ED%83%80%EB%A7%88%ED%94%8C%EB%A0%89%EC%8A%A4&r=17841122857344&cate=17225873",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%EA%B4%80%EC%A0%88%EA%B1%B4%EA%B0%95%EC%97%94%ED%83%80%EB%A7%88%ED%94%8C%EB%A0%89%EC%8A%A4"
+    ],
+    "evidence_text": "검증된 상품 제목이 “프롬팜 관절 건강 엔 타마플렉스 60정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 202,
+    "document_id": "20250812_110755",
+    "original_name": "프롬팜관절건강엔MSM&NAG",
+    "corrected_name": "프롬팜 관절건강엔 MSM&NAG",
+    "original_capacity": "240T",
+    "corrected_capacity": "240정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228847&cate_c4=231886&cmpny_c=TP40F&link_prod_c=V94606940818&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C%EA%B4%80%EC%A0%88%EA%B1%B4%EA%B0%95%EC%97%94MSM%26NAG&r=17841122866469&cate=1632319",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%EA%B4%80%EC%A0%88%EA%B1%B4%EA%B0%95%EC%97%94MSM%26NAG"
+    ],
+    "evidence_text": "검증된 상품 제목이 “프롬팜 관절 건강 엔 MSM & NAG 240정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 203,
+    "document_id": "20250812_110800",
+    "original_name": "콘티600",
+    "corrected_name": "콘티600정",
+    "original_capacity": "180T",
+    "corrected_capacity": "180정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2012062500015"
+    ],
+    "evidence_text": "약학정보원 후보와 조사 후보가 모두 “콘티600정”으로 일치하고 조사 자료가 180정을 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 204,
+    "document_id": "20250812_110803",
+    "original_name": "조인탑600",
+    "corrected_name": "조인탑600정",
+    "original_capacity": "90정",
+    "corrected_capacity": "90정",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/%EC%A1%B0%EC%9D%B8%ED%83%91600%EC%A0%95-90%EC%A0%9545%EC%A0%952",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019022200041",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G0166"
+    ],
+    "evidence_text": "약학정보원과 판매 페이지가 “조인탑600정 90정(45정×2)”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 207,
+    "document_id": "20250812_110817",
+    "original_name": "맥스콘드로이틴1200",
+    "corrected_name": "맥스콘드로이틴1200경구용겔",
+    "original_capacity": "60포",
+    "corrected_capacity": "60포",
+    "evidence_urls": [
+      "https://dpharm.co.kr/maxchondroitin/story",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023112100003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071502027"
+    ],
+    "evidence_text": "동아제약 제품 페이지와 약학정보원 후보가 “맥스콘드로이틴1200경구용겔”로 일치하고 조사 자료가 60포를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 214,
+    "document_id": "20250812_110925",
+    "original_name": "이뮤골드액",
+    "corrected_name": "이뮤골드액",
+    "original_capacity": "60병",
+    "corrected_capacity": "10g×60병",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1762",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ALLLLL0159"
+    ],
+    "evidence_text": "약학정보원 후보와 판매 페이지가 “이뮤골드액 10g 60병(30병×2)”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 215,
+    "document_id": "20250812_110932",
+    "original_name": "녹십자 하루케어 밀크씨슬",
+    "corrected_name": "녹십자 하루케어 밀크씨슬",
+    "original_capacity": "30T",
+    "corrected_capacity": "30정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228847&cate_c4=231916&cmpny_c=TP40F&link_prod_c=I26461568210&keyword=%EB%85%B9%EC%8B%AD%EC%9E%90+%ED%95%98%EB%A3%A8%EC%BC%80%EC%96%B4+%EB%B0%80%ED%81%AC%EC%94%A8%EC%8A%AC&r=17841122913837&cate=1632325",
+      "https://search.danawa.com/dsearch.php?query=%EB%85%B9%EC%8B%AD%EC%9E%90%20%ED%95%98%EB%A3%A8%EC%BC%80%EC%96%B4%20%EB%B0%80%ED%81%AC%EC%94%A8%EC%8A%AC",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020040800002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020040800001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020040100003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023070700001"
+    ],
+    "evidence_text": "검증된 상품 제목이 “GC녹십자 하루케어 밀크씨슬 500mg 30정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 216,
+    "document_id": "20250812_110942",
+    "original_name": "리포조말 글루타치온 셀렌",
+    "corrected_name": "리포조말 글루타치온 셀렌",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=231958&cmpny_c=EE309&link_prod_c=LO2707668105&keyword=%EB%A6%AC%ED%8F%AC%EC%A1%B0%EB%A7%90+%EA%B8%80%EB%A3%A8%ED%83%80%EC%B9%98%EC%98%A8+%EC%85%80%EB%A0%8C&r=17841122939031&cate=16316917",
+      "https://search.danawa.com/dsearch.php?query=%EB%A6%AC%ED%8F%AC%EC%A1%B0%EB%A7%90%20%EA%B8%80%EB%A3%A8%ED%83%80%EC%B9%98%EC%98%A8%20%EC%85%80%EB%A0%8C"
+    ],
+    "evidence_text": "검증된 상품 제목이 “리포조말 글루타치온 셀렌 120정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 218,
+    "document_id": "20250812_110955",
+    "original_name": "쓸기담",
+    "corrected_name": "쓸기담50mg연질캡슐",
+    "original_capacity": "50캡슐",
+    "corrected_capacity": "50캡슐",
+    "evidence_urls": [
+      "https://blog.naver.com/nuriipharm/221351027060",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0250A0668",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0250A0686",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB0062"
+    ],
+    "evidence_text": "약학정보원 후보가 “쓸기담50mg연질캡슐”이고 기존 이미지 검수도 같은 쓸기담 캡슐 제품을 가리킨다. 용량 50캡슐과 제형이 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 221,
+    "document_id": "20250812_111018",
+    "original_name": "우루샷정",
+    "corrected_name": "우루샷정",
+    "original_capacity": "2T",
+    "corrected_capacity": "2정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=16278740&keyword=%EC%9A%B0%EB%A3%A8%EC%83%B7%EC%A0%95&cate=16216017",
+      "https://search.danawa.com/dsearch.php?query=%EC%9A%B0%EB%A3%A8%EC%83%B7%EC%A0%95"
+    ],
+    "evidence_text": "검증된 상품 제목이 “대웅제약 우루샷정 2정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 223,
+    "document_id": "20250812_111110",
+    "original_name": "칼륨메리로트밸런스",
+    "corrected_name": "온유로케어 칼륨 메리로트 밸런스",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=97342751"
+    ],
+    "evidence_text": "검증된 상품 제목이 “온유바이오 온유로케어 칼륨 메리로트 밸런스 1000mg 60정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 225,
+    "document_id": "20250812_111123",
+    "original_name": "프롬팜두뇌인지력엔",
+    "corrected_name": "프롬팜 두뇌 인지력엔",
+    "original_capacity": "60캡슐",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=V95682743089&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C%EB%91%90%EB%87%8C%EC%9D%B8%EC%A7%80%EB%A0%A5%EC%97%94&r=17841122999469&cate=16256683",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%EB%91%90%EB%87%8C%EC%9D%B8%EC%A7%80%EB%A0%A5%EC%97%94"
+    ],
+    "evidence_text": "검증된 상품 제목에서 “프롬팜 두뇌 인지력엔 … 60캡슐”을 확인했다. 붙임만 바로잡는다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 227,
+    "document_id": "20250812_111135",
+    "original_name": "기넥슨에프",
+    "corrected_name": "기넥신에프정",
+    "original_capacity": "100T",
+    "corrected_capacity": "100정",
+    "evidence_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB1014",
+      "https://mirpharma.net/products/31"
+    ],
+    "evidence_text": "반복 조사 후보가 “기넥신에프정 100정”으로 일치한다. “기넥슨”은 “기넥신” OCR 오인이다. 세부 함량은 확정하지 않아 이름에 넣지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 231,
+    "document_id": "20250812_111151",
+    "original_name": "징코폴리시아",
+    "corrected_name": "징코폴리시아",
+    "original_capacity": "120c",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/8627663897"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “징코폴리시아 600mg 120캡슐(60캡슐×2병)”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 232,
+    "document_id": "20250812_111154",
+    "original_name": "징코넥신",
+    "corrected_name": "징코넥신",
+    "original_capacity": "120c",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/3158272257"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “징코넥신 600mg 60캡슐 2개”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 236,
+    "document_id": "20250812_111209",
+    "original_name": "써큐란알파",
+    "corrected_name": "써큐란 알파",
+    "original_capacity": "180캡슐",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://www.dapharm.com/ko/brand/product/CCLA180",
+      "https://blog.naver.com/riandesca/222455083256"
+    ],
+    "evidence_text": "동아제약 공식 제품 페이지가 “써큐란 알파 180캡슐”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 241,
+    "document_id": "20250812_111237",
+    "original_name": "5070먼역비타민",
+    "corrected_name": "5070 면역비타민",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/5070-%EB%A9%B4%EC%97%AD%EB%B9%84%ED%83%80%EB%AF%BC-120%EC%A0%9560%EC%A0%952",
+      "https://blog.naver.com/flowitch22/223821094965"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “익수제약 5070 면역비타민 120정”으로 표시한다. “먼역”은 “면역” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 257,
+    "document_id": "20250812_111802",
+    "original_name": "지엘세티리진",
+    "corrected_name": "지엘세티리진염산염정",
+    "original_capacity": "10T",
+    "corrected_capacity": "10정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB1579"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 “지엘세티리진염산염정 10정”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 260,
+    "document_id": "20250812_111814",
+    "original_name": "캐롤에프",
+    "corrected_name": "캐롤에프정",
+    "original_capacity": "10C",
+    "corrected_capacity": "10정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AGGGGA4001"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 “캐롤에프정 10정”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 267,
+    "document_id": "20250812_112150",
+    "original_name": "모스케어싹액",
+    "corrected_name": "모스케어 싹액",
+    "original_capacity": "80ml",
+    "corrected_capacity": "80mL",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8360477233"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “GC녹십자 모스케어 싹액 80mL”로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 268,
+    "document_id": "20250812_112153",
+    "original_name": "홈키파엑파에어졸",
+    "corrected_name": "홈키파 마이키파 에스 엑스트라 파워 에어졸",
+    "original_capacity": "150ml",
+    "corrected_capacity": "150mL",
+    "evidence_urls": [
+      "https://mfront.homeplus.co.kr/item?itemNo=058448539&storeType=HYPER"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “홈키파 마이키파 에스 엑스트라 파워 에어졸 150mL”로 표시한다. “엑파”는 “엑스트라 파워”가 줄거나 잘못 읽힌 값이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 269,
+    "document_id": "20250812_112156",
+    "original_name": "신신모스키토아웃도어에어로솔",
+    "corrected_name": "신신 모스키토 아웃도어 에어로솔",
+    "original_capacity": "1통",
+    "corrected_capacity": "100mL",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1985&cate_c2=226387&cate_c3=226447&cate_c4=226816&cmpny_c=EE715&link_prod_c=F200555850&keyword=%EC%8B%A0%EC%8B%A0%EB%AA%A8%EC%8A%A4%ED%82%A4%ED%86%A0%EC%95%84%EC%9B%83%EB%8F%84%EC%96%B4%EC%97%90%EC%96%B4%EB%A1%9C%EC%86%94&r=17841123172279&cate=17316142",
+      "https://search.danawa.com/dsearch.php?query=%EC%8B%A0%EC%8B%A0%EB%AA%A8%EC%8A%A4%ED%82%A4%ED%86%A0%EC%95%84%EC%9B%83%EB%8F%84%EC%96%B4%EC%97%90%EC%96%B4%EB%A1%9C%EC%86%94"
+    ],
+    "evidence_text": "검증된 상품 제목이 “신신 모스키토 아웃도어 에어로솔 100mL”로 표시한다. 일반 단위 1통을 실제 용량으로 바꾼다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 270,
+    "document_id": "20250812_112224",
+    "original_name": "영국산비타민c500mg",
+    "corrected_name": "영국산 비타민C 500mg",
+    "original_capacity": "12T",
+    "corrected_capacity": "12정",
+    "evidence_urls": [
+      "https://m.mariomall.co.kr/Detail?PCode=P003743267&isPersonal=0&pid=1108"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “영국산 비타민C 500mg 12정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 271,
+    "document_id": "20250812_112336",
+    "original_name": "무통환",
+    "corrected_name": "무통환(영선제통음)",
+    "original_capacity": "10T",
+    "corrected_capacity": "10포",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07L0284"
+    ],
+    "evidence_text": "약학정보원과 반복 조사 후보가 “무통환(영선제통음) 10포”로 일치한다. 원문의 10T는 제형과 맞지 않는 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 274,
+    "document_id": "20250812_112437",
+    "original_name": "다나옴액티브엽산",
+    "corrected_name": "다나음 액티브 엽산+비타민D3",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://catalog.11st.co.kr/pc/77933413"
+    ],
+    "evidence_text": "검증된 상품 제목이 “다나음 액티브 엽산+비타민D3 30정 2케이스”로 표시한다. “다나옴”은 브랜드명 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 279,
+    "document_id": "20250812_112455",
+    "original_name": "디어미T",
+    "corrected_name": "디어미정",
+    "original_capacity": "21T",
+    "corrected_capacity": "21정",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1302"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “디어미정 21정”으로 표시한다. 원문의 T는 제품명 일부가 아니라 정제 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 285,
+    "document_id": "20250812_112542",
+    "original_name": "니코틴엘30",
+    "corrected_name": "니코틴엘TTS30",
+    "original_capacity": "7매",
+    "corrected_capacity": "7매",
+    "evidence_urls": [
+      "https://www.whites.sa/en-sa/nicotinell-tts-30-21mg-patch-7pcs/",
+      "https://korepharm.com/products/nicotinell-tts-30-step-1",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9996",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9984",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9994",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9995"
+    ],
+    "evidence_text": "약학정보원 후보와 검증된 판매 페이지가 “니코틴엘TTS30 7매”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 286,
+    "document_id": "20250812_112549",
+    "original_name": "니코틴엘1mg로젠즈",
+    "corrected_name": "니코틴엘로젠즈민트향트로키1mg",
+    "original_capacity": "36EA",
+    "corrected_capacity": "36개",
+    "evidence_urls": [
+      "https://nicotinell.co.kr/product.html",
+      "https://blog.naver.com/inyl1110/130143147871",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9988",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9995",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9996",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9984"
+    ],
+    "evidence_text": "니코틴엘 공식 제품 페이지와 약학정보원 후보가 “니코틴엘로젠즈민트향트로키1mg”으로 일치하며 기존 포장 수량은 36개다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 287,
+    "document_id": "20250812_112552",
+    "original_name": "니코틴엘2mg",
+    "corrected_name": "니코틴엘껌2mg",
+    "original_capacity": "24T",
+    "corrected_capacity": "24개",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9984",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9988",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9994",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9995",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO9996"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 “니코틴엘껌2mg 24개”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 296,
+    "document_id": "20250812_112655",
+    "original_name": "청상기가환",
+    "corrected_name": "청상기가환(청상보하환)",
+    "original_capacity": "90포",
+    "corrected_capacity": "90포",
+    "evidence_urls": [
+      "https://barkiri.com/products/p814",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AGGGGG7032"
+    ],
+    "evidence_text": "약학정보원 후보가 “청상기가환(청상보하환)”으로 표시하고 판매 페이지가 90포를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 314,
+    "document_id": "20250812_112920",
+    "original_name": "일양정정보환",
+    "corrected_name": "정정보환(온신산)",
+    "original_capacity": "120포",
+    "corrected_capacity": "120포",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/%EC%A0%95%EC%A0%95%EB%B3%B4%ED%99%98%EC%98%A8%EC%8B%A0%EC%82%B0120P",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AGGGGG7028",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022032200001"
+    ],
+    "evidence_text": "약학정보원 후보와 판매 페이지가 “정정보환(온신산) 120포”로 일치한다. 제조사명 “일양”을 제품명에서 분리한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 316,
+    "document_id": "20250812_112930",
+    "original_name": "헤파신",
+    "corrected_name": "헤파신캡슐(배농산)",
+    "original_capacity": "10C",
+    "corrected_capacity": "10캡슐",
+    "evidence_urls": [
+      "https://barkiri.com/products/p543",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1055",
+      "https://www.aropamall.co.kr/Goods/Goods_List.asp?DIVISION=&ListSearchKey=&ListSort=2&TopSearchGubun=1&TopSearchKey=&TopSearch_CMP_NUM=&TopSearch_MakeCmp=&TopSearchsCtg1=&cmp=&ctg=002&page=LIST&pdnum=&search=&start=1801"
+    ],
+    "evidence_text": "의약품 도매 상품 목록이 영진약품 “헤파신(배농산) 10C”로 표시하고 기존 판매 페이지도 헤파신 10캡슐을 확인한다. 약학정보원의 경진헤파신 후보는 제조사가 다른 별도 제품이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 327,
+    "document_id": "20250812_113138",
+    "original_name": "오트리빈베이비",
+    "corrected_name": "오트리빈 베이비 내추럴 비강분무액",
+    "original_capacity": "1병",
+    "corrected_capacity": "1병",
+    "evidence_urls": [
+      "https://www.otrivin.co.kr/products/baby-natural/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020060100090",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=hdyu0svvvqwjv",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019052200054",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO2696",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ALLLLL0153"
+    ],
+    "evidence_text": "오트리빈 공식 제품 페이지와 약학정보원 후보가 “오트리빈 베이비 내추럴 비강분무액”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 331,
+    "document_id": "20250812_113152",
+    "original_name": "피지오머비강세척액스프레이",
+    "corrected_name": "피지오머 비강세척액 스프레이 노즐",
+    "original_capacity": "115ml",
+    "corrected_capacity": "115mL",
+    "evidence_urls": [
+      "https://www.thepharmacy.co.kr/%ED%94%BC%EC%A7%80%EC%98%A4%EB%A8%B8-%EB%B2%A0%EC%9D%B4%EB%B9%84",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07K0065",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AMMMMM0499",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AMMMMM1003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AMMMMM1006",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018061500013"
+    ],
+    "evidence_text": "판매 페이지의 피지오머 베이비 115mL와 약학정보원 후보의 “피지오머비강세척액스프레이노즐”이 일치한다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 333,
+    "document_id": "20250812_113206",
+    "original_name": "포비돈스틱스왑액",
+    "corrected_name": "성광포스틱스왑액",
+    "original_capacity": "6개",
+    "corrected_capacity": "2매×6개입",
+    "evidence_urls": [
+      "https://www.firsonhealthcare.com/sub_products/prod_view.php?block=1&cate=0003_&effi=%EC%99%B8%ED%94%BC%EC%9A%A9%EC%82%B4%EA%B7%A0%EC%86%8C%EB%8F%85%EC%A0%9C&p_idx=25&pg=1",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07L0538",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1029",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=h3lj31or61ahr",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A6030B0011",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A6030B0003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1030"
+    ],
+    "evidence_text": "퍼슨헬스케어 제품 페이지와 약학정보원 원문을 다시 확인했다. 정식 제품명은 ‘성광포스틱스왑액(포비돈요오드)’이고 규격은 2매×6개입이다. 이전 ‘포비스틱’ 교정은 잘못되어 ‘포스틱’으로 바로잡는다.",
+    "review_confidence": "high",
+    "approved": true,
+    "accepted_previous_names": [
+      "성광포비스틱스왑액"
+    ]
+  },
+  {
+    "source_order": 341,
+    "document_id": "20250812_113230",
+    "original_name": "그린나잘스프레이",
+    "corrected_name": "그린나잘스프레이모이스쳐액",
+    "original_capacity": "15ml",
+    "corrected_capacity": "15mL",
+    "evidence_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2018071000013",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018071000013",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AEEEEE0188",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1020A0345",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A6030A0006",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0390A0094"
+    ],
+    "evidence_text": "약학정보원 원문과 현재 이미지 출처가 “그린나잘스프레이모이스쳐액”을 가리키며 용량은 15mL다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 352,
+    "document_id": "20250812_113313",
+    "original_name": "아이다움 실리콘 투약병",
+    "corrected_name": "아이다움 실리콘 투약병",
+    "original_capacity": "1EA",
+    "corrected_capacity": "1개",
+    "evidence_urls": [
+      "https://idahum.kr/product/%EC%95%84%EC%9D%B4%EB%8B%A4%EC%9B%80-%EC%8B%A4%EB%A6%AC%EC%BD%98%ED%88%AC%EC%95%BD%EB%B3%91-3%EC%A2%85/1090/category/73/display/1/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022051300002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025073100010"
+    ],
+    "evidence_text": "브랜드 공식 판매 페이지가 “아이다움 실리콘투약병”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 354,
+    "document_id": "20250812_113323",
+    "original_name": "어린이타이레놀현탄액",
+    "corrected_name": "어린이타이레놀현탁액",
+    "original_capacity": "100ml",
+    "corrected_capacity": "100mL",
+    "evidence_urls": [
+      "https://barkiri.com/products/p20",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022020400007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0500A0154",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0540A0251",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019010200002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019101800001"
+    ],
+    "evidence_text": "약학정보원 후보와 판매 페이지가 “어린이타이레놀현탁액 100mL”로 일치한다. “현탄액”은 “현탁액” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 358,
+    "document_id": "20250812_113347",
+    "original_name": "카네스탄산제",
+    "corrected_name": "카네스텐산제",
+    "original_capacity": "30g",
+    "corrected_capacity": "30g",
+    "evidence_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=A11A1380A0059",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1380A0059",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1380A0031",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1380A0032",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1380A0054",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020040800003"
+    ],
+    "evidence_text": "약학정보원 원문이 “카네스텐산제”로 표시한다. “카네스탄”은 “카네스텐” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 360,
+    "document_id": "20250812_113352",
+    "original_name": "세네폴에스액",
+    "corrected_name": "세네풀에스액",
+    "original_capacity": "30ml",
+    "corrected_capacity": "30mL",
+    "evidence_urls": [
+      "https://www.firson.co.kr/sub_products/prod_view.php?block=1&cate=0003_&effi=%EC%99%B8%ED%94%BC%EC%9A%A9%EC%82%B4%EA%B7%A0%EC%86%8C%EB%8F%85%EC%A0%9C&p_idx=23&pg=1"
+    ],
+    "evidence_text": "제조사 제품 페이지가 “세네풀에스액”으로 표시한다. “세네폴”은 “세네풀” OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 362,
+    "document_id": "20250812_113403",
+    "original_name": "잇치",
+    "corrected_name": "잇치페이스트",
+    "original_capacity": "150g",
+    "corrected_capacity": "150g",
+    "evidence_urls": [
+      "https://www.dong-wha.co.kr/product/content.asp?b=20&s=24&t_idx=395",
+      "https://barkiri.com/products/p489",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=f29ua8m9p963y"
+    ],
+    "evidence_text": "동화약품 공식 제품 페이지와 약학정보원 후보가 “잇치페이스트 150g”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 363,
+    "document_id": "20250812_113405",
+    "original_name": "잇치 프로폴리스",
+    "corrected_name": "잇치 페이스트 프로폴리스향",
+    "original_capacity": "140g",
+    "corrected_capacity": "140g",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/%EC%9E%87%EC%B9%98-%ED%8E%98%EC%9D%B4%EC%8A%A4%ED%8A%B8%ED%94%84%EB%A1%9C%ED%8F%B4%EB%A6%AC%EC%8A%A4-140g"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “잇치 페이스트 프로폴리스향 140g”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 375,
+    "document_id": "20250812_113614",
+    "original_name": "모드콜키즈노즈시럽",
+    "corrected_name": "모드콜노즈시럽",
+    "original_capacity": "10p",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://barkiri.com/products/p786",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020111300012",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025061100002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2014012200009",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=3ikznxh0huioi",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022121500005"
+    ],
+    "evidence_text": "약학정보원 후보와 검증된 판매 페이지가 “모드콜노즈시럽 5mL×10포”로 일치한다. “키즈”는 판매 설명의 대상 연령 표현이며 허가 제품명에는 없다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 376,
+    "document_id": "20250812_113616",
+    "original_name": "모드콜키즈코프시럽",
+    "corrected_name": "모드콜코프시럽",
+    "original_capacity": "10p",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://blog.naver.com/darlene56/223376610284",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022090100005",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025061100002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020111300012",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2014012200010",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=3ikznxh0huioi"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 “모드콜코프시럽 5mL×10포”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 377,
+    "document_id": "20250812_113618",
+    "original_name": "모드콜키즈콜드시럽",
+    "corrected_name": "모드콜콜드시럽",
+    "original_capacity": "10p",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://barkiri.com/products/p784",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022090800004",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025061100002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020111300012",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=3ikznxh0huioi",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022121500005"
+    ],
+    "evidence_text": "약학정보원 후보와 검증된 판매 페이지가 “모드콜콜드시럽 5mL×10포”로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 379,
+    "document_id": "20250812_113630",
+    "original_name": "이큐펜키즈A(이브프로펜)",
+    "corrected_name": "이큐펜키즈아이시럽(이부프로펜)",
+    "original_capacity": "10p",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023011600015",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023013100005"
+    ],
+    "evidence_text": "약학정보원 후보가 이부프로펜 제품을 “이큐펜키즈아이시럽”으로 표시한다. 원문의 A와 “이브프로펜”은 각각 I 제품 구분과 “이부프로펜”을 잘못 읽은 값이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 380,
+    "document_id": "20250812_113631",
+    "original_name": "이큐펜키즈(아세트아미노펜)",
+    "corrected_name": "이큐펜키즈에이시럽(아세트아미노펜)",
+    "original_capacity": "10p",
+    "corrected_capacity": "5mL×10포",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023013100005",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023011600015"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 아세트아미노펜 제품을 “이큐펜키즈에이시럽”으로 표시하고 5mL×10포를 확인한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 384,
+    "document_id": "20250812_113738",
+    "original_name": "광동우황청심환",
+    "corrected_name": "광동우황청심원현탁액",
+    "original_capacity": "50ml",
+    "corrected_capacity": "50mL",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A2260A0347"
+    ],
+    "evidence_text": "약학정보원 원문은 광동제약 ‘광동우황청심원현탁액’의 포장단위를 1병 50mL로 표시한다. 카탈로그의 50ml 규격은 환제가 될 수 없으므로 원문의 ‘환’을 액상 제품명으로 바로잡는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 399,
+    "document_id": "20250812_113925",
+    "original_name": "로이디펜규",
+    "corrected_name": "로이디펜큐캡슐",
+    "original_capacity": "10T",
+    "corrected_capacity": "10캡슐",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020082500005",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO2535"
+    ],
+    "evidence_text": "약학정보원 후보와 반복 조사 후보가 “로이디펜큐캡슐 10캡슐”로 일치한다. “규”는 “큐” OCR 오인이고 10T는 캡슐 제형과 맞지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 401,
+    "document_id": "20250812_113929",
+    "original_name": "로페리놀S10캡슐",
+    "corrected_name": "로페리놀에스캡슐",
+    "original_capacity": "10캡슐",
+    "corrected_capacity": "10캡슐",
+    "evidence_urls": [
+      "https://aroundpharm.com/kr/product/18361",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016070800012",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2026010900002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019101400009",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0920A0104",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0970A0146"
+    ],
+    "evidence_text": "약학정보원 후보와 검증된 판매 페이지가 “로페리놀에스캡슐 10캡슐”로 일치한다. 원문의 S10은 제품 구분과 포장 수량이 붙은 값이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 406,
+    "document_id": "20250812_113951",
+    "original_name": "정로환에프",
+    "corrected_name": "동성정로환에프환",
+    "original_capacity": "100환",
+    "corrected_capacity": "100환",
+    "evidence_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2018061500010",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018061500010",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2022032200001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018080700007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2015031600020"
+    ],
+    "evidence_text": "약학정보원 원문과 현재 이미지 출처가 “동성정로환에프환 100환”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 415,
+    "document_id": "20250812_114016",
+    "original_name": "미야리산u",
+    "corrected_name": "미야리산U",
+    "original_capacity": "420T",
+    "corrected_capacity": "420정",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=51860375",
+      "https://blog.naver.com/ranitj/224000091752",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020121800004"
+    ],
+    "evidence_text": "검증된 상품 제목과 포장 이미지가 “신신제약 미야리산U 420정”으로 일치한다. 영문 제품 구분 U를 대문자로 바로잡는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 416,
+    "document_id": "20250812_114031",
+    "original_name": "덴파사",
+    "corrected_name": "덴파사캡슐",
+    "original_capacity": "240c",
+    "corrected_capacity": "240캡슐",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1241",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07L0271"
+    ],
+    "evidence_text": "약학정보원 후보와 검증된 판매 페이지가 “덴파사캡슐 120캡슐×2갑”으로 일치한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 418,
+    "document_id": "20250812_114035",
+    "original_name": "덴타탁액티브",
+    "corrected_name": "덴타탁 액티브",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://www.yak-al.com/product/44619"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “GC녹십자 덴타탁 액티브 120정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 419,
+    "document_id": "20250812_114037",
+    "original_name": "유한덴티케어플러스",
+    "corrected_name": "유한 덴티케어플러스",
+    "original_capacity": "120C",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/7951386571"
+    ],
+    "evidence_text": "검증된 판매 페이지가 “유한 덴티케어플러스 120정”으로 표시한다. 기존 120C는 확인된 정제 단위와 맞지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 422,
+    "document_id": "20250812_114054",
+    "original_name": "프로탁스",
+    "corrected_name": "프로탁스(R)",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://www.bukwang.co.kr/product_view.php?idx=296&search=1"
+    ],
+    "evidence_text": "부광약품 공식 제품 페이지가 “프로탁스(R)”로 표시하며 기존 120T를 120정으로 바꾼다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 426,
+    "document_id": "20250812_114122",
+    "original_name": "이가엔탑플러스",
+    "corrected_name": "이가 엔 탑플러스",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=231961&cmpny_c=TP40F&link_prod_c=I28369685036&keyword=%EC%9D%B4%EA%B0%80%EC%97%94%ED%83%91%ED%94%8C%EB%9F%AC%EC%8A%A4&r=17841123795335&cate=16349741",
+      "https://search.danawa.com/dsearch.php?query=%EC%9D%B4%EA%B0%80%EC%97%94%ED%83%91%ED%94%8C%EB%9F%AC%EC%8A%A4"
+    ],
+    "evidence_text": "검증된 상품 제목이 “이가 엔 탑플러스 120정”으로 표시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 427,
+    "document_id": "20250812_114124",
+    "original_name": "이엔탁스프로",
+    "corrected_name": "이엔탁스프로",
+    "original_capacity": "120c",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "http://medipana.com/news/news_viewer.asp?NewsNum=279615&MainKind=A&NewsKind=5&vCount=12&vKind=1"
+    ],
+    "evidence_text": "기존 제품 기사와 이미지 검수 자료가 “이엔탁스프로”를 확인한다. 기존 120c를 한국어 단위 120캡슐로 바꾼다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 428,
+    "document_id": "20250812_114127",
+    "original_name": "아이간유연질",
+    "corrected_name": "아이간유연질캡슐",
+    "original_capacity": "240c",
+    "corrected_capacity": "240캡슐",
+    "evidence_urls": [
+      "https://www.gcbiopharma.com/kor/product_view.do?currentPage=1&idx=534&searchColumn2List=",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024040200003"
+    ],
+    "evidence_text": "약학정보원 후보와 GC녹십자 제품 페이지가 아이간유연질캡슐 240캡슐 포장을 명시한다. 원문의 제형명 누락과 C 축약을 바로잡는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 440,
+    "document_id": "20250812_114411",
+    "original_name": "커버든액상과립",
+    "corrected_name": "커버든엑스과립(위령탕)",
+    "original_capacity": "5P",
+    "corrected_capacity": "5포",
+    "evidence_urls": [
+      "https://www.health.kr/searchDrug/result_take.asp?drug_cd=A11AKP07L0179",
+      "https://comedi.kr/drug/article/200005719",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07L0179"
+    ],
+    "evidence_text": "약학정보원과 의약품 허가 자료의 정식 제품명은 커버든엑스과립(위령탕)이다. 원문의 액상은 엑스의 OCR 오인으로 판단되며 5P는 5포로 풀어 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 443,
+    "document_id": "20250812_114420",
+    "original_name": "위엔젤",
+    "corrected_name": "위엔젤정",
+    "original_capacity": "10T",
+    "corrected_capacity": "10정",
+    "evidence_urls": [
+      "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EC%9C%84%EC%97%94%EC%A0%A4%20%EC%A0%9C%ED%92%88",
+      "https://blog.naver.com/issueday-/223845812532",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F0896",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2014070900007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017022200004"
+    ],
+    "evidence_text": "약학정보원 후보가 위엔젤정 10정(10정/PTP×1)을 명시한다. 원문에서 정 제형이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 449,
+    "document_id": "20250812_114437",
+    "original_name": "판키아제",
+    "corrected_name": "판키아제정",
+    "original_capacity": "100C",
+    "corrected_capacity": "100정",
+    "evidence_urls": [
+      "https://barkiri.com/products/p307",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0340A0324"
+    ],
+    "evidence_text": "약학정보원과 전문 판매 페이지가 판키아제정 100정을 명시하고 포장 사진에도 100정이 보인다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 450,
+    "document_id": "20250812_114439",
+    "original_name": "신일트리메부틴",
+    "corrected_name": "신일트리메부틴말레산염정200mg",
+    "original_capacity": "180정",
+    "corrected_capacity": "180정",
+    "evidence_urls": [
+      "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EC%8B%A0%EC%9D%BC%ED%8A%B8%EB%A6%AC%EB%A9%94%EB%B6%80%ED%8B%B4%20%EC%A0%9C%ED%92%88",
+      "https://blog.naver.com/p2j10/224050995355",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A2070A0266",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A2070A0226",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A2070B0033"
+    ],
+    "evidence_text": "약학정보원 정식명과 포장단위가 신일트리메부틴말레산염정200mg 180정이다. 원문에서 성분염·제형·함량이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 460,
+    "document_id": "20250812_114520",
+    "original_name": "트리겔",
+    "corrected_name": "트리겔정",
+    "original_capacity": "20정",
+    "corrected_capacity": "20정",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/%ED%8A%B8%EB%A6%AC%EA%B2%94%EC%A0%95-20%EC%A0%95",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AJJJJJ0093",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0030A0148",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0450A0335",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AGGGGA3918"
+    ],
+    "evidence_text": "약학정보원과 전문 약국 페이지가 트리겔정 20정을 명시한다. 원문에서 정 제형이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 468,
+    "document_id": "20250812_114657",
+    "original_name": "페리비타",
+    "corrected_name": "페리비타캡슐",
+    "original_capacity": "60C",
+    "corrected_capacity": "60캡슐(30캡슐×2병)",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO8115",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO7029"
+    ],
+    "evidence_text": "약학정보원 정식명은 페리비타캡슐이고 단품은 30캡슐/병이다. 판매 자료의 60캡슐은 30캡슐 2병 세트이므로 원문의 제형 누락과 묶음 규격을 명확히 적는다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 479,
+    "document_id": "20250812_114800",
+    "original_name": "자이젤리",
+    "corrected_name": "자이젤리겔",
+    "original_capacity": "50g",
+    "corrected_capacity": "50g",
+    "evidence_urls": [
+      "https://www.peoplepharm.com/m2/goods/view.php?goodsno=186788224"
+    ],
+    "evidence_text": "전문 판매 페이지와 제품 튜브가 동아제약 자이젤리겔 50g을 명시한다. 원문에서 겔 제형이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 482,
+    "document_id": "20250812_114808",
+    "original_name": "프로캄 클레어진 여성청결제",
+    "corrected_name": "프로캄 클레어진 여성청결제",
+    "original_capacity": "250ml",
+    "corrected_capacity": "200mL + 50mL",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/6440416356?categoryId=464985&itemId=24342001244&sourceType=CATEGORY&vendorItemId=92977095573"
+    ],
+    "evidence_text": "판매 상세 페이지와 포장 이미지가 200mL 본품과 50mL 추가 증정 세트임을 명시한다. 합계 250mL만 적힌 규격을 실제 구성으로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 489,
+    "document_id": "20250812_114924",
+    "original_name": "경목골드",
+    "corrected_name": "경옥골드",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL × 10병",
+    "evidence_urls": [
+      "https://www.upharmmall.co.kr/Search/Search.aspx?prodCode=2A0104416-250",
+      "https://jongsu.co.kr/shop.php?goPage=GoodDetail&idx=1975",
+      "https://www.11st.co.kr/products/7747352035"
+    ],
+    "evidence_text": "유팜몰·종수약품·11번가 등 실제 상품 페이지가 경옥골드 100mL×10병을 일관되게 명시한다. 경목은 경옥의 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 507,
+    "document_id": "20250812_115141",
+    "original_name": "롱키즈하이연조엑스",
+    "corrected_name": "롱키드하이연조엑스",
+    "original_capacity": "180P",
+    "corrected_capacity": "180포",
+    "evidence_urls": [
+      "https://barkiri.com/products/p955",
+      "https://sports.donga.com/society/article/all/20211110/110166682/2",
+      "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EB%A1%B1%ED%82%A4%EC%A6%88%ED%95%98%EC%9D%B4%EC%97%B0%EC%A1%B0%EC%97%91%EC%8A%A4%20%EC%A0%9C%ED%92%88",
+      "http://www.yakup.com/news/index.html?mode=view&cat=12&nid=262514"
+    ],
+    "evidence_text": "제조사 출시 기사와 전문 판매 페이지의 제품명은 롱키드하이연조엑스이며 180포다. 키즈는 키드의 OCR·전사 오류이고 P를 포로 풀어 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 515,
+    "document_id": "20250812_115225",
+    "original_name": "젤리잘크론(망고)",
+    "corrected_name": "젤리 잘크톤(망고맛)",
+    "original_capacity": "30포",
+    "corrected_capacity": "15g × 30포",
+    "evidence_urls": [
+      "https://m.choa.co.kr/product/product_020100.asp?bmain=view&idx=267&page="
+    ],
+    "evidence_text": "조아제약 공식 페이지와 포장에 젤리 잘크톤 망고맛 15g×30포가 표시된다. 잘크론을 잘크톤으로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 516,
+    "document_id": "20250812_115226",
+    "original_name": "젤리잘크론(블루베이)",
+    "corrected_name": "젤리 잘크톤(블루베리맛)",
+    "original_capacity": "30포",
+    "corrected_capacity": "15g × 30포",
+    "evidence_urls": [
+      "https://m.choa.co.kr/product/product_020100.asp?bmain=view&idx=285&page="
+    ],
+    "evidence_text": "조아제약 공식 페이지와 포장에 젤리 잘크톤 블루베리맛 15g×30포가 표시된다. 잘크론과 블루베이를 각각 잘크톤과 블루베리로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 517,
+    "document_id": "20250812_115232",
+    "original_name": "미량키즈아이쑥쑥",
+    "corrected_name": "미향 키즈아이쑥쑥",
+    "original_capacity": "480정",
+    "corrected_capacity": "275mg × 240정 × 2박스",
+    "evidence_urls": [
+      "https://smartstore.naver.com/onnuli/products/9276381648"
+    ],
+    "evidence_text": "실제 판매 페이지 제목과 포장에 미향 키즈아이쑥쑥, 275mg×240정×2 boxes가 표시된다. 미량은 미향의 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 518,
+    "document_id": "20250812_115242",
+    "original_name": "액상 미네랄 키드",
+    "corrected_name": "더팜 액상 미네랄 키즈",
+    "original_capacity": "30P",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://item.gmarket.co.kr/Item?goodscode=3125935195"
+    ],
+    "evidence_text": "실제 상품 페이지와 포장에 더팜 액상 미네랄 키즈 30포가 표시된다. 키드를 키즈로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 519,
+    "document_id": "20250812_115247",
+    "original_name": "프롬팜락토챔피언",
+    "corrected_name": "프롬팜 락토 챔피언 키즈",
+    "original_capacity": "60포",
+    "corrected_capacity": "60포",
+    "evidence_urls": [
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%EB%9D%BD%ED%86%A0%EC%B1%94%ED%94%BC%EC%96%B8",
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1985&cate_c2=227122&cate_c3=227167&cate_c4=227449&cmpny_c=TH201&link_prod_c=9484670248&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C%EB%9D%BD%ED%86%A0%EC%B1%94%ED%94%BC%EC%96%B8&r=17841124282737&cate=17327975"
+    ],
+    "evidence_text": "판매 자료와 포장 표기가 프롬팜 락토 챔피언 키즈 60포로 일치한다. 누락된 키즈 구분명을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 523,
+    "document_id": "20250812_115304",
+    "original_name": "프롬판오메가챔피언",
+    "corrected_name": "프롬팜 오메가 챔피언",
+    "original_capacity": "80c",
+    "corrected_capacity": "700mg × 80캡슐",
+    "evidence_urls": [
+      "https://www.dapharm.com/ko/brand/product/OCPO80"
+    ],
+    "evidence_text": "동아제약 공식 페이지와 포장에 프롬팜 오메가 챔피언 700mg×80캡슐이 표시된다. 프롬판은 프롬팜의 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 534,
+    "document_id": "20260129_110232",
+    "original_name": "엉겅퀴",
+    "corrected_name": "조아엉겅퀴골드",
+    "original_capacity": "10병",
+    "corrected_capacity": "100mL × 10병",
+    "evidence_urls": [
+      "https://m.choa.co.kr/product/product_020100.asp?bmain=view&idx=78&page="
+    ],
+    "evidence_text": "조아제약 공식 페이지와 포장에 조아엉겅퀴골드 100mL×10병이 표시된다. 지나치게 축약된 원문을 실제 상품명으로 복원한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 550,
+    "document_id": "20260129_110356",
+    "original_name": "닥터리뷰피디PDRN크림",
+    "corrected_name": "닥터 리쥬피디 프리미엄 PDRN 리페어 크림",
+    "original_capacity": "20g",
+    "corrected_capacity": "20g",
+    "evidence_urls": [
+      "https://www.testerkorea.net/product/47883-62104/drrejupd-premium-pdrn-repair-cream-20g"
+    ],
+    "evidence_text": "상품 페이지와 포장에 Dr.REJUPD Premium PDRN Repair Cream 20g이 명시되고 한국어 상품명도 닥터 리쥬피디로 표시된다. 리뷰피디는 브랜드 OCR 오류다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 551,
+    "document_id": "20260129_110359",
+    "original_name": "닥터리뷰피디PDRN크림10EA",
+    "corrected_name": "닥터 리쥬피디 프리미엄 PDRN 리페어 크림",
+    "original_capacity": "10EA",
+    "corrected_capacity": "10EA",
+    "evidence_urls": [
+      "https://www.testerkorea.net/product/47883-62104/drrejupd-premium-pdrn-repair-cream-20g",
+      "https://glowinkorea.com/products/dr-rejupd-pdrn-repair-cream-2-400-ppm"
+    ],
+    "evidence_text": "인접 단품과 여러 판매 페이지가 브랜드를 Dr.REJUPD/닥터 리쥬피디로 확인한다. 10EA 묶음 자체는 별도 검증이 필요하지만 이름의 리뷰피디 OCR 오류는 확실하다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 552,
+    "document_id": "20260129_110402",
+    "original_name": "리쥬닉피디알엔리페어크림",
+    "corrected_name": "리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림",
+    "original_capacity": "20ml",
+    "corrected_capacity": "20mL",
+    "evidence_urls": [
+      "https://search.danawa.com/dsearch.php?query=%EB%A6%AC%EC%A5%AC%EB%8B%89%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%EB%A6%AC%ED%8E%98%EC%96%B4%ED%81%AC%EB%A6%BC",
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=9875&cate_c2=228061&cate_c3=228184&cate_c4=229555&cmpny_c=TP40F&link_prod_c=V94175094732&keyword=%EB%A6%AC%EC%A5%AC%EB%8B%89%ED%94%BC%EB%94%94%EC%95%8C%EC%97%94%EB%A6%AC%ED%8E%98%EC%96%B4%ED%81%AC%EB%A6%BC&r=17841123667786&cate=18355397"
+    ],
+    "evidence_text": "일동제약·전문 판매 자료의 전체 제품명이 리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림 20mL다. 누락된 중간 제품명을 복원한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 553,
+    "document_id": "20260129_110406",
+    "original_name": "리쥬닉피디알엔리페어크림10EA",
+    "corrected_name": "리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림",
+    "original_capacity": "10EA",
+    "corrected_capacity": "10EA",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1727"
+    ],
+    "evidence_text": "인접 단품과 일동제약·전문 판매 자료가 전체 제품명을 확인한다. 10EA 묶음 규격은 유지하되 누락된 중간 제품명을 복원한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 554,
+    "document_id": "20260129_110414",
+    "original_name": "리쥬올 레티노텔라세럼",
+    "corrected_name": "닥터 리쥬올 어드밴스드 RETINO 멜라 세럼",
+    "original_capacity": "50ml",
+    "corrected_capacity": "50mL",
+    "evidence_urls": [
+      "https://drrejuall.kr/product/%EB%8B%A5%ED%84%B0-%EB%A6%AC%EC%A5%AC%EC%98%AC-%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C-retino-%EB%A9%9C%EB%9D%BC-%EC%84%B8%EB%9F%BC-50ml/33/category/51/display/1/"
+    ],
+    "evidence_text": "닥터 리쥬올 공식 페이지와 용기 전면이 Advanced RETINO-MELA Serum 50mL를 명시한다. 레티노텔라는 RETINO-MELA의 OCR 오인이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 562,
+    "document_id": "20260129_110455",
+    "original_name": "아르베라 PDRN리쥬샷세럼",
+    "corrected_name": "아르베라 PDRN 리쥬샷 리페어 세럼",
+    "original_capacity": "50ml",
+    "corrected_capacity": "45mL",
+    "evidence_urls": [
+      "https://arvera.co.kr/product/%EC%95%84%EB%A5%B4%EB%B2%A0%EB%9D%BC-pdrn-%EB%A6%AC%EC%A5%AC%EC%83%B7-%EB%A6%AC%ED%8E%98%EC%96%B4-%EC%84%B8%EB%9F%BC/38/"
+    ],
+    "evidence_text": "아르베라 공식몰의 동일 제품명은 PDRN 리쥬샷 리페어 세럼이며 공식 용량은 45mL다. 일부 판매처의 50mL보다 제조사 표기를 우선한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 563,
+    "document_id": "20260129_110456",
+    "original_name": "아르베라 포포파우더워시",
+    "corrected_name": "아르베라 포포 파우더 워시",
+    "original_capacity": "09g",
+    "corrected_capacity": "90g",
+    "evidence_urls": [
+      "https://prod.danawa.com/vssearch/?productCodes=8048455",
+      "https://search.danawa.com/dsearch.php?query=%EC%95%84%EB%A5%B4%EB%B2%A0%EB%9D%BC%20%ED%8F%AC%ED%8F%AC%ED%8C%8C%EC%9A%B0%EB%8D%94%EC%9B%8C%EC%8B%9C",
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=9875&cate_c2=228085&cate_c3=228484&cate_c4=0&cmpny_c=TP40F&link_prod_c=I20972316545&keyword=%EC%95%84%EB%A5%B4%EB%B2%A0%EB%9D%BC+%ED%8F%AC%ED%8F%AC%ED%8C%8C%EC%9A%B0%EB%8D%94%EC%9B%8C%EC%8B%9C&r=17841123796248&cate=18322864"
+    ],
+    "evidence_text": "다나와 실제 상품 페이지가 아르베라 포포 파우더워시 90g을 명시한다. 09g는 90g의 연속 숫자 OCR 전도다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 565,
+    "document_id": "20260129_110518",
+    "original_name": "셀비엔 글루라치온 백옥앰플",
+    "corrected_name": "셀비엔 글루타치온 백옥앰플",
+    "original_capacity": "30ml",
+    "corrected_capacity": "30mL",
+    "evidence_urls": [
+      "https://cellbn.co.kr/product/%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%9C%84%ED%81%AC-%EA%B8%80%EB%A3%A8%ED%83%80%EC%B9%98%EC%98%A8-%EB%B0%B1%EC%98%A5%EC%95%B0%ED%94%8C-30ml/227/"
+    ],
+    "evidence_text": "셀비엔 공식몰과 제품 용기가 셀비엔 글루타치온 백옥앰플 30mL를 명시한다. 글루라치온을 글루타치온으로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 566,
+    "document_id": "20260129_110519",
+    "original_name": "샐비엔 글루타치온 백옥크림",
+    "corrected_name": "셀비엔 글루타치온 백옥크림",
+    "original_capacity": "50g",
+    "corrected_capacity": "50g",
+    "evidence_urls": [
+      "https://m.cellbn.co.kr/product/%EA%B3%A0%EC%88%9C%EB%8F%84-%EA%B8%80%EB%A3%A8%ED%83%80%EC%B9%98%EC%98%A8-%EB%B0%B1%EC%98%A5%EB%8F%84%EC%9E%90%EA%B8%B0-%ED%81%AC%EB%A6%BC-50g/230/category/137/display/1/"
+    ],
+    "evidence_text": "셀비엔 공식몰과 제품 용기가 셀비엔 글루타치온 크림 50g을 명시한다. 샐비엔을 셀비엔으로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 570,
+    "document_id": "20260129_110533",
+    "original_name": "에크온 딥 클렌징 폼",
+    "corrected_name": "애크온 딥 클렌징 폼",
+    "original_capacity": "100ml",
+    "corrected_capacity": "100mL",
+    "evidence_urls": [
+      "https://www.hwahae.co.kr/products/%EB%8F%99%EC%95%84%EC%A0%9C%EC%95%BD-%EC%95%A0%ED%81%AC%EC%98%A8-%EB%94%A5-%ED%81%B4%EB%A0%8C%EC%A7%95-%ED%8F%BC/2177634",
+      "https://www.11st.co.kr/products/9075410388"
+    ],
+    "evidence_text": "화해 제품 페이지와 11번가 실제 상품 페이지가 동아제약 애크온 딥 클렌징 폼 100mL를 표시한다. 에크온은 첫 음절 OCR 오류다.",
+    "review_confidence": "medium",
+    "approved": true
+  },
+  {
+    "source_order": 571,
+    "document_id": "20260129_110842",
+    "original_name": "파워겔1g",
+    "corrected_name": "파워겔",
+    "original_capacity": "5포",
+    "corrected_capacity": "1g × 5포",
+    "evidence_urls": [
+      "https://www.thepharmacy.co.kr/%ED%8C%8C%EC%9B%8C-%EA%B2%94",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ACCCCC0423",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023053100001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019051600021",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024091000009"
+    ],
+    "evidence_text": "약학정보원과 전문 약국 페이지가 파워겔 1g/포×5포를 명시한다. 상품명에 붙은 1g을 규격으로 분리한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 577,
+    "document_id": "20260129_110918",
+    "original_name": "듀럭스러브",
+    "corrected_name": "듀렉스 러브",
+    "original_capacity": "10EA",
+    "corrected_capacity": "10개",
+    "evidence_urls": [
+      "https://m.kondom.co.kr/product/detail.html?product_no=180"
+    ],
+    "evidence_text": "전문 판매 페이지와 포장 전면에 Durex Love, 10 condoms가 표시된다. 듀럭스를 듀렉스로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 578,
+    "document_id": "20260129_110940",
+    "original_name": "듀럭스익사이트미",
+    "corrected_name": "듀렉스 익사이트 미",
+    "original_capacity": "10개",
+    "corrected_capacity": "10개",
+    "evidence_urls": [
+      "https://ivancity.com/shop/1000000606"
+    ],
+    "evidence_text": "전문 판매 페이지와 포장 전면에 Durex Excite Me, 10 condoms가 표시된다. 듀럭스를 듀렉스로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 579,
+    "document_id": "20260129_110942",
+    "original_name": "듀렉스플레쥬어미",
+    "corrected_name": "듀렉스 플레져 미",
+    "original_capacity": "10EA",
+    "corrected_capacity": "10개",
+    "evidence_urls": [
+      "https://www.bananamall.co.kr/shop/view.php?index_no=10143"
+    ],
+    "evidence_text": "전문 판매 페이지와 포장 전면에 Durex Pleasure Me, 10 condoms가 표시된다. 플레쥬어미를 국내 상품 표기 플레져 미로 고친다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 586,
+    "document_id": "20260129_111242",
+    "original_name": "볼두민",
+    "corrected_name": "볼두민캡슐",
+    "original_capacity": "270캡슐",
+    "corrected_capacity": "270캡슐",
+    "evidence_urls": [
+      "https://www.yakkok.com/product/%EB%B3%BC%EB%91%90%EB%AF%BC%EC%BA%A1%EC%8A%90-270%EC%BA%A1%EC%8A%90",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08L0336",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB2089"
+    ],
+    "evidence_text": "약학정보원과 전문 판매 페이지가 볼두민캡슐 270캡슐 판매 구성을 확인한다. 원문에서 캡슐 제형이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 588,
+    "document_id": "20260129_111250",
+    "original_name": "카필러스",
+    "corrected_name": "카필러스캡슐",
+    "original_capacity": "180c",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1432",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G2962",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024081200001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G2915"
+    ],
+    "evidence_text": "약학정보원 정식명은 카필러스캡슐이고 전문 판매 페이지가 180캡슐 구성을 명시한다. 원문에서 캡슐 제형이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 589,
+    "document_id": "20260129_111258",
+    "original_name": "마이녹실",
+    "corrected_name": "마이녹실에스캡슐",
+    "original_capacity": "360캡슐",
+    "corrected_capacity": "360캡슐",
+    "evidence_urls": [
+      "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EB%A7%88%EC%9D%B4%EB%85%B9%EC%8B%A4%20%EC%A0%9C%ED%92%88",
+      "https://blog.naver.com/inyl1110/130144380620",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071505962",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018062100007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A3060A0247"
+    ],
+    "evidence_text": "약학정보원 정식명과 포장단위가 마이녹실에스캡슐 360캡슐이다. 원문의 마이녹실만으로는 액·겔 등 다른 제형과 구분되지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 590,
+    "document_id": "20260129_111302",
+    "original_name": "마이녹실S캡슐",
+    "corrected_name": "마이녹실에스캡슐",
+    "original_capacity": "180캡슐",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EB%A7%88%EC%9D%B4%EB%85%B9%EC%8B%A4S%EC%BA%A1%EC%8A%90%20%EC%A0%9C%ED%92%88",
+      "https://blog.naver.com/tak3134/222548990260",
+      "https://barkiri.com/products/p2019",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071505962",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A3060A0247"
+    ],
+    "evidence_text": "약학정보원 정식명과 전문 판매 페이지가 마이녹실에스캡슐 180캡슐을 명시한다. 영문 S를 정식 한글 표기로 통일한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 595,
+    "document_id": "20260129_111340",
+    "original_name": "판시딜(미녹시딜)",
+    "corrected_name": "판시딜액5%(미녹시딜)",
+    "original_capacity": "240ml",
+    "corrected_capacity": "240mL",
+    "evidence_urls": [
+      "https://www.dkpharm.co.kr/product/view.php?idx=147",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2011010600002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024122400005",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2010101100004"
+    ],
+    "evidence_text": "동국제약 공식 페이지와 약학정보원이 판시딜액5%(미녹시딜) 240mL를 명시한다. 원문에서 액 제형과 5% 함량이 누락되었다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 599,
+    "document_id": "20260129_111412",
+    "original_name": "마이녹실5%",
+    "corrected_name": "마이녹실폼에어로솔5%",
+    "original_capacity": "60g",
+    "corrected_capacity": "60g",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1726",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1379",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024080800001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A3060A0346"
+    ],
+    "evidence_text": "판매 페이지의 ‘현대약품 마이녹실 폼 에어로솔 5% 60g’과 약학정보원 폼에어로솔 후보를 대조했다. 원문은 제형 ‘폼에어로솔’이 빠져 액·겔 제품과 구분되지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 602,
+    "document_id": "20260129_111427",
+    "original_name": "로게인5%폼",
+    "corrected_name": "로게인5%폼에어로졸",
+    "original_capacity": "60g3캔",
+    "corrected_capacity": "60g×3캔",
+    "evidence_urls": [
+      "https://toomega.com/product/tc0168/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016101400005"
+    ],
+    "evidence_text": "약학정보원 제품명은 ‘로게인5%폼에어로졸’이고 포장단위에 60g 3캔 구성이 있다. 판매 페이지도 Three 60g Cans로 확인된다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 607,
+    "document_id": "20260129_111453",
+    "original_name": "마이녹실5%",
+    "corrected_name": "마이녹실액5%",
+    "original_capacity": "360ml",
+    "corrected_capacity": "360ml",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1379",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024080800001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A3060A0346"
+    ],
+    "evidence_text": "약학정보원 마이녹실액5% 포장단위에 360밀리리터/병이 있다. 360ml 규격은 겔·폼이 아니라 액제이므로 누락된 제형 ‘액’을 복원한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 608,
+    "document_id": "20260129_111459",
+    "original_name": "마이녹실5%",
+    "corrected_name": "마이녹실액5%",
+    "original_capacity": "60ml",
+    "corrected_capacity": "60ml",
+    "evidence_urls": [
+      "https://barkiri.com/products/p2021",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08F1379",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024080800001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018062100007"
+    ],
+    "evidence_text": "판매 페이지가 ‘마이녹실액 5% 60ml’로 표시하고 약학정보원 액제 후보도 60ml 포장을 제시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 610,
+    "document_id": "20260129_111506",
+    "original_name": "엘크라넬",
+    "corrected_name": "엘크라넬알파액0.025%",
+    "original_capacity": "100ml",
+    "corrected_capacity": "100ml",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G3600"
+    ],
+    "evidence_text": "약학정보원 후보 제품명이 ‘엘크라넬알파액0.025%’이다. 원문 ‘엘크라넬’에는 알파·제형·함량이 빠져 있다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 612,
+    "document_id": "20260129_111516",
+    "original_name": "판시딜3%(미녹시딜)비오딜정",
+    "corrected_name": "판시딜액3%(미녹시딜)",
+    "original_capacity": "200ml",
+    "corrected_capacity": "200ml",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2010101100004",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2011010600002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024122400005",
+      "https://pharm.jjyu.co.kr/%ED%83%88%EB%AA%A8/%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90/",
+      "https://www.health.kr/searchDrug/result_take.asp?drug_cd=2018012200012"
+    ],
+    "evidence_text": "판시딜액 3% 200ml 제품과 비오딜정5mg은 서로 다른 제품이다. 원문은 두 상품명이 잘못 이어진 값이므로 뒤의 ‘비오딜정’을 제거하고 액제를 명시한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 615,
+    "document_id": "20260129_111529",
+    "original_name": "동성미녹스",
+    "corrected_name": "동성미녹스샴푸",
+    "original_capacity": "120g",
+    "corrected_capacity": "120g",
+    "evidence_urls": [
+      "https://blog.naver.com/asanman/223544347698",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11APPPPP2219",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11APPPPP2301"
+    ],
+    "evidence_text": "조사 페이지 제목이 ‘동성 미녹스 샴푸 출시’로 확인된다. 원문에는 제품 종류인 ‘샴푸’가 빠져 있다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 619,
+    "document_id": "20260129_111721",
+    "original_name": "용표우황청심원(사향)변뱡",
+    "corrected_name": "용표우황청심원현탁액(사향함유)",
+    "original_capacity": "50ml",
+    "corrected_capacity": "50ml",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1240A0062",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A1240A0081",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G2421",
+      "https://www.iksu.co.kr/bbs/board.php?bo_table=m02_01&wr_id=466",
+      "https://www.dailypharm.com/user/news/17388?view_mode=pc"
+    ],
+    "evidence_text": "익수제약 공식 페이지는 50ml 제품을 ‘용표우황청심원 현탁액(사향함유)’로 표시한다. ‘변뱡’은 판매 기사에 쓰인 ‘천연사향변방’의 OCR 오타이며 정식 제품명에는 넣지 않는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 625,
+    "document_id": "20260129_112014",
+    "original_name": "컬처렐 헬스앤웰니스",
+    "corrected_name": "컬처렐 헬스앤웰니스",
+    "original_capacity": "30C",
+    "corrected_capacity": "30캡슐",
+    "evidence_urls": [
+      "https://culturelle.com/products/health-wellness-capsules"
+    ],
+    "evidence_text": "브랜드 공식 페이지가 Health & Wellness Capsules 30 count로 표시한다. ‘30C’의 C는 캡슐 단위를 축약한 값이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 626,
+    "document_id": "20260129_112016",
+    "original_name": "상쾌한구강유산균",
+    "corrected_name": "상쾌한구강유산균",
+    "original_capacity": "30T",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=60204575&keyword=%EC%83%81%EC%BE%8C%ED%95%9C%EA%B5%AC%EA%B0%95%EC%9C%A0%EC%82%B0%EA%B7%A0&cate=16242109",
+      "https://search.danawa.com/dsearch.php?query=%EC%83%81%EC%BE%8C%ED%95%9C%EA%B5%AC%EA%B0%95%EC%9C%A0%EC%82%B0%EA%B7%A0"
+    ],
+    "evidence_text": "다나와 제품 페이지가 ‘상쾌한 구강 유산균 30포’로 표시한다. 원문의 ‘30T’는 정제가 아니라 포 단위 오인식이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 627,
+    "document_id": "20260129_112022",
+    "original_name": "와이즈바이옴프로",
+    "corrected_name": "와이즈바이옴프로위앤장",
+    "original_capacity": "30P",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228856&cate_c4=232027&cmpny_c=TP40F&link_prod_c=V91054130068&keyword=%EC%99%80%EC%9D%B4%EC%A6%88%EB%B0%94%EC%9D%B4%EC%98%B4%ED%94%84%EB%A1%9C&r=17841124281841&cate=16342110",
+      "https://search.danawa.com/dsearch.php?query=%EC%99%80%EC%9D%B4%EC%A6%88%EB%B0%94%EC%9D%B4%EC%98%B4%ED%94%84%EB%A1%9C",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO7227",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019123100016",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO7032"
+    ],
+    "evidence_text": "검수된 판매 페이지 제목이 ‘와이즈 바이옴 프로 위앤장 … 30포’로 확인된다. 원문에는 세부 제품명 ‘위앤장’이 빠졌고 P는 포 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 628,
+    "document_id": "20260129_112026",
+    "original_name": "피비골드플러스",
+    "corrected_name": "피비10골드플러스",
+    "original_capacity": "120캡슐",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "https://sspharmacy.co.kr/read3.php?id=17894"
+    ],
+    "evidence_text": "판매 페이지의 정확한 상품명은 ‘피비10 골드플러스 120캡슐’이다. 원문의 숫자 10이 누락됐다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 629,
+    "document_id": "20260129_112030",
+    "original_name": "프롬팜질건강엔리스펙타&리노밸런스",
+    "corrected_name": "프롬팜질건강엔리스펙타&지노밸런스",
+    "original_capacity": "60C",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://blog.naver.com/dyek2274/223987159314"
+    ],
+    "evidence_text": "검수 페이지 제목은 ‘프롬팜 질건강엔 리스펙타&지노밸런스’이다. 원문의 ‘리노밸런스’는 ‘지노밸런스’ 오타이며 C는 캡슐 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 630,
+    "document_id": "20260129_112032",
+    "original_name": "진 프로바이오틱스 플러스30",
+    "corrected_name": "프로캄진프로바이오틱스플러스30",
+    "original_capacity": "30캡슐",
+    "corrected_capacity": "30캡슐",
+    "evidence_urls": [
+      "https://blog.naver.com/nature__pharm/224291174387",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A5060A0033",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G5112",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2013112700009"
+    ],
+    "evidence_text": "검수 페이지가 한미약품 ‘프로-캄 진 프로바이오틱스 플러스 30’으로 표시한다. 원문에는 브랜드명 ‘프로캄’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 633,
+    "document_id": "20260129_112042",
+    "original_name": "프롬판 싱글맥스 프로바이오틱스 50",
+    "corrected_name": "프롬팜싱글맥스프로바이오틱스50",
+    "original_capacity": "60포",
+    "corrected_capacity": "60포",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8780095000",
+      "https://blog.naver.com/sehoonblog/223712441861"
+    ],
+    "evidence_text": "판매·검수 페이지가 모두 ‘프롬팜 싱글맥스 프로바이오틱스 50’으로 표시한다. 원문의 ‘프롬판’은 OCR 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 635,
+    "document_id": "20260129_112050",
+    "original_name": "프롬팜 프로바이오틱스아연",
+    "corrected_name": "프롬팜장건강엔프로바이오틱스아연",
+    "original_capacity": "60c",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228856&cate_c4=232027&cmpny_c=TP40F&link_prod_c=V93937520165&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C+%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8B%B1%EC%8A%A4%EC%95%84%EC%97%B0&r=17841124413862&cate=16342110",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%20%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8B%B1%EC%8A%A4%EC%95%84%EC%97%B0"
+    ],
+    "evidence_text": "검수된 판매 페이지가 ‘프롬팜 장건강엔 프로바이오틱스 아연 … 60정’으로 표시한다. 원문에는 ‘장건강엔’이 빠졌고 60c는 60정으로 잘못 인식됐다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 637,
+    "document_id": "20260129_112100",
+    "original_name": "올케어장용성프로바이오틱스",
+    "corrected_name": "올케어장용성프로바이오틱스",
+    "original_capacity": "60c",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://www.yakup.com/news/index.html?mode=view&cat=12&nid=304129"
+    ],
+    "evidence_text": "제품 출시 기사에서 동일 상품명을 확인했다. 이 제품의 원문 단위 60c는 캡슐 축약이므로 60캡슐로 풀어 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 639,
+    "document_id": "20260129_112106",
+    "original_name": "맥스바이오틱스 생유산균",
+    "corrected_name": "마이크로바이옴맥스바이오틱스",
+    "original_capacity": "30포",
+    "corrected_capacity": "4g×30포",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=61439465"
+    ],
+    "evidence_text": "다나와 상세 페이지에서 GC녹십자 제품명과 포장 전면의 4g×30포가 직접 대조됐다. 원문에는 ‘마이크로바이옴’과 1포 중량이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 642,
+    "document_id": "20260129_112117",
+    "original_name": "야쿠르트 프로바이오틱스",
+    "corrected_name": "야쿠르트프로바이오틱스",
+    "original_capacity": "60포",
+    "corrected_capacity": "2g×60포",
+    "evidence_urls": [
+      "https://m.fredit.co.kr/product/detail?prdId=70337"
+    ],
+    "evidence_text": "공식 판매 페이지가 ‘야쿠르트 프로바이오틱스 2g×60포’로 표시한다. 원문의 60포에 1포 중량 2g을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 645,
+    "document_id": "20260129_112134",
+    "original_name": "매야리산U",
+    "corrected_name": "미야리산U",
+    "original_capacity": "420T",
+    "corrected_capacity": "420정",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8402651056?itemId=24028075702&vendorItemId=91975502486",
+      "https://blog.naver.com/ranitj/224000091752"
+    ],
+    "evidence_text": "판매·검수 페이지가 모두 ‘미야리산U 420정’으로 표시한다. ‘매야리산’은 명백한 OCR 오타이고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 647,
+    "document_id": "20260129_112142",
+    "original_name": "프리락토 프리미엄",
+    "corrected_name": "프리락토프리미엄",
+    "original_capacity": "60c",
+    "corrected_capacity": "60캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228856&cate_c4=0&cmpny_c=TH201&link_prod_c=9274454574&keyword=%ED%94%84%EB%A6%AC%EB%9D%BD%ED%86%A0+%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84&r=17841124614324&cate=16256683",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A6%AC%EB%9D%BD%ED%86%A0%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84"
+    ],
+    "evidence_text": "검수 페이지가 ‘프리락토 프리미엄 장용캡슐 60C’로 표시한다. C를 60캡슐로 풀어 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 648,
+    "document_id": "20260129_112145",
+    "original_name": "프리락토 시그니처키즈2g",
+    "corrected_name": "프리락토시그니처키즈",
+    "original_capacity": "60P",
+    "corrected_capacity": "2g×60포",
+    "evidence_urls": [
+      "https://soear.co.kr/product/detail.html?product_no=177"
+    ],
+    "evidence_text": "판매 페이지의 정확한 표기는 ‘프리락토 시그니처 키즈 2g×60포’다. 이름에 붙은 2g을 규격으로 옮기고 P를 포로 교정한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 649,
+    "document_id": "20260129_112148",
+    "original_name": "프리락토 시그니처2g",
+    "corrected_name": "프리락토시그니처",
+    "original_capacity": "60P",
+    "corrected_capacity": "2g×60포",
+    "evidence_urls": [
+      "https://soear.co.kr/product/detail.html?product_no=185"
+    ],
+    "evidence_text": "판매 페이지의 정확한 표기는 ‘프리락토 시그니처 2g×60포’다. 이름에 붙은 2g을 규격으로 옮기고 P를 포로 교정한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 650,
+    "document_id": "20260129_112151",
+    "original_name": "프리락토 더포스트",
+    "corrected_name": "프리락토더포스트",
+    "original_capacity": "60P",
+    "corrected_capacity": "60포",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=9430097863&keyword=%ED%94%84%EB%A6%AC%EB%9D%BD%ED%86%A0+%EB%8D%94%ED%8F%AC%EC%8A%A4%ED%8A%B8&r=17841124666694&cate=16256683",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A6%AC%EB%9D%BD%ED%86%A0%20%EB%8D%94%ED%8F%AC%EC%8A%A4%ED%8A%B8"
+    ],
+    "evidence_text": "검수 페이지가 ‘프리락토 더 포스트 60포’로 표시한다. P는 포 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 656,
+    "document_id": "20260129_112608",
+    "original_name": "안정액50ml",
+    "corrected_name": "안정액",
+    "original_capacity": "10병",
+    "corrected_capacity": "50ml×10병",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1999",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11ABBBBB0727",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11A0840B0039",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G3641"
+    ],
+    "evidence_text": "판매 페이지가 ‘삼진제약 안정액 50ml 10병’으로 표시한다. 상품명에 붙은 용량을 규격으로 옮겨 중복 표시를 막는다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 663,
+    "document_id": "20260129_112636",
+    "original_name": "온유로케어나이트루틴 식물성멜라토닌",
+    "corrected_name": "온유로케어나이트루틴멜나잇",
+    "original_capacity": "30정",
+    "corrected_capacity": "30정",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8334325519"
+    ],
+    "evidence_text": "판매 페이지의 실제 제품명은 ‘온유로케어 나이트루틴 … 멜나잇 30정’이다. 원문은 성분 설명만 있고 고유 제품명 ‘멜나잇’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 664,
+    "document_id": "20260129_112638",
+    "original_name": "순심",
+    "corrected_name": "순심환(천왕보심단)",
+    "original_capacity": "10환",
+    "corrected_capacity": "10환",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1675",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=dxidqwscpgzj6"
+    ],
+    "evidence_text": "약학정보원 후보와 판매 페이지가 모두 ‘순심환(천왕보심단)’을 가리킨다. 원문의 ‘순심’에는 제형 ‘환’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 666,
+    "document_id": "20260129_112644",
+    "original_name": "알지오골드15ml",
+    "corrected_name": "알지오골드",
+    "original_capacity": "10ea",
+    "corrected_capacity": "15ml×10바이알",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8773801093"
+    ],
+    "evidence_text": "판매 페이지가 ‘알지오 골드 15ml×10바이알’로 표시한다. 상품명에 붙은 15ml를 규격으로 옮기고 10ea를 실제 포장 단위로 교정한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 669,
+    "document_id": "20260129_112658",
+    "original_name": "평온액20ML",
+    "corrected_name": "평온액(천왕보심단)",
+    "original_capacity": "6포",
+    "corrected_capacity": "20ml×6포",
+    "evidence_urls": [
+      "https://www.hpusa.shop/product-page/calmliquid1box",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2021060100013"
+    ],
+    "evidence_text": "약학정보원과 판매 페이지가 ‘평온액(천왕보심단) 20ml×6포’로 일치한다. 이름에 붙은 용량을 규격으로 옮긴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 674,
+    "document_id": "20260129_113153",
+    "original_name": "비라밸",
+    "corrected_name": "비라밸정",
+    "original_capacity": "120정",
+    "corrected_capacity": "60정×2병",
+    "evidence_urls": [
+      "https://barkiri.com/products/p838",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019031300034",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023120700001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025122600007"
+    ],
+    "evidence_text": "약학정보원 제품명은 ‘비라밸정’이고 판매 페이지는 60정×2병(120정) 구성으로 확인된다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 682,
+    "document_id": "20260129_113219",
+    "original_name": "메가비텐액티브",
+    "corrected_name": "메가비텐액티브정",
+    "original_capacity": "120정",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2021110500001",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017091900019",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2021062400001"
+    ],
+    "evidence_text": "약학정보원 후보 제품명이 ‘메가비텐액티브정’이다. 원문에는 제형 ‘정’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 686,
+    "document_id": "20260129_113241",
+    "original_name": "액세라민엑소",
+    "corrected_name": "엑세라민엑소정",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://mobile.ildong.com/kor/product/view.id?prdSeq=1216"
+    ],
+    "evidence_text": "일동제약 공식 제품 페이지가 ‘엑세라민엑소정’으로 표시한다. 원문의 ‘액세라민’은 ‘엑세라민’ 오타이고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 687,
+    "document_id": "20260129_113244",
+    "original_name": "액세라민비",
+    "corrected_name": "엑세라민비정",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://mirpharma.net/en/products/%EC%95%A1%EC%84%B8%EB%9D%BC%EB%AF%BC%EB%B9%84-120%EC%A0%95",
+      "https://blog.naver.com/ekdtksfh96/222309060216",
+      "https://www.ildong.com/portlet-repositories/product/afile_/20150512/1431404986767.pdf"
+    ],
+    "evidence_text": "일동제약 제품설명서가 ‘엑세라민비정’과 포장단위 120정을 명시한다. 원문의 ‘액세라민’은 오타이고 제형 ‘정’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 692,
+    "document_id": "20260129_113305",
+    "original_name": "비멕스메타",
+    "corrected_name": "비맥스메타",
+    "original_capacity": "120정",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://blog.naver.com/jh040404sj/222155104465"
+    ],
+    "evidence_text": "검수 페이지 제목이 ‘비맥스메타’로 확인된다. 원문의 ‘비멕스’는 ‘비맥스’ 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 696,
+    "document_id": "20260129_113323",
+    "original_name": "벤포벨B",
+    "corrected_name": "벤포벨B",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://barkiri.com/products/p1015",
+      "https://blog.naver.com/thekissq/222606496804"
+    ],
+    "evidence_text": "판매 페이지가 ‘벤포벨B 120정’으로 표시한다. T는 정 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 721,
+    "document_id": "20260129_113539",
+    "original_name": "액티넘EX골드",
+    "corrected_name": "액티넘EX골드정",
+    "original_capacity": "180T",
+    "corrected_capacity": "90정×2병",
+    "evidence_urls": [
+      "https://blog.naver.com/tak3134/222291270349",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016121900004",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2013123000006"
+    ],
+    "evidence_text": "약학정보원 제품명은 ‘액티넘이엑스골드정’이고 90정/병×2 포장을 명시한다. 원문에는 제형이 빠져 있다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 724,
+    "document_id": "20260129_113619",
+    "original_name": "비타씬 프로테엠",
+    "corrected_name": "비타씬포르테엠정",
+    "original_capacity": "120T",
+    "corrected_capacity": "120정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2021051700002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2014040300002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08B0021",
+      "https://www.choa.co.kr/productInfo/productInfo_020200.asp?bmain=view&idx=184"
+    ],
+    "evidence_text": "약학정보원 후보에 ‘비타씬포르테엠정’이 존재한다. 원문의 ‘프로테엠’은 글자 순서가 바뀐 OCR 오타이고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 725,
+    "document_id": "20260129_113630",
+    "original_name": "올인원 뉴트리썬 이뮨 데일리팩",
+    "corrected_name": "올인원뉴트리션이뮨데일리팩",
+    "original_capacity": "30포",
+    "corrected_capacity": "30포",
+    "evidence_urls": [
+      "https://blog.naver.com/kolmar_bnh/223970057847"
+    ],
+    "evidence_text": "출시 기사 제목이 ‘올인원 뉴트리션 이뮨 데일리팩’으로 확인된다. 원문의 ‘뉴트리썬’은 ‘뉴트리션’ 오타다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 726,
+    "document_id": "20260129_113633",
+    "original_name": "프롬팜 싱글맥스 비타민",
+    "corrected_name": "프롬팜싱글맥스비타민D5000IU",
+    "original_capacity": "60T",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=231952&cmpny_c=TP40F&link_prod_c=V93886814861&keyword=%ED%94%84%EB%A1%AC%ED%8C%9C+%EC%8B%B1%EA%B8%80%EB%A7%A5%EC%8A%A4+%EB%B9%84%ED%83%80%EB%AF%BC&r=17841125104072&cate=16316918",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A1%AC%ED%8C%9C%20%EC%8B%B1%EA%B8%80%EB%A7%A5%EC%8A%A4%20%EB%B9%84%ED%83%80%EB%AF%BC"
+    ],
+    "evidence_text": "검수된 판매 페이지가 ‘프롬팜 싱글맥스 비타민 D 5000IU … 60회분’으로 표시한다. 원문에는 비타민 종류와 함량이 빠졌고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 727,
+    "document_id": "20260129_113635",
+    "original_name": "프레스샷",
+    "corrected_name": "프레스샷",
+    "original_capacity": "10병",
+    "corrected_capacity": "15ml×10병",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=28600742&keyword=%ED%94%84%EB%A0%88%EC%8A%A4%EC%83%B7&cate=1622278",
+      "https://search.danawa.com/dsearch.php?query=%ED%94%84%EB%A0%88%EC%8A%A4%EC%83%B7"
+    ],
+    "evidence_text": "다나와 상세 페이지가 ‘프레스 샷 15ml 10병’으로 표시한다. 누락된 1병 용량을 규격에 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 729,
+    "document_id": "20260129_113648",
+    "original_name": "경남데일리츄어블",
+    "corrected_name": "경남데일리디츄어블정",
+    "original_capacity": "60정",
+    "corrected_capacity": "60정",
+    "evidence_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2013062100003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2014111900018",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009090700404",
+      "https://www.newswire.co.kr/newsRead.php?no=721601"
+    ],
+    "evidence_text": "약학정보원과 제품 출시 자료가 모두 ‘경남데일리디츄어블정’ 60정을 명시한다. 원문에는 비타민D를 뜻하는 ‘디’와 제형 ‘정’이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 733,
+    "document_id": "20260129_113706",
+    "original_name": "츄어블 비타민D 4000IU",
+    "corrected_name": "츄어블비타민D4000IU",
+    "original_capacity": "120T",
+    "corrected_capacity": "120캡슐",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/6978372765",
+      "http://www.focus.kr/view.php?key=2016071400120425133",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G4032",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO1054",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO6082"
+    ],
+    "evidence_text": "판매 페이지가 ‘조아제약 츄어블비타민D 4000IU 120캡슐’로 표시한다. 원문의 T는 정제가 아니라 캡슐 단위 오인식이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 735,
+    "document_id": "20260129_113712",
+    "original_name": "유한 비타민D 2000IU",
+    "corrected_name": "유한m비타민D2000IU",
+    "original_capacity": "180캡슐",
+    "corrected_capacity": "90캡슐×2병",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8136911735",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019103100014",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016050200017",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019091900021"
+    ],
+    "evidence_text": "판매 페이지가 ‘유한m 비타민D 2000IU 450mg×90캡슐×2병’으로 표시한다. 브랜드 표기와 묶음 규격을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 737,
+    "document_id": "20260129_113716",
+    "original_name": "비타민D3 1000IU",
+    "corrected_name": "솔가비타민D3 1000IU",
+    "original_capacity": "180캡슐",
+    "corrected_capacity": "180캡슐",
+    "evidence_urls": [
+      "https://prod.danawa.com/info/?pcode=62395451&keyword=%EB%B9%84%ED%83%80%EB%AF%BCD3+1000IU&cate=16316916",
+      "https://search.danawa.com/dsearch.php?query=%EB%B9%84%ED%83%80%EB%AF%BCD3%201000IU",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019091900021",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019091900022",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2016050200017"
+    ],
+    "evidence_text": "다나와 제품 페이지가 ‘솔가 비타민 D3 1000IU 180캡슐’로 표시한다. 원문에 브랜드명이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 740,
+    "document_id": "20260129_113732",
+    "original_name": "하루루틴미타민C",
+    "corrected_name": "하루루틴비타민C",
+    "original_capacity": "100Px2EA",
+    "corrected_capacity": "100포×2개",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/9180060743",
+      "https://www.11st.co.kr/products/8833958927"
+    ],
+    "evidence_text": "쿠팡과 11번가 실제 상품 페이지가 ‘하루 루틴 비타민 C 100포’로 표시한다. ‘미타민C’를 ‘비타민C’로 교정하고 100P×2EA를 100포×2개로 풀어 쓴다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 749,
+    "document_id": "20260129_113801",
+    "original_name": "하루케어 멀티비타민 미네랄",
+    "corrected_name": "하루케어멀티비타민&미네랄",
+    "original_capacity": "30정",
+    "corrected_capacity": "500mg×30정",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/9024069658",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2019050200052"
+    ],
+    "evidence_text": "판매 페이지가 ‘GC녹십자 하루케어 멀티비타민&미네랄 500mg 30정’으로 표시한다. 제품명 구분 기호와 1정 중량을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 752,
+    "document_id": "20260129_113832",
+    "original_name": "멀티비타민 이뮨부스트",
+    "corrected_name": "슈퍼멀티비타민이뮨부스트",
+    "original_capacity": "30병",
+    "corrected_capacity": "30병",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/8987512295?itemId=26321999472&vendorItemId=92906325836",
+      "https://blog.naver.com/qkrrhkdgns04/223895125726",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025062700003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO6780",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G0315"
+    ],
+    "evidence_text": "판매·검수 페이지가 ‘스웨디시뉴트라 슈퍼 멀티비타민 이뮨부스트’로 표시한다. 원문에는 제품명 ‘슈퍼’가 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 753,
+    "document_id": "20260129_113838",
+    "original_name": "멀티비타민 이뮨부스트",
+    "corrected_name": "슈퍼멀티비타민이뮨부스트",
+    "original_capacity": "10병",
+    "corrected_capacity": "25ml×10병",
+    "evidence_urls": [
+      "https://www.checkeat.org/incidents/3000224863/",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025062700003",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AOOOOO6780",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP08G0315"
+    ],
+    "evidence_text": "조사 페이지가 ‘슈퍼 멀티비타민 이뮨부스트 25mL×10병’으로 표시한다. 누락된 ‘슈퍼’와 1병 용량을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 754,
+    "document_id": "20260129_113939",
+    "original_name": "이뮨엔 비타민미네랄 듀얼샷",
+    "corrected_name": "이뮨엔비타민미네랄듀얼샷",
+    "original_capacity": "14포",
+    "corrected_capacity": "500mg×14포",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=0&cmpny_c=TH201&link_prod_c=8862758412&keyword=%EC%9D%B4%EB%AE%A8%EC%97%94+%EB%B9%84%ED%83%80%EB%AF%BC%EB%AF%B8%EB%84%A4%EB%9E%84+%EB%93%80%EC%96%BC%EC%83%B7&r=17841125443095&cate=16256683",
+      "https://search.danawa.com/dsearch.php?query=%EC%9D%B4%EB%AE%A8%EC%97%94%20%EB%B9%84%ED%83%80%EB%AF%BC%EB%AF%B8%EB%84%A4%EB%9E%84%20%EB%93%80%EC%96%BC%EC%83%B7"
+    ],
+    "evidence_text": "검수된 판매 페이지가 ‘이뮨 엔 비타민 미네랄 듀얼 샷 500mg×14포’로 표시한다. 누락된 단위 중량을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 756,
+    "document_id": "20260129_113946",
+    "original_name": "메가트루골",
+    "corrected_name": "메가트루골드정",
+    "original_capacity": "200T",
+    "corrected_capacity": "200정",
+    "evidence_urls": [
+      "https://www.yuhan.co.kr/Products/News/?YPRDG_IDX=3166&mode=view",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2013101100013",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2012082700006",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2018060800005"
+    ],
+    "evidence_text": "유한양행 공식 페이지와 약학정보원이 ‘메가트루골드정 200정’으로 표시한다. 원문의 ‘골’은 ‘골드’ 절단 오류이고 제형이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 758,
+    "document_id": "20260129_113958",
+    "original_name": "레모나",
+    "corrected_name": "레모나산",
+    "original_capacity": "20포",
+    "corrected_capacity": "20포",
+    "evidence_urls": [
+      "https://m.joeunpharm.com/product/%EA%B2%BD%EB%82%A8%EC%A0%9C%EC%95%BD-%EB%A0%88%EB%AA%A8%EB%82%98-20%ED%8F%AC-%EB%B9%84%ED%83%80%EB%AF%BCc-%ED%94%BC%EB%A1%9C%ED%9A%8C%EB%B3%B5/99",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2021031100002",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2020102900018",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2015081700020"
+    ],
+    "evidence_text": "판매 페이지가 ‘경남제약 레모나산 20포’로 표시한다. 원문의 브랜드명만으로는 제형이 빠져 있어 ‘산’을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 761,
+    "document_id": "20260129_114007",
+    "original_name": "속편한비타민C프리미엄",
+    "corrected_name": "속편한비타민C프리미엄",
+    "original_capacity": "120정",
+    "corrected_capacity": "1000mg×120정",
+    "evidence_urls": [
+      "https://www.coupang.com/vp/products/4503030856",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2025072500007"
+    ],
+    "evidence_text": "판매 페이지가 ‘일양약품 속편한 비타민C 프리미엄 1000mg 120정’으로 표시한다. 누락된 1정 함량을 보완한다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 763,
+    "document_id": "20260129_114011",
+    "original_name": "엘리나C",
+    "corrected_name": "엘리나C",
+    "original_capacity": "120P",
+    "corrected_capacity": "120포",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/6668425991"
+    ],
+    "evidence_text": "판매 페이지가 ‘동국제약 엘리나C 120포’로 표시한다. P는 포 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 765,
+    "document_id": "20260129_114030",
+    "original_name": "비타그란비타민C츄어블 사과맛",
+    "corrected_name": "비타그란비타민C츄어블사과맛",
+    "original_capacity": "72T",
+    "corrected_capacity": "72정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=231958&cmpny_c=TH201&link_prod_c=8602790133&keyword=%EB%B9%84%ED%83%80%EA%B7%B8%EB%9E%80%EB%B9%84%ED%83%80%EB%AF%BCC%EC%B8%84%EC%96%B4%EB%B8%94+%EC%82%AC%EA%B3%BC%EB%A7%9B&r=17841125556866&cate=16316917",
+      "https://search.danawa.com/dsearch.php?query=%EB%B9%84%ED%83%80%EA%B7%B8%EB%9E%80%EB%B9%84%ED%83%80%EB%AF%BCC%EC%B8%84%EC%96%B4%EB%B8%94%20%EC%82%AC%EA%B3%BC%EB%A7%9B",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071502027"
+    ],
+    "evidence_text": "다나와 상품명이 동일 제품을 72정으로 표시한다. T는 정 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 766,
+    "document_id": "20260129_114033",
+    "original_name": "비타그란비타민C츄어블 포도맛",
+    "corrected_name": "비타그란비타민C츄어블포도맛",
+    "original_capacity": "72T",
+    "corrected_capacity": "72정",
+    "evidence_urls": [
+      "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=46803&cate_c2=228115&cate_c3=228853&cate_c4=231958&cmpny_c=TH201&link_prod_c=9461911620&keyword=%EB%B9%84%ED%83%80%EA%B7%B8%EB%9E%80%EB%B9%84%ED%83%80%EB%AF%BCC%EC%B8%84%EC%96%B4%EB%B8%94+%ED%8F%AC%EB%8F%84%EB%A7%9B&r=17841125578526&cate=16316917",
+      "https://search.danawa.com/dsearch.php?query=%EB%B9%84%ED%83%80%EA%B7%B8%EB%9E%80%EB%B9%84%ED%83%80%EB%AF%BCC%EC%B8%84%EC%96%B4%EB%B8%94%20%ED%8F%AC%EB%8F%84%EB%A7%9B",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071502027"
+    ],
+    "evidence_text": "다나와 상품명이 동일 제품을 72정으로 표시한다. T는 정 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 767,
+    "document_id": "20260129_114042",
+    "original_name": "비타그란비타민C츄어블 라즈베리맛",
+    "corrected_name": "비타그란비타민C츄어블베리맛",
+    "original_capacity": "72T",
+    "corrected_capacity": "72정",
+    "evidence_urls": [
+      "https://m.dmall.co.kr/product/detail.html?product_no=1131",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071502027"
+    ],
+    "evidence_text": "동아제약 공식몰 상품명은 ‘비타그란 비타민C 츄어블 베리맛 72정’이다. 원문의 ‘라즈베리맛’은 공식 제품명과 다르고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 768,
+    "document_id": "20260129_114045",
+    "original_name": "비타그란비타민C츄어블 레몬맛",
+    "corrected_name": "비타그란비타민C츄어블레몬맛",
+    "original_capacity": "72T",
+    "corrected_capacity": "72정",
+    "evidence_urls": [
+      "https://m.dmall.co.kr/product/detail.html?product_no=1131",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2009071502027"
+    ],
+    "evidence_text": "동아제약 공식몰 상품명은 ‘비타그란 비타민C 츄어블 레몬맛 72정’이다. T는 정 단위 축약이다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 769,
+    "document_id": "20260129_114051",
+    "original_name": "비타 바이탈씨",
+    "corrected_name": "비타바이탈씨과립레몬맛",
+    "original_capacity": "120포",
+    "corrected_capacity": "120포",
+    "evidence_urls": [
+      "https://www.yaksawa.com/m/product.html?branduid=1003181"
+    ],
+    "evidence_text": "판매 페이지가 ‘유한양행 비타 바이탈씨 과립 레몬맛 120포’로 표시한다. 원문에는 제형과 맛 구분이 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 770,
+    "document_id": "20260129_114054",
+    "original_name": "유한 액티브셀렌효모",
+    "corrected_name": "유한m액티브셀렌효모플러스",
+    "original_capacity": "480포",
+    "corrected_capacity": "480정",
+    "evidence_urls": [
+      "https://blog.naver.com/knsnet/223173968905",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017012600008",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017082400007",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2017013100014",
+      "https://www.11st.co.kr/products/312061646"
+    ],
+    "evidence_text": "판매 페이지가 ‘유한m 액티브 셀렌효모 플러스 480정’으로 표시한다. 원문의 480포는 480정 단위 오인식이고 ‘플러스’가 빠졌다.",
+    "review_confidence": "high",
+    "approved": true
+  },
+  {
+    "source_order": 775,
+    "document_id": "20260129_114110",
+    "original_name": "쎈탁스",
+    "corrected_name": "쎈탁스올인원멀티비타민미네랄",
+    "original_capacity": "36T",
+    "corrected_capacity": "36정",
+    "evidence_urls": [
+      "https://www.11st.co.kr/products/2583670015"
+    ],
+    "evidence_text": "판매 페이지가 ‘닥터피플 쎈탁스 올인원 멀티비타민미네랄 36정’으로 표시한다. 원문에는 세부 제품명이 빠졌고 T는 정 단위다.",
+    "review_confidence": "high",
+    "approved": true
+  }
+]
