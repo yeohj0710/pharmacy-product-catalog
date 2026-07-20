@@ -10,7 +10,7 @@
 - 가격은 추출·녹화 시점에 앱이 표시한 값이며 현재 판매가·재고가 아니다.
 - `data/firestore-products.json`, `data/products*.json`, `data/catalog.csv`, `public/data/products.json`, `public/data/catalog.csv`는 로컬 데이터다. Git이나 외부 배포에 포함하지 않는다.
 - 원본 앱 화면, 로고, 광고, 재고 사진과 이용 조건을 확인하지 못한 이미지는 공개 파일에 넣지 않는다.
-- 외부 공개는 [DATA_POLICY.md](./DATA_POLICY.md)의 공개 게이트를 모두 통과한 뒤 별도 승인한다. 로컬 사이트가 작동한다는 사실은 공개 승인을 뜻하지 않는다.
+- 외부 공개 기준은 데이터 기준 페이지([app/data-policy/page.tsx](./app/data-policy/page.tsx), 운영 경로 `/data-policy`)를 따른다. 로컬 사이트가 작동한다는 사실은 공개 승인을 뜻하지 않는다.
 
 ## 실행
 
@@ -18,6 +18,8 @@
 npm install
 npm run dev
 ```
+
+`dev`와 `build`는 시작 전에 카탈로그 데이터 검사(`catalog:sync`)를 실행하므로 **Python이 PATH에 있어야 한다**. 검사 입력·출력이 이전 실행과 같으면 자동으로 건너뛰고, `npm run catalog:sync`로 강제 실행할 수 있다.
 
 사이트는 `data/enrichment-queue.json`을 정본으로 사용한다. `npm run catalog:sync`가 검색·다운로드용 파일을 `public/data/enrichment-queue.json`과 CSV로 복사한다.
 
@@ -66,7 +68,7 @@ npm run dev
 npm run build:local
 ```
 
-개발 서버와 `build:local`은 776개 전체 가격 데이터를 포함한다. 일반 `npm run build`는 공개 승인 전 실수로 배포하지 못하도록 실패한다. 외부 배포 전에는 `DATA_POLICY.md`의 공개 게이트를 모두 확인하고 별도 승인을 기록해야 한다.
+개발 서버와 `build:local`은 776개 전체 가격 데이터를 포함한다. 공개 배포는 `npm run deploy:public`이 승인된 파일 오버레이만 담은 스테이징 사본으로 수행하며, 공개 범위·권리 기준은 데이터 기준 페이지(`/data-policy`)를 따른다.
 
 각 열의 뜻은 [DATA_DICTIONARY.md](./DATA_DICTIONARY.md)에 정리했다.
 
@@ -74,7 +76,7 @@ npm run build:local
 
 약학정보원에서 정확히 일치하는 의약품은 성분, 효능·효과, 용법·용량, 사용상의 주의사항, 저장방법, 제조사, 제형, 투여경로, 포장단위와 원문 링크를 별도 필드로 저장한다. 일치 여부가 모호하거나 규격·제형이 충돌하면 `review_required`로 격리하고 상세정보와 이미지를 표시하지 않는다.
 
-약학정보원에 이미지가 없거나 약학정보원 대상이 아닌 상품은 다나와·네이버 검색 결과를 보조 조사한다. 검색 결과 이미지는 파일로 복제하지 않고 출처 페이지가 연결된 원격 미리보기로만 사용한다. 짧거나 일반적인 상품명은 자동 확정하지 않는다. 자세한 출처·권리 기준은 [DATA_POLICY.md](./DATA_POLICY.md)에 적었다.
+약학정보원에 이미지가 없거나 약학정보원 대상이 아닌 상품은 다나와·네이버 검색 결과를 보조 조사한다. 검색 결과 이미지는 파일로 복제하지 않고 출처 페이지가 연결된 원격 미리보기로만 사용한다. 짧거나 일반적인 상품명은 자동 확정하지 않는다. 자세한 출처·권리 기준은 데이터 기준 페이지(`/data-policy`)에 적었다.
 
 ```powershell
 npm run kpic:images
@@ -100,4 +102,4 @@ npm run official:materialize
 
 ## 공개 전 주의
 
-전체 데이터와 가격을 외부에 공개하기 전에 [DATA_POLICY.md](./DATA_POLICY.md)의 공개 게이트를 모두 확인한다. 특히 앱 이용약관·취득 경위, 데이터베이스제작자 권리, 비영리 연구 목적 예외의 조건, 이미지 재사용 근거, 가격 오인 방지 표시와 정정·삭제 연락처를 검토한다. 로컬 저장소는 공개 배포되지 않은 상태다.
+전체 데이터와 가격을 외부에 공개하기 전에 데이터 기준 페이지(`/data-policy`)의 기준을 모두 확인한다. 특히 앱 이용약관·취득 경위, 데이터베이스제작자 권리, 비영리 연구 목적 예외의 조건, 이미지 재사용 근거, 가격 오인 방지 표시와 정정·삭제 연락처를 검토한다.

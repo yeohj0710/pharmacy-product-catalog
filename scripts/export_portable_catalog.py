@@ -499,6 +499,7 @@ def main() -> int:
     if args.check:
         validation = validate_package(args.output)
         if validation["error_count"]:
+            print(json.dumps(validation["errors"], ensure_ascii=False, indent=1), file=sys.stderr)
             raise SystemExit(f"Portable package validation failed: {validation['error_count']} errors")
         with tempfile.TemporaryDirectory() as directory:
             expected = Path(directory)
@@ -514,6 +515,7 @@ def main() -> int:
         raise SystemExit("Portable package product count mismatch")
     validation = validate_package(args.output)
     if validation["error_count"]:
+        print(json.dumps(validation["errors"], ensure_ascii=False, indent=1), file=sys.stderr)
         raise SystemExit(f"Portable package validation failed: {validation['error_count']} errors")
     print(json.dumps({**manifest, "validation_errors": 0}, ensure_ascii=False))
     return 0

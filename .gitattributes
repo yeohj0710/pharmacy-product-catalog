@@ -1,0 +1,5 @@
+# The portable package manifest records sha256 hashes of the raw file bytes.
+# Force LF on checkout so the hash check passes on Windows (autocrlf would
+# rewrite these to CRLF and break `catalog:portable:check` on fresh clones).
+data/portable/** text eol=lf
+public/data/portable/** text eol=lf
