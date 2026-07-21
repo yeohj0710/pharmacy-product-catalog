@@ -1,0 +1,866 @@
+{
+ "generated_at": "2026-07-18T14:57:30+09:00",
+ "method": "web_search_snippets_only",
+ "verification_status": "unverified_search_candidate",
+ "usage_policy": "이 파일의 모든 값은 웹 검색 결과의 제목·URL·요약에서만 수집한 미검증 후보다. 출처 페이지를 직접 열어 확인하기 전까지 정본 데이터(data/enrichment-queue.json)와 portable 데이터에 절대 반영하지 않는다. 확정은 docs/GPT_PRO_HANDOFF.md의 허용 출처와 확정 기준을 따른다.",
+ "environment_note": "원격 세션의 네트워크 정책이 nedrug.mfds.go.kr, health.kr, apis.data.go.kr 접근을 차단하고 DATA_GO_KR_SERVICE_KEY도 없어 페이지 열람·API 확정이 불가능했다. 검색 결과 스니펫만 사용했다.",
+ "unresolved_product_research": [
+  {
+   "product_id": "20250812_102743",
+   "catalog_name": "고함량비타민 하이렉스 비타민B3000",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "하이렉스® 정 (Hilex Tab.)",
+     "manufacturer": "한독",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2023070600001"
+     },
+     "candidate_source_urls": [
+      "https://handok.co.kr/product/detail?idx=98",
+      "https://www.handok.co.kr/board/pressView?idx=3633",
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2023070600001"
+     ],
+     "evidence_note": "Search results showed the Handok product page and press release titled '한독, 고함량 비타민 하이렉스®정 출시' plus a health.kr page titled '하이렉스정 Hilex Tab. 의약품 정보' with drug_cd=2023070600001 in the URL.",
+     "search_queries_used": [
+      "하이렉스 비타민B3000 고함량비타민",
+      "한독 하이렉스정 고함량 비타민B"
+     ]
+    }
+   ],
+   "notes": "The exact string '비타민B3000' never appeared in any result; snippets describe Handok 하이렉스정 as a high-dose vitamin B complex OTC nutritional supplement (일반의약품, launched Nov 2023). A different product '액상하이랙스주 Hirax Injection' (health.kr drug_cd=2011122700003) also appeared but is an injection and was excluded."
+  },
+  {
+   "product_id": "20250812_104505",
+   "catalog_name": "일양약품 오네론액",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "오네론액 (Oneron Sol.)",
+     "manufacturer": null,
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2020112300001"
+     },
+     "candidate_source_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2020112300001"
+     ],
+     "evidence_note": "health.kr result titled '오네론액 Oneron Sol. 의약품 정보' with drug_cd=2020112300001 in the URL; a retail result '오네론액 5포 멀미약' (hkmedi.co.kr) matches the 20mL×5포 pack.",
+     "search_queries_used": [
+      "일양약품 오네론액 품목기준코드",
+      "오네론액 일양약품"
+     ]
+    }
+   ],
+   "notes": "Snippets describe it as a motion-sickness (멀미) anti-emetic liquid, 1포=20mL with 디멘히드리네이트 35mg etc., matching the 20mL×5포 spec. ilyang.co.kr appeared in results but no snippet literally tied 일양약품 to 오네론액, so manufacturer left null."
+  },
+  {
+   "product_id": "20250812_113556",
+   "catalog_name": "콜대원키즈시럽",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "콜대원키즈노즈시럽",
+     "manufacturer": null,
+     "identifier": {
+      "type": "item_seq",
+      "value": "200101608"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200101608"
+     ],
+     "evidence_note": "nedrug result titled '의약품제품정보 상세보기(콜대원키즈노즈시럽)' with itemSeq=200101608 in the URL.",
+     "search_queries_used": [
+      "콜대원키즈시럽 품목기준코드 식약처"
+     ]
+    },
+    {
+     "candidate_name": "콜대원키즈노즈에스시럽",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=201802210aupdateTs2025-01-02+13:54:27.486942b"
+     ],
+     "evidence_note": "nedrug cached detail page titled '의약품제품정보 상세보기-콜대원키즈노즈에스시럽'.",
+     "search_queries_used": [
+      "콜대원키즈시럽 품목기준코드 식약처"
+     ]
+    },
+    {
+     "candidate_name": "콜대원키즈콜드에스시럽",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://www.daewonpharm.com/products/sub02_01_view.jsp?mb=02&mm=22&ms=211&lang=1&PRD_NO=1355"
+     ],
+     "evidence_note": "Daewon Pharm official site page titled '일반 의약품 콜대원키즈콜드에스시럽'.",
+     "search_queries_used": [
+      "콜대원키즈시럽 품목기준코드 식약처"
+     ]
+    }
+   ],
+   "notes": "'콜대원키즈' is a product line with multiple variants (노즈, 노즈에스, 콜드에스, plus 콜대원콜드큐 for adults); the catalog name '콜대원키즈시럽' does not specify which variant, so multiple candidates recorded. The daewonpharm.com domain indicates 대원제약 as the maker but the company name was not literally in a snippet."
+  },
+  {
+   "product_id": "20250812_114000",
+   "catalog_name": "로페라미드캡슐",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "로파인캡슐(로페라미드염산염)",
+     "manufacturer": null,
+     "identifier": {
+      "type": "item_seq",
+      "value": "197800212"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=197800212",
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=197800212aupdateTs2026-06-09+13%3A24%3A09.0b"
+     ],
+     "evidence_note": "nedrug result titled '의약품제품정보 상세보기-로파인캡슐(로페라미드염산염)'; a companion nedrug URL literally showed itemSeq=197800212.",
+     "search_queries_used": [
+      "로페라미드캡슐 품목기준코드 식약처",
+      "로페라미드염산염캡슐 지사제 nedrug"
+     ]
+    },
+    {
+     "candidate_name": "로페스탑캡슐(로페라미드염산염캡슐)",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=199900295aupdateTs2023-02-02+08:16:36.0b"
+     ],
+     "evidence_note": "nedrug cached detail page titled '상세보기(로페스탑캡슐(로페라미드염산염캡슐))'.",
+     "search_queries_used": [
+      "로페라미드염산염캡슐 지사제 nedrug"
+     ]
+    },
+    {
+     "candidate_name": "휴온스로페라미드염산염캡슐(수출명:ANDILO CAP.)",
+     "manufacturer": null,
+     "identifier": {
+      "type": "item_seq",
+      "value": "198701639"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198701639"
+     ],
+     "evidence_note": "nedrug result titled '상세보기-휴온스로페라미드염산염캡슐' with itemSeq=198701639 in the URL.",
+     "search_queries_used": [
+      "로페라미드염산염캡슐 지사제 nedrug"
+     ]
+    }
+   ],
+   "notes": "'로페라미드캡슐' is a generic ingredient-based name; many manufacturers hold approvals for loperamide HCl capsules (OTC antidiarrheal, 지사제), so the catalog entry cannot be mapped to a single item without more info (e.g. maker printed on the box)."
+  },
+  {
+   "product_id": "20250812_114016",
+   "catalog_name": "미야리산U",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "신신제약 미야리산U",
+     "manufacturer": "신신제약",
+     "candidate_source_urls": [
+      "https://www.miyarisan.co.kr/"
+     ],
+     "evidence_note": "Titles literally read '신신제약 미야리산U' (pillyze.com, danawa) and '신신제약 유산균 보다 강한 낙산균, 미야리산U 출시' (heraldcorp); miyarisan.co.kr is the brand site ('미야리산 시리즈').",
+     "search_queries_used": [
+      "미야리산U정 품목기준코드 제조사",
+      "미야리산유 약학정보원 미야리산U"
+     ]
+    }
+   ],
+   "notes": "No nedrug.mfds.go.kr or health.kr URL for 미야리산U surfaced in results; snippets describe it as a 낙산균(Clostridium butyricum) probiotic with UDCA whose 장 건강 효능·효과 was recognized by 식약처, and mention a 420정 pack usage (1일 3회 2정), matching the catalog spec."
+  },
+  {
+   "product_id": "20250812_114422",
+   "catalog_name": "스모타큐",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "스토마큐정(반하사심탕) Stoma-Q Tab.",
+     "manufacturer": "경방신약(주)",
+     "identifier": {
+      "type": "other",
+      "value": "health.kr dcode=2018032600012"
+     },
+     "candidate_source_urls": [
+      "https://health.kr/searchIdentity/result.asp?didx=43941&dcode=2018032600012",
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202101917"
+     ],
+     "evidence_note": "health.kr result titled '스토마큐정(반하사심탕) Stoma-Q Tab. 의약품 식별표시' and medinavi result titled '스토마큐정(반하사심탕) 경방신약(주)'; a nedrug page for the related liquid form 스토마큐액(반하사심탕) showed itemSeq=202101917.",
+     "search_queries_used": [
+      "스모타큐정 제조사",
+      "스토마큐정 반하사심탕 경방신약"
+     ]
+    }
+   ],
+   "notes": "Catalog name '스모타큐' appears to be a transposition of '스토마큐' (Stoma-Q); no product named 스모타큐 exists in results. Catalog spec 20T (tablets) matches 스토마큐정, not the 스토마큐액 liquid whose nedrug itemSeq was also seen. Snippets classify it as an OTC 반하사심탕 digestive herbal tablet approved 2018-03-23. Note it is filed under 호흡기 in the catalog but search evidence shows it is a digestive (소화기) medicine."
+  },
+  {
+   "product_id": "20250812_114655",
+   "catalog_name": "1436품",
+   "status": "no_candidate_found",
+   "candidates": [],
+   "notes": "Two searches ('\"1436품\" 소화', '\"1436품\" 캡슐 약국') returned nothing relevant — only unrelated pages about the year 1436 and the Showa era, and one exact-phrase search returned zero links. '1436품' is almost certainly an internal catalog code/abbreviation, not a marketed product name; the real product name is needed to search official databases."
+  },
+  {
+   "product_id": "20250812_114707",
+   "catalog_name": "훼마틴에이",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "훼마틴캡슐 (Fematin Cap.)",
+     "manufacturer": "조아제약",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "A11AKKKKK0206"
+     },
+     "candidate_source_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKKKKK0206",
+      "http://www.fematin.co.kr/product.asp"
+     ],
+     "evidence_note": "health.kr result titled '훼마틴캡슐 Fematin Cap. 의약품 정보' with drug_cd in URL; brand site fematin.co.kr titled '생체철 빈혈약 훼마틴[조아제약]' shows the maker.",
+     "search_queries_used": [
+      "훼마틴에이 캡슐 조아제약",
+      "훼마틴에이캡슐 의약품 정보"
+     ]
+    },
+    {
+     "candidate_name": "훼마틴에이시럽 (Fematin-A Syrup)",
+     "manufacturer": "조아제약",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "A11AJJJJJ0523"
+     },
+     "candidate_source_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=A11AJJJJJ0523",
+      "https://m.choa.co.kr/product/product_020100.asp?idx=17&page=1&bmain=view"
+     ],
+     "evidence_note": "health.kr result titled '훼마틴에이시럽 Fematin-A Syrup 의약품 정보' with drug_cd in URL; 조아제약 shown in pillyze title '조아제약 훼마틴 에이 시럽'.",
+     "search_queries_used": [
+      "훼마틴에이 캡슐 조아제약",
+      "훼마틴에이캡슐 의약품 정보"
+     ]
+    }
+   ],
+   "notes": "Catalog says '훼마틴에이 60캡슐', but search results only surfaced '훼마틴캡슐' (capsule, no '에이') and '훼마틴에이시럽' (syrup, has '에이') — no page literally named '훼마틴에이캡슐' appeared. Product line is 조아제약's ferritin-based anemia OTC (빈혈약); 훼마틴캡슐 is the closest dosage-form match to 60캡슐."
+  },
+  {
+   "product_id": "20250812_115050",
+   "catalog_name": "삼진본경옥고",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "본 경옥고 (삼진제약)",
+     "manufacturer": "삼진제약",
+     "candidate_source_urls": [
+      "https://www.hitnews.co.kr/news/articleView.html?idxno=49527"
+     ],
+     "evidence_note": "Hitnews article titled '삼진제약도 '본 경옥고' 선봬' with snippet describing it as an OTC (일반의약품) 자양강장제 sold in 60포 packs, matching the catalog spec 60P.",
+     "search_queries_used": [
+      "삼진 본경옥고 60포",
+      "본경옥고 삼진제약 품목기준코드"
+     ]
+    }
+   ],
+   "notes": "No nedrug.mfds.go.kr or health.kr URL for 본경옥고 surfaced; the only evidence is news coverage (hitnews.co.kr, newsthevoice.com) stating 삼진제약 launched '본 경옥고' as a 일반의약품 자양강장제 (생지황즙, 복령, 인삼, 꿀), 60포 per box, 1일 2회 — so despite the catalog category 영양제 it appears to be an OTC drug, not 건강기능식품. Item code would need direct nedrug lookup."
+  },
+  {
+   "product_id": "20250812_115314",
+   "catalog_name": "키드큐",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "일동제약 키드큐 홍삼젤리 30포 (15g x 15포 x 2)",
+     "manufacturer": "일동제약",
+     "candidate_source_urls": [
+      "https://kimspharm.com/product/697",
+      "https://m.fooddata.kr/items/2020021000152045"
+     ],
+     "evidence_note": "Retailer title '[일동제약] 최신 신규포장 키드큐 홍삼젤리 30포 (15g x 15포 x 2) 어린이 홍삼' matched the 30포 spec exactly; no nedrug/health.kr entry surfaced.",
+     "search_queries_used": [
+      "키드큐 30포 약국"
+     ]
+    },
+    {
+     "candidate_name": "키드큐 키즈플러스젤리(비타민 D, 칼슘, 아연)",
+     "manufacturer": null,
+     "identifier": {
+      "type": "other",
+      "value": "fooddata.kr item id 2020021000152045 (visible in URL)"
+     },
+     "candidate_source_urls": [
+      "https://m.fooddata.kr/items/2020021000152045"
+     ],
+     "evidence_note": "fooddata.kr result titled '키드큐 키즈플러스젤리(비타민 D, 칼슘, 아연) 상품정보' shows a food-database record for a KidQ line product.",
+     "search_queries_used": [
+      "키드큐 30포 약국"
+     ]
+    },
+    {
+     "candidate_name": "일동제약 키드큐 비타젤리 15g X 20포 X 2박스",
+     "manufacturer": "일동제약",
+     "candidate_source_urls": [
+      "https://questlife.co.kr/product/1545"
+     ],
+     "evidence_note": "Retailer title shows a separate 키드큐 비타젤리 variant (20포x2), so the 키드큐 line has multiple products.",
+     "search_queries_used": [
+      "키드큐 30포 약국"
+     ]
+    }
+   ],
+   "notes": "키드큐 is an 일동제약 children's jelly line and appears to be 식품/건강기능식품 (fooddata.kr record), not a drug — no nedrug.mfds.go.kr or health.kr entry appeared. Multiple jelly variants (홍삼젤리, 비타젤리, 키즈플러스젤리); the 30포 spec matches 홍삼젤리 30포."
+  },
+  {
+   "product_id": "20260129_111414",
+   "catalog_name": "모발렌5%폼",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "모바렌5%폼에어로솔(미녹시딜)",
+     "manufacturer": "(주)대웅제약",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2024080200001"
+     },
+     "candidate_source_urls": [
+      "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024080200001",
+      "https://doumdoc.com/User_inform/inform_drug_detail/du01_pk/74412"
+     ],
+     "evidence_note": "Result titles '모바렌5%폼에어로솔(미녹시딜) (주)대웅제약' (doumdoc) and '모바렌5%폼에어로솔 Mobaren 5% Foam Aerosol 의약품 정보' with drug_cd=2024080200001 visible in the health.kr URL; news results (docdocdoc, bosa, dailypharm) about minoxidil foam aerosol approvals appeared alongside.",
+     "search_queries_used": [
+      "모발렌5%폼 60g 식약처",
+      "모바렌5%폼에어로솔 대웅제약"
+     ]
+    }
+   ],
+   "notes": "Catalog spelling '모발렌' appears to be a variant/typo of the registered name '모바렌' (Mobaren); the direct 모발렌 search returned no exact product, while 모바렌5%폼에어로솔 (minoxidil 5%, OTC hair-loss treatment) matched. Search summary attributed approval date 2024-08-01 and contract manufacturing by 신신제약 to news snippets."
+  },
+  {
+   "product_id": "20260129_111437",
+   "catalog_name": "프롬팜",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "동아제약 프롬팜 이뮨 챔피언 30포",
+     "manufacturer": "동아제약",
+     "candidate_source_urls": [
+      "https://www.dapharm.com/ko/brand/product?searchKey=bmi&bmIdx=72&searchKeyText=%ED%94%84%EB%A1%AC%ED%8C%9C",
+      "https://taehyefng.com/product/172/",
+      "https://www.pillyze.com/products/28448/%ED%94%84%EB%A1%AC%ED%8C%9C-%EC%9D%B4%EB%AE%A8-%EC%B1%94%ED%94%BC%EC%96%B8"
+     ],
+     "evidence_note": "Titles '[약국정식] 동아제약 프롬팜 이뮨 챔피언 30포 아연 비타민B D 키즈...' and the dapharm.com brand page (searchKeyText=프롬팜) show 프롬팜 as a 동아제약 pharmacy supplement brand with a 30포 product.",
+     "search_queries_used": [
+      "프롬팜 30포 탈모",
+      "프롬팜 동아제약",
+      "프롬팜 맥주효모 탈모 30포"
+     ]
+    }
+   ],
+   "notes": "Category mismatch: catalog lists 탈모 but every search hit for 프롬팜 30포 was the kids immune supplement (이뮨 챔피언); no 프롬팜 hair-loss product appeared in any of three searches. 프롬팜 is a multi-product 동아제약 건강기능식품 brand (also 눈건강엔 루테인 등), so the exact 30포 SKU should be confirmed."
+  },
+  {
+   "product_id": "20260129_112348",
+   "catalog_name": "쌍화탕",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "광동쌍화탕",
+     "manufacturer": "광동제약",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "A11ALLLLL0058"
+     },
+     "candidate_source_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=A11ALLLLL0058",
+      "https://www.ekdp.com/product/items_view.do?s=93"
+     ],
+     "evidence_note": "health.kr result titled '광동쌍화탕 Ssangwhatang Kwangdong 의약품 정보' with drug_cd in URL; 광동제약 mall (ekdp.com) lists 광동쌍화탕 as 일반의약품, and a price-comparison result shows '광동 쌍화탕 100ml 10병'.",
+     "search_queries_used": [
+      "쌍화탕 품목기준코드 nedrug",
+      "쌍화탕 10병 제약회사 일반의약품"
+     ]
+    },
+    {
+     "candidate_name": "한풍쌍화탕액",
+     "manufacturer": null,
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2019010700018"
+     },
+     "candidate_source_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2019010700018"
+     ],
+     "evidence_note": "health.kr result titled '한풍쌍화탕액 Hanpoong Ssangwhatang Sol. 의약품 정보' with drug_cd visible in URL.",
+     "search_queries_used": [
+      "쌍화탕 10병 제약회사 일반의약품"
+     ]
+    },
+    {
+     "candidate_name": "부채표쌍화탕",
+     "manufacturer": "동화약품",
+     "candidate_source_urls": [
+      "https://www.newsthevoice.com/news/articleView.html?idxno=30072"
+     ],
+     "evidence_note": "Search summary of results named 동화약품 '부채표쌍화탕' alongside 광동쌍화탕 as representative OTC 쌍화탕 products; no direct product-page URL captured.",
+     "search_queries_used": [
+      "쌍화탕 10병 제약회사 일반의약품"
+     ]
+    }
+   ],
+   "notes": "쌍화탕 is a generic herbal formula made by many manufacturers (only MFDS-licensed OTC drugs may use '탕'; convenience-store 쌍화 drinks are 액상차/혼합음료 foods, per news snippets). Catalog spec 10P cannot disambiguate the manufacturer."
+  },
+  {
+   "product_id": "20260129_112351",
+   "catalog_name": "갈근탕종합감기약",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "솔표쌍감탕액(갈근탕)",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://www.ekdp.com/product/items_view.do?s=823"
+     ],
+     "evidence_note": "ekdp.com (광동제약 online mall) result titled '솔표쌍감탕액(갈근탕) 일반의약품 > 해열.진통.소염제'; search summary attributed it to 광동제약.",
+     "search_queries_used": [
+      "갈근탕 종합감기약 액 제조사"
+     ]
+    },
+    {
+     "candidate_name": "엠피갈근액(갈근탕)",
+     "manufacturer": "마더스제약",
+     "candidate_source_urls": [
+      "https://moden2345.gabia.io/bbs/board.php?bo_table=product&wr_id=169"
+     ],
+     "evidence_note": "Result titled '엠피갈근액(갈근탕) > 제품소개 | 마더스제약'.",
+     "search_queries_used": [
+      "갈근탕 종합감기약 액 제조사"
+     ]
+    },
+    {
+     "candidate_name": "익수 갈근탕액",
+     "manufacturer": "익수제약",
+     "candidate_source_urls": [
+      "http://www.iksu.co.kr/bbs/board.php?bo_table=Products01&wr_id=21"
+     ],
+     "evidence_note": "익수제약 site result titled '익수 갈근탕액 > 일반의약품'; same site also lists '본 갈근탕 플러스액'.",
+     "search_queries_used": [
+      "갈근탕액 10병 약국 감기약"
+     ]
+    },
+    {
+     "candidate_name": "제감갈근탕액",
+     "manufacturer": null,
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2022092600002"
+     },
+     "candidate_source_urls": [
+      "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2022092600002"
+     ],
+     "evidence_note": "health.kr result titled '제감갈근탕액 의약품 정보' with drug_cd visible in URL.",
+     "search_queries_used": [
+      "갈근탕액 10병 약국 감기약"
+     ]
+    }
+   ],
+   "notes": "No product literally named '갈근탕종합감기약' surfaced in three searches; 갈근탕 is a generic herbal cold-medicine formula produced by many companies under different brand names (namu.wiki and 데일리팜 results confirm multi-manufacturer OTC status). The catalog name looks like a generic label plus category."
+  },
+  {
+   "product_id": "20260129_112354",
+   "catalog_name": "경남보강탕액",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "경남 보감탕",
+     "manufacturer": "경남제약",
+     "candidate_source_urls": [
+      "https://comportpharm.co.kr/otc/18143",
+      "https://nedrug.mfds.go.kr/pbp/CCBBA01/getItem?entpSeq=19570018&sEntpName=%EA%B2%BD%EB%82%A8%EC%A0%9C%EC%95%BD(%EC%A3%BC)&rUrl=/pbp/CCBAE01/getItemPermitIntro"
+     ],
+     "evidence_note": "Pharmacy-mall result titled '경남 보감탕 - 일반의약품 - 늘편한약국' and a nedrug company-item page URL for 경남제약(주) (entpSeq=19570018) appeared for this query.",
+     "search_queries_used": [
+      "경남보강탕액 경남제약",
+      "경남제약 보강탕 액 10병"
+     ]
+    },
+    {
+     "candidate_name": "보감탕코프액 (Bogamtang Cough Sol.)",
+     "manufacturer": "경남제약",
+     "identifier": {
+      "type": "drug_cd",
+      "value": "2012091400009"
+     },
+     "candidate_source_urls": [
+      "http://www.health.kr/searchDrug/result_drug.asp?drug_cd=2012091400009"
+     ],
+     "evidence_note": "health.kr result titled '보감탕코프액 Bogamtang Cough Sol. 의약품 정보' with drug_cd in URL; search summary attributed manufacture to 경남제약.",
+     "search_queries_used": [
+      "경남보강탕액 경남제약",
+      "경남제약 보강탕 액 10병"
+     ]
+    }
+   ],
+   "notes": "No product spelled '보강탕' was found in two searches — catalog name is likely a typo/variant of 경남제약's '보감탕' line, which has at least two variants (보감탕, 보감탕코프액). Needs confirmation of which SKU the 10P pack is."
+  },
+  {
+   "product_id": "20260129_113223",
+   "catalog_name": "멕타",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "비맥스메타정 (비맥스 메타)",
+     "manufacturer": "(유)한풍제약 (판매: GC녹십자)",
+     "identifier": {
+      "type": "item_seq",
+      "value": "201901373"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201901373",
+      "https://gcbmax.co.kr/lineup_metaB.php",
+      "https://www.gcbmax.co.kr/lineup_meta.php"
+     ],
+     "evidence_note": "Query '멕타 270정 비타민' returned the 비맥스 메타 official lineup page as top result, and the follow-up query surfaced the nedrug detail page titled '...상세보기-비맥스메타정' with itemSeq=201901373 in the URL; pillyze title shows 'GC녹십자 비맥스 메타'.",
+     "search_queries_used": [
+      "멕타 270정 비타민",
+      "비맥스 메타 270정 녹십자"
+     ]
+    }
+   ],
+   "notes": "Catalog name '멕타' is almost certainly shorthand for '비맥스 메타' — the direct 멕타 search returned 비맥스 메타 pages as the leading hits and no standalone product named 멕타. Search summaries attributed manufacture to 한풍제약 and sale to 녹십자. 270정 pack size was not explicitly confirmed in a snippet."
+  },
+  {
+   "product_id": "20260129_113301",
+   "catalog_name": "비맥스",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "비맥스 메타정 120정",
+     "manufacturer": "한풍제약/녹십자 (per search summary)",
+     "candidate_source_urls": [
+      "https://gcbmax.co.kr/",
+      "https://barkiri.com/products/p24"
+     ],
+     "evidence_note": "Price-comparison title '비맥스 메타정 120정의 가격 비교' and the official 비맥스 brand site gcbmax.co.kr.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    },
+    {
+     "candidate_name": "비맥스 에버정 120정",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://barkiri.com/products/p235"
+     ],
+     "evidence_note": "Title '비맥스 에버정 120정의 약국 가격 비교 - 발키리'.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    },
+    {
+     "candidate_name": "비맥스 골드정 120정",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://barkiri.com/products/p1114"
+     ],
+     "evidence_note": "Title '비맥스 골드정 120정의 가격 비교 - 발키리'.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    },
+    {
+     "candidate_name": "비맥스 비비정 120정",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://barkiri.com/products/p1011"
+     ],
+     "evidence_note": "Title '비맥스 비비정 120정의 가격 비교 - 발키리'.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    },
+    {
+     "candidate_name": "비맥스 메타비정 120정",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://barkiri.com/products/p193"
+     ],
+     "evidence_note": "Title '비맥스 메타비정 120정 가격 비교'.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    },
+    {
+     "candidate_name": "비맥스제트정",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://www.munyak.co.kr/product/detail/202300436",
+      "https://www.gcbmax.co.kr/lineup_z.php"
+     ],
+     "evidence_note": "Titles '비맥스제트정' (munyak.co.kr, with 202300436 in URL path) and '비맥스 제트 > 비맥스 라인업'.",
+     "search_queries_used": [
+      "비맥스 120정 약국"
+     ]
+    }
+   ],
+   "notes": "비맥스 is a GC녹십자-sold, 한풍제약-manufactured OTC vitamin line with at least 6 variants (메타, 에버, 골드, 비비, 메타비, 제트), all sold in 120정 packs per the price-comparison titles — the catalog entry '비맥스 120정' does not identify which variant."
+  },
+  {
+   "product_id": "20260129_113537",
+   "catalog_name": "액티넘EX",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "액티넘EX플러스 (아리나민 EX PLUS) 180정",
+     "manufacturer": "한국다케다 (per search summary)",
+     "candidate_source_urls": [
+      "http://www.actinum.co.kr/information/",
+      "https://momochishop.com/mall/view/goodsNo/2076"
+     ],
+     "evidence_note": "Titles '아리나민 EX PLUS, 액티넘ex플러스, 차승원 비타민 180정' and the official 액티넘 제품정보 page (actinum.co.kr); search summary stated 식약처 허가일 2013-12-27, 일반의약품, 혼합비타민제(316).",
+     "search_queries_used": [
+      "액티넘EX플러스 180정 제조사",
+      "액티넘EX플러스 식약처 품목기준코드",
+      "액티넘이엑스플러스정 nedrug 한국다케다"
+     ]
+    },
+    {
+     "candidate_name": "액티넘이엑스골드정",
+     "manufacturer": null,
+     "identifier": {
+      "type": "item_seq",
+      "value": "201607127"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=201607127aupdateTs2025-04-02+09:14:00.651461b",
+      "https://actinumex.com/"
+     ],
+     "evidence_note": "nedrug result titled '...상세보기-액티넘이엑스골드정' with cacheSeq=201607127 visible in URL, plus official site actinumex.com titled '액티넘 EX GOLD'.",
+     "search_queries_used": [
+      "액티넘이엑스플러스정 nedrug 한국다케다"
+     ]
+    }
+   ],
+   "notes": "The 액티넘 line has at least EX플러스 and EX골드 variants; catalog '액티넘EX 180T' most plausibly maps to 액티넘EX플러스 180정 (180정 pack literally shown in a result title), but no nedrug item_seq for the 플러스 variant was visible — only the 골드 variant's nedrug page surfaced. The 201607127 value is from the cacheSeq URL parameter."
+  },
+  {
+   "product_id": "20260129_113703",
+   "catalog_name": "썬비타민D500U",
+   "status": "no_candidate_found",
+   "candidates": [],
+   "notes": "Two searches ('썬비타민D 500IU 캡슐', '\"썬비타민D\" 200캡슐') surfaced no product named 썬비타민D and nothing in a 200-capsule 500IU pack from official sources. Nearest misses, none matching name+spec: '힐링팩토리 캐나다 직수입 썬앤디 비타민D 500iu 6개월분' (11st.co.kr/products/8598874355), '네이처런스 비타민D 500IU' (pillyze.com/products/27437), '내추럴라이프 칼슘 마그네슘 비타민D 200캡슐' (danawa pcode=6348295). Likely a 건강기능식품/imported supplement."
+  },
+  {
+   "product_id": "20260129_113715",
+   "catalog_name": "비타민D 2000IU",
+   "status": "ambiguous_multiple_candidates",
+   "candidates": [
+    {
+     "candidate_name": "내츄럴플러스 비타민D 2000IU 180캡슐",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://www.11st.co.kr/products/3790183292",
+      "https://m.danawa.com/product/product.html?code=115795791"
+     ],
+     "evidence_note": "Multiple retail titles ('내츄럴플러스 비타민D 2000IU 180캡슐 1병(6개월분)', G마켓, danawa '허브앤비타 내츄럴플러스 비타민D3 2000 IU 180캡슐') exactly match the 180캡슐 spec.",
+     "search_queries_used": [
+      "비타민D 2000IU 180캡슐 약국 건강기능식품"
+     ]
+    },
+    {
+     "candidate_name": "홀리트리 비타민D 프렌디 2000IU 180캡슐 (2병)",
+     "manufacturer": null,
+     "candidate_source_urls": [
+      "https://mymomn.com/product/479/category/24/display/1/"
+     ],
+     "evidence_note": "Retail title '[약국정품] 홀리트리 비타민D 프렌디 2000IU 2병 180캡슐'.",
+     "search_queries_used": [
+      "비타민D 2000IU 180캡슐 약국 건강기능식품"
+     ]
+    },
+    {
+     "candidate_name": "종근당 비타민D 2000IU",
+     "manufacturer": "종근당",
+     "candidate_source_urls": [
+      "https://www.pillyze.com/products/20307/%EB%B9%84%ED%83%80%EB%AF%BCD-2000IU"
+     ],
+     "evidence_note": "Pillyze title '종근당 비타민D 2000IU 효능, 부작용...' shows another brand with the identical generic name.",
+     "search_queries_used": [
+      "비타민D 2000IU 180캡슐 약국 건강기능식품"
+     ]
+    }
+   ],
+   "notes": "'비타민D 2000IU' is a fully generic 건강기능식품 name used by many brands (내츄럴플러스, 홀리트리, 종근당, 아임비타, 네오비타 all appeared); the 180캡슐 spec most literally matches the 내츄럴플러스 product but the catalog gives no brand. No nedrug/health.kr entries expected since these are foods, not drugs."
+  },
+  {
+   "product_id": "20260129_113958",
+   "catalog_name": "레모나산",
+   "status": "candidate_found",
+   "candidates": [
+    {
+     "candidate_name": "레모나산 (수출명: LEMONA LEMON)",
+     "manufacturer": "경남제약",
+     "identifier": {
+      "type": "item_seq",
+      "value": "200107091"
+     },
+     "candidate_source_urls": [
+      "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=200107091aupdateTs2024-08-19+19%3A02%3A23.0b",
+      "https://www.kyungnampharm.com:6519/product/list_prd.asp?category=4&idx=10064",
+      "https://www.lemona.co.kr/"
+     ],
+     "evidence_note": "nedrug result titled '의약품제품정보 상세보기-레모나산(수출명 : LEMONA LEMON)' (200107091 taken from the cacheSeq URL parameter), plus 경남제약 official product page and retail titles like '경남제약 레모나산 120포 (20포x6개)' confirming 20포 packs.",
+     "search_queries_used": [
+      "레모나산 20포 경남제약 식약처"
+     ]
+    }
+   ],
+   "notes": "Clear single match: 경남제약's 레모나산 (vitamin C powder, listed on nedrug; search summary described it as 의약외품, first launched 1983). Sold in 20포/60포/70포/120포 packs. Related newer SKU '비타메드레모나산' also exists but is a distinct product."
+  }
+ ],
+ "suspect_match_verification": [
+  {
+   "product_id": "20260129_113323",
+   "case": "벤포벨B 120정 matched to 벤포벨정 (2015121700002); does a separate 벤포벨비정 exist?",
+   "separate_product_exists": "no",
+   "evidence": [
+    {
+     "finding": "Dailypharm article on the Benfobell series literally states the lineup began with '2016년 벤포벨B정' and expanded to 벤포벨V정(2017), 벤포벨G정(2019), 벤포벨S정(2022); its per-product sales list names the products as '벤포벨정', '벤포벨에스정', '벤포벨지정', '벤포벨브이정' — i.e. the '벤포벨B정' launch product appears in official sales listings simply as '벤포벨정', with no separate '벤포벨비정' entry",
+     "url": "https://www.dailypharm.com/Users/News/NewsView.html?ID=297801",
+     "search_query": "벤포벨 시리즈 벤포벨정 벤포벨에스정 벤포벨지정 종근당 데일리팜"
+    },
+    {
+     "finding": "Searching '벤포벨비정 품목기준코드' returned a 약학정보원 page at drug_cd=2015121700002 (the code currently matched) plus pages for 벤포벨에스정 and 벤포벨지정, but no official record titled 벤포벨비정",
+     "url": "https://www.health.kr/searchDrug/result_take.asp?drug_cd=2015121700002",
+     "search_query": "벤포벨비정 품목기준코드"
+    },
+    {
+     "finding": "Exact-phrase search for '벤포벨비정' returned only 벤포벨에스정/벤포벨지정 official pages and a retail pharmacy listing titled '벤포벨 비 - 일반의약품'; no nedrug or health.kr record named 벤포벨비정 appeared",
+     "url": "https://comportpharm.co.kr/otc/25415",
+     "search_query": "\"벤포벨비정\""
+    }
+   ],
+   "recommendation": "keep_current_match",
+   "notes": "Search evidence indicates '벤포벨B' is the marketing/retail name of the original 벤포벨정 (launched 2016, license code 2015121700002 consistent with a 2015-12-17 approval); no separately licensed 벤포벨비정 surfaced in any search."
+  },
+  {
+   "product_id": "20250812_113405",
+   "case": "잇치 페이스트 프로폴리스향 140g matched to plain 잇치페이스트; is the propolis version a separate licensed product?",
+   "separate_product_exists": "yes",
+   "evidence": [
+    {
+     "finding": "News/search summary from a Dong-wha product article lists three distinct products: '잇치페이스트', '잇치페이스트 피톤치드' (with phytoncide added), and '잇치페이스트 프로폴리스' (with propolis extract added), and describes 잇치페이스트 프로폴리스 as an 외용제 페이스트제 with its own stated composition (카모밀레틴크 12.5mg, 몰약틴크 6.2mg, 라타니아틴크 12.5mg)",
+     "url": "https://www.bosa.co.kr/news/articleView.html?idxno=2226678",
+     "search_query": "잇치 페이스트 프로폴리스 동화약품 의약품"
+    },
+    {
+     "finding": "A pharmacy product page exists titled exactly '잇치페이스트프로폴리스' (as a single concatenated product name, the format used for licensed item names), listed in 140g size — matching the catalog product's 140g",
+     "url": "https://sspharmacy.co.kr/read3.php?id=17405",
+     "search_query": "\"잇치페이스트프로폴리스\" nedrug 품목"
+    }
+   ],
+   "recommendation": "rematch_needed",
+   "notes": "A distinctly named product '잇치페이스트프로폴리스' (140g) exists separately from plain 잇치페이스트; its exact 품목기준코드 did not surface in snippets, so the correct code must be looked up in nedrug before rematching."
+  },
+  {
+   "product_id": "20250812_114745",
+   "case": "사노바 (20개, wound category) matched to 사노바스프레이 10g; does a non-spray wound-care 사노바 exist?",
+   "separate_product_exists": "unclear_from_search",
+   "evidence": [
+    {
+     "finding": "Search results describe 사노바스프레이 as a lidocaine product for reducing male genital hypersensitivity (조루 치료용 국소 마취제), not a wound-care product; a Myungmoon Pharm (명문제약) product page for 사노바 스프레이 appears",
+     "url": "http://mmpharm.co.kr/m/product/prescript_view.asp?gubun=%EC%9D%BC%EB%B0%98%EC%9D%98%EC%95%BD%ED%92%88&sub_name=&mm_code=53",
+     "search_query": "\"사노바\" 스프레이 태극제약 상처치료"
+    },
+    {
+     "finding": "A separate official record '사노바겔 (리도카인)' exists on nedrug (cacheSeq 201308592, health.kr drug_cd 2013080100067), but search snippets state 사노바겔 is also a lidocaine product for male genital sensitivity applied before intercourse — 'not a wound treatment product'",
+     "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=201308592aupdateTs2026-06-06+01%3A10%3A10.0b",
+     "search_query": "사노바겔 상처 하이드로콜로이드"
+    },
+    {
+     "finding": "Searches for a 사노바-branded wound band/moist dressing ('사노바 태극제약 상처 밴드', '\"사노바\" 습윤밴드 20매') returned no 사노바 wound product at all — only generic wound-band listings from other brands",
+     "url": "https://search.danawa.com/dsearch.php?query=%EC%8A%B5%EC%9C%A4%EB%B0%B4%EB%93%9C",
+     "search_query": "\"사노바\" 습윤밴드 20매"
+    }
+   ],
+   "recommendation": "review_required",
+   "notes": "No wound-care 사노바 product surfaced; the only official 사노바 records found (사노바스프레이, 사노바겔) are both lidocaine desensitizing products, which conflicts with the catalog's wound category and '20개' pack count. The current match looks wrong in kind, but no correct alternative was found via search — manual review of the retail listing is needed."
+  },
+  {
+   "product_id": "20250812_104252",
+   "case": "산타몬플러스 120c matched to 산타몬플러스액 (liquid); does a capsule/tablet 산타몬 product exist?",
+   "separate_product_exists": "yes",
+   "evidence": [
+    {
+     "finding": "약학정보원 has a distinct product page titled '산타몬플러스캡슐 Santamon-Plus Cap. 의약품 정보' (drug_cd A11AKP07L0226), separate from '산타몬플러스액 Santamon Plus Solution' (drug_cd A11ADDDDD0017); the search summary confirms Santamon Plus exists in both solution and capsule forms and is an iron/anemia product",
+     "url": "https://health.kr/searchDrug/result_drug.asp?drug_cd=A11AKP07L0226",
+     "search_query": "산타몬플러스 츄어블 정 한미약품"
+    },
+    {
+     "finding": "산타몬플러스캡슐 also has a drug identification (식별표시) page at 약학정보원, confirming it is an orally identifiable solid dosage form",
+     "url": "https://www.health.kr/searchIdentity/result.asp?didx=26454&dcode=A11AKP07L0226",
+     "search_query": "산타몬플러스 츄어블 정 한미약품"
+    }
+   ],
+   "recommendation": "rematch_needed",
+   "notes": "A separate 산타몬플러스캡슐 exists; a '120c' (120-capsule) catalog item should be rematched from the liquid (산타몬플러스액) to the capsule product."
+  },
+  {
+   "product_id": "20260129_111420",
+   "case": "카필러스 60g matched to 카필러스캡슐; does a non-capsule 60g 카필러스 product exist?",
+   "separate_product_exists": "yes",
+   "evidence": [
+    {
+     "finding": "약학정보원 has a distinct page '카필러스폼에어로솔 Capillus Foam Aerosols 의약품 정보' (drug_cd 2024081200001), separate from '카필러스캡슐 Capillus Cap.' (drug_cd A11AKP08G2962) and '카필러스액5%' (drug_cd A11AKP08G2915)",
+     "url": "https://health.kr/searchDrug/result_drug.asp?drug_cd=2024081200001",
+     "search_query": "카필러스 60g 유유제약"
+    },
+    {
+     "finding": "A pharmacy price-comparison page is titled '카필러스 폼 에어로솔 5% 미녹시딜 60g의 약국 가격 비교', literally showing the foam aerosol is sold in 60g size; search summary states it is a minoxidil foam in 60g/캔 format",
+     "url": "https://barkiri.com/products/p1468",
+     "search_query": "\"카필러스폼에어로솔\" 60g"
+    }
+   ],
+   "recommendation": "rematch_needed",
+   "notes": "A '60g' catalog unit fits the 카필러스폼에어로솔 (minoxidil foam, 60g/can, drug_cd 2024081200001), not the capsule product; note the foam is a minoxidil hair-loss drug while the capsule is an oral keratin/vitamin product, so the current match is likely the wrong product entirely."
+  },
+  {
+   "product_id": "20250812_113149",
+   "case": "피지오머 젯노즐 135ml and 스프레이노즐 115ml both matched to one combined record; are they separately licensed with distinct codes?",
+   "separate_product_exists": "no",
+   "evidence": [
+    {
+     "finding": "The nedrug (MFDS) product detail page title is the combined name '피지오머비강세척액 스프레이 노즐(멸균등장해수)/피지오머비강세척액 젯 노즐(멸균등장해수)' on a single item detail page (cacheSeq 200108738), indicating one official record covers both nozzle presentations",
+     "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=200108738aupdateTs2026-07-01+15%3A01%3A52.948b",
+     "search_query": "피지오머 비강세척액 젯노즐 135ml 스프레이노즐 115ml"
+    },
+    {
+     "finding": "Search summary of product/news pages states the packaging units are '스프레이노즐 115mL, 젯노즐 135mL' as two presentations of the same 피지오머 비강세척액 (spray nozzle for infants 1-24 months, jet nozzle for age 6+), i.e. one product line differing by dispensing nozzle and volume",
+     "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2209245",
+     "search_query": "피지오머 비강세척액 젯노즐 135ml 스프레이노즐 115ml"
+    },
+    {
+     "finding": "Yuyu Pharma's own site does maintain two separate marketing product pages (피지오머비강세척액스프레이노즐 product_id=123 and 피지오머비강세척액젯노즐 product_id=124), so the two retail SKUs are real distinct presentations even though the official record is combined",
+     "url": "https://www.yuyu.co.kr/ko/productInfo/productView.do?product_id=124&category=N&pageIndex=1&order=new",
+     "search_query": "피지오머 비강세척액 젯노즐 135ml 스프레이노즐 115ml"
+    }
+   ],
+   "recommendation": "keep_current_match",
+   "notes": "The MFDS record itself carries the combined slash-separated name covering both nozzle types, so both catalog SKUs mapping to that single record appears correct; however, since they are physically different presentations (115mL spray for infants vs 135mL jet for 6+), sharing one image is a display issue worth fixing with SKU-specific images from the manufacturer pages."
+  },
+  {
+   "product_id": "20250812_113152",
+   "case": "피지오머 스프레이노즐 115mL (paired case with 20250812_113149)",
+   "separate_product_exists": "no",
+   "evidence": [
+    {
+     "finding": "Same evidence as 20250812_113149: single combined MFDS record '피지오머비강세척액 스프레이 노즐(멸균등장해수)/피지오머비강세척액 젯 노즐(멸균등장해수)' covering both presentations, with distinct manufacturer marketing pages per nozzle type",
+     "url": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetailCache?cacheSeq=200108738aupdateTs2026-07-01+15%3A01%3A52.948b",
+     "search_query": "피지오머 비강세척액 젯노즐 135ml 스프레이노즐 115ml"
+    }
+   ],
+   "recommendation": "keep_current_match",
+   "notes": "No separate official code for the spray-nozzle presentation surfaced; the shared license match is consistent with search evidence, but per-SKU images (spray 115mL for 1-24 months vs jet 135mL for 6+) should be differentiated at the catalog level."
+  }
+ ]
+}

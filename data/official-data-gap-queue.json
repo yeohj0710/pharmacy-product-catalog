@@ -1,0 +1,5401 @@
+{
+ "generated_at": "2026-07-18T14:53:27+09:00",
+ "input": "data/portable/v1/products.json",
+ "row_count": 375,
+ "reason_counts": {
+  "official_match_unresolved": 21,
+  "image_missing": 111,
+  "shared_item_code_identity_conflict": 37,
+  "shared_image_cross_identity": 37,
+  "non_medicine_official_source_pending": 297,
+  "image_search_proxy_source": 8
+ },
+ "rows": [
+  {
+   "product_id": "20250812_102743",
+   "name": "고함량비타민 하이렉스 비타민B3000",
+   "specification": "180정",
+   "category": "이벤트",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 25
+  },
+  {
+   "product_id": "20250812_104505",
+   "name": "일양약품 오네론액",
+   "specification": "20mL×5포",
+   "category": "기타",
+   "official_match_status": "review_required",
+   "image_url": "https://imagedelivery.net/SJfchtznPkhOJzvVd6Drkw/barkiri/product/p1968/w=1920",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "official_match_unresolved"
+   ],
+   "priority": 1,
+   "source_order": 89
+  },
+  {
+   "product_id": "20250812_113556",
+   "name": "콜대원키즈시럽",
+   "specification": "10p",
+   "category": "키즈",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 368
+  },
+  {
+   "product_id": "20250812_114000",
+   "name": "로페라미드캡슐",
+   "specification": "10c",
+   "category": "소화기",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 410
+  },
+  {
+   "product_id": "20250812_114016",
+   "name": "미야리산U",
+   "specification": "420정",
+   "category": "소화기",
+   "official_match_status": "not_found",
+   "image_url": "https://img.danuri.io/catalog-image/375/860/051/36db5288e2c3455195b0880016a2cdec.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "official_match_unresolved"
+   ],
+   "priority": 1,
+   "source_order": 415
+  },
+  {
+   "product_id": "20250812_114422",
+   "name": "스모타큐",
+   "specification": "20T",
+   "category": "호흡기",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 444
+  },
+  {
+   "product_id": "20250812_114655",
+   "name": "1436품",
+   "specification": "60C",
+   "category": "소화기",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 467
+  },
+  {
+   "product_id": "20250812_114707",
+   "name": "훼마틴에이",
+   "specification": "60캡슐",
+   "category": "빈혈",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": null,
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 470
+  },
+  {
+   "product_id": "20250812_115050",
+   "name": "삼진본경옥고",
+   "specification": "60P",
+   "category": "영양제",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 500
+  },
+  {
+   "product_id": "20250812_115314",
+   "name": "키드큐",
+   "specification": "30포",
+   "category": "키즈",
+   "official_match_status": "not_found",
+   "image_url": "https://img.danuri.io/catalog-image/623/520/118/9c50939c8a29459c8c31d3d7df9307e1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "official_match_unresolved"
+   ],
+   "priority": 1,
+   "source_order": 524
+  },
+  {
+   "product_id": "20260129_111414",
+   "name": "모발렌5%폼",
+   "specification": "60g",
+   "category": "탈모",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 600
+  },
+  {
+   "product_id": "20260129_111437",
+   "name": "프롬팜",
+   "specification": "30포",
+   "category": "탈모",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 604
+  },
+  {
+   "product_id": "20260129_112348",
+   "name": "쌍화탕",
+   "specification": "10P",
+   "category": "드링크",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 651
+  },
+  {
+   "product_id": "20260129_112351",
+   "name": "갈근탕종합감기약",
+   "specification": "10P",
+   "category": "호흡기",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 652
+  },
+  {
+   "product_id": "20260129_112354",
+   "name": "경남보강탕액",
+   "specification": "10P",
+   "category": "호흡기",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 653
+  },
+  {
+   "product_id": "20260129_113223",
+   "name": "멕타",
+   "specification": "270정",
+   "category": "비타민",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 683
+  },
+  {
+   "product_id": "20260129_113301",
+   "name": "비맥스",
+   "specification": "120정",
+   "category": "비타민",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 691
+  },
+  {
+   "product_id": "20260129_113537",
+   "name": "액티넘EX",
+   "specification": "180T",
+   "category": "비타민",
+   "official_match_status": "review_required",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 720
+  },
+  {
+   "product_id": "20260129_113703",
+   "name": "썬비타민D500U",
+   "specification": "200캡슐",
+   "category": "비타민",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 732
+  },
+  {
+   "product_id": "20260129_113715",
+   "name": "비타민D 2000IU",
+   "specification": "180캡슐",
+   "category": "비타민",
+   "official_match_status": "not_found",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "official_match_unresolved",
+    "image_missing"
+   ],
+   "priority": 1,
+   "source_order": 736
+  },
+  {
+   "product_id": "20260129_113958",
+   "name": "레모나산",
+   "specification": "20포",
+   "category": "비타민",
+   "official_match_status": "review_required",
+   "image_url": "https://m.joeunpharm.com/web/product/big/201910/e55cb34452d3b5592802fe3cf5183bf5.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "official_match_unresolved"
+   ],
+   "priority": 1,
+   "source_order": 758
+  },
+  {
+   "product_id": "20250801_173218",
+   "name": "챔프노트코감기",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2017090500003_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 12
+  },
+  {
+   "product_id": "20250801_173524",
+   "name": "챔프코프목감기",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/p_2018110500002_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 15
+  },
+  {
+   "product_id": "20250801_173526",
+   "name": "챔프알러논알레르기",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://www.dapharm.com/common/images/brand/1e7a892cc525459ba8fdbc78dd09b6be.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 17
+  },
+  {
+   "product_id": "20250801_173527",
+   "name": "챕프이부펜해열소염",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2016071900002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 18
+  },
+  {
+   "product_id": "20250812_104252",
+   "name": "산타몬플러스",
+   "specification": "120c",
+   "category": "여성",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ADDDDD0017_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 79
+  },
+  {
+   "product_id": "20250812_104323",
+   "name": "멘탈관리 듀얼 솔루션 안정액",
+   "specification": "1병",
+   "category": "기타",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ABBBBB0727_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 83
+  },
+  {
+   "product_id": "20250812_104449",
+   "name": "어린이멀미약 조은아이",
+   "specification": "4P",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2021042300003_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 88
+  },
+  {
+   "product_id": "20250812_104723",
+   "name": "챔프코프액",
+   "specification": "10P",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/p_2018110500002_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 97
+  },
+  {
+   "product_id": "20250812_104727",
+   "name": "챔프알러논시럽",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://www.dapharm.com/common/images/brand/1e7a892cc525459ba8fdbc78dd09b6be.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 99
+  },
+  {
+   "product_id": "20250812_104730",
+   "name": "챔프이부펜시럽",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2016071900002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 100
+  },
+  {
+   "product_id": "20250812_104733",
+   "name": "챔프노즈시럽",
+   "specification": "10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2017090500003_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 101
+  },
+  {
+   "product_id": "20250812_111329",
+   "name": "비가졸",
+   "specification": "120ml",
+   "category": "피부",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A0670A0329_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 242
+  },
+  {
+   "product_id": "20250812_111521",
+   "name": "메가트루골드",
+   "specification": "200T",
+   "category": "영양제",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2013101100013_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 247
+  },
+  {
+   "product_id": "20250812_112347",
+   "name": "보화소합원(소환)",
+   "specification": "5P",
+   "category": "진통",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2670A0001_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 273
+  },
+  {
+   "product_id": "20250812_113149",
+   "name": "피지오머비강세척액젯노즐",
+   "specification": "135ml",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP07K0065_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 330
+  },
+  {
+   "product_id": "20250812_113152",
+   "name": "피지오머 비강세척액 스프레이 노즐",
+   "specification": "115mL",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP07K0065_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 331
+  },
+  {
+   "product_id": "20250812_113403",
+   "name": "잇치페이스트",
+   "specification": "150g",
+   "category": "구강, 치아",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_f29ua8m9p963y_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 362
+  },
+  {
+   "product_id": "20250812_113405",
+   "name": "잇치 페이스트 프로폴리스향",
+   "specification": "140g",
+   "category": "구강, 치아",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_f29ua8m9p963y_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 363
+  },
+  {
+   "product_id": "20250812_113738",
+   "name": "광동우황청심원현탁액",
+   "specification": "50mL",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2260A0347_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 384
+  },
+  {
+   "product_id": "20250812_113752",
+   "name": "안정액",
+   "specification": "50ml",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ABBBBB0727_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 385
+  },
+  {
+   "product_id": "20250812_114405",
+   "name": "보화소합원",
+   "specification": "5P",
+   "category": "소화기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2670A0001_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 437
+  },
+  {
+   "product_id": "20250812_114721",
+   "name": "산타몬플러스액",
+   "specification": "60V",
+   "category": "빈혈",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ADDDDD0017_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 473
+  },
+  {
+   "product_id": "20250812_114745",
+   "name": "사노바",
+   "specification": "20개",
+   "category": "남성",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A3180A0218_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 476
+  },
+  {
+   "product_id": "20250812_115214",
+   "name": "조은아이시럽",
+   "specification": "400ml",
+   "category": "소화기",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2021042300003_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 514
+  },
+  {
+   "product_id": "20250812_115324",
+   "name": "사노바스프레이",
+   "specification": "10g",
+   "category": "남성",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A3180A0218_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 525
+  },
+  {
+   "product_id": "20260129_111250",
+   "name": "카필러스캡슐",
+   "specification": "180캡슐",
+   "category": "탈모",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08G2962_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 588
+  },
+  {
+   "product_id": "20260129_111420",
+   "name": "카필러스",
+   "specification": "60g",
+   "category": "탈모",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11AKP08G2962_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 601
+  },
+  {
+   "product_id": "20260129_111525",
+   "name": "비가졸액",
+   "specification": "120ml",
+   "category": "탈모",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A0670A0329_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 614
+  },
+  {
+   "product_id": "20260129_111718",
+   "name": "광동우황청심원(사향)액",
+   "specification": "50ml",
+   "category": "기타",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2260A0347_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 618
+  },
+  {
+   "product_id": "20260129_111735",
+   "name": "광동우황청심원(사향)액50ml",
+   "specification": "10병",
+   "category": "기타",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11A2260A0347_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 624
+  },
+  {
+   "product_id": "20260129_112608",
+   "name": "안정액",
+   "specification": "50ml×10병",
+   "category": "수면",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ABBBBB0727_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 656
+  },
+  {
+   "product_id": "20260129_112701",
+   "name": "안정액50ml",
+   "specification": "5포",
+   "category": "수면",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_A11ABBBBB0727_02.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 670
+  },
+  {
+   "product_id": "20260129_113317",
+   "name": "벤포벨",
+   "specification": "180정",
+   "category": "비타민",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2015121700002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 695
+  },
+  {
+   "product_id": "20260129_113323",
+   "name": "벤포벨B",
+   "specification": "120정",
+   "category": "비타민",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2015121700002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 696
+  },
+  {
+   "product_id": "20260129_113326",
+   "name": "벤포벨",
+   "specification": "180정",
+   "category": "비타민",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2015121700002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 697
+  },
+  {
+   "product_id": "20260129_113330",
+   "name": "벤포벨",
+   "specification": "120정",
+   "category": "비타민",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2015121700002_00.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 698
+  },
+  {
+   "product_id": "20260129_113946",
+   "name": "메가트루골드정",
+   "specification": "200정",
+   "category": "비타민",
+   "official_match_status": "confirmed",
+   "image_url": "https://common.health.kr/shared/images/ext_images/pack_img/P_2013101100013_01.jpg",
+   "image_rights_status": "official_source_preview",
+   "queue_reasons": [
+    "shared_item_code_identity_conflict",
+    "shared_image_cross_identity"
+   ],
+   "priority": 2,
+   "source_order": 756
+  },
+  {
+   "product_id": "20250801_172327",
+   "name": "식물성멜라토닌",
+   "specification": "30정",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 2
+  },
+  {
+   "product_id": "20250801_172721",
+   "name": "AD혈압계",
+   "specification": "1EA",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 3
+  },
+  {
+   "product_id": "20250801_172724",
+   "name": "귀이마적외선체온계",
+   "specification": "1EA",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 6
+  },
+  {
+   "product_id": "20250801_172845",
+   "name": "유한비타민D5000IU",
+   "specification": "100캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 8
+  },
+  {
+   "product_id": "20250812_102357",
+   "name": "국내산꿀생강도라지스틱",
+   "specification": "20포",
+   "category": "이벤트",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 22
+  },
+  {
+   "product_id": "20250812_102500",
+   "name": "칼슘마그네슘 아연앤비타민D",
+   "specification": "180정",
+   "category": "이벤트",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 23
+  },
+  {
+   "product_id": "20250812_102506",
+   "name": "맥스조인트뮤코다당단백콘드로이친1200",
+   "specification": "60정",
+   "category": "이벤트",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 24
+  },
+  {
+   "product_id": "20250812_103011",
+   "name": "드링크",
+   "specification": "10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 28
+  },
+  {
+   "product_id": "20250812_103505",
+   "name": "비타하임비타민",
+   "specification": "1통",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 45
+  },
+  {
+   "product_id": "20250812_103509",
+   "name": "비빌크림캔디",
+   "specification": "10ea",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 46
+  },
+  {
+   "product_id": "20250812_103517",
+   "name": "허브눈찜질팩",
+   "specification": "1Box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 47
+  },
+  {
+   "product_id": "20250812_103607",
+   "name": "키드큐젤리",
+   "specification": "30P",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 49
+  },
+  {
+   "product_id": "20250812_103727",
+   "name": "트리어드코어플러스D",
+   "specification": "180c",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 54
+  },
+  {
+   "product_id": "20250812_103735",
+   "name": "초임계 눈건강 아스타잔틴",
+   "specification": "120캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 55
+  },
+  {
+   "product_id": "20250812_103738",
+   "name": "슈퍼 아이잔틴 루테인",
+   "specification": "180캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 56
+  },
+  {
+   "product_id": "20250812_103758",
+   "name": "프롬팜싱글맥스루테인20",
+   "specification": "120c",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 58
+  },
+  {
+   "product_id": "20250812_103803",
+   "name": "슈퍼 아이 루테인",
+   "specification": "90캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 59
+  },
+  {
+   "product_id": "20250812_104052",
+   "name": "슬림락정",
+   "specification": "50정",
+   "category": "소화기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 63
+  },
+  {
+   "product_id": "20250812_104242",
+   "name": "유한m 메가엽산",
+   "specification": "90정",
+   "category": "여성",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 77
+  },
+  {
+   "product_id": "20250812_104713",
+   "name": "이큐펜키즈에이시럽(아세트아미노펜)",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 95
+  },
+  {
+   "product_id": "20250812_104716",
+   "name": "이큐펜키즈아이시럽(이부프로펜)",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 96
+  },
+  {
+   "product_id": "20250812_104725",
+   "name": "챔프콜드펜하이시럽",
+   "specification": "10P",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 98
+  },
+  {
+   "product_id": "20250812_104736",
+   "name": "챔프콜드펜하이시럽",
+   "specification": "10P",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 102
+  },
+  {
+   "product_id": "20250812_104759",
+   "name": "모드콜콜드시럽",
+   "specification": "5P",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 105
+  },
+  {
+   "product_id": "20250812_104856",
+   "name": "나프졸크림",
+   "specification": "30g",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 106
+  },
+  {
+   "product_id": "20250812_105007",
+   "name": "바디드란트액",
+   "specification": "30ml",
+   "category": "기타",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": null,
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 115
+  },
+  {
+   "product_id": "20250812_105631",
+   "name": "식물성 멜라토닌 멜레븐 하모니",
+   "specification": "60T",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 118
+  },
+  {
+   "product_id": "20250812_105730",
+   "name": "카무트 브랜드 밀",
+   "specification": "30포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 120
+  },
+  {
+   "product_id": "20250812_105744",
+   "name": "산양유단백분말",
+   "specification": "500G",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 121
+  },
+  {
+   "product_id": "20250812_105810",
+   "name": "녹십자 하루케어 멀티비타민V",
+   "specification": "30정",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 125
+  },
+  {
+   "product_id": "20250812_105836",
+   "name": "홍삼진스틱",
+   "specification": "100p",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 128
+  },
+  {
+   "product_id": "20250812_105841",
+   "name": "하루케어칼마디",
+   "specification": "30T",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 129
+  },
+  {
+   "product_id": "20250812_105906",
+   "name": "녹용침향환",
+   "specification": "30환",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 131
+  },
+  {
+   "product_id": "20250812_110019",
+   "name": "알부스",
+   "specification": "80C",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 141
+  },
+  {
+   "product_id": "20250812_110120",
+   "name": "어린리즈저분자콜라겐",
+   "specification": "30P",
+   "category": "피부",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 144
+  },
+  {
+   "product_id": "20250812_110124",
+   "name": "비오틴어린콜라겐",
+   "specification": "60P",
+   "category": "피부",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 145
+  },
+  {
+   "product_id": "20250812_110141",
+   "name": "그린프로폴리스40",
+   "specification": "120C",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 148
+  },
+  {
+   "product_id": "20250812_110155",
+   "name": "코큐텐 아연 셀렌 프리미엄",
+   "specification": "60캡슐×2개입",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 151
+  },
+  {
+   "product_id": "20250812_110224",
+   "name": "동성허브칼라2호",
+   "specification": "1box",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 154
+  },
+  {
+   "product_id": "20250812_110232",
+   "name": "창포휴허브",
+   "specification": "1box",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 155
+  },
+  {
+   "product_id": "20250812_110525",
+   "name": "이동국테이핑",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 182
+  },
+  {
+   "product_id": "20250812_110528",
+   "name": "웰업엠앰엠테이프와이",
+   "specification": "1통",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 183
+  },
+  {
+   "product_id": "20250812_110722",
+   "name": "스트롱조인트",
+   "specification": "240정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 196
+  },
+  {
+   "product_id": "20250812_110748",
+   "name": "명품난각막프리미엄",
+   "specification": "120T",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 200
+  },
+  {
+   "product_id": "20250812_110952",
+   "name": "프리미엄리버시마린",
+   "specification": "60c",
+   "category": "건강보조식품",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 217
+  },
+  {
+   "product_id": "20250812_111138",
+   "name": "마그징코플러스",
+   "specification": "60T",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 228
+  },
+  {
+   "product_id": "20250812_111229",
+   "name": "브레인하이큐",
+   "specification": "60c",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 240
+  },
+  {
+   "product_id": "20250812_112817",
+   "name": "한풍올가에스",
+   "specification": "120포",
+   "category": "소화기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 307
+  },
+  {
+   "product_id": "20250812_113118",
+   "name": "인사큐어액",
+   "specification": "10P",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 320
+  },
+  {
+   "product_id": "20250812_113122",
+   "name": "이바프텐액",
+   "specification": "10포",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 322
+  },
+  {
+   "product_id": "20250812_113223",
+   "name": "콜즈록나잘스프레이",
+   "specification": "20ml",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 338
+  },
+  {
+   "product_id": "20250812_113258",
+   "name": "센코프액",
+   "specification": "5P",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": null,
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 348
+  },
+  {
+   "product_id": "20250812_113301",
+   "name": "파인큐나프록센현탁액",
+   "specification": "5포",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 349
+  },
+  {
+   "product_id": "20250812_113616",
+   "name": "모드콜코프시럽",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 376
+  },
+  {
+   "product_id": "20250812_113630",
+   "name": "이큐펜키즈아이시럽(이부프로펜)",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 379
+  },
+  {
+   "product_id": "20250812_113631",
+   "name": "이큐펜키즈에이시럽(아세트아미노펜)",
+   "specification": "5mL×10포",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 380
+  },
+  {
+   "product_id": "20250812_113634",
+   "name": "콜록키즈이부펜시럽",
+   "specification": "5ml",
+   "category": "키즈",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 381
+  },
+  {
+   "product_id": "20250812_114124",
+   "name": "이엔탁스프로",
+   "specification": "120캡슐",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 427
+  },
+  {
+   "product_id": "20250812_114411",
+   "name": "커버든엑스과립(위령탕)",
+   "specification": "5포",
+   "category": "호흡기",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 440
+  },
+  {
+   "product_id": "20250812_114737",
+   "name": "트리플리얼리체크(임테기)",
+   "specification": "1개",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 475
+  },
+  {
+   "product_id": "20250812_114756",
+   "name": "HONEY GEL",
+   "specification": "1통",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 478
+  },
+  {
+   "product_id": "20250812_114918",
+   "name": "상황산삼액",
+   "specification": "10병",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 488
+  },
+  {
+   "product_id": "20250812_114924",
+   "name": "경옥골드",
+   "specification": "100mL × 10병",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 489
+  },
+  {
+   "product_id": "20250812_114928",
+   "name": "파워텐골드",
+   "specification": "1병",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 490
+  },
+  {
+   "product_id": "20250812_114935",
+   "name": "셀티아이베이비",
+   "specification": "60P",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 492
+  },
+  {
+   "product_id": "20250812_115001",
+   "name": "글루타치온실크알부민",
+   "specification": "1통",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 496
+  },
+  {
+   "product_id": "20250812_115254",
+   "name": "티니핑홍삼젤리",
+   "specification": "10EA",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 521
+  },
+  {
+   "product_id": "20250812_115259",
+   "name": "프로팜칼슘챔피언",
+   "specification": "90정",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 522
+  },
+  {
+   "product_id": "20250812_115421",
+   "name": "일동쏘팔메토코사놀프리미엄",
+   "specification": "120캡슐",
+   "category": "전립선",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 528
+  },
+  {
+   "product_id": "20250812_115426",
+   "name": "뉴올업쏘팔메토포르테",
+   "specification": "60c",
+   "category": "전립선",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 529
+  },
+  {
+   "product_id": "20250812_115450",
+   "name": "젤세라프리미엄쏘팔메토",
+   "specification": "120c",
+   "category": "전립선",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 533
+  },
+  {
+   "product_id": "20260129_110235",
+   "name": "녹용보",
+   "specification": "10EA",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 535
+  },
+  {
+   "product_id": "20260129_110359",
+   "name": "닥터 리쥬피디 프리미엄 PDRN 리페어 크림",
+   "specification": "10EA",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 551
+  },
+  {
+   "product_id": "20260129_110406",
+   "name": "리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림",
+   "specification": "10EA",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 553
+  },
+  {
+   "product_id": "20260129_110416",
+   "name": "리쥬올세라마이드베리어크림",
+   "specification": "90ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 555
+  },
+  {
+   "product_id": "20260129_110428",
+   "name": "후시메드 마스크팩",
+   "specification": "5ea",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 558
+  },
+  {
+   "product_id": "20260129_110455",
+   "name": "아르베라 PDRN 리쥬샷 리페어 세럼",
+   "specification": "45mL",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 562
+  },
+  {
+   "product_id": "20260129_110533",
+   "name": "애크온 딥 클렌징 폼",
+   "specification": "100mL",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 570
+  },
+  {
+   "product_id": "20260129_110915",
+   "name": "윙크리얼핏",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 576
+  },
+  {
+   "product_id": "20260129_111516",
+   "name": "판시딜액3%(미녹시딜)",
+   "specification": "200ml",
+   "category": "탈모",
+   "official_match_status": "confirmed",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing"
+   ],
+   "priority": 3,
+   "source_order": 612
+  },
+  {
+   "product_id": "20260129_111529",
+   "name": "동성미녹스샴푸",
+   "specification": "120g",
+   "category": "탈모",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 615
+  },
+  {
+   "product_id": "20260129_112030",
+   "name": "프롬팜질건강엔리스펙타&지노밸런스",
+   "specification": "60캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 629
+  },
+  {
+   "product_id": "20260129_112032",
+   "name": "프로캄진프로바이오틱스플러스30",
+   "specification": "30캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 630
+  },
+  {
+   "product_id": "20260129_112046",
+   "name": "트루팍 생프로바이오틱스",
+   "specification": "30포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 634
+  },
+  {
+   "product_id": "20260129_112100",
+   "name": "올케어장용성프로바이오틱스",
+   "specification": "60캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 637
+  },
+  {
+   "product_id": "20260129_112103",
+   "name": "프로바이오틱스프라임",
+   "specification": "120c",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 638
+  },
+  {
+   "product_id": "20260129_113524",
+   "name": "울트라맥스메가B",
+   "specification": "120정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 716
+  },
+  {
+   "product_id": "20260129_113630",
+   "name": "올인원뉴트리션이뮨데일리팩",
+   "specification": "30포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 725
+  },
+  {
+   "product_id": "20260129_113732",
+   "name": "하루루틴비타민C",
+   "specification": "100포×2개",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 740
+  },
+  {
+   "product_id": "20260129_113748",
+   "name": "리포좀비타민C",
+   "specification": "30포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 745
+  },
+  {
+   "product_id": "20260129_114009",
+   "name": "엘리나C이뮨",
+   "specification": "120T",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 762
+  },
+  {
+   "product_id": "20260129_114024",
+   "name": "장용비타민C복합제",
+   "specification": "240c",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 764
+  },
+  {
+   "product_id": "20260129_114054",
+   "name": "유한m액티브셀렌효모플러스",
+   "specification": "480정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 770
+  },
+  {
+   "product_id": "20260129_114113",
+   "name": "아이브라 아연",
+   "specification": "60정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": null,
+   "image_rights_status": "미확인",
+   "queue_reasons": [
+    "image_missing",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 3,
+   "source_order": 776
+  },
+  {
+   "product_id": "20250812_105806",
+   "name": "녹십자 하루케어 오메가3",
+   "specification": "30캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/4379/a68607c745c6a299d018716cb6f633240f699e2fb04102e177251d2d5a77.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 124
+  },
+  {
+   "product_id": "20250812_110425",
+   "name": "큐어반F 관절용",
+   "specification": "7매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/3c45/6367c958cb5c7a4ec5107644de598e6fbb18d6a428265231668fa05ab519.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 168
+  },
+  {
+   "product_id": "20250812_110426",
+   "name": "큐어반F 손끝용",
+   "specification": "10매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/033e/8ddb3b42ee081ad6c27921ba56ff0e72eb332dba197361890998458e512b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 169
+  },
+  {
+   "product_id": "20250812_112150",
+   "name": "모스케어 싹액",
+   "specification": "80mL",
+   "category": "호흡기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/08/07/14/5/90734ebf-f3b3-466a-bfd2-cf99e4a51039.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 267
+  },
+  {
+   "product_id": "20260129_112042",
+   "name": "프롬팜싱글맥스프로바이오틱스50",
+   "specification": "60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/4e7c/d53077c18bc71246885bf77100ef0450453767ac2dc7eacbffb772221926.jpeg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 633
+  },
+  {
+   "product_id": "20260129_113706",
+   "name": "츄어블비타민D4000IU",
+   "specification": "120캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/668f/b18fc34e273b4aef795e1a798b6ded7e6b72402e25d2bf99686b335c152b.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 733
+  },
+  {
+   "product_id": "20260129_113801",
+   "name": "하루케어멀티비타민&미네랄",
+   "specification": "500mg×30정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/image/vendor_inventory/dc03/3b6e0e25620a7a322c61d4a339960be0ac791474cd2dcd1a0597ae3fb2d9.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 749
+  },
+  {
+   "product_id": "20260129_113832",
+   "name": "슈퍼멀티비타민이뮨부스트",
+   "specification": "30병",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://thumbnail.coupangcdn.com/image/retail/images/2025/05/07/17/5/292e21c9-9ebe-438c-9758-600808e775e1.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "image_search_proxy_source",
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 4,
+   "source_order": 752
+  },
+  {
+   "product_id": "20250801_172323",
+   "name": "헬씨허그 식물성 멜라토닌 함유 멜라잇 플러스 500mg",
+   "specification": "30정",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/777/901/061/64f56c0cedf347969414ccdc059f5213.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 1
+  },
+  {
+   "product_id": "20250801_172722",
+   "name": "보령 메디칼 비접촉식 다기능 체온계 BR-060",
+   "specification": "1개",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/9212/268aaa16b1a611a237e2e0f17b1dcc767f88a2832ca49cf3126a731d7811.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 4
+  },
+  {
+   "product_id": "20250801_172723",
+   "name": "보령 귓속형 체온계 DT-025",
+   "specification": "1개",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/92ac/a825fdd41c9eef945e4d5b604602a191a647f23ed07b7c297c1d35213a37.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 5
+  },
+  {
+   "product_id": "20250801_172844",
+   "name": "유한m 비타민D 2000IU",
+   "specification": "90캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.peoplepharm.com/shop/data/goods/1692687104547l0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 7
+  },
+  {
+   "product_id": "20250801_173304",
+   "name": "비겐크림톤",
+   "specification": "1통",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/068/630/004/12e319e435424a6798668cfb814a27a9.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 13
+  },
+  {
+   "product_id": "20250812_103019",
+   "name": "컨디션 헛개",
+   "specification": "100mL×10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/8437151603/B.webp?241429988",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 29
+  },
+  {
+   "product_id": "20250812_103032",
+   "name": "부채표 쌍화천",
+   "specification": "100mL×10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.dong-wha.co.kr/product/pimage/20250908015900_mid-200px.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 30
+  },
+  {
+   "product_id": "20250812_103132",
+   "name": "영진 아미노비 골드",
+   "specification": "100mL×10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/8978393215/B.webp?638431694",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 34
+  },
+  {
+   "product_id": "20250812_103254",
+   "name": "컴배트 스피드 에어졸",
+   "specification": "500mL×1개",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/761/147/005/3dde9953d30c4632895e65d2b652afb0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 36
+  },
+  {
+   "product_id": "20250812_103307",
+   "name": "홈키파 수성 에어졸 무향",
+   "specification": "600mL×1개",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/458/174/093/a91c4bfc228b404486ff93cc4a351131.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 37
+  },
+  {
+   "product_id": "20250812_103314",
+   "name": "피톤치드 에어로졸(수성)",
+   "specification": "1EA",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/3515129059/B.jpg?567000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 38
+  },
+  {
+   "product_id": "20250812_103344",
+   "name": "웰빙헬스 고운발",
+   "specification": "100g",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.cjq.co.kr/shopimages/maxcareon/005000000081.jpg?1478849640",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 39
+  },
+  {
+   "product_id": "20250812_103426",
+   "name": "바세린 인텐시브 케어 헬씨 핸드 앤 스트롱거 네일",
+   "specification": "60mL",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/589/193/010/a1f8817e5cbd4ff4aaae40865a49aa4b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 40
+  },
+  {
+   "product_id": "20250812_103431",
+   "name": "바세린 풋크림 딥 모이스처",
+   "specification": "55g",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://simg.ssgcdn.com/trans.ssg?src=/uphoto/202410/20241025103858_1227497783_0_1.jpg&w=500&h=500&autoOrient=true&t=aba5fe1276b8201d411ed9cca6dc9a54046de94b",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 41
+  },
+  {
+   "product_id": "20250812_103434",
+   "name": "바세린 프로텍팅 젤리 오리지널",
+   "specification": "50mL",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/362/544/003/690b9a07f0e149c0a927c11d7cb6e109.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 42
+  },
+  {
+   "product_id": "20250812_103447",
+   "name": "듀렉스 인비저블 엑스트라 센서티브",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg480b29845720013/greentube/web/product/big/20251127/59426f89d3662759599b38a0b165fe83.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 43
+  },
+  {
+   "product_id": "20250812_103448",
+   "name": "윙크 퍼펙트 슬림 001",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.dapharm.com/common/images/brand/WNKCDPS10P_01.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 44
+  },
+  {
+   "product_id": "20250812_103544",
+   "name": "레모비타플러스",
+   "specification": "120정",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.peoplepharm.com/shop/data/goods/1449113376l0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 48
+  },
+  {
+   "product_id": "20250812_103618",
+   "name": "정관장 아이키커 비타골드 포도",
+   "specification": "100mL×10포",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/596/924/117/2b6acafa07bc4c6b8aa3976ff29a9fa9.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 50
+  },
+  {
+   "product_id": "20250812_103632",
+   "name": "동아제약 프롬팜 이뮨챔피언",
+   "specification": "15g×30포",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.dapharm.com/common/images/brand/ICPO30_01.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 51
+  },
+  {
+   "product_id": "20250812_103713",
+   "name": "리너지 초임계 알티지 오메가3 원스",
+   "specification": "60캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9337580498/B.webp?189849497",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 52
+  },
+  {
+   "product_id": "20250812_103723",
+   "name": "종근당 명작 프리미엄 알티지 오메가-3",
+   "specification": "90캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/4717666670/B.png?221000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 53
+  },
+  {
+   "product_id": "20250812_103749",
+   "name": "유한 루테인 지아잔틴 플러스",
+   "specification": "60캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://contents.lotteon.com/itemimage/20260626205213/LO/27/09/45/70/90/_2/70/94/57/09/1/LO2709457090_2709457091_1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 57
+  },
+  {
+   "product_id": "20250812_104948",
+   "name": "시카케어 실리콘 겔 시트(소)",
+   "specification": "3cm×12cm 1매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://smith-nephew.stylelabs.cloud/api/public/content/4e95d4ec304c4f788b56f8e616c0948f?v=6f8e6114",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 112
+  },
+  {
+   "product_id": "20250812_105723",
+   "name": "온유바이오 파인애플 그레인 효소",
+   "specification": "30포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/606/618/122/f8dab3fea4524504b9b5b7fbce7c097b.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 119
+  },
+  {
+   "product_id": "20250812_105753",
+   "name": "리틀모어 아르앤비타 블러드 오렌지맛",
+   "specification": "12g×14포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://itemimage.cjonstyle.net/goods_images/20/137/2075592137L.jpg?t=20251205200439",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 122
+  },
+  {
+   "product_id": "20250812_105757",
+   "name": "아임얼라이브 카무트 브랜드밀 효소",
+   "specification": "3g×30포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.ssfshop.com/goods/BETY/25/04/23/GQR525042393491_0_ORGINL_20250423131003192.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 123
+  },
+  {
+   "product_id": "20250812_105814",
+   "name": "익수 프리미엄 수 침향환 4.2",
+   "specification": "30환",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/51cd/a86ef25d216629f3ad168bf36702602a5861dc13f99cf9e23919a2d542f4.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 126
+  },
+  {
+   "product_id": "20250812_105820",
+   "name": "녹십자 하루케어 루테인",
+   "specification": "30캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/174a/a0570de1e4584947d821d254ecbdcc317586c59e4bc65cd373eab393feb6.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 127
+  },
+  {
+   "product_id": "20250812_105859",
+   "name": "한삼인 홍기천 앰플",
+   "specification": "20mL×16병",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/122/667/122/e9955df5b55a474daa9bf9407417048a.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 130
+  },
+  {
+   "product_id": "20250812_105912",
+   "name": "한삼인 홍기천 침향환",
+   "specification": "30환",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/pd/v2/1/9/8/9/1/4/XwfGK/9486198914_B.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 132
+  },
+  {
+   "product_id": "20250812_105919",
+   "name": "씨스팡 늘 비움",
+   "specification": "28포",
+   "category": "다이어트",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/retail/images/50b48da7-70e6-4ef3-a2ba-fab8f8ba8fe215732333612504323224.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 133
+  },
+  {
+   "product_id": "20250812_105923",
+   "name": "유기농 엑스트라 버진 올리브유",
+   "specification": "14P",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/896/411/054/537eb4aab0294bdd954284ee23900666.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 134
+  },
+  {
+   "product_id": "20250812_105931",
+   "name": "헬씨허그 하루1레몬 유기농 NFC 레몬즙 100%",
+   "specification": "20g×30포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sitem.ssgcdn.com/09/62/09/item/1000682096209_i1_1200.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 135
+  },
+  {
+   "product_id": "20250812_105934",
+   "name": "뉴트리가든 엑스트라버진 유기농 올리브오일100 스틱",
+   "specification": "10mL×30포",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.ngardenmall.co.kr/web/product/big/202505/7ed40406e01f833744cbdf8ee1972a1d.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 136
+  },
+  {
+   "product_id": "20250812_105940",
+   "name": "헬씨허그 마이 라이프 식물성 대마종자유 100%",
+   "specification": "60캡슐",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/156/626/122/3fcae4221f0d4a63bf927dc3c7fc95d5.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 137
+  },
+  {
+   "product_id": "20250812_105953",
+   "name": "나우푸드 블러드 케어 올인원",
+   "specification": "60정",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/image_audit/prod/42c8cb37-1d36-4db8-8ec7-34cf5fe3b82d_fixing_v2.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 138
+  },
+  {
+   "product_id": "20250812_105957",
+   "name": "씨스팡 혈관 팔팔",
+   "specification": "60정",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/271/415/072/17b54815da3544bfb5bdad3513a01c69.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 139
+  },
+  {
+   "product_id": "20250812_110005",
+   "name": "종근당 명작 코큐텐",
+   "specification": "90캡슐",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9267534677/B.webp?804082625",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 140
+  },
+  {
+   "product_id": "20250812_110026",
+   "name": "일양약품 바이탈 NMN 퀘르세틴",
+   "specification": "600mg×30정",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sep-item.ssgcdn.com/75/30/27/item/1000846273075_i1_350.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 142
+  },
+  {
+   "product_id": "20250812_110029",
+   "name": "식물유래 명품 NMN 프리미엄",
+   "specification": "500mg×60정×2개입",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://midermall.com/upload/goods/list/20250319151942023236.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 143
+  },
+  {
+   "product_id": "20250812_110130",
+   "name": "뉴트리 에버콜라겐 인앤업 플러스",
+   "specification": "750mg×56정",
+   "category": "피부",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sitem.ssgcdn.com/72/39/67/item/1000265673972_i1_1200.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 146
+  },
+  {
+   "product_id": "20250812_110132",
+   "name": "온유바이오 리핏 어린 저분자 피쉬 콜라겐",
+   "specification": "30포",
+   "category": "피부",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/224/345/015/da6b59f6bec8497696c72cd281a41363.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 147
+  },
+  {
+   "product_id": "20250812_110146",
+   "name": "면역앤포르테",
+   "specification": "120T",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9342072842/B.webp?404042857",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 149
+  },
+  {
+   "product_id": "20250812_110151",
+   "name": "유한m 면역앤 프로폴리스 아연 플러스",
+   "specification": "1000mg×60캡슐×2개입",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/67eb/443874cd785f746280503b6763842b8f449d12db7c0f33ab03f8111975b1.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 150
+  },
+  {
+   "product_id": "20250812_110159",
+   "name": "조아제약 허브쵸크에스",
+   "specification": "20mL×30앰플",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20230620_140653_0596370.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 152
+  },
+  {
+   "product_id": "20250812_110219",
+   "name": "매직리얼허브",
+   "specification": "1box",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/4639761446/B.webp?734757385",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 153
+  },
+  {
+   "product_id": "20250812_110336",
+   "name": "케어리브 L",
+   "specification": "30mm×72mm 16매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/b759/c786976fbc59992918bf249f2971b8e30cd6bc2592f7dd8c90dda5e83c25.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 156
+  },
+  {
+   "product_id": "20250812_110338",
+   "name": "니치반 케어리브 카카오프렌즈 라이언",
+   "specification": "12매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/804/148/088/c8417895700a4b06aac532ea0f2474ed.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 157
+  },
+  {
+   "product_id": "20250812_110350",
+   "name": "밴드닥터소프트스킨일반",
+   "specification": "20매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg1711b79719016088/dbneedlemall/web/product/big/20260305/3ba5fcc8f071ab0298ab1f9710ecefe2.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 158
+  },
+  {
+   "product_id": "20250812_110402",
+   "name": "동국제약 마데카 습윤 밴드 키즈",
+   "specification": "10매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.ehanmaum.co.kr/data/goods/1/2024/01/2091_tmp_1127fef008c960a00ea4e666b82b13166524large.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 159
+  },
+  {
+   "product_id": "20250812_110403",
+   "name": "마데카습윤밴드",
+   "specification": "2매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/643/939/013/3281f2beba4b4a5e9dfdc34f04a27406.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 160
+  },
+  {
+   "product_id": "20250812_110416",
+   "name": "대원제약 큐어반F 일반용 중형",
+   "specification": "10매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://shop-phinf.pstatic.net/20240627_292/17194943284505zVgi_JPEG/1206301499682559_212518834.JPG?type=o1000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 161
+  },
+  {
+   "product_id": "20250812_110417",
+   "name": "대원제약 큐어반F 일반용",
+   "specification": "30매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/4572902183/B.png?455000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 162
+  },
+  {
+   "product_id": "20250812_110418",
+   "name": "큐어반F대형",
+   "specification": "16매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/4f/a7/d5/4fa7d52856.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 163
+  },
+  {
+   "product_id": "20250812_110419",
+   "name": "큐어반F 소형(큐티용)",
+   "specification": "10매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://shop-phinf.pstatic.net/20250224_116/1740372367617U8Kuf_JPEG/18564307746932240_1776584554.jpg?type=o1000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 164
+  },
+  {
+   "product_id": "20250812_110420",
+   "name": "큐어반F 원형",
+   "specification": "20매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://gdimg.gmarket.co.kr/3936442429/goodsimage?ver=29401969785",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 165
+  },
+  {
+   "product_id": "20250812_110421",
+   "name": "큐어반F 발뒤꿈치용",
+   "specification": "12매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/302/143/088/a4c980436ea84bdeb11ac1716a674051.jpg?_v=20260529173423&shrink=330%3A%2A",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 166
+  },
+  {
+   "product_id": "20250812_110424",
+   "name": "큐어반F 가족용",
+   "specification": "20매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/4f/a7/c7/4fa7c7f1a6.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 167
+  },
+  {
+   "product_id": "20250812_110430",
+   "name": "큐어반A 방수(표준형)",
+   "specification": "10매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/4f/a7/db/4fa7db5976.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 170
+  },
+  {
+   "product_id": "20250812_110431",
+   "name": "큐어반A 방수(대형)",
+   "specification": "15매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/4f/a7/d9/4fa7d96846.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 171
+  },
+  {
+   "product_id": "20250812_110436",
+   "name": "큐어반H 스팟",
+   "specification": "66매",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/6383994536/B.jpg?480000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 172
+  },
+  {
+   "product_id": "20250812_110456",
+   "name": "맨담 서포트 발목 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/636/650/090/6a554d0e1ff444329c2d20eb3703659f.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 173
+  },
+  {
+   "product_id": "20250812_110457",
+   "name": "맨담 서포트 손목 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/697/652/090/9630f64c77f04cf987263e6da6db160b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 174
+  },
+  {
+   "product_id": "20250812_110459",
+   "name": "맨담 서포트 무릎 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/558/650/090/2f59b3fa644144cf9834c0370cde4c56.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 175
+  },
+  {
+   "product_id": "20250812_110460",
+   "name": "맨담 서포트 팔꿈치 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/814/715/072/7d274f792bf947d19dbeca70188cdcc9.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 176
+  },
+  {
+   "product_id": "20250812_110502",
+   "name": "맨담 서포트 엄지 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/178/231/088/ddd23732f2a8427c923e14a7c03175e5.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 177
+  },
+  {
+   "product_id": "20250812_110503",
+   "name": "맨담 서포트 골프 테니스 엘보 튼튼 프리미엄",
+   "specification": "1box",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sep-item.ssgcdn.com/46/20/68/item/1000547682046_i1_350.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 178
+  },
+  {
+   "product_id": "20250812_110511",
+   "name": "반테린코와 서포터 손목 L",
+   "specification": "1매",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.iroirotokyo.net/wp-content/uploads/2020/02/1628713.thumb_.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 179
+  },
+  {
+   "product_id": "20250812_110512",
+   "name": "반테린코와 서포터 손목 M",
+   "specification": "1개",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/images/2019/03/19/14/2/e367a717-03d3-4a56-a364-5d0204fbcdb6.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 180
+  },
+  {
+   "product_id": "20250812_110524",
+   "name": "아나파 롤테이프",
+   "specification": "5cm×5m",
+   "category": "의료기기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://soear.co.kr/web/product/small/202304/0786ac0ee82f7122a5c39a9560e717b8.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 181
+  },
+  {
+   "product_id": "20250812_110534",
+   "name": "메디큐어 롤반창고 중형",
+   "specification": "10cm×10m",
+   "category": "상처",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cafe24.poxo.com/ec01/a2medi/2MPBwJPY1W6L+wzPUGJ+dOfWSHtUJv/jzAzR5mAW0Aj6aWO/HjpocP2kLrq8kRhJh7EBgkiBIMP89T1uwB0Rhw==/_/web/product/big/202304/4768b81e5fc4884fa0a416f9024f9071.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 184
+  },
+  {
+   "product_id": "20250812_110543",
+   "name": "컴배트 파워 개미 베이트",
+   "specification": "6개입",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://asset.m-gs.kr/prod/91593240/1/550",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 185
+  },
+  {
+   "product_id": "20250812_110546",
+   "name": "컴배트 파워 작은바퀴용",
+   "specification": "12개입",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://basecamp.kr/web/product/big/20200410/00b6e94aa05de379d97c37a47343bfc4.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 186
+  },
+  {
+   "product_id": "20250812_110604",
+   "name": "쿨티아 프로폴리스 토탈케어 가글",
+   "specification": "11mL×30포",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cooltia.com/web/product/big/202606/98fd149421ed711242e14de9963fbe82.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 187
+  },
+  {
+   "product_id": "20250812_110608",
+   "name": "클리덴트RX",
+   "specification": "48정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://dpharm.co.kr/images/brand/cd02_sec01_img01.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 188
+  },
+  {
+   "product_id": "20250812_110613",
+   "name": "폴리덴트 취침전",
+   "specification": "48정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/413/470/013/aae50c3eec0b4644a190fff4e38c112b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 189
+  },
+  {
+   "product_id": "20250812_110618",
+   "name": "인사덴트 교정기 세정제",
+   "specification": "60정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/retail/images/e8c8e1a6-7470-4f4d-a49c-53f6825dce8b4761053293448570829.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 190
+  },
+  {
+   "product_id": "20250812_110621",
+   "name": "인사덴트 나이트 의치 세정제",
+   "specification": "60정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://gdimg.gmarket.co.kr/4802970321/goodsimage?ver=37840802368",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 191
+  },
+  {
+   "product_id": "20250812_110627",
+   "name": "가그린 후레쉬 라임",
+   "specification": "750mL",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://static.megamart.com/product/image/1379/13792862/13792862_1_960.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 192
+  },
+  {
+   "product_id": "20250812_110707",
+   "name": "관절팔팔",
+   "specification": "30캡슐",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/278/016/032/c3347a5e93504d8296f7113a0f2fe554.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 193
+  },
+  {
+   "product_id": "20250812_110709",
+   "name": "7일의 보스웰리아",
+   "specification": "30정",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg1906b94289711043/newtreemall/web/product/big/20250911/29e476426b58776ef8c337695e861dc7.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 194
+  },
+  {
+   "product_id": "20250812_110713",
+   "name": "관절애MSM",
+   "specification": "240정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://soear.co.kr/web/product/big/202405/1804cf32d7e7b4ce1d6c69f458f142da.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 195
+  },
+  {
+   "product_id": "20250812_110725",
+   "name": "스트롱조인트-F",
+   "specification": "240정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://soear.co.kr/web/product/big/202212/197ffdc754352f583d088cab41c9402d.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 197
+  },
+  {
+   "product_id": "20250812_110732",
+   "name": "MSM 포르테",
+   "specification": "90정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/856/824/017/f64a4f719324465c91ecfd0db0335cf5.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 198
+  },
+  {
+   "product_id": "20250812_110734",
+   "name": "코랄칼슘마그네슘",
+   "specification": "90T",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/543/372/006/eaff1a31b8cf45f18e7b2cb4c202a479.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 199
+  },
+  {
+   "product_id": "20250812_110751",
+   "name": "프롬팜 관절건강엔 타마플렉스",
+   "specification": "60정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9456016183/B.webp?314055303",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 201
+  },
+  {
+   "product_id": "20250812_110755",
+   "name": "프롬팜 관절건강엔 MSM&NAG",
+   "specification": "240정",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/a638/5c23545ec337fff03edf4142c84d0f5aeaf337c4c145e48ef596edaf7512.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 202
+  },
+  {
+   "product_id": "20250812_110820",
+   "name": "소연골콘드로이친1200맥스플러스",
+   "specification": "60P",
+   "category": "관절",
+   "official_match_status": "not_applicable",
+   "image_url": "https://product-image.prod-nsmall.com/new/36010668_0.jpg?s=238x238",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 208
+  },
+  {
+   "product_id": "20250812_110932",
+   "name": "녹십자 하루케어 밀크씨슬",
+   "specification": "30정",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/e2ee/074fb9286e203972caf8549dd5ea075a79c6d175726593a2f51fb6f14581.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 215
+  },
+  {
+   "product_id": "20250812_110942",
+   "name": "리포조말 글루타치온 셀렌",
+   "specification": "120정",
+   "category": "기타",
+   "official_match_status": "not_applicable",
+   "image_url": "https://contents.lotteon.com/itemimage/20260624154702/LO/27/07/66/81/05/_2/70/76/68/10/6/LO2707668105_2707668106_1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 216
+  },
+  {
+   "product_id": "20250812_111018",
+   "name": "우루샷정",
+   "specification": "2정",
+   "category": "건강보조식품",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/740/278/016/0abd6aca6c284ca5ae6261609966f456.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 221
+  },
+  {
+   "product_id": "20250812_111110",
+   "name": "온유로케어 칼륨 메리로트 밸런스",
+   "specification": "60정",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/751/342/097/8c2c3713ff854fef98d0f459ea9d1244.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 223
+  },
+  {
+   "product_id": "20250812_111123",
+   "name": "프롬팜 두뇌 인지력엔",
+   "specification": "60캡슐",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/02c3/0690a31d4b189ea61d2683922f81e0ba4cd5d4283e4f42627277ef7e0da5.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 225
+  },
+  {
+   "product_id": "20250812_111151",
+   "name": "징코폴리시아",
+   "specification": "120캡슐",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/8627663897/B.webp?792774467",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 231
+  },
+  {
+   "product_id": "20250812_111154",
+   "name": "징코넥신",
+   "specification": "120캡슐",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/3158272257/B.jpg?434000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 232
+  },
+  {
+   "product_id": "20250812_111209",
+   "name": "써큐란 알파",
+   "specification": "180캡슐",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.dapharm.com/common/images/brand/CCLA180_01.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 236
+  },
+  {
+   "product_id": "20250812_111237",
+   "name": "5070 면역비타민",
+   "specification": "120정",
+   "category": "혈행개선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.platpharm.co.kr/2025/01/2501200923210002860.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 241
+  },
+  {
+   "product_id": "20250812_112153",
+   "name": "홈키파 마이키파 에스 엑스트라 파워 에어졸",
+   "specification": "150mL",
+   "category": "호흡기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.homeplus.kr/td/eacb976b-48bb-467c-9c4c-d8158ab922e4",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 268
+  },
+  {
+   "product_id": "20250812_112156",
+   "name": "신신 모스키토 아웃도어 에어로솔",
+   "specification": "100mL",
+   "category": "호흡기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/4f/15/87/4f15872ec6.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 269
+  },
+  {
+   "product_id": "20250812_112224",
+   "name": "영국산 비타민C 500mg",
+   "specification": "12정",
+   "category": "호흡기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.mariooutlet.com/Product/A0747/DJN/P003743267_d1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 270
+  },
+  {
+   "product_id": "20250812_112437",
+   "name": "다나음 액티브 엽산+비타민D3",
+   "specification": "60정",
+   "category": "여성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/cat/21/9/3/3/4/1/3/VbGwq/77933413_1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 274
+  },
+  {
+   "product_id": "20250812_113313",
+   "name": "아이다움 실리콘 투약병",
+   "specification": "1개",
+   "category": "호흡기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg195b61208726017/jintkorea1/web/product/big/20250212/e488e65926696db4ecfedf009b47a403.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 352
+  },
+  {
+   "product_id": "20250812_114035",
+   "name": "덴타탁 액티브",
+   "specification": "120정",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image9.coupangcdn.com/image/vendor_inventory/6579/0415bf567468b5b884ef51d6542144ac783a53980ff36a320409b5535c1f.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 418
+  },
+  {
+   "product_id": "20250812_114037",
+   "name": "유한 덴티케어플러스",
+   "specification": "120정",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/7951386571/B.jpg?92000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 419
+  },
+  {
+   "product_id": "20250812_114054",
+   "name": "프로탁스(R)",
+   "specification": "120정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.bukwang.co.kr/data/product/attachFiles_1733472240ndcz40x3bz.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 422
+  },
+  {
+   "product_id": "20250812_114122",
+   "name": "이가 엔 탑플러스",
+   "specification": "120정",
+   "category": "구강, 치아",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/456b/61f87847ca153e67715837e5f005ca7b5890c78401c062dca69632fb5963.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 426
+  },
+  {
+   "product_id": "20250812_114800",
+   "name": "자이젤리겔",
+   "specification": "50g",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.peoplepharm.com/shop/data/goods/1644061413386l0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 479
+  },
+  {
+   "product_id": "20250812_114805",
+   "name": "페미라이드플러스",
+   "specification": "180ml",
+   "category": "여성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9398751345/B.webp?640603511",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 481
+  },
+  {
+   "product_id": "20250812_114808",
+   "name": "프로캄 클레어진 여성청결제",
+   "specification": "200mL + 50mL",
+   "category": "여성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/b22b/8dae9532c52b323c1138003234bd15e7a17fdf2277db94706ee520f528af.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 482
+  },
+  {
+   "product_id": "20250812_114826",
+   "name": "그린티다이어트",
+   "specification": "30T",
+   "category": "다이어트",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/7848017763/B.jpg?317000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 484
+  },
+  {
+   "product_id": "20250812_114911",
+   "name": "밀크씨슬액세트",
+   "specification": "1box",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/665/223/029/a7a087d06519425d949f2b9cb13769a9.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 487
+  },
+  {
+   "product_id": "20250812_114938",
+   "name": "셀티아이키즈",
+   "specification": "60P",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/b5eb/07d064ff71d30b560c32a5666471113e01e7e0177dfa8222428c503dcb81.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 493
+  },
+  {
+   "product_id": "20250812_114941",
+   "name": "셀티아이 골드",
+   "specification": "120C",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://shopping-phinf.pstatic.net/main_8802069/88020696096.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 494
+  },
+  {
+   "product_id": "20250812_114943",
+   "name": "셀티아이 맘",
+   "specification": "120C",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/4791/ca55bebbc6d29567796a70fc2f11a502eb727a8b5c5539fd9e5ea9214edd.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 495
+  },
+  {
+   "product_id": "20250812_115003",
+   "name": "황제진상보",
+   "specification": "100ml",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/pd/v2/9/5/3/7/0/6/QsYYg/9494953706_B.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 497
+  },
+  {
+   "product_id": "20250812_115110",
+   "name": "경옥침향세트",
+   "specification": "100ml",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://static.megamart.com/product/image/1357/13572778/13572778_1_960.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 504
+  },
+  {
+   "product_id": "20250812_115206",
+   "name": "잘크토닉",
+   "specification": "40ml",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20220113_111825_0653148.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 511
+  },
+  {
+   "product_id": "20250812_115209",
+   "name": "데이스트",
+   "specification": "3앰플",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20230620_140224_0655361.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 513
+  },
+  {
+   "product_id": "20250812_115225",
+   "name": "젤리 잘크톤(망고맛)",
+   "specification": "15g × 30포",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20201229_161913_0074520.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 515
+  },
+  {
+   "product_id": "20250812_115226",
+   "name": "젤리 잘크톤(블루베리맛)",
+   "specification": "15g × 30포",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20220113_113723_0617748.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 516
+  },
+  {
+   "product_id": "20250812_115232",
+   "name": "미향 키즈아이쑥쑥",
+   "specification": "275mg × 240정 × 2박스",
+   "category": "소화기",
+   "official_match_status": "not_applicable",
+   "image_url": "https://shop-phinf.pstatic.net/20230925_15/16956417306555Seac_PNG/10538629446138649_571722160.png?type=o1000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 517
+  },
+  {
+   "product_id": "20250812_115242",
+   "name": "더팜 액상 미네랄 키즈",
+   "specification": "30포",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://gdimg.gmarket.co.kr/3125935195/still/600?ver=1745388571",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 518
+  },
+  {
+   "product_id": "20250812_115247",
+   "name": "프롬팜 락토 챔피언 키즈",
+   "specification": "60포",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9484670248/B.webp?384685152",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 519
+  },
+  {
+   "product_id": "20250812_115248",
+   "name": "더팜이지바울베베키즈",
+   "specification": "60P",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/7248329001/B.jpg?284000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 520
+  },
+  {
+   "product_id": "20250812_115304",
+   "name": "프롬팜 오메가 챔피언",
+   "specification": "700mg × 80캡슐",
+   "category": "키즈",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.dapharm.com/common/images/brand/84281a9929994366875dcb7af7aa6987.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 523
+  },
+  {
+   "product_id": "20250812_115344",
+   "name": "블랙마카애골드",
+   "specification": "30정",
+   "category": "전립선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://pharmswell.net/web/product/big/202603/568007930013d86a01966c7c1d7ca04e.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 526
+  },
+  {
+   "product_id": "20250812_115438",
+   "name": "쏘팔메토옥타코사놀메가프라임",
+   "specification": "120캡슐",
+   "category": "전립선",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/fe8e/bbd8172a0b4621dd124f9b170f89c8a54bc62a8889869494b240fa67139f.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 531
+  },
+  {
+   "product_id": "20250812_115445",
+   "name": "녹십자 하루케어 쏘팔메토",
+   "specification": "30c",
+   "category": "영양제",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/3a77/1461dfe9be28880a30d9e4caea70f568c5b3e6fba38e03df613b88566f27.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 532
+  },
+  {
+   "product_id": "20260129_110232",
+   "name": "조아엉겅퀴골드",
+   "specification": "100mL × 10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.choa.co.kr/userFiles2/product/filename20250827_102646_0616436.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 534
+  },
+  {
+   "product_id": "20260129_110238",
+   "name": "건강애",
+   "specification": "10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/image_audit/prod/dcec799e-c7c0-40b1-92b1-7e3ace2ba4d6_fixing_v2.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 536
+  },
+  {
+   "product_id": "20260129_110242",
+   "name": "구론산",
+   "specification": "10병",
+   "category": "드링크",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/623/730/017/ec4c7a4820ad48a8b5459b884accc002.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 537
+  },
+  {
+   "product_id": "20260129_110248",
+   "name": "쿠퍼스깨곰",
+   "specification": "10병",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/8314940267/B.png?875077017",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 538
+  },
+  {
+   "product_id": "20260129_110250",
+   "name": "주당의비결",
+   "specification": "10개입",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://godomall.speedycdn.net/6013ba44731dbbeb20b93e792f36377f/goods/1000000301/image/magnify/1000000301_magnify_019.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 539
+  },
+  {
+   "product_id": "20260129_110254",
+   "name": "헛개컨디션",
+   "specification": "10병",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/888/231/004/9620ad20a144439f8b2cec33bf859253.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 540
+  },
+  {
+   "product_id": "20260129_110257",
+   "name": "컨디션스틱그린애플",
+   "specification": "10개",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/647/782/016/fe4471e173a64814b5b3861ffce0988b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 541
+  },
+  {
+   "product_id": "20260129_110259",
+   "name": "컨디션스틱자두",
+   "specification": "10개",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/9057758651/B.webp?783976653",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 542
+  },
+  {
+   "product_id": "20260129_110300",
+   "name": "컨디션스틱망고",
+   "specification": "10개",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://hkinnotr7596.cdn-nhncommerce.com/data/goods/23/11/48/1000001128/1000001128_detail_053.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 543
+  },
+  {
+   "product_id": "20260129_110306",
+   "name": "상쾌환",
+   "specification": "10포",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/809/645/072/10ec1fd214974bd88f841f25caadc31d.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 544
+  },
+  {
+   "product_id": "20260129_110309",
+   "name": "상쾌환부스터",
+   "specification": "10EA",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/5441774528/B.jpg?990000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 545
+  },
+  {
+   "product_id": "20260129_110312",
+   "name": "헛개땡큐골드",
+   "specification": "10병",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ckdmall.co.kr/web/product/big/202506/b47471fcc591a3bbe974b7cf05c2a3df.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 546
+  },
+  {
+   "product_id": "20260129_110316",
+   "name": "광동헛개파워",
+   "specification": "10병",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://content.foodspring.co.kr/vendor/192/images/28_8911124316_r.JPG?f=webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 547
+  },
+  {
+   "product_id": "20260129_110317",
+   "name": "헛개숙취세트",
+   "specification": "1SET",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/3359973101/B.jpg?496000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 548
+  },
+  {
+   "product_id": "20260129_110323",
+   "name": "헛개숙취세트10EA",
+   "specification": "10EA",
+   "category": "숙취",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/1000x1000/quality/75/11src/product/8267449554/B.jpg?73080907",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 549
+  },
+  {
+   "product_id": "20260129_110356",
+   "name": "닥터 리쥬피디 프리미엄 PDRN 리페어 크림",
+   "specification": "20g",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.makewebcdn.com/makeweb/m_1920x0/S3M3eCgZP/16brand/TK0003439_104.jpg?v=202405291424",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 550
+  },
+  {
+   "product_id": "20260129_110402",
+   "name": "리쥬닉 PDRN 리쥬비네이팅 앤 리페어 크림",
+   "specification": "20mL",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/9a3b/7f25d1f5432dad428656c2fc6185a894306c1093ff2ee2e4fcceae08caa4.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 552
+  },
+  {
+   "product_id": "20260129_110414",
+   "name": "닥터 리쥬올 어드밴스드 RETINO 멜라 세럼",
+   "specification": "50mL",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/69fd47a8662af8916c219d42dd92e513.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 554
+  },
+  {
+   "product_id": "20260129_110422",
+   "name": "리쥬올 PDRN크림",
+   "specification": "30ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ecimg.cafe24img.com/pg1921b33605515017/neosimplerix/web/product/medium/20260521/807b731a578a7db597a26b5728327e90.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 556
+  },
+  {
+   "product_id": "20260129_110426",
+   "name": "프로캄레드엑스크림",
+   "specification": "18ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/ac4d/40edc3557b67913c43bbbe81551a04ed46022780f27bdea3a2343f87351a.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 557
+  },
+  {
+   "product_id": "20260129_110434",
+   "name": "프로캄EGFPDRN시너지마스크",
+   "specification": "3EA",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://down-sg.img.susercontent.com/file/sg-11134207-824h8-me6i1h0nv9c15a",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 559
+  },
+  {
+   "product_id": "20260129_110451",
+   "name": "아르베라 PDRN리쥬샷크림",
+   "specification": "50ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sep-item.ssgcdn.com/00/46/40/item/1000776404600_i1_350.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 560
+  },
+  {
+   "product_id": "20260129_110453",
+   "name": "아르베라 PDRN리쥬샷부스터",
+   "specification": "120ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sep-item.ssgcdn.com/89/45/40/item/1000776404589_i1_350.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 561
+  },
+  {
+   "product_id": "20260129_110456",
+   "name": "아르베라 포포 파우더 워시",
+   "specification": "90g",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/3563/6533ca6c1eef16961436b5eac634823aa2fe7f003bebef77e397c4f27c73.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 563
+  },
+  {
+   "product_id": "20260129_110508",
+   "name": "이데베논 프레스티지앰플",
+   "specification": "10ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/101/663/030/94c62887e9434c5c96f13e181c7699e2.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 564
+  },
+  {
+   "product_id": "20260129_110518",
+   "name": "셀비엔 글루타치온 백옥앰플",
+   "specification": "30mL",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cellbn.co.kr/web/product/big/202505/836afd4a090b36800be2b3115597267a.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 565
+  },
+  {
+   "product_id": "20260129_110519",
+   "name": "셀비엔 글루타치온 백옥크림",
+   "specification": "50g",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.cellbn.co.kr/web/product/big/202505/0d932a7bb0ece85b706589b269f7375b.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 566
+  },
+  {
+   "product_id": "20260129_110521",
+   "name": "나티아 PDRN다이렉트 필름",
+   "specification": "30매",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.oasis.co.kr:48581/product/123662/thumb/30b616f1-4348-456d-bfde-989a7a2a8912.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 567
+  },
+  {
+   "product_id": "20260129_110528",
+   "name": "프로캄 베베 베이비로션",
+   "specification": "250ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/image_audit/prod/2fc2b3e4-d8bf-4dd1-8920-b3cc84bd34f0_fixing_v2.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 568
+  },
+  {
+   "product_id": "20260129_110530",
+   "name": "프로캄 베베 베이비크림",
+   "specification": "140ml",
+   "category": "코스메틱",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/542/576/048/c87373bbe1d34919a081a4870080f143.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 569
+  },
+  {
+   "product_id": "20260129_110845",
+   "name": "풀업373다이렉트",
+   "specification": "15매",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/847/909/091/9a95dde88c3840948174a69da2858fc0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 573
+  },
+  {
+   "product_id": "20260129_110848",
+   "name": "더다른아르기닌오르니틴",
+   "specification": "14포",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.drprio.com/web/product/big/202406/ecaa0c5a8284579048dbafa81adc93f8.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 574
+  },
+  {
+   "product_id": "20260129_110858",
+   "name": "알콘달콘소프트핑거가드",
+   "specification": "20개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://alcondalcon.com/web/product/big/202210/5c96b24365ebda9acab883f4afdf9369.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 575
+  },
+  {
+   "product_id": "20260129_110918",
+   "name": "듀렉스 러브",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.kondom.co.kr/web/product/big/202406/073ef475ebe2aeec353558137b8ba0ba.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 577
+  },
+  {
+   "product_id": "20260129_110940",
+   "name": "듀렉스 익사이트 미",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ivancity.com/data/item/16/08/35/1000000606/1000000606_magnify_051.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 578
+  },
+  {
+   "product_id": "20260129_110942",
+   "name": "듀렉스 플레져 미",
+   "specification": "10개",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn-banana.bizhost.kr/files/goods/10143/1628751274_1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 579
+  },
+  {
+   "product_id": "20260129_110946",
+   "name": "듀렉스필울트라씬",
+   "specification": "3EA",
+   "category": "남성",
+   "official_match_status": "not_applicable",
+   "image_url": "https://eskl001image.godohosting.com/dalbame/images/goods/25/07/29/1000002789/1000002789_detail_054.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 580
+  },
+  {
+   "product_id": "20260129_111224",
+   "name": "판토모나 비오틴하이퍼포머",
+   "specification": "240정",
+   "category": "탈모",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/084/090/119/2d94ed5b0f5e4e4eb0b7ad962af1c3e4.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 582
+  },
+  {
+   "product_id": "20260129_111318",
+   "name": "맥스파워비오틴",
+   "specification": "120정",
+   "category": "탈모",
+   "official_match_status": "not_applicable",
+   "image_url": "https://sep-item.ssgcdn.com/49/09/20/item/1000684200949_i1_350.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 594
+  },
+  {
+   "product_id": "20260129_111429",
+   "name": "일동모발솔루션프리미엄",
+   "specification": "30포",
+   "category": "탈모",
+   "official_match_status": "not_applicable",
+   "image_url": "https://admin.ildong.com/upload/2026-01-22/176908384045814007.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 603
+  },
+  {
+   "product_id": "20260129_112014",
+   "name": "컬처렐 헬스앤웰니스",
+   "specification": "30캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://assets.fullscript.io/Product/AM9003/400_front.png?image_position=1&label=front",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 625
+  },
+  {
+   "product_id": "20260129_112016",
+   "name": "상쾌한구강유산균",
+   "specification": "30포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/575/204/060/89190201b50444b1846429d9b5027724.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 626
+  },
+  {
+   "product_id": "20260129_112022",
+   "name": "와이즈바이옴프로위앤장",
+   "specification": "30포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/613c/950b3a8393201ea10636e6d567a1f2c7e8fa379870d7a77a7070851a822e.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 627
+  },
+  {
+   "product_id": "20260129_112026",
+   "name": "피비10골드플러스",
+   "specification": "120캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/792x792/quality/75/11src/product/2781330855/B.jpg?633000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 628
+  },
+  {
+   "product_id": "20260129_112036",
+   "name": "프리미엄 뉴케어 유산균 100억",
+   "specification": "60캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/8353417947/B.jpg?100009337",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 631
+  },
+  {
+   "product_id": "20260129_112040",
+   "name": "리포좀 생유산균",
+   "specification": "30포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/0528/6a05d49ad74393d16e5c82171fbf05a7ccc97a9ed224327348466d19f176.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 632
+  },
+  {
+   "product_id": "20260129_112050",
+   "name": "프롬팜장건강엔프로바이오틱스아연",
+   "specification": "60정",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/c01c/c38ff6f767356737f5fcbd55d418a28875c4dc7a6f38478726c202cec2de.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 635
+  },
+  {
+   "product_id": "20260129_112053",
+   "name": "하루 밸런스 프로바이오틱스",
+   "specification": "100포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://shop-phinf.pstatic.net/20260624_170/1782282762045Dhs9C_PNG/36941520971374161_2000320216.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 636
+  },
+  {
+   "product_id": "20260129_112106",
+   "name": "마이크로바이옴맥스바이오틱스",
+   "specification": "4g×30포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/465/439/061/dc11b5a8617a4960bfb7cd075e79589f.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 639
+  },
+  {
+   "product_id": "20260129_112109",
+   "name": "프로바이오틱스맥스",
+   "specification": "120캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/e426/ea420ab9ec0f15aac9bfa5fb617c5c56300ac6736c2e0a663e940547992a.jpeg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 640
+  },
+  {
+   "product_id": "20260129_112113",
+   "name": "락토핏생유산균팜",
+   "specification": "60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9274967952/B.webp?337911866",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 641
+  },
+  {
+   "product_id": "20260129_112117",
+   "name": "야쿠르트프로바이오틱스",
+   "specification": "2g×60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://s3image.fredit.co.kr/prdimg/20251128/008/0007/00010/000240/70337/70337_F_129.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 642
+  },
+  {
+   "product_id": "20260129_112120",
+   "name": "야쿠르트 프로바이오틱스 혈당콜레스테롤케어",
+   "specification": "60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.auction.co.kr/origin/50/f7/5f/50f75fa676.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 643
+  },
+  {
+   "product_id": "20260129_112125",
+   "name": "바이오리브 100억 유산균",
+   "specification": "30캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/796/655/075/6056913aabba4d90aa7ff656cbe8d81d.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 644
+  },
+  {
+   "product_id": "20260129_112134",
+   "name": "미야리산U",
+   "specification": "420정",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/image_audit/prod/daaec6ac-10b1-40a3-a751-f0f18cffae92_fixing_v2.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 645
+  },
+  {
+   "product_id": "20260129_112142",
+   "name": "프리락토프리미엄",
+   "specification": "60캡슐",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9274454574/B.webp?64498861",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 647
+  },
+  {
+   "product_id": "20260129_112145",
+   "name": "프리락토시그니처키즈",
+   "specification": "2g×60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://soear.co.kr/web/product/big/202404/793beb6e68cac358b50d2d918ee990cd.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 648
+  },
+  {
+   "product_id": "20260129_112148",
+   "name": "프리락토시그니처",
+   "specification": "2g×60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://soear.co.kr/web/product/big/202405/919f2d2ad12da9f8abdd6ce43e086e66.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 649
+  },
+  {
+   "product_id": "20260129_112151",
+   "name": "프리락토더포스트",
+   "specification": "60포",
+   "category": "유산균",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/9430097863/B.webp?310433405",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 650
+  },
+  {
+   "product_id": "20260129_112636",
+   "name": "온유로케어나이트루틴멜나잇",
+   "specification": "30정",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/40e3/15de490a1baf339b0195f5765289521f11fc160321568c678c0bc4a03cca.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 663
+  },
+  {
+   "product_id": "20260129_112642",
+   "name": "온유로케어 릴렉스루틴 테아닌",
+   "specification": "60캡슐",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/189/783/077/feda3787f9e642f19243209dfe2ad902.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 665
+  },
+  {
+   "product_id": "20260129_112644",
+   "name": "알지오골드",
+   "specification": "15ml×10바이알",
+   "category": "수면",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/82a1/9fa11e9d0b6e93f164068ad17ebefe245089abc156f0163c72f5a84ac484.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 666
+  },
+  {
+   "product_id": "20260129_113532",
+   "name": "식물성비타민B컴플렉스",
+   "specification": "30캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://nutrius.co.kr/web/product/medium/202503/4348f95ff25925a16283ffff99b0024a.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 719
+  },
+  {
+   "product_id": "20260129_113633",
+   "name": "프롬팜싱글맥스비타민D5000IU",
+   "specification": "60정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/51cf/2a08dda69c472760d78845c1c86a56b79b2d12043582e60b1f410c608dbc.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 726
+  },
+  {
+   "product_id": "20260129_113635",
+   "name": "프레스샷",
+   "specification": "15ml×10병",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/742/600/028/3f99287a1a384504bd3ea329f01696a1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 727
+  },
+  {
+   "product_id": "20260129_113649",
+   "name": "식물성멀티비타민미네랄",
+   "specification": "30캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://nutrius.co.kr/web/product/medium/202503/680ee098bdbb703177d9d09286df5faa.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 730
+  },
+  {
+   "product_id": "20260129_113651",
+   "name": "식물성비타민D아연",
+   "specification": "30캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://nutrius.co.kr/web/product/big/202503/473e23b15d54877203111534d3bdebda.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 731
+  },
+  {
+   "product_id": "20260129_113710",
+   "name": "하루케어비타민D 4000IU",
+   "specification": "30캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/18bf/efe7ae47fe82acc25554abf12a84458a831dc8c9b275888918578cf5ca42.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 734
+  },
+  {
+   "product_id": "20260129_113712",
+   "name": "유한m비타민D2000IU",
+   "specification": "90캡슐×2병",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/5cf5/99c427a8b2100e65372058ee51d47ce75737b8c946d25ccfef9394b3ea9a.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 735
+  },
+  {
+   "product_id": "20260129_113716",
+   "name": "솔가비타민D3 1000IU",
+   "specification": "180캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/451/395/062/c65902fa06494a579e4548d507c36e34.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 737
+  },
+  {
+   "product_id": "20260129_113736",
+   "name": "비타블로썸 메가비타민C3000",
+   "specification": "120포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/845/044/064/b58d99cda82b41ad98eacf67432a7985.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 741
+  },
+  {
+   "product_id": "20260129_113739",
+   "name": "영국산 비타민C 3000",
+   "specification": "100포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img.danuri.io/catalog-image/212/280/029/7e8cee2336064b76a60018cb0479a2b0.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 742
+  },
+  {
+   "product_id": "20260129_113742",
+   "name": "데일리 비타민C 골드 프리미엄",
+   "specification": "60포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/retail/images/59287453866584-7801cf02-b9f3-4429-98c9-844f810014e1.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 743
+  },
+  {
+   "product_id": "20260129_113744",
+   "name": "식물성비타민C 셀레늄",
+   "specification": "30캡슐",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://nutrius.co.kr/web/product/big/202503/085dd2245277a1fa303d8985025f9788.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 744
+  },
+  {
+   "product_id": "20260129_113838",
+   "name": "슈퍼멀티비타민이뮨부스트",
+   "specification": "25ml×10병",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.checkeat.org/incidents/3000224863.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 753
+  },
+  {
+   "product_id": "20260129_113939",
+   "name": "이뮨엔비타민미네랄듀얼샷",
+   "specification": "500mg×14포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/8862758412/B.webp?861286150",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 754
+  },
+  {
+   "product_id": "20260129_113942",
+   "name": "데일리 에너지 올인원 끌올팩",
+   "specification": "30팩",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/retail/images/262868907515538-7c4fd5d9-f318-4374-ab75-b939cbb0a663.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 755
+  },
+  {
+   "product_id": "20260129_114007",
+   "name": "속편한비타민C프리미엄",
+   "specification": "1000mg×120정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://image.coupangcdn.com/image/vendor_inventory/5184/4ec9c4087921978be61f06c0c2b38eafe663a9487d739f757039e30f055d.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 761
+  },
+  {
+   "product_id": "20260129_114011",
+   "name": "엘리나C",
+   "specification": "120포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/2000x2000/quality/100/11src/product/6668425991/B.jpg?595000000",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 763
+  },
+  {
+   "product_id": "20260129_114030",
+   "name": "비타그란비타민C츄어블사과맛",
+   "specification": "72정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/product/8602790133/B.webp?473879659",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 765
+  },
+  {
+   "product_id": "20260129_114033",
+   "name": "비타그란비타민C츄어블포도맛",
+   "specification": "72정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://ep-cdn.011st.com/11dims/resize/900x900/quality/75/11src/pd/v2/9/1/1/6/2/0/ZzvWu/9461911620_B.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 766
+  },
+  {
+   "product_id": "20260129_114042",
+   "name": "비타그란비타민C츄어블베리맛",
+   "specification": "72정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.dmall.co.kr/web/product/extra/big/202510/7def2e4edcbf9528a2bc2281c66496ec.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 767
+  },
+  {
+   "product_id": "20260129_114045",
+   "name": "비타그란비타민C츄어블레몬맛",
+   "specification": "72정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://m.dmall.co.kr/web/product/extra/big/202510/06b59b44249635c450bf74771467a819.png",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 768
+  },
+  {
+   "product_id": "20260129_114051",
+   "name": "비타바이탈씨과립레몬맛",
+   "specification": "120포",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://www.yaksawa.com/shopimages/yaksawa/1470000005832.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 769
+  },
+  {
+   "product_id": "20260129_114102",
+   "name": "에너쎌 아연",
+   "specification": "30정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://img1a.coupangcdn.com/image/vendor_inventory/5ca7/2473e260aca8e7db8b767993e00f3003ff91e33cd1c999d89c3cdf7208a2.jpg",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 772
+  },
+  {
+   "product_id": "20260129_114110",
+   "name": "쎈탁스올인원멀티비타민미네랄",
+   "specification": "36정",
+   "category": "비타민",
+   "official_match_status": "not_applicable",
+   "image_url": "https://cdn.011st.com/11dims/resize/2000x2000/quality/100/11src/dl/v2/6/7/0/0/1/5/ZLCLL/2583670015_235700373.webp",
+   "image_rights_status": "verified",
+   "queue_reasons": [
+    "non_medicine_official_source_pending"
+   ],
+   "priority": 6,
+   "source_order": 775
+  }
+ ]
+}
